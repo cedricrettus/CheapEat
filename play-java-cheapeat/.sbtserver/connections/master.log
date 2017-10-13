@@ -1,0 +1,16 @@
+New log file opened at Fri Oct 13 09:28:03 CEST 2017 by 13272@Fabio-SF
+Taking next connection to: 2116
+New client attempting to connect on port: 2117-2116
+  Address = /146.136.56.193:2116
+This client on port 2117 has uuid cc6457d9-7378-4415-b01c-4768e7103fdd configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-cc6457d9-7378-4415-b01c-4768e7103fdd
+Taking next connection to: 2116
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2116
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2116
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2116
