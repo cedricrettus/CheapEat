@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="SBT: org.seleniumhq.selenium:selenium-leg-rc:2.48.2:jar">
     <CLASSES>
-      <root url="jar://C:/dev/play/activator/repository/org.seleniumhq.selenium/selenium-leg-rc/2.48.2/jars/selenium-leg-rc.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.seleniumhq.selenium/selenium-leg-rc/jars/selenium-leg-rc-2.48.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
