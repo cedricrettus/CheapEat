@@ -21,7 +21,11 @@
           <value>
             <ProjectSettingsEntry>
               <option name="sourceDir" value="C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\app" />
+<<<<<<< HEAD
               <option name="confDir" value="C:\dev\git\CheapEat\play-java-cheapeat\app" />
+=======
+              <option name="confDir" value="C:\Users\csutter\dev\CheapEat\play-java-cheapeat\app" />
+>>>>>>> e434468be8ffa6034b90ccf1cdf241f7fe16c5e9
               <option name="templateImports">
                 <list>
                   <option value="models._" />
@@ -46,7 +50,11 @@
                   <option value="play.libs.F" />
                 </list>
               </option>
+<<<<<<< HEAD
               <option name="uri" value="/C:/dev/git/CheapEat/play-java-cheapeat" />
+=======
+              <option name="uri" value="/C:/Users/csutter/dev/CheapEat/play-java-cheapeat" />
+>>>>>>> e434468be8ffa6034b90ccf1cdf241f7fe16c5e9
             </ProjectSettingsEntry>
           </value>
         </entry>

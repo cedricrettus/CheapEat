@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 New log file opened at Fri Oct 13 16:37:43 CEST 2017 by 16236@Fabio-SF
 Taking next connection to: 1214
 New client attempting to connect on port: 1215-1214
@@ -5,9 +6,46 @@ New client attempting to connect on port: 1215-1214
 This client on port 1215 has uuid c6f0c2ae-2d36-442b-b920-4a4c398af374 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
 Connected Clients: play-fork-run-c6f0c2ae-2d36-442b-b920-4a4c398af374
 Taking next connection to: 1214
+=======
+New log file opened at Fri Oct 13 15:35:06 CEST 2017 by 3080@DESKTOP-S7IFK17
+Taking next connection to: 58801
+New client attempting to connect on port: 58802-58801
+  Address = /192.168.119.1:58801
+This client on port 58802 has uuid a179da56-e48c-4d2a-be4f-eb9581393df8 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-a179da56-e48c-4d2a-be4f-eb9581393df8
+Taking next connection to: 58801
+New client attempting to connect on port: 59178-58801
+  Address = /192.168.119.1:58801
+Handshake exception on socket: 59178
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 58801
+New client attempting to connect on port: 59179-58801
+  Address = /192.168.119.1:58801
+This client on port 59179 has uuid 3192c0e4-a6c6-4bce-8967-4b189a816d53 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-3192c0e4-a6c6-4bce-8967-4b189a816d53
+Taking next connection to: 58801
+>>>>>>> e434468be8ffa6034b90ccf1cdf241f7fe16c5e9
 Checking to see if clients are empty...
 No non-daemon clients connected after 3 min. Shutting down.
 Server socket thread exiting.
 0 clients open, will close them...
 All client sockets have been closed.
+<<<<<<< HEAD
 Closing the 16236@Fabio-SF logs at Sat Oct 14 09:39:40 CEST 2017, goodbye.
+=======
+Closing the 3080@DESKTOP-S7IFK17 logs at Fri Oct 13 15:39:32 CEST 2017, goodbye.
+>>>>>>> e434468be8ffa6034b90ccf1cdf241f7fe16c5e9
