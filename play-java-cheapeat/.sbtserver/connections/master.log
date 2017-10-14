@@ -1,13 +1,13 @@
-New log file opened at Fri Oct 13 16:37:43 CEST 2017 by 16236@Fabio-SF
-Taking next connection to: 1214
-New client attempting to connect on port: 1215-1214
-  Address = /146.136.56.193:1214
-This client on port 1215 has uuid c6f0c2ae-2d36-442b-b920-4a4c398af374 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-c6f0c2ae-2d36-442b-b920-4a4c398af374
-Taking next connection to: 1214
+New log file opened at Sat Oct 14 12:12:52 CEST 2017 by 3916@Fabio-PC
+Taking next connection to: 60809
+New client attempting to connect on port: 60811-60809
+  Address = /192.168.0.126:60809
+This client on port 60811 has uuid e2320fc3-db50-4499-ba7a-2cfe338df298 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-e2320fc3-db50-4499-ba7a-2cfe338df298
+Taking next connection to: 60809
 Checking to see if clients are empty...
-No non-daemon clients connected after 3 min. Shutting down.
-Server socket thread exiting.
-0 clients open, will close them...
-All client sockets have been closed.
-Closing the 16236@Fabio-SF logs at Sat Oct 14 09:39:40 CEST 2017, goodbye.
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 60809
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 60809

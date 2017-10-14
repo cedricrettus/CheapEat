@@ -6,7 +6,10 @@
 
   scalaVersion := "2.11.7"
 
+  resolvers += Resolver.url("Typesafe Ivy releases", url("https://repo.typesafe.com/typesafe/ivy-releases"))(Resolver.ivyStylePatterns)
+
 libraryDependencies ++= Seq(
+  evolutions, jdbc,
   // If you enable PlayEbean plugin you must remove these
   // JPA dependencies to avoid conflicts.
   javaJpa,

@@ -21,14 +21,14 @@ public class Application extends Controller {
     }
 
     @Transactional
-    public Result addPerson() {
+    public Result addAngebot() {
         Person person = formFactory.form(Person.class).bindFromRequest().get();
         JPA.em().persist(person);
         return redirect(routes.Application.index());
     }
 
     @Transactional(readOnly = true)
-    public Result getPersons() {
+    public Result getAngebote() {
         List<Person> persons = (List<Person>) JPA.em().createQuery("select p from Person p").getResultList();
         return ok(toJson(persons));
     }
