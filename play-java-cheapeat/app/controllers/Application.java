@@ -1,10 +1,9 @@
 package controllers;
 
-import play.*;
+import models.Angebot;
 import play.mvc.*;
 import play.db.jpa.*;
 import views.html.*;
-import models.Person;
 import play.data.FormFactory;
 import javax.inject.Inject;
 import java.util.List;
@@ -22,14 +21,14 @@ public class Application extends Controller {
 
     @Transactional
     public Result addAngebot() {
-        Person person = formFactory.form(Person.class).bindFromRequest().get();
-        JPA.em().persist(person);
+        Angebot angebot = formFactory.form(Angebot.class).bindFromRequest().get();
+        JPA.em().persist(angebot);
         return redirect(routes.Application.index());
     }
 
     @Transactional(readOnly = true)
     public Result getAngebote() {
-        List<Person> persons = (List<Person>) JPA.em().createQuery("select p from Person p").getResultList();
-        return ok(toJson(persons));
+        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p").getResultList();
+        return ok(toJson(angebote));
     }
 }

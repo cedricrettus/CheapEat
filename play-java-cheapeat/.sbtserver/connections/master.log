@@ -1,13 +1,40 @@
-New log file opened at Sat Oct 14 13:03:04 CEST 2017 by 9852@Fabio-PC
-Taking next connection to: 49456
-New client attempting to connect on port: 49457-49456
-  Address = /192.168.0.126:49456
-This client on port 49457 has uuid 7fb87a77-1c5b-49ed-bcdd-05b048ba3ba0 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-7fb87a77-1c5b-49ed-bcdd-05b048ba3ba0
-Taking next connection to: 49456
+New log file opened at Sat Oct 14 13:36:38 CEST 2017 by 17276@Fabio-PC
+Taking next connection to: 52754
+New client attempting to connect on port: 52755-52754
+  Address = /192.168.0.126:52754
+This client on port 52755 has uuid 355b0a13-d927-41fa-9d50-2d455af38b52 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-355b0a13-d927-41fa-9d50-2d455af38b52
+Taking next connection to: 52754
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 49456
+Taking next connection to: 52754
+New client attempting to connect on port: 53390-52754
+  Address = /192.168.0.126:52754
+Handshake exception on socket: 53390
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 52754
+New client attempting to connect on port: 53391-52754
+  Address = /192.168.0.126:52754
+This client on port 53391 has uuid eebac6a0-0709-42fe-a9d9-0535a83bd434 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-eebac6a0-0709-42fe-a9d9-0535a83bd434
+Taking next connection to: 52754
 Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 49456
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 17276@Fabio-PC logs at Sat Oct 14 13:43:33 CEST 2017, goodbye.

@@ -2,9 +2,11 @@
 
 @main("CheapEat - Home") {
 
-    <ul id="persons"></ul>
+    <script src="@routes.Assets.at("js/home.js")" type="text/javascript"></script>
 
-    <form method="POST" action="@routes.Application.addAngebot">
+    <ul id="angebote"></ul>
+
+    <form method="POST" action="/angebot"> <!--  routes.Application.getPerson() -->
         <input type="text" name="name"/>
         <button>Angebot erstellen</button>
     </form>
