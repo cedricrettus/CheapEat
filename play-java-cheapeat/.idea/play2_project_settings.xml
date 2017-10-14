@@ -3,6 +3,13 @@
   <component name="Play2ExcludedModulesSettings">
     <option name="INFO">
       <map>
+        <entry key="play-java-cheapeat">
+          <value>
+            <ProjectSettingsEntry>
+              <option name="playDistrPath" value="$USER_HOME$/.ivy2/cache/com.typesafe.play/play_2.11/jars/play_2.11-2.5.10.jar" />
+            </ProjectSettingsEntry>
+          </value>
+        </entry>
         <entry key="play-java-intro">
           <value>
             <ProjectSettingsEntry>
@@ -13,7 +20,8 @@
         <entry key="root">
           <value>
             <ProjectSettingsEntry>
-              <option name="confDir" value="C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\app" />
+              <option name="sourceDir" value="C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\app" />
+              <option name="confDir" value="C:\dev\git\CheapEat\play-java-cheapeat\app" />
               <option name="templateImports">
                 <list>
                   <option value="models._" />
@@ -38,7 +46,7 @@
                   <option value="play.libs.F" />
                 </list>
               </option>
-              <option name="uri" value="/C:/Users/Fabio/GDrive/dev/CheapEat/play-java-intro" />
+              <option name="uri" value="/C:/dev/git/CheapEat/play-java-cheapeat" />
             </ProjectSettingsEntry>
           </value>
         </entry>

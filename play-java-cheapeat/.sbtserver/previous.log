@@ -1,4 +1,28 @@
-New log file opened at Fri Oct 13 09:25:43 CEST 2017 by 6000@Fabio-SF
+New log file opened at Fri Oct 13 16:35:06 CEST 2017 by 8564@Fabio-SF
+== resolving dependencies com.typesafe.akka#akka-slf4j_2.11;2.4.12->org.slf4j#slf4j-api;1.7.21 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.akka#akka-slf4j_2.11;2.4.12->org.slf4j#slf4j-api;1.7.21 [runtime->compile]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->com.fasterxml.jackson.core#jackson-core;2.7.8 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->com.fasterxml.jackson.core#jackson-core;2.7.8 [runtime->compile]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->com.fasterxml.jackson.core#jackson-annotations;2.7.8 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->com.fasterxml.jackson.core#jackson-annotations;2.7.8 [runtime->compile]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->com.fasterxml.jackson.core#jackson-databind;2.7.8 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->com.fasterxml.jackson.core#jackson-databind;2.7.8 [runtime->compile]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.7.8 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.7.8 [runtime->compile]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.7.8 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.7.8 [runtime->compile]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->org.scala-stm#scala-stm_2.11;0.7 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->org.scala-stm#scala-stm_2.11;0.7 [runtime->compile]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->commons-codec#commons-codec;1.10 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->commons-codec#commons-codec;1.10 [runtime->compile]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->joda-time#joda-time;2.9.6 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->joda-time#joda-time;2.9.6 [runtime->compile]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->org.joda#joda-convert;1.8.1 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->org.joda#joda-convert;1.8.1 [runtime->compile]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->org.apache.commons#commons-lang3;3.4 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->org.apache.commons#commons-lang3;3.4 [runtime->compile]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->xerces#xercesImpl;2.11.0 [runtime->runtime(*)]
+== resolving dependencies com.typesafe.play#play_2.11;2.5.10->xerces#xercesImpl;2.11.0 [runtime->compile]
 == resolving dependencies xerces#xercesImpl;2.11.0->xml-apis#xml-apis;1.4.01 [runtime->runtime(*)]
 == resolving dependencies xerces#xercesImpl;2.11.0->xml-apis#xml-apis;1.4.01 [runtime->compile]
 == resolving dependencies com.typesafe.play#play_2.11;2.5.10->javax.transaction#jta;1.1 [runtime->runtime(*)]
@@ -23,10 +47,10 @@ New log file opened at Fri Oct 13 09:25:43 CEST 2017 by 6000@Fabio-SF
 == resolving dependencies com.typesafe.play#play_2.11;2.5.10->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [runtime->compile]
 == resolving dependencies com.typesafe.play#play-server_2.11;2.5.10->com.typesafe.play#play-iteratees_2.11;2.5.10 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#play-server_2.11;2.5.10->com.typesafe.play#play-iteratees_2.11;2.5.10 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->master(compile)]
@@ -122,10 +146,10 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.google.code.findbugs#jsr305;3.0.1 [runtime->compile]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.apache.tomcat#tomcat-servlet-api;8.0.33 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.apache.tomcat#tomcat-servlet-api;8.0.33 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->compile]
 == resolving dependencies com.typesafe.play#play-netty-server_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-netty-server_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-netty-server_2.11;2.5.10->com.typesafe.play#play-server_2.11;2.5.10 [compile->master(compile)]
@@ -202,10 +226,10 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies io.netty#netty-transport-native-epoll;4.0.41.Final->io.netty#netty-buffer;4.0.41.Final [runtime->compile]
 == resolving dependencies io.netty#netty-transport-native-epoll;4.0.41.Final->io.netty#netty-transport;4.0.41.Final [runtime->runtime(*)]
 == resolving dependencies io.netty#netty-transport-native-epoll;4.0.41.Final->io.netty#netty-transport;4.0.41.Final [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->compile]
 == resolving dependencies com.typesafe.play#play-logback_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-logback_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-logback_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->master(compile)]
@@ -229,10 +253,10 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;1.7.20 [runtime->runtime(*)]
 == resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;1.7.21 [runtime->runtime(*)]
 == resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;1.7.21 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->compile]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master(compile)]
@@ -318,10 +342,10 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->compile]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->org.hibernate.javax.persistence#hibernate-jpa-2.1-api;1.0.0.Final [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->org.hibernate.javax.persistence#hibernate-jpa-2.1-api;1.0.0.Final [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->compile]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.jboss.logging#jboss-logging;3.1.3.GA [compile->master(compile)]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.jboss.logging#jboss-logging;3.2.1.Final [compile->master(compile)]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.jboss.logging#jboss-logging;3.1.3.GA [compile->compile(*)]
@@ -420,20 +444,24 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.javassist#javassist;3.18.1-GA [runtime->runtime(*)]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.javassist#javassist;3.18.2-GA [runtime->runtime(*)]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.javassist#javassist;3.18.2-GA [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->master]
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [optional]
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [provided]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.35 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.35 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.35 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.35 [compile->master]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [optional]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [provided]
 resolving dependencies for configuration 'runtime-internal'
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [runtime-internal]
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [runtime]
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->compile]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [runtime-internal]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [runtime]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->compile]
 == resolving dependencies com.typesafe.play#twirl-api_2.11;1.1.1->org.scala-lang#scala-library;2.11.6 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#twirl-api_2.11;1.1.1->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#twirl-api_2.11;1.1.1->org.scala-lang#scala-library;2.11.6 [compile->compile(*)]
@@ -455,18 +483,18 @@ resolving dependencies for configuration 'runtime-internal'
 == resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)]
 == resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)]
 == resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.7 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile]
 == resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->compile]
 == resolving dependencies com.typesafe.play#play-server_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-server_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-server_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->master(compile)]
@@ -845,10 +873,10 @@ resolving dependencies for configuration 'runtime-internal'
 == resolving dependencies com.typesafe.play#play_2.11;2.5.10->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [runtime->compile]
 == resolving dependencies com.typesafe.play#play-server_2.11;2.5.10->com.typesafe.play#play-iteratees_2.11;2.5.10 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#play-server_2.11;2.5.10->com.typesafe.play#play-iteratees_2.11;2.5.10 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->master(compile)]
@@ -944,10 +972,10 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.google.code.findbugs#jsr305;3.0.1 [runtime->compile]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.apache.tomcat#tomcat-servlet-api;8.0.33 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.apache.tomcat#tomcat-servlet-api;8.0.33 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->compile]
 == resolving dependencies com.typesafe.play#play-netty-server_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-netty-server_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-netty-server_2.11;2.5.10->com.typesafe.play#play-server_2.11;2.5.10 [compile->master(compile)]
@@ -1024,10 +1052,10 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies io.netty#netty-transport-native-epoll;4.0.41.Final->io.netty#netty-buffer;4.0.41.Final [runtime->compile]
 == resolving dependencies io.netty#netty-transport-native-epoll;4.0.41.Final->io.netty#netty-transport;4.0.41.Final [runtime->runtime(*)]
 == resolving dependencies io.netty#netty-transport-native-epoll;4.0.41.Final->io.netty#netty-transport;4.0.41.Final [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->compile]
 == resolving dependencies com.typesafe.play#play-logback_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-logback_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-logback_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->master(compile)]
@@ -1051,10 +1079,10 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;1.7.20 [runtime->runtime(*)]
 == resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;1.7.21 [runtime->runtime(*)]
 == resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;1.7.21 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->compile]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master(compile)]
@@ -1140,10 +1168,10 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->compile]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->org.hibernate.javax.persistence#hibernate-jpa-2.1-api;1.0.0.Final [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->org.hibernate.javax.persistence#hibernate-jpa-2.1-api;1.0.0.Final [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->compile]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.jboss.logging#jboss-logging;3.1.3.GA [compile->master(compile)]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.jboss.logging#jboss-logging;3.2.1.Final [compile->master(compile)]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.jboss.logging#jboss-logging;3.1.3.GA [compile->compile(*)]
@@ -1242,20 +1270,24 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.javassist#javassist;3.18.1-GA [runtime->runtime(*)]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.javassist#javassist;3.18.2-GA [runtime->runtime(*)]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.javassist#javassist;3.18.2-GA [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->master]
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [optional]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.35 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.35 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.35 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.35 [compile->master]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [optional]
 resolving dependencies for configuration 'test-internal'
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [test-internal]
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [test]
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [runtime]
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->compile]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [test-internal]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [test]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [runtime]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->compile]
 == resolving dependencies com.typesafe.play#twirl-api_2.11;1.1.1->org.scala-lang#scala-library;2.11.6 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#twirl-api_2.11;1.1.1->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#twirl-api_2.11;1.1.1->org.scala-lang#scala-library;2.11.6 [compile->compile(*)]
@@ -1277,18 +1309,18 @@ resolving dependencies for configuration 'test-internal'
 == resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.0 [runtime->runtime(*)]
 == resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)]
 == resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.1->org.scala-lang#scala-library;2.11.7 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#twirl-api_2.11;1.1.1 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->compile]
 == resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#play-enhancer;1.1.0->org.javassist#javassist;3.18.2-GA [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-enhancer;1.1.0 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->compile]
 == resolving dependencies com.typesafe.play#play-server_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-server_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-server_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->master(compile)]
@@ -1667,10 +1699,10 @@ resolving dependencies for configuration 'test-internal'
 == resolving dependencies com.typesafe.play#play_2.11;2.5.10->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [runtime->compile]
 == resolving dependencies com.typesafe.play#play-server_2.11;2.5.10->com.typesafe.play#play-iteratees_2.11;2.5.10 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#play-server_2.11;2.5.10->com.typesafe.play#play-iteratees_2.11;2.5.10 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-server_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->compile]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->master(compile)]
@@ -1766,10 +1798,10 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->com.google.code.findbugs#jsr305;3.0.1 [runtime->compile]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.apache.tomcat#tomcat-servlet-api;8.0.33 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#play-java_2.11;2.5.10->org.apache.tomcat#tomcat-servlet-api;8.0.33 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->compile]
 == resolving dependencies com.typesafe.play#play-netty-server_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-netty-server_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-netty-server_2.11;2.5.10->com.typesafe.play#play-server_2.11;2.5.10 [compile->master(compile)]
@@ -1846,10 +1878,10 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies io.netty#netty-transport-native-epoll;4.0.41.Final->io.netty#netty-buffer;4.0.41.Final [runtime->compile]
 == resolving dependencies io.netty#netty-transport-native-epoll;4.0.41.Final->io.netty#netty-transport;4.0.41.Final [runtime->runtime(*)]
 == resolving dependencies io.netty#netty-transport-native-epoll;4.0.41.Final->io.netty#netty-transport;4.0.41.Final [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->compile]
 == resolving dependencies com.typesafe.play#play-logback_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-logback_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-logback_2.11;2.5.10->com.typesafe.play#play_2.11;2.5.10 [compile->master(compile)]
@@ -1873,10 +1905,10 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;1.7.20 [runtime->runtime(*)]
 == resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;1.7.21 [runtime->runtime(*)]
 == resolving dependencies ch.qos.logback#logback-classic;1.1.7->org.slf4j#slf4j-api;1.7.21 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-logback_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->compile]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->com.typesafe.play#play-java-jdbc_2.11;2.5.10 [compile->master(compile)]
@@ -1962,10 +1994,10 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies com.typesafe.play#play-java-jdbc_2.11;2.5.10->com.typesafe.play#play-java_2.11;2.5.10 [runtime->compile]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->org.hibernate.javax.persistence#hibernate-jpa-2.1-api;1.0.0.Final [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#play-java-jpa_2.11;2.5.10->org.hibernate.javax.persistence#hibernate-jpa-2.1-api;1.0.0.Final [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-java-jpa_2.11;2.5.10 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->compile]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.jboss.logging#jboss-logging;3.1.3.GA [compile->master(compile)]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.jboss.logging#jboss-logging;3.2.1.Final [compile->master(compile)]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.jboss.logging#jboss-logging;3.1.3.GA [compile->compile(*)]
@@ -2064,10 +2096,14 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.javassist#javassist;3.18.1-GA [runtime->runtime(*)]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.javassist#javassist;3.18.2-GA [runtime->runtime(*)]
 == resolving dependencies org.hibernate#hibernate-entitymanager;4.3.7.Final->org.javassist#javassist;3.18.2-GA [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.5.10 [test->default(compile)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.5.10 [test->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.5.10 [test->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.hibernate#hibernate-entitymanager;4.3.7.Final [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.35 [compile->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.35 [compile->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.35 [compile->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->mysql#mysql-connector-java;5.1.35 [compile->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.5.10 [test->default(compile)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.5.10 [test->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.5.10 [test->compile]
 == resolving dependencies com.typesafe.play#play-test_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-test_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-test_2.11;2.5.10->com.typesafe.play#play-netty-server_2.11;2.5.10 [compile->master(compile)]
@@ -2405,23 +2441,23 @@ excluding dependency: xerces#xercesImpl;2.11.0 {compile=[compile(*), master(comp
 == resolving dependencies org.seleniumhq.selenium#selenium-java;2.48.2->org.seleniumhq.selenium#selenium-leg-rc;2.48.2 [runtime->compile]
 == resolving dependencies org.seleniumhq.selenium#selenium-leg-rc;2.48.2->org.seleniumhq.selenium#selenium-remote-driver;2.48.2 [runtime->runtime(*)]
 == resolving dependencies org.seleniumhq.selenium#selenium-leg-rc;2.48.2->org.seleniumhq.selenium#selenium-remote-driver;2.48.2 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.5.10 [test->master]
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [optional]
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [provided]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.5.10 [test->master]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [optional]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [provided]
 resolving dependencies for configuration 'plugin'
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [plugin]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [plugin]
 resolving dependencies for configuration 'sources'
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [sources]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [sources]
 resolving dependencies for configuration 'docs'
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [docs]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.11;2.5.10 [docs->default(compile)]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [docs]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.11;2.5.10 [docs->default(compile)]
 Read from stdout: Resolving com.typesafe.play#play-omnidoc_2.11;2.5.10 ...
 Resolving com.typesafe.play#play-omnidoc_2.11;2.5.10 ...
 sbt-chain: Checking cache for: dependency: com.typesafe.play#play-omnidoc_2.11;2.5.10 {docs=[default(compile)]}
 sbt-chain: module revision found in cache: com.typesafe.play#play-omnidoc_2.11;2.5.10
 	found com.typesafe.play#play-omnidoc_2.11;2.5.10 in sbt-chain
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.11;2.5.10 [docs->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.11;2.5.10 [docs->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.11;2.5.10 [docs->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.11;2.5.10 [docs->compile]
 == resolving dependencies com.typesafe.play#play-omnidoc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-omnidoc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-omnidoc_2.11;2.5.10->com.typesafe.play#play-docs_2.11;2.5.10 [compile->master(compile)]
@@ -3022,19 +3058,19 @@ sbt-chain: module revision found in cache: org.ow2.asm#asm-util;4.1
 == resolving dependencies com.typesafe.play#play-omnidoc_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [runtime->compile]
 == resolving dependencies com.typesafe.play#play-omnidoc_2.11;2.5.10->com.typesafe.play#play-docs_2.11;2.5.10 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#play-omnidoc_2.11;2.5.10->com.typesafe.play#play-docs_2.11;2.5.10 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.11;2.5.10 [docs->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#play-omnidoc_2.11;2.5.10 [docs->master]
 resolving dependencies for configuration 'pom'
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [pom]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [pom]
 resolving dependencies for configuration 'scala-tool'
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [scala-tool]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.7 [scala-tool->default]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [scala-tool]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.7 [scala-tool->default]
 Read from stdout: Resolving org.scala-lang#scala-compiler;2.11.7 ...
 Resolving org.scala-lang#scala-compiler;2.11.7 ...
 sbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.11.7 {scala-tool=[default, optional(default)]}
 sbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.11.7
 	found org.scala-lang#scala-compiler;2.11.7 in sbt-chain
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.7 [scala-tool->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.7 [scala-tool->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.7 [scala-tool->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.7 [scala-tool->compile]
 == resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->default]
@@ -3081,8 +3117,8 @@ sbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11
 == resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.6 [runtime->runtime(*)]
 == resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)]
 == resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.7 [scala-tool->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.7 [scala-tool->optional(default)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.7 [scala-tool->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-compiler;2.11.7 [scala-tool->optional(default)]
 == resolving dependencies org.scala-lang#scala-compiler;2.11.7->jline#jline;2.12.1 [optional->master(compile)]
 Read from stdout: Resolving jline#jline;2.12.1 ...
 Resolving jline#jline;2.12.1 ...
@@ -3090,21 +3126,21 @@ sbt-chain: Checking cache for: dependency: jline#jline;2.12.1 {optional=[compile
 sbt-chain: module revision found in cache: jline#jline;2.12.1
 	found jline#jline;2.12.1 in sbt-chain
 == resolving dependencies org.scala-lang#scala-compiler;2.11.7->jline#jline;2.12.1 [optional->compile(*)]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [scala-tool->default]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [scala-tool->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [scala-tool->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [scala-tool->master]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [scala-tool->optional(default)]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [scala-tool->default]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [scala-tool->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [scala-tool->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [scala-tool->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [scala-tool->optional(default)]
 resolving dependencies for configuration 'fork-run'
-== resolving dependencies for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT [fork-run]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.11;2.5.10 [fork-run->default(compile)]
+== resolving dependencies for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT [fork-run]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.11;2.5.10 [fork-run->default(compile)]
 Read from stdout: Resolving com.typesafe.play#fork-run_2.11;2.5.10 ...
 Resolving com.typesafe.play#fork-run_2.11;2.5.10 ...
 sbt-chain: Checking cache for: dependency: com.typesafe.play#fork-run_2.11;2.5.10 {fork-run=[default(compile)]}
 sbt-chain: module revision found in cache: com.typesafe.play#fork-run_2.11;2.5.10
 	found com.typesafe.play#fork-run_2.11;2.5.10 in sbt-chain
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.11;2.5.10 [fork-run->runtime]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.11;2.5.10 [fork-run->compile]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.11;2.5.10 [fork-run->runtime]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.11;2.5.10 [fork-run->compile]
 == resolving dependencies com.typesafe.play#fork-run_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->master(compile)]
 == resolving dependencies com.typesafe.play#fork-run_2.11;2.5.10->org.scala-lang#scala-library;2.11.7 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#fork-run_2.11;2.5.10->com.typesafe.play#fork-run-protocol_2.11;2.5.10 [compile->master(compile)]
@@ -3550,7 +3586,7 @@ sbt-chain: module revision found in cache: net.contentobjects.jnotify#jnotify;0.
 == resolving dependencies com.typesafe.play#fork-run_2.11;2.5.10->com.typesafe.sbtrc#actor-client-2-11;0.3.1 [runtime->compile]
 == resolving dependencies com.typesafe.play#fork-run_2.11;2.5.10->net.contentobjects.jnotify#jnotify;0.94-play-1 [runtime->runtime(*)]
 == resolving dependencies com.typesafe.play#fork-run_2.11;2.5.10->net.contentobjects.jnotify#jnotify;0.94-play-1 [runtime->compile]
-== resolving dependencies play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.11;2.5.10 [fork-run->master]
+== resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->com.typesafe.play#fork-run_2.11;2.5.10 [fork-run->master]
 	resolved ivy file produced in cache
 :: downloading artifacts ::
 	[NOT REQUIRED] org.scala-lang#scala-library;2.11.7!scala-library.jar
@@ -3562,6 +3598,7 @@ sbt-chain: module revision found in cache: net.contentobjects.jnotify#jnotify;0.
 	[NOT REQUIRED] com.typesafe.play#play-logback_2.11;2.5.10!play-logback_2.11.jar
 	[NOT REQUIRED] com.typesafe.play#play-java-jpa_2.11;2.5.10!play-java-jpa_2.11.jar
 	[NOT REQUIRED] org.hibernate#hibernate-entitymanager;4.3.7.Final!hibernate-entitymanager.jar
+	[NOT REQUIRED] mysql#mysql-connector-java;5.1.35!mysql-connector-java.jar
 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.4!commons-lang3.jar
 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.1!scala-xml_2.11.jar(bundle)
 	[NOT REQUIRED] org.javassist#javassist;3.18.2-GA!javassist.jar(bundle)
@@ -3725,60 +3762,31 @@ sbt-chain: module revision found in cache: net.contentobjects.jnotify#jnotify;0.
 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.11;2.3.8!akka-actor_2.11.jar
 	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.11;2.3.8!akka-testkit_2.11.jar
 	[NOT REQUIRED] com.typesafe#config;1.2.1!config.jar(bundle)
-:: resolution report :: resolve 8615ms :: artifacts dl 203ms
-	report for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT compile produced in C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.11-compile.xml
-	report for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT runtime produced in C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.11-runtime.xml
-	report for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT test produced in C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.11-test.xml
-	report for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT provided produced in C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.11-provided.xml
-	report for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT optional produced in C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.11-optional.xml
-	report for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT compile-internal produced in C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.11-compile-internal.xml
-	report for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT runtime-internal produced in C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.11-runtime-internal.xml
-	report for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT test-internal produced in C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.11-test-internal.xml
-	report for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT plugin produced in C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.11-plugin.xml
-	report for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT sources produced in C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.11-sources.xml
-	report for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT docs produced in C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.11-docs.xml
-	report for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT pom produced in C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.11-pom.xml
-	report for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT scala-tool produced in C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.11-scala-tool.xml
-	report for play-java-intro#play-java-intro_2.11;1.0-SNAPSHOT fork-run produced in C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\resolution-cache\reports\play-java-intro-play-java-intro_2.11-fork-run.xml
-	resolve done (8615ms resolve - 203ms download)
+:: resolution report :: resolve 6634ms :: artifacts dl 328ms
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT compile produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-compile.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT runtime produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-runtime.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT test produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-test.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT provided produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-provided.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT optional produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-optional.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT compile-internal produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-compile-internal.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT runtime-internal produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-runtime-internal.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT test-internal produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-test-internal.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT plugin produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-plugin.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT sources produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-sources.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT docs produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-docs.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT pom produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-pom.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT scala-tool produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-scala-tool.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT fork-run produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-fork-run.xml
+	resolve done (6634ms resolve - 328ms download)
 Read from stdout: Done updating.
 Done updating.
-Total time: 10 s, completed 13.10.2017 09:25:46
+Total time: 8 s, completed 13.10.2017 16:35:08
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@25606b2c, check cycles: false
-Total time: 0 s, completed 13.10.2017 09:25:51
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Fabio/GDrive/dev/CheapEat/play-java-intro/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@1e88d762, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	(C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\conf\application.conf,C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\scala-2.11\classes\application.conf)
-	(C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\conf\logback.xml,C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\scala-2.11\classes\logback.xml)
-	(C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\conf\META-INF,C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\scala-2.11\classes\META-INF)
-	(C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\conf\routes,C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\scala-2.11\classes\routes)
-	(C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\conf\META-INF\persistence.xml,C:\Users\Fabio\GDrive\dev\CheapEat\play-java-intro\target\scala-2.11\classes\META-INF\persistence.xml)
-Warning: node.js detection failed, sbt will use the Rhino based Trireme JavaScript engine instead to run JavaScript assets compilation, which in some cases may be orders of magnitude slower than using node.js.
-Total time: 3 s, completed 13.10.2017 09:26:36
+Running task... Cancel: sbt.server.ServerTaskCancellation@a51fcff, check cycles: false
+Total time: 0 s, completed 13.10.2017 16:35:13
 > server-post-command-cleanup
 > server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
@@ -3787,4 +3795,4 @@ Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 6000@Fabio-SF logs at Fri Oct 13 09:27:53 CEST 2017, goodbye.
+Closing the 8564@Fabio-SF logs at Fri Oct 13 16:37:35 CEST 2017, goodbye.
