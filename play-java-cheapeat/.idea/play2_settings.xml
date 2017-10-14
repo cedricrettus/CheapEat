@@ -3,11 +3,8 @@
   <component name="Play2ProjectSettings">
     <option name="LANGUAGE_IMPORTS">
       <array>
-        <option value="play.api.data.Field" />
-<<<<<<< HEAD
-=======
         <option value="play.data._" />
->>>>>>> e434468be8ffa6034b90ccf1cdf241f7fe16c5e9
+        <option value="play.api.data.Field" />
         <option value="play.api.templates.PlayMagic._" />
         <option value="scala.collection.JavaConversions._" />
         <option value="java.lang._" />
