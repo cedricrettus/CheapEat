@@ -3,11 +3,51 @@
 @main("CheapEat - Home") {
 
     <script src="@routes.Assets.at("js/home.js")" type="text/javascript"></script>
+    <div class="content">
+        <div class="container">
+            <h1>Angebot erstellen</h1>
+                <div class="panel panel-default">
+                    <form method="POST" action="/angebot"> <!--  routes.Application.getPerson() -->
+                        <div class="form-group">
+                            <label for="titel" >Titel: </label>
+                            <input type="text" name="titel" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="beschreibung" >Beschreibung: </label>
+                            <input type="text" name="beschreibung" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="zeit" >Zeit: </label>
+                            <input type="text" name="zeit" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="datum" >Datum: </label>
+                            <input type="date" name="datum" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="kueche" >Küche: </label>
+                            <input type="text" name="kueche" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="menge" >Menge: </label>
+                            <input type="text" name="menge" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label for="preis" >Preis: </label>
+                            <input type="text" name="preis" class="form-control" />
+                        </div>
+                        <button type="submit">Angebot erstellen</button>
+                    </form>
+                </div>
 
-    <ul id="angebote"></ul>
+            <h1>Alle Angebote</h1>
+            <ul id="angebote"></ul>
+            </div>
 
-    <form method="POST" action="/angebot"> <!--  routes.Application.getPerson() -->
-        <input type="text" name="name"/>
-        <button>Angebot erstellen</button>
-    </form>
+
+
+
+    </div>
+
+
 }
