@@ -12,7 +12,7 @@ public class Angebot {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-	public String id;
+	public int id;
 
     public String titel;
 
