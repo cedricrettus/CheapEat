@@ -70,10 +70,10 @@ CREATE TABLE benutzeradressen(
 
 # --- !Downs
 
-DROP table angebote;
-DROP table benutzer;
-DROP table benutzeradressen;
-DROP table adressen;
-DROP table bilder;
-DROP table bilderangebote;
-DROP table bestellungen;
+-- DROP table angebote;
+-- DROP table benutzer;
+-- DROP table benutzeradressen;
+-- DROP table adressen;
+-- DROP table bilder;
+-- DROP table bilderangebote;
+-- DROP table bestellungen;
