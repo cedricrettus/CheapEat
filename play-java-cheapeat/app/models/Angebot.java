@@ -14,6 +14,10 @@ public class Angebot {
     @GeneratedValue(strategy=GenerationType.AUTO)
 	public int id;
 
+    public int benutzer_id;
+
+    public int adressen_id;
+
     public String titel;
 
     public String beschreibung;
