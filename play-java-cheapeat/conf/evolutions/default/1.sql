@@ -13,16 +13,16 @@ CREATE TABLE angebote(
   zeit TIME,
   menge INTEGER,
   preis DOUBLE,
-  FOREIGN KEY (benutzer_id) REFERENCES benutzer(id),
-  FOREIGN KEY (adressen_id) REFERENCES adressen(id)
+  -- FOREIGN KEY (benutzer_id) REFERENCES benutzer(id),
+  -- FOREIGN KEY (adressen_id) REFERENCES adressen(id)
 );
 
 CREATE TABLE bilderangebote(
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   angebote_id INTEGER,
   bilder_id INTEGER,
-  FOREIGN KEY (angebote_id) REFERENCES angebote(id),
-  FOREIGN KEY (bilder_id) REFERENCES bilder(id)
+  -- FOREIGN KEY (angebote_id) REFERENCES angebote(id),
+  -- FOREIGN KEY (bilder_id) REFERENCES bilder(id)
 );
 
 CREATE TABLE bilder(
@@ -46,8 +46,8 @@ CREATE TABLE bestellungen(
   angebote_id INTEGER,
   menge INTEGER NOT NULL,
   prozesscode INTEGER NOT NULL,
-  FOREIGN KEY (benutzer_id) REFERENCES benutzer(id),
-  FOREIGN KEY (angebote_id) REFERENCES angebote(id)
+  -- FOREIGN KEY (benutzer_id) REFERENCES benutzer(id),
+  -- FOREIGN KEY (angebote_id) REFERENCES angebote(id)
 );
 
 CREATE TABLE adressen(
@@ -63,8 +63,8 @@ CREATE TABLE benutzeradressen(
   id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   benutzer_id INTEGER,
   adressen_id INTEGER,
-  FOREIGN KEY (adressen_id) REFERENCES adressen(id),
-  FOREIGN KEY (benutzer_id) REFERENCES benutzer(id)
+  -- FOREIGN KEY (adressen_id) REFERENCES adressen(id),
+  -- FOREIGN KEY (benutzer_id) REFERENCES benutzer(id)
 );
 
 
