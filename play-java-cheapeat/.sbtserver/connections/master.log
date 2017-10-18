@@ -1,7 +1,13 @@
-New log file opened at Sun Oct 15 21:34:33 CEST 2017 by 15612@Fabio-PC
-Taking next connection to: 50598
-New client attempting to connect on port: 50600-50598
-  Address = /192.168.0.126:50598
-This client on port 50600 has uuid 7a0580a2-b411-4cea-b437-559a411921d2 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-7a0580a2-b411-4cea-b437-559a411921d2
-Taking next connection to: 50598
+New log file opened at Wed Oct 18 11:46:55 CEST 2017 by 1728@DESKTOP-S7IFK17
+Taking next connection to: 49799
+New client attempting to connect on port: 49800-49799
+  Address = /192.168.119.1:49799
+This client on port 49800 has uuid f69f4bf3-02ba-4305-9216-138d144608c5 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-f69f4bf3-02ba-4305-9216-138d144608c5
+Taking next connection to: 49799
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 1728@DESKTOP-S7IFK17 logs at Wed Oct 18 11:49:55 CEST 2017, goodbye.

@@ -1319,3 +1319,22 @@ Caused by: java.lang.IllegalArgumentException:
 	at org.h2.util.DateTimeUtils.parseTimeNanos(DateTimeUtils.java:343)
 	at org.h2.value.ValueTime.parse(ValueTime.java:79)
 	... 84 more
+2017-10-18 10:59:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "BENUTZER" not found; SQL statement:
+CREATE TABLE angebote(
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+benutzer_id INTEGER,
+adressen_id INTEGER,
+titel VARCHAR(255) NOT NULL,
+beschreibung VARCHAR(255),
+kueche VARCHAR(255),
+datum DATE,
+zeit TIME,
+menge INTEGER,
+preis DOUBLE,
+FOREIGN KEY (benutzer_id) REFERENCES benutzer(id),
+FOREIGN KEY (adressen_id) REFERENCES adressen(id)
+) [42102-192]
+2017-10-18 11:03:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "ANGEBOTE" not found; SQL statement:
+DROP table angebote [42102-192]

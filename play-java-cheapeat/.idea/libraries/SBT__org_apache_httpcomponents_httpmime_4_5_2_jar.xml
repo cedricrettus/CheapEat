@@ -2,6 +2,7 @@
   <library name="SBT: org.apache.httpcomponents:httpmime:4.5.2:jar">
     <CLASSES>
       <root url="jar://C:/dev/play/activator/repository/org.apache.httpcomponents/httpmime/4.5.2/jars/httpmime.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.httpcomponents/httpmime/jars/httpmime-4.5.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
