@@ -1,5 +1,5 @@
-New log file opened at Wed Oct 18 11:46:55 CEST 2017 by 1728@DESKTOP-S7IFK17
-jvm 1728@DESKTOP-S7IFK17
+New log file opened at Thu Oct 19 11:21:56 CEST 2017 by 11208@DESKTOP-S7IFK17
+jvm 11208@DESKTOP-S7IFK17
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.121-b13
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in C:\Users\csutter\.sbt\0.13\plugins, returning: (global-plugins)
 Loading global plugins from C:\Users\csutter\.sbt\0.13\plugins
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@b01ce8e, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@2b87686b, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -62,7 +62,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\project, returning: (play-java-cheapeat-build)
 Loading project definition from C:\Users\csutter\dev\CheapEat\play-java-cheapeat\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@b01ce8e, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@2b87686b, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -102,10 +102,3 @@ Set current project to play-java-cheapeat (in build file:/C:/Users/csutter/dev/C
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-Done executing sbt server engine, result Right(Exit(0))
-Closing listening server socket
-Waiting for socket thread
-Waiting for request processor thread
-Waiting for command engine result
-Returning control to sbt launcher with result Exit(0)
-Closing the 1728@DESKTOP-S7IFK17 logs at Wed Oct 18 11:49:55 CEST 2017, goodbye.

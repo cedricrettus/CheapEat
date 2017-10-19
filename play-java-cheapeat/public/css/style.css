@@ -1,0 +1,9 @@
+nav.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+}
