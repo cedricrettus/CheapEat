@@ -4,84 +4,105 @@
 
     <script src="@routes.Assets.at("js/home.js")" type="text/javascript"></script>
 
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">CheapEat</h1>
+        </div>
+    </div>
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-between">
+        <a class="navbar-brand" href="#">CheapEat</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalLong">
+                    Angebot erstellen!
                 </button>
-                <a class="navbar-brand" href="#">CheapEat</a>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                            Angebot erstellen!
-                    </button>
-                    </div>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="PLZ" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Suchen</button>
+            </form>
         </div>
     </nav>
 
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="container-angebot">
-                    <h1>Angebot erstellen</h1>
-                    <div class="panel panel-default">
-                        <form method="POST" action="/angebot"> <!--  routes.Application.getPerson() -->
-                            <div class="form-group">
-                                <label for="titel" >Titel: </label>
-                                <input type="text" name="titel" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label for="beschreibung" >Beschreibung: </label>
-                                <input type="text" name="beschreibung" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label for="zeit" >Zeit: </label>
-                                <input type="text" name="zeit" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label for="datum" >Datum: </label>
-                                <input type="date" name="datum" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label for="kueche" >Küche: </label>
-                                <input type="text" name="kueche" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label for="menge" >Menge: </label>
-                                <input type="text" name="menge" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label for="preis" >Preis: </label>
-                                <input type="text" name="preis" class="form-control" />
-                            </div>
-                            <button type="submit">Angebot erstellen</button>
-                        </form>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Angebot erstellen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-angebot">
+                        <h1>Angebot erstellen</h1>
+                        <div class="panel panel-default">
+                            <form method="POST" action="/angebot"> <!--  routes.Application.getPerson() -->
+                                <div class="form-group">
+                                    <label for="titel" >Titel: </label>
+                                    <input type="text" name="titel" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="beschreibung" >Beschreibung: </label>
+                                    <input type="text" name="beschreibung" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="zeit" >Zeit: </label>
+                                    <input type="text" name="zeit" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="datum" >Datum: </label>
+                                    <input type="date" name="datum" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="kueche" >Küche: </label>
+                                    <input type="text" name="kueche" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="menge" >Menge: </label>
+                                    <input type="text" name="menge" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="preis" >Preis: </label>
+                                    <input type="text" name="preis" class="form-control" />
+                                </div>
+                                <button type="submit">Angebot erstellen</button>
+                            </form>
+                        </div>
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit">Angebot erstellen</button>
                 </div>
             </div>
         </div>
     </div>
 
 
-
     <div class="content">
-            <h1>Alle Angebote</h1>
-            <ul id="angebote"></ul>
+        <div class="container">
+                <h1>Angebote</h1>
+                <ul id="angebote"></ul>
+                <h1>hello</h1>
+            <h1>hello</h1>
+            <h1>hello</h1>
+            <h1>hello</h1>
+            <h1>hello</h1>
+            <h1>hello</h1>
+            <h1>hello</h1>
+            <h1>hello</h1>
+            <h1>hello</h1>
+        </div>
     </div>
 
 
 
-    </div>
 
 
 }
