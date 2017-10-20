@@ -51,6 +51,7 @@ public class Application extends Controller {
 
     @Transactional
     public Result addAngebot() {
+        // TODO change to Angebot
         Form<CreateAngebot> submission = formFactory.form(CreateAngebot.class).bindFromRequest();
         if(submission.hasErrors()){
             System.out.println("Form error");

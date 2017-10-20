@@ -1,5 +1,7 @@
 package models;
 
+import play.data.validation.Constraints;
+
 import javax.persistence.*;
 import javax.xml.crypto.Data;
 import java.sql.Time;
@@ -18,6 +20,7 @@ public class Angebot {
 
     public int adressen_id;
 
+    @Constraints.Required
     public String titel;
 
     public String beschreibung;
