@@ -1,31 +1,13 @@
-New log file opened at Fri Oct 20 12:55:25 CEST 2017 by 11360@DESKTOP-S7IFK17
-Taking next connection to: 51459
-New client attempting to connect on port: 51460-51459
-  Address = /192.168.119.1:51459
-This client on port 51460 has uuid 0c9f42ec-22c7-46df-ab9c-aa3ed1f9461b configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-0c9f42ec-22c7-46df-ab9c-aa3ed1f9461b
-Taking next connection to: 51459
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 51459
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 51459
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 51459
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 51459
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 51459
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 51459
+New log file opened at Fri Oct 20 13:29:05 CEST 2017 by 9652@DESKTOP-S7IFK17
+Taking next connection to: 65195
+New client attempting to connect on port: 65196-65195
+  Address = /192.168.119.1:65195
+This client on port 65196 has uuid e3664779-092c-4c4c-a7b8-7e105bede1a6 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-e3664779-092c-4c4c-a7b8-7e105bede1a6
+Taking next connection to: 65195
 Checking to see if clients are empty...
 No non-daemon clients connected after 3 min. Shutting down.
 Server socket thread exiting.
 0 clients open, will close them...
 All client sockets have been closed.
-Closing the 11360@DESKTOP-S7IFK17 logs at Fri Oct 20 13:16:26 CEST 2017, goodbye.
+Closing the 9652@DESKTOP-S7IFK17 logs at Fri Oct 20 13:32:08 CEST 2017, goodbye.
