@@ -37,6 +37,10 @@ $(document).ready(function() {
         $('#angebotModal').modal('toggle');
     });
 
+    $('#angebotSubmit').click(function(){
+        $('#angebotForm').submit();
+    })
+
 }); //document ready closing
 
 

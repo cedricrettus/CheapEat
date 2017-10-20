@@ -25,6 +25,10 @@ public class Angebot {
 
     public String beschreibung;
 
+    @Constraints.Email
+    @Constraints.Required
+    public String email;
+
     @Temporal(TemporalType.DATE)
     public Date datum;
 
