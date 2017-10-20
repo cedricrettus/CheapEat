@@ -1,22 +1,22 @@
-New log file opened at Fri Oct 20 12:34:24 CEST 2017 by 3012@DESKTOP-S7IFK17
-jvm 3012@DESKTOP-S7IFK17
-jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.121-b13
+New log file opened at Fri Oct 20 13:00:54 CEST 2017 by 16280@Fabio-PC
+jvm 16280@Fabio-PC
+jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.144-b01
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
 Starting event engine
 Starting sbt command engine
 Waiting for sbt command engine
 Command engine arguments=List()
-Command engine baseDirectory=C:\Users\csutter\dev\CheapEat\play-java-cheapeat
+Command engine baseDirectory=C:\dev\git\CheapEat\play-java-cheapeat
 Command engine initial remaining commands List(--initialize, onFailure load-failed, boot, server-send-ready-for-request, server-handle-next-server-request)
 > --initialize
 > initialize
 > onFailure load-failed
 > boot
 > reload
-[Loading] Scanning directory C:\Users\csutter\.sbt\0.13\plugins
+[Loading] Scanning directory C:\Users\Fabio\.sbt\0.13\plugins
 [Loading] Found non-root projects 
-[Loading] Done in C:\Users\csutter\.sbt\0.13\plugins, returning: ()
+[Loading] Done in C:\Users\Fabio\.sbt\0.13\plugins, returning: ()
 deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))))
   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.JUnitXmlReportPlugin)
 sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
@@ -25,9 +25,9 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin) not found List(sbt.plugins.JUnitXmlReportPlugin)
   :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin) not found List()
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
-[Loading] Done in C:\Users\csutter\.sbt\0.13\plugins, returning: (global-plugins)
-Loading global plugins from C:\Users\csutter\.sbt\0.13\plugins
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@725cd605, check cycles: false
+[Loading] Done in C:\Users\Fabio\.sbt\0.13\plugins, returning: (global-plugins)
+Loading global plugins from C:\Users\Fabio\.sbt\0.13\plugins
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@6e70ab3b, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -49,9 +49,9 @@ Copy resource mappings:
 Other repositories:
 Default repositories:
 Using inline dependencies specified in Scala.
-[Loading] Scanning directory C:\Users\csutter\dev\CheapEat\play-java-cheapeat\project
+[Loading] Scanning directory C:\dev\git\CheapEat\play-java-cheapeat\project
 [Loading] Found non-root projects 
-[Loading] Done in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\project, returning: ()
+[Loading] Done in C:\dev\git\CheapEat\play-java-cheapeat\project, returning: ()
 deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))))
   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.JUnitXmlReportPlugin)
 sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
@@ -60,9 +60,9 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin) not found List(sbt.plugins.JUnitXmlReportPlugin)
   :: sorting:: found: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin) not found List()
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
-[Loading] Done in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\project, returning: (play-java-cheapeat-build)
-Loading project definition from C:\Users\csutter\dev\CheapEat\play-java-cheapeat\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@725cd605, check cycles: false
+[Loading] Done in C:\dev\git\CheapEat\play-java-cheapeat\project, returning: (play-java-cheapeat-build)
+Loading project definition from C:\dev\git\CheapEat\play-java-cheapeat\project
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@6e70ab3b, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -81,7 +81,7 @@ All initially invalidated sources: Set()
 
 Copy resource mappings: 
 	
-[Loading] Scanning directory C:\Users\csutter\dev\CheapEat\play-java-cheapeat
+[Loading] Scanning directory C:\dev\git\CheapEat\play-java-cheapeat
 [Loading] Found root project root w/ remaining 
 deducing auto plugins based on known facts Set(Atom(play.sbt.PlayJava), Atom(sbt.plugins.CorePlugin)) and clauses Clauses(List(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.forkrun.PlayForkRun),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(Atom(play.sbt.Play),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.routes.RoutesCompiler))), Clause(Atom(play.sbt.Play),Set(Atom(play.twirl.sbt.SbtTwirl))), Clause(Atom(play.sbt.Play),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(play.sbt.PlayAkkaHttpServer),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayJava),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayLayoutPlugin),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayLogback),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayNettyServer),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.PlayScala),Set(Atom(play.sbt.Play))), Clause(Atom(play.sbt.routes.RoutesCompiler),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(play.twirl.sbt.SbtTwirl),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.AkkaAppPackaging),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.docker.DockerPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging),Set(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin))), Clause(Atom(com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.archetypes.jar.ClasspathJarPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.archetypes.jar.LauncherJarPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.debian.DebianDeployPlugin),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.debian.DebianPlugin),Set(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin))), Clause(Atom(com.typesafe.sbt.packager.debian.JDebPackaging),Set(Atom(com.typesafe.sbt.packager.debian.DebianPlugin))), Clause(Atom(com.typesafe.sbt.packager.docker.DockerPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerDeployPlugin),Set(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.JavaAppPackaging))), Clause(Atom(com.typesafe.sbt.packager.jdkpackager.JDKPackagerPlugin),Set(Atom(com.typesafe.sbt.packager.archetypes.jar.LauncherJarPlugin))), Clause(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.rpm.RpmDeployPlugin),Set(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin))), Clause(Atom(com.typesafe.sbt.packager.rpm.RpmPlugin),Set(Atom(com.typesafe.sbt.packager.linux.LinuxPlugin))), Clause(Atom(com.typesafe.sbt.packager.universal.UniversalDeployPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin),Set(Atom(com.typesafe.sbt.SbtNativePackager))), Clause(Atom(com.typesafe.sbt.packager.windows.WindowsDeployPlugin),Set(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin))), Clause(Atom(com.typesafe.sbt.packager.windows.WindowsPlugin),Set(Atom(com.typesafe.sbt.packager.universal.UniversalPlugin))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.BackgroundRunPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(com.typesafe.sbt.coffeescript.SbtCoffeeScript),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.less.SbtLess),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.jshint.SbtJSHint),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.rjs.SbtRjs),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(com.typesafe.sbt.digest.SbtDigest),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.sbt.mocha.SbtMocha),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(org.irundaia.sbt.sass.SbtSassify),Set(Atom(com.typesafe.sbt.web.SbtWeb))), Clause(Atom(com.typesafe.play.sbt.enhancer.PlayEnhancer),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin))), Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin))), Clause(And(Set(Atom(sbt.plugins.BackgroundRunPlugin), Atom(play.sbt.Play), Atom(sbt.plugins.SerializersPlugin))),Set(Atom(play.sbt.forkrun.PlayForkRun))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.PlayLayoutPlugin))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.PlayLogback))), Clause(Atom(play.sbt.Play),Set(Atom(play.sbt.PlayNettyServer))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.BackgroundRunPlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.InteractionServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SendEventServicePlugin))), Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.SerializersPlugin))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.coffeescript.SbtCoffeeScript))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.less.SbtLess))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.jshint.SbtJSHint))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.rjs.SbtRjs))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.jse.SbtJsEngine))), Clause(Atom(com.typesafe.sbt.jse.SbtJsEngine),Set(Atom(com.typesafe.sbt.jse.SbtJsTask))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(com.typesafe.sbt.digest.SbtDigest))), Clause(Atom(com.typesafe.sbt.jse.SbtJsTask),Set(Atom(com.typesafe.sbt.mocha.SbtMocha))), Clause(Atom(com.typesafe.sbt.web.SbtWeb),Set(Atom(org.irundaia.sbt.sass.SbtSassify))), Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(com.typesafe.play.sbt.enhancer.PlayEnhancer)))))
   :: deduced result: Matched(sbt.plugins.CorePlugin,play.sbt.PlayJava,sbt.plugins.InteractionServicePlugin,sbt.plugins.SendEventServicePlugin,play.sbt.Play,sbt.plugins.SerializersPlugin,sbt.plugins.IvyPlugin,com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging,play.twirl.sbt.SbtTwirl,sbt.plugins.JvmPlugin,play.sbt.PlayNettyServer,play.sbt.PlayLayoutPlugin,play.sbt.routes.RoutesCompiler,play.sbt.PlayLogback,com.typesafe.sbt.jse.SbtJsTask,com.typesafe.sbt.jshint.SbtJSHint,com.typesafe.play.sbt.enhancer.PlayEnhancer,com.typesafe.sbt.packager.archetypes.JavaAppPackaging,sbt.plugins.JUnitXmlReportPlugin,com.typesafe.sbt.mocha.SbtMocha,com.typesafe.sbt.less.SbtLess,com.typesafe.sbt.rjs.SbtRjs,com.typesafe.sbt.jse.SbtJsEngine,com.typesafe.sbt.coffeescript.SbtCoffeeScript,sbt.plugins.BackgroundRunPlugin,com.typesafe.sbt.packager.rpm.RpmPlugin,com.typesafe.sbt.packager.windows.WindowsPlugin,com.typesafe.sbt.web.SbtWeb,com.typesafe.sbt.packager.docker.DockerPlugin,play.sbt.forkrun.PlayForkRun,com.typesafe.sbt.packager.debian.DebianPlugin,org.irundaia.sbt.sass.SbtSassify,com.typesafe.sbt.digest.SbtDigest,com.typesafe.sbt.packager.universal.UniversalPlugin,com.typesafe.sbt.packager.linux.LinuxPlugin,com.typesafe.sbt.SbtNativePackager)
@@ -95,18 +95,18 @@ sorting: ns: List(sbt.plugins.CorePlugin, play.sbt.PlayJava, sbt.plugins.Interac
   :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.universal.UniversalPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.packager.docker.DockerPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin, play.twirl.sbt.SbtTwirl, play.sbt.routes.RoutesCompiler, com.typesafe.play.sbt.enhancer.PlayEnhancer, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.debian.DebianPlugin, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, com.typesafe.sbt.jse.SbtJsEngine, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, com.typesafe.sbt.jse.SbtJsTask, play.sbt.Play, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript) not found List(play.sbt.PlayJava, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.PlayLogback, play.sbt.forkrun.PlayForkRun)
   :: sorting:: found: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.universal.UniversalPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.packager.docker.DockerPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin, play.twirl.sbt.SbtTwirl, play.sbt.routes.RoutesCompiler, com.typesafe.play.sbt.enhancer.PlayEnhancer, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.debian.DebianPlugin, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, com.typesafe.sbt.jse.SbtJsEngine, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, com.typesafe.sbt.jse.SbtJsTask, play.sbt.Play, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, play.sbt.PlayJava, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.PlayLogback, play.sbt.forkrun.PlayForkRun) not found List()
   :: sorted deduced result: List(sbt.plugins.CorePlugin, com.typesafe.sbt.SbtNativePackager, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.packager.universal.UniversalPlugin, sbt.plugins.JvmPlugin, com.typesafe.sbt.packager.windows.WindowsPlugin, com.typesafe.sbt.packager.docker.DockerPlugin, com.typesafe.sbt.packager.linux.LinuxPlugin, play.twirl.sbt.SbtTwirl, play.sbt.routes.RoutesCompiler, com.typesafe.play.sbt.enhancer.PlayEnhancer, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.BackgroundRunPlugin, com.typesafe.sbt.packager.rpm.RpmPlugin, com.typesafe.sbt.web.SbtWeb, com.typesafe.sbt.packager.debian.DebianPlugin, com.typesafe.sbt.packager.archetypes.JavaAppPackaging, com.typesafe.sbt.jse.SbtJsEngine, org.irundaia.sbt.sass.SbtSassify, com.typesafe.sbt.digest.SbtDigest, com.typesafe.sbt.packager.archetypes.JavaServerAppPackaging, com.typesafe.sbt.jse.SbtJsTask, play.sbt.Play, com.typesafe.sbt.jshint.SbtJSHint, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, play.sbt.PlayJava, play.sbt.PlayNettyServer, play.sbt.PlayLayoutPlugin, play.sbt.PlayLogback, play.sbt.forkrun.PlayForkRun)
-[Loading] Done in C:\Users\csutter\dev\CheapEat\play-java-cheapeat, returning: (root)
-Set current project to play-java-cheapeat (in build file:/C:/Users/csutter/dev/CheapEat/play-java-cheapeat/)
+[Loading] Done in C:\dev\git\CheapEat\play-java-cheapeat, returning: (root)
+Set current project to play-java-cheapeat (in build file:/C:/dev/git/CheapEat/play-java-cheapeat/)
 Reapplying settings...
-Set current project to play-java-cheapeat (in build file:/C:/Users/csutter/dev/CheapEat/play-java-cheapeat/)
+Set current project to play-java-cheapeat (in build file:/C:/dev/git/CheapEat/play-java-cheapeat/)
 > iflast shell
 > server-send-ready-for-request
 > server-handle-next-server-request
-> {file:/C:/Users/csutter/dev/CheapEat/play-java-cheapeat/}root/*:playForkConfig
+> {file:/C:/dev/git/CheapEat/play-java-cheapeat/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@4daf69c5, check cycles: false
-Read from stdout: Updating {file:/C:/Users/csutter/dev/CheapEat/play-java-cheapeat/}root...
-Updating {file:/C:/Users/csutter/dev/CheapEat/play-java-cheapeat/}root...
+Running task... Cancel: sbt.server.ServerTaskCancellation@4e155820, check cycles: false
+Read from stdout: Updating {file:/C:/dev/git/CheapEat/play-java-cheapeat/}root...
+Updating {file:/C:/dev/git/CheapEat/play-java-cheapeat/}root...
 Other repositories:
 Default repositories:
 Using inline dependencies specified in Scala.
@@ -119,7 +119,7 @@ resolving dependencies for configuration 'compile'
 == resolving dependencies play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.7 [compile->default(compile)]
 Read from stdout: Resolving org.scala-lang#scala-library;2.11.7 ...
 Resolving org.scala-lang#scala-library;2.11.7 ...
-sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@12d6c236
+sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@76c3dcd2
 sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7
 	found org.scala-lang#scala-library;2.11.7 in sbt-chain
 	[2.11.7] org.scala-lang#scala-library;2.11.7
@@ -1198,12 +1198,12 @@ sbt-chain: Checking cache for: dependency: com.jolbox#bonecp;0.8.0.RELEASE {comp
 sbt-chain: module revision found in cache: com.jolbox#bonecp;0.8.0.RELEASE
 	found com.jolbox#bonecp;0.8.0.RELEASE in sbt-chain
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->compile(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->master(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->master(*)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->master(compile)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->master(compile)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->compile(*)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->compile(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->master(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->master(*)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->master(compile)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->master(compile)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->runtime(*)]
@@ -1373,8 +1373,8 @@ sbt-chain: Checking cache for: dependency: dom4j#dom4j;1.6.1 {compile=[compile(*
 sbt-chain: module revision found in cache: dom4j#dom4j;1.6.1
 	found dom4j#dom4j;1.6.1 in sbt-chain
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->dom4j#dom4j;1.6.1 [compile->compile(*)]
-== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->master(*)]
-== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->master(*)]
+== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->master(compile)]
+== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->master(compile)]
 == resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->compile(*)]
 == resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->compile(*)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->dom4j#dom4j;1.6.1 [compile->runtime(*)]
@@ -2141,12 +2141,12 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->compile(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->master(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->master(*)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->master(compile)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->master(compile)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->compile(*)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->compile(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->master(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->master(*)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->master(compile)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->master(compile)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.zaxxer#HikariCP;2.5.1 [compile->master(compile)]
@@ -2238,8 +2238,8 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->org.jboss.spec.javax.transaction#jboss-transaction-api_1.2_spec;1.0.0.Final [compile->compile(*)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->dom4j#dom4j;1.6.1 [compile->master(compile)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->dom4j#dom4j;1.6.1 [compile->compile(*)]
-== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->master(*)]
-== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->master(*)]
+== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->master(compile)]
+== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->master(compile)]
 == resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->compile(*)]
 == resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->compile(*)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->org.hibernate.common#hibernate-commons-annotations;4.0.5.Final [compile->master(compile)]
@@ -2981,12 +2981,12 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->compile(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->master(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->master(*)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->master(compile)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->master(compile)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->compile(*)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->compile(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->master(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->master(*)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->master(compile)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->master(compile)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.zaxxer#HikariCP;2.5.1 [compile->master(compile)]
@@ -3078,8 +3078,8 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->org.jboss.spec.javax.transaction#jboss-transaction-api_1.2_spec;1.0.0.Final [compile->compile(*)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->dom4j#dom4j;1.6.1 [compile->master(compile)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->dom4j#dom4j;1.6.1 [compile->compile(*)]
-== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->master(*)]
-== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->master(*)]
+== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->master(compile)]
+== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->master(compile)]
 == resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->compile(*)]
 == resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->compile(*)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->org.hibernate.common#hibernate-commons-annotations;4.0.5.Final [compile->master(compile)]
@@ -4380,12 +4380,12 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->compile(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->master(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->master(*)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->master(compile)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->master(compile)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->compile(*)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->compile(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->master(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->master(*)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->master(compile)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->master(compile)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.zaxxer#HikariCP;2.5.1 [compile->master(compile)]
@@ -4477,8 +4477,8 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->org.jboss.spec.javax.transaction#jboss-transaction-api_1.2_spec;1.0.0.Final [compile->compile(*)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->dom4j#dom4j;1.6.1 [compile->master(compile)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->dom4j#dom4j;1.6.1 [compile->compile(*)]
-== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->master(*)]
-== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->master(*)]
+== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->master(compile)]
+== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->master(compile)]
 == resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->compile(*)]
 == resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->compile(*)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->org.hibernate.common#hibernate-commons-annotations;4.0.5.Final [compile->master(compile)]
@@ -5222,12 +5222,12 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->compile(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->master(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->master(*)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->master(compile)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->master(compile)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->compile(*)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->compile(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->master(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->master(*)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->master(compile)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->master(compile)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.zaxxer#HikariCP;2.5.1 [compile->master(compile)]
@@ -5319,8 +5319,8 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->org.jboss.spec.javax.transaction#jboss-transaction-api_1.2_spec;1.0.0.Final [compile->compile(*)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->dom4j#dom4j;1.6.1 [compile->master(compile)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->dom4j#dom4j;1.6.1 [compile->compile(*)]
-== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->master(*)]
-== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->master(*)]
+== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->master(compile)]
+== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->master(compile)]
 == resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->compile(*)]
 == resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->compile(*)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->org.hibernate.common#hibernate-commons-annotations;4.0.5.Final [compile->master(compile)]
@@ -6064,12 +6064,12 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.typesafe.play#play-jdbc-api_2.11;2.5.10 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->master(compile)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.jolbox#bonecp;0.8.0.RELEASE [compile->compile(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->master(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->master(*)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->master(compile)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->master(compile)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;15.0 [compile->compile(*)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->com.google.guava#guava;19.0 [compile->compile(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->master(*)]
-== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->master(*)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->master(compile)]
+== resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->master(compile)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.2 [compile->compile(*)]
 == resolving dependencies com.jolbox#bonecp;0.8.0.RELEASE->org.slf4j#slf4j-api;1.7.21 [compile->compile(*)]
 == resolving dependencies com.typesafe.play#play-jdbc_2.11;2.5.10->com.zaxxer#HikariCP;2.5.1 [compile->master(compile)]
@@ -6161,8 +6161,8 @@ excluding dependency: com.google.code.findbugs#annotations;2.0.1 {compile=[compi
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->org.jboss.spec.javax.transaction#jboss-transaction-api_1.2_spec;1.0.0.Final [compile->compile(*)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->dom4j#dom4j;1.6.1 [compile->master(compile)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->dom4j#dom4j;1.6.1 [compile->compile(*)]
-== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->master(*)]
-== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->master(*)]
+== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->master(compile)]
+== resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->master(compile)]
 == resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.0.b2 [compile->compile(*)]
 == resolving dependencies dom4j#dom4j;1.6.1->xml-apis#xml-apis;1.4.01 [compile->compile(*)]
 == resolving dependencies org.hibernate#hibernate-core;4.3.7.Final->org.hibernate.common#hibernate-commons-annotations;4.0.5.Final [compile->master(compile)]
@@ -7908,87 +7908,106 @@ sbt-chain: module revision found in cache: net.contentobjects.jnotify#jnotify;0.
 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.11;2.3.8!akka-actor_2.11.jar
 	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.11;2.3.8!akka-testkit_2.11.jar
 	[NOT REQUIRED] com.typesafe#config;1.2.1!config.jar(bundle)
-:: resolution report :: resolve 6845ms :: artifacts dl 224ms
-	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT compile produced in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-compile.xml
-	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT runtime produced in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-runtime.xml
-	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT test produced in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-test.xml
-	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT provided produced in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-provided.xml
-	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT optional produced in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-optional.xml
-	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT compile-internal produced in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-compile-internal.xml
-	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT runtime-internal produced in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-runtime-internal.xml
-	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT test-internal produced in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-test-internal.xml
-	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT plugin produced in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-plugin.xml
-	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT sources produced in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-sources.xml
-	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT docs produced in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-docs.xml
-	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT pom produced in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-pom.xml
-	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT scala-tool produced in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-scala-tool.xml
-	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT fork-run produced in C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-fork-run.xml
-	resolve done (6845ms resolve - 224ms download)
+:: resolution report :: resolve 2384ms :: artifacts dl 120ms
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT compile produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-compile.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT runtime produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-runtime.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT test produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-test.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT provided produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-provided.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT optional produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-optional.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT compile-internal produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-compile-internal.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT runtime-internal produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-runtime-internal.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT test-internal produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-test-internal.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT plugin produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-plugin.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT sources produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-sources.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT docs produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-docs.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT pom produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-pom.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT scala-tool produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-scala-tool.xml
+	report for play-java-cheapeat#play-java-cheapeat_2.11;1.0-SNAPSHOT fork-run produced in C:\dev\git\CheapEat\play-java-cheapeat\target\resolution-cache\reports\play-java-cheapeat-play-java-cheapeat_2.11-fork-run.xml
+	resolve done (2384ms resolve - 120ms download)
 Read from stdout: Done updating.
 Done updating.
-Total time: 8 s, completed 20-Oct-2017 12:52:27
+Total time: 3 s, completed 20.10.2017 13:06:46
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@5363ab1, check cycles: false
-Total time: 0 s, completed 20-Oct-2017 12:52:28
+Running task... Cancel: sbt.server.ServerTaskCancellation@2e45a1b6, check cycles: false
+Total time: 0 s, completed 20.10.2017 13:06:47
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Users/csutter/dev/CheapEat/play-java-cheapeat/}root/*:playForkReload
+> {file:/C:/dev/git/CheapEat/play-java-cheapeat/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@9f09630, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@c97d079, check cycles: false
 
 Initial source changes: 
 	removed:Set()
 	added: Set()
-	modified: Set(C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\scala-2.11\twirl\main\views\html\index.template.scala)
+	modified: Set(C:\dev\git\CheapEat\play-java-cheapeat\app\models\Angebot.java, C:\dev\git\CheapEat\play-java-cheapeat\app\controllers\Application.java, C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\twirl\main\views\html\index.template.scala)
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Initial directly invalidated sources: Set(C:\dev\git\CheapEat\play-java-cheapeat\app\models\Angebot.java, C:\dev\git\CheapEat\play-java-cheapeat\app\controllers\Application.java, C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\twirl\main\views\html\index.template.scala)
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
-All initially invalidated sources: Set(C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\scala-2.11\twirl\main\views\html\index.template.scala)
+All initially invalidated sources: Set(C:\dev\git\CheapEat\play-java-cheapeat\app\models\Angebot.java, C:\dev\git\CheapEat\play-java-cheapeat\app\controllers\Application.java, C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\twirl\main\views\html\index.template.scala)
 
-Read from stdout: Compiling 1 Scala source to C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\scala-2.11\classes...
-Compiling 1 Scala source to C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\scala-2.11\classes...
+Read from stdout: Compiling 1 Scala source and 2 Java sources to C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\classes...
+Compiling 1 Scala source and 2 Java sources to C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\classes...
 Getting compiler-interface from component compiler for Scala 2.11.7
 Other repositories:
 Default repositories:
+Warning: node.js detection failed, sbt will use the Rhino based Trireme JavaScript engine instead to run JavaScript assets compilation, which in some cases may be orders of magnitude slower than using node.js.
 Getting compiler-interface from component compiler for Scala 2.11.7
 Other repositories:
 Default repositories:
-Running cached compiler 49362ae, interfacing (CompilerInterface) with Scala compiler version 2.11.7
+Running cached compiler 4061125c, interfacing (CompilerInterface) with Scala compiler version 2.11.7
 Calling Scala compiler with arguments  (CompilerInterface):
 	-deprecation
 	-unchecked
 	-encoding
 	utf8
 	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_121\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_121\jre\classes;C:\Users\csutter\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
+	C:\Program Files\Java\jdk1.8.0_144\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_144\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_144\jre\classes;C:\Users\Fabio\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar
 	-classpath
-	C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\scala-2.11\classes;C:\Users\csutter\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.1.1.jar;C:\Users\csutter\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.4.jar;C:\Users\csutter\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-enhancer\jars\play-enhancer-1.1.0.jar;C:\Users\csutter\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.5.10.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.5.10.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\csutter\.ivy2\cache\com.typesafe\config\bundles\config-1.3.0.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.6.jar;C:\Users\csutter\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\csutter\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.7.jar;C:\Users\csutter\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.7.8.jar;C:\Users\csutter\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.7.8.jar;C:\Users\csutter\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.7.8.jar;C:\Users\csutter\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.7.8.jar;C:\Users\csutter\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.7.8.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.5.10.jar;C:\Users\csutter\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.21.jar;C:\Users\csutter\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.21.jar;C:\Users\csutter\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.21.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-streams_2.11\jars\play-streams_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\org.reactivestreams\reactive-streams\jars\reactive-streams-1.0.0.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.akka\akka-stream_2.11\jars\akka-stream_2.11-2.4.12.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.4.12.jar;C:\Users\csutter\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.7.0.jar;C:\Users\csutter\.ivy2\cache\com.typesafe\ssl-config-core_2.11\bundles\ssl-config-core_2.11-0.2.1.jar;C:\Users\csutter\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.4.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.4.12.jar;C:\Users\csutter\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.10.jar;C:\Users\csutter\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\csutter\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\csutter\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\csutter\.ivy2\cache\com.google.inject\guice\jars\guice-4.0.jar;C:\Users\csutter\.ivy2\cache\javax.inject\javax.inject\jars\javax.inject-1.jar;C:\Users\csutter\.ivy2\cache\aopalliance\aopalliance\jars\aopalliance-1.0.jar;C:\Users\csutter\.ivy2\cache\com.google.inject.extensions\guice-assistedinject\jars\guice-assistedinject-4.0.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.16.jar;C:\Users\csutter\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.2.4.Final.jar;C:\Users\csutter\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\csutter\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.1.Final.jar;C:\Users\csutter\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.1.0.jar;C:\Users\csutter\.ivy2\cache\javax.el\javax.el-api\jars\javax.el-api-3.0.0.jar;C:\Users\csutter\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.2.7.RELEASE.jar;C:\Users\csutter\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.2.7.RELEASE.jar;C:\Users\csutter\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.2.7.RELEASE.jar;C:\Users\csutter\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.10.jar;C:\Users\csutter\.ivy2\cache\com.google.guava\guava\bundles\guava-19.0.jar;C:\Users\csutter\.ivy2\cache\net.jodah\typetools\bundles\typetools-0.4.4.jar;C:\Users\csutter\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-3.0.1.jar;C:\Users\csutter\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.33.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\jars\netty-reactive-streams-http-1.0.8.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\jars\netty-reactive-streams-1.0.8.jar;C:\Users\csutter\.ivy2\cache\io.netty\netty-handler\jars\netty-handler-4.0.41.Final.jar;C:\Users\csutter\.ivy2\cache\io.netty\netty-buffer\jars\netty-buffer-4.0.41.Final.jar;C:\Users\csutter\.ivy2\cache\io.netty\netty-common\jars\netty-common-4.0.41.Final.jar;C:\Users\csutter\.ivy2\cache\io.netty\netty-transport\jars\netty-transport-4.0.41.Final.jar;C:\Users\csutter\.ivy2\cache\io.netty\netty-codec\jars\netty-codec-4.0.41.Final.jar;C:\Users\csutter\.ivy2\cache\io.netty\netty-codec-http\jars\netty-codec-http-4.0.41.Final.jar;C:\Users\csutter\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.41.Final-linux-x86_64.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-logback_2.11\jars\play-logback_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.7.jar;C:\Users\csutter\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.7.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-jdbc-evolutions_2.11\jars\play-jdbc-evolutions_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\csutter\.ivy2\cache\com.zaxxer\HikariCP\bundles\HikariCP-2.5.1.jar;C:\Users\csutter\.ivy2\cache\com.googlecode.usc\jdbcdslog\jars\jdbcdslog-1.0.6.2.jar;C:\Users\csutter\.ivy2\cache\com.h2database\h2\jars\h2-1.4.192.jar;C:\Users\csutter\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-java-jpa_2.11\jars\play-java-jpa_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.5.10.jar;C:\Users\csutter\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.1-api\jars\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\csutter\.ivy2\cache\org.hibernate\hibernate-entitymanager\jars\hibernate-entitymanager-4.3.7.Final.jar;C:\Users\csutter\.ivy2\cache\org.jboss.logging\jboss-logging-annotations\jars\jboss-logging-annotations-1.2.0.Beta1.jar;C:\Users\csutter\.ivy2\cache\org.hibernate\hibernate-core\jars\hibernate-core-4.3.7.Final.jar;C:\Users\csutter\.ivy2\cache\org.jboss.spec.javax.transaction\jboss-transaction-api_1.2_spec\jars\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Users\csutter\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\csutter\.ivy2\cache\org.hibernate.common\hibernate-commons-annotations\jars\hibernate-commons-annotations-4.0.5.Final.jar;C:\Users\csutter\.ivy2\cache\antlr\antlr\jars\antlr-2.7.7.jar;C:\Users\csutter\.ivy2\cache\org.jboss\jandex\jars\jandex-1.1.0.Final.jar;C:\Users\csutter\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.35.jar
-Scala compilation took 6.021121925 s
+	C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\classes;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.1.1.jar;C:\Users\Fabio\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.4.jar;C:\Users\Fabio\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-enhancer\jars\play-enhancer-1.1.0.jar;C:\Users\Fabio\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.18.2-GA.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-server_2.11\jars\play-server_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe\config\bundles\config-1.3.0.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.9.6.jar;C:\Users\Fabio\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar;C:\Users\Fabio\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.7.jar;C:\Users\Fabio\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.7.8.jar;C:\Users\Fabio\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.7.8.jar;C:\Users\Fabio\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.7.8.jar;C:\Users\Fabio\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jdk8\bundles\jackson-datatype-jdk8-2.7.8.jar;C:\Users\Fabio\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\bundles\jackson-datatype-jsr310-2.7.8.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-netty-utils\jars\play-netty-utils-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.21.jar;C:\Users\Fabio\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.21.jar;C:\Users\Fabio\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.21.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-streams_2.11\jars\play-streams_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\org.reactivestreams\reactive-streams\jars\reactive-streams-1.0.0.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.akka\akka-stream_2.11\jars\akka-stream_2.11-2.4.12.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.4.12.jar;C:\Users\Fabio\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\bundles\scala-java8-compat_2.11-0.7.0.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe\ssl-config-core_2.11\bundles\ssl-config-core_2.11-0.2.1.jar;C:\Users\Fabio\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.4.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.4.12.jar;C:\Users\Fabio\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.10.jar;C:\Users\Fabio\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Fabio\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Fabio\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Fabio\.ivy2\cache\com.google.inject\guice\jars\guice-4.0.jar;C:\Users\Fabio\.ivy2\cache\javax.inject\javax.inject\jars\javax.inject-1.jar;C:\Users\Fabio\.ivy2\cache\aopalliance\aopalliance\jars\aopalliance-1.0.jar;C:\Users\Fabio\.ivy2\cache\com.google.inject.extensions\guice-assistedinject\jars\guice-assistedinject-4.0.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.16.jar;C:\Users\Fabio\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.2.4.Final.jar;C:\Users\Fabio\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Fabio\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.1.Final.jar;C:\Users\Fabio\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.1.0.jar;C:\Users\Fabio\.ivy2\cache\javax.el\javax.el-api\jars\javax.el-api-3.0.0.jar;C:\Users\Fabio\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.2.7.RELEASE.jar;C:\Users\Fabio\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.2.7.RELEASE.jar;C:\Users\Fabio\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.2.7.RELEASE.jar;C:\Users\Fabio\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.10.jar;C:\Users\Fabio\.ivy2\cache\com.google.guava\guava\bundles\guava-19.0.jar;C:\Users\Fabio\.ivy2\cache\net.jodah\typetools\bundles\typetools-0.4.4.jar;C:\Users\Fabio\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-3.0.1.jar;C:\Users\Fabio\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.33.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\jars\play-netty-server_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\jars\netty-reactive-streams-http-1.0.8.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\jars\netty-reactive-streams-1.0.8.jar;C:\Users\Fabio\.ivy2\cache\io.netty\netty-handler\jars\netty-handler-4.0.41.Final.jar;C:\Users\Fabio\.ivy2\cache\io.netty\netty-buffer\jars\netty-buffer-4.0.41.Final.jar;C:\Users\Fabio\.ivy2\cache\io.netty\netty-common\jars\netty-common-4.0.41.Final.jar;C:\Users\Fabio\.ivy2\cache\io.netty\netty-transport\jars\netty-transport-4.0.41.Final.jar;C:\Users\Fabio\.ivy2\cache\io.netty\netty-codec\jars\netty-codec-4.0.41.Final.jar;C:\Users\Fabio\.ivy2\cache\io.netty\netty-codec-http\jars\netty-codec-http-4.0.41.Final.jar;C:\Users\Fabio\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.41.Final-linux-x86_64.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-logback_2.11\jars\play-logback_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.7.jar;C:\Users\Fabio\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.7.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-jdbc-evolutions_2.11\jars\play-jdbc-evolutions_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Fabio\.ivy2\cache\com.zaxxer\HikariCP\bundles\HikariCP-2.5.1.jar;C:\Users\Fabio\.ivy2\cache\com.googlecode.usc\jdbcdslog\jars\jdbcdslog-1.0.6.2.jar;C:\Users\Fabio\.ivy2\cache\com.h2database\h2\jars\h2-1.4.192.jar;C:\Users\Fabio\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-java-jpa_2.11\jars\play-java-jpa_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.5.10.jar;C:\Users\Fabio\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.1-api\jars\hibernate-jpa-2.1-api-1.0.0.Final.jar;C:\Users\Fabio\.ivy2\cache\org.hibernate\hibernate-entitymanager\jars\hibernate-entitymanager-4.3.7.Final.jar;C:\Users\Fabio\.ivy2\cache\org.jboss.logging\jboss-logging-annotations\jars\jboss-logging-annotations-1.2.0.Beta1.jar;C:\Users\Fabio\.ivy2\cache\org.hibernate\hibernate-core\jars\hibernate-core-4.3.7.Final.jar;C:\Users\Fabio\.ivy2\cache\org.jboss.spec.javax.transaction\jboss-transaction-api_1.2_spec\jars\jboss-transaction-api_1.2_spec-1.0.0.Final.jar;C:\Users\Fabio\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Fabio\.ivy2\cache\org.hibernate.common\hibernate-commons-annotations\jars\hibernate-commons-annotations-4.0.5.Final.jar;C:\Users\Fabio\.ivy2\cache\antlr\antlr\jars\antlr-2.7.7.jar;C:\Users\Fabio\.ivy2\cache\org.jboss\jandex\jars\jandex-1.1.0.Final.jar;C:\Users\Fabio\.ivy2\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.35.jar
+Scala compilation took 2.506337568 s
+Attempting to call com.sun.tools.javac.api.JavacTool@6edd883d directly...
+Read from stdout: C:\dev\git\CheapEat\play-java-cheapeat\app\controllers\Application.java: C:\dev\git\CheapEat\play-java-cheapeat\app\controllers\Application.java uses unchecked or unsafe operations.
+C:\dev\git\CheapEat\play-java-cheapeat\app\controllers\Application.java: C:\dev\git\CheapEat\play-java-cheapeat\app\controllers\Application.java uses unchecked or unsafe operations.
+Read from stdout: C:\dev\git\CheapEat\play-java-cheapeat\app\controllers\Application.java: Recompile with -Xlint:unchecked for details.
+C:\dev\git\CheapEat\play-java-cheapeat\app\controllers\Application.java: Recompile with -Xlint:unchecked for details.
+Java compilation took 0.535811433 s
+Java analysis took 0.136865927 s
+Java compile + analysis took 0.68185781 s
+Invalidating C:\dev\git\CheapEat\play-java-cheapeat\app\models\Angebot.java...
+Invalidating (transitively) by inheritance from C:\dev\git\CheapEat\play-java-cheapeat\app\models\Angebot.java...
+Initial set of included nodes: Set(C:\dev\git\CheapEat\play-java-cheapeat\app\models\Angebot.java)
+Invalidated by transitive inheritance dependency: Set(C:\dev\git\CheapEat\play-java-cheapeat\app\models\Angebot.java)
+The C:\dev\git\CheapEat\play-java-cheapeat\app\models\Angebot.java source file has the following regular definitions changed:
+	Angebot, email.
+All member reference dependencies will be considered within this context.
+Name hashing optimization doesn't apply to non-Scala dependency: C:\dev\git\CheapEat\play-java-cheapeat\app\models\Angebot.java
+Name hashing optimization doesn't apply to non-Scala dependency: C:\dev\git\CheapEat\play-java-cheapeat\app\controllers\Application.java
 New invalidations:
-	Set()
-Initial set of included nodes: Set()
+	Set(C:\dev\git\CheapEat\play-java-cheapeat\app\controllers\Application.java)
+Initial set of included nodes: Set(C:\dev\git\CheapEat\play-java-cheapeat\app\controllers\Application.java)
+Including C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\routes\main\router\Routes.scala by C:\dev\git\CheapEat\play-java-cheapeat\app\controllers\Application.java
 Previously invalidated, but (transitively) depend on new invalidations:
 	Set()
 All newly invalidated sources after taking into account (previously) recompiled sources:Set()
 Copy resource mappings: 
-	(C:\Users\csutter\dev\CheapEat\play-java-cheapeat\conf\application.conf,C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\scala-2.11\classes\application.conf)
-	(C:\Users\csutter\dev\CheapEat\play-java-cheapeat\conf\evolutions,C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\scala-2.11\classes\evolutions)
-	(C:\Users\csutter\dev\CheapEat\play-java-cheapeat\conf\logback.xml,C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\scala-2.11\classes\logback.xml)
-	(C:\Users\csutter\dev\CheapEat\play-java-cheapeat\conf\META-INF,C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\scala-2.11\classes\META-INF)
-	(C:\Users\csutter\dev\CheapEat\play-java-cheapeat\conf\routes,C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\scala-2.11\classes\routes)
-	(C:\Users\csutter\dev\CheapEat\play-java-cheapeat\conf\evolutions\default,C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\scala-2.11\classes\evolutions\default)
-	(C:\Users\csutter\dev\CheapEat\play-java-cheapeat\conf\evolutions\default\1.sql,C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\scala-2.11\classes\evolutions\default\1.sql)
-	(C:\Users\csutter\dev\CheapEat\play-java-cheapeat\conf\META-INF\persistence.xml,C:\Users\csutter\dev\CheapEat\play-java-cheapeat\target\scala-2.11\classes\META-INF\persistence.xml)
-Total time: 9 s, completed 20-Oct-2017 12:52:59
+	(C:\dev\git\CheapEat\play-java-cheapeat\conf\application.conf,C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\classes\application.conf)
+	(C:\dev\git\CheapEat\play-java-cheapeat\conf\evolutions,C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\classes\evolutions)
+	(C:\dev\git\CheapEat\play-java-cheapeat\conf\logback.xml,C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\classes\logback.xml)
+	(C:\dev\git\CheapEat\play-java-cheapeat\conf\META-INF,C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\classes\META-INF)
+	(C:\dev\git\CheapEat\play-java-cheapeat\conf\routes,C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\classes\routes)
+	(C:\dev\git\CheapEat\play-java-cheapeat\conf\evolutions\default,C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\classes\evolutions\default)
+	(C:\dev\git\CheapEat\play-java-cheapeat\conf\evolutions\default\1.sql,C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\classes\evolutions\default\1.sql)
+	(C:\dev\git\CheapEat\play-java-cheapeat\conf\META-INF\persistence.xml,C:\dev\git\CheapEat\play-java-cheapeat\target\scala-2.11\classes\META-INF\persistence.xml)
+Total time: 4 s, completed 20.10.2017 13:07:01
 > server-post-command-cleanup
 > server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
@@ -7997,4 +8016,4 @@ Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 3012@DESKTOP-S7IFK17 logs at Fri Oct 20 12:55:18 CEST 2017, goodbye.
+Closing the 16280@Fabio-PC logs at Fri Oct 20 13:09:43 CEST 2017, goodbye.

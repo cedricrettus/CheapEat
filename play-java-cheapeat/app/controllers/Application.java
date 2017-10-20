@@ -52,13 +52,13 @@ public class Application extends Controller {
     @Transactional
     public Result addAngebot() {
         // TODO change to Angebot
-        Form<CreateAngebot> submission = formFactory.form(CreateAngebot.class).bindFromRequest();
+        Form<Angebot> submission = formFactory.form(Angebot.class).bindFromRequest();
         if(submission.hasErrors()){
             System.out.println("Form error");
             System.out.println(submission.errors());
             //error ausgeben
         }else{
-            Angebot angebot = formFactory.form(Angebot.class).bindFromRequest().get();
+            Angebot angebot = submission.get();
 
             System.out.println(angebot.toString());
             JPA.em().persist(angebot);
