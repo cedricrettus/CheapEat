@@ -20,6 +20,28 @@ $(document).ready(function() {
     $.get('/angebote', function (angebote) {
         $.each(angebote, function (index, angebot) {
             var html = '';
+            html += '<div class="card">' +
+                '<div class="row">' +
+                '<div class="col-md-3">' +
+                '<img class="card-img-top" src="images/burger1.jpg" alt="Card image cap">' +
+                '</div>' +
+                '<div class="col-md-6">' +
+                '<div class="card-body">' +
+                '<h4 class="card-title">'+ angebot.titel +'</h4>' +
+                '<h6 class="card-subtitle mb-2 text-muted">'+ angebot.kueche +'</h6>' +
+                '<p class="card-text">'+ angebot.beschreibung +'</p>' +
+                '</div>' +
+                '</div>' +
+                '<div class="col-md-3">' +
+                '<div class="card-body">' +
+                '<p class="card-text">Username <span class="">Bewertung</span></p>' +
+                '<p class="card-text"><span class="preis">'+ angebot.preis +' CHF</span> <span class="">Portionen: '+ angebot.menge +'</span></p>' +
+                '<a href="#" class="btn btn-primary" data-id="' + angebot.id + '">Bestellen</a>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+            /*
             html += '<div class="card">';
             html += '<img class="card-img-top" src="" alt="Card image cap">';
             html += '<div class="card-block">'
@@ -29,6 +51,8 @@ $(document).ready(function() {
             html += '<a href="/bestellen" class="btn btn-primary" data-id="' + angebot.id + '">Bestellen</a>';
             html += '</div>';
             html += '</div>';
+            */
+
 
             $('#angebote-cards').append(html);
         });

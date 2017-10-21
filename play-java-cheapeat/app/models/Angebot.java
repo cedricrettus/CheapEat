@@ -34,6 +34,9 @@ public class Angebot {
 
     public String zeit;
 
+    @Constraints.Required
+    public double preis;
+
     public int menge;
 
     public String kueche;
