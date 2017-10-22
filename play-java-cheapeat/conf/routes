@@ -6,6 +6,8 @@
 GET     /                           controllers.Application.index()
 POST    /angebot                     controllers.Application.addAngebot()
 GET     /angebote                    controllers.Application.getAngebote()
+GET     /suche                       controllers.Application.suchePlz(plz:Int ?= 0)
+GET     /search                      controllers.Application.suche(plz:Int ?= 0)
 #POST    /bestellen                   controllers.Application.addBestellung()
 
 # Map static resources from the /public folder to the /assets URL path

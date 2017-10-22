@@ -11,6 +11,7 @@ import java.util.List;
 import play.data.validation.Constraints;
 
 import static play.libs.Json.*;
+import static views.html.suche.*;
 
 public class Application extends Controller {
 
@@ -71,5 +72,17 @@ public class Application extends Controller {
     public Result getAngebote() {
         List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p").getResultList();
         return ok(toJson(angebote));
+    }
+
+    @Transactional(readOnly = true)
+    public Result suchePlz(int plz) {
+        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p where p.plz = "+ plz +"").getResultList();
+        return ok(toJson(angebote));
+    }
+
+    @Transactional(readOnly = true)
+    public Result suche(int plz){
+        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p where p.plz = "+ plz +"").getResultList();
+        return ok(views.html.suche.render(angebote));
     }
 }

@@ -1,49 +1,7 @@
-New log file opened at Sat Oct 21 13:05:50 CEST 2017 by 7400@Fabio-PC
-Taking next connection to: 60262
-New client attempting to connect on port: 60263-60262
-  Address = /192.168.0.126:60262
-This client on port 60263 has uuid ed84415a-05eb-401a-bf78-64d0b3668d35 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-ed84415a-05eb-401a-bf78-64d0b3668d35
-Taking next connection to: 60262
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 60262
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 60262
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 60262
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 60262
-New client attempting to connect on port: 62275-60262
-  Address = /192.168.0.126:60262
-Handshake exception on socket: 62275
-sbt.impl.ipc.HandshakeException: Unable to perform handshake
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
-	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
-	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.net.SocketException: Software caused connection abort: recv failed
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
-	at java.net.SocketInputStream.read(SocketInputStream.java:171)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
-	at java.io.DataInputStream.readInt(DataInputStream.java:387)
-	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
-	... 2 more
-Taking next connection to: 60262
-New client attempting to connect on port: 62276-60262
-  Address = /192.168.0.126:60262
-This client on port 62276 has uuid 4eca7071-e180-4fd8-b01e-2756b879f16d configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-4eca7071-e180-4fd8-b01e-2756b879f16d
-Taking next connection to: 60262
-Checking to see if clients are empty...
-No non-daemon clients connected after 3 min. Shutting down.
-Server socket thread exiting.
-0 clients open, will close them...
-All client sockets have been closed.
-Closing the 7400@Fabio-PC logs at Sat Oct 21 13:22:51 CEST 2017, goodbye.
+New log file opened at Sun Oct 22 19:46:15 CEST 2017 by 10128@Fabio-PC
+Taking next connection to: 62448
+New client attempting to connect on port: 62449-62448
+  Address = /192.168.0.126:62448
+This client on port 62449 has uuid 16e2d9b6-a5b2-446e-bc1e-44f0a1876618 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-16e2d9b6-a5b2-446e-bc1e-44f0a1876618
+Taking next connection to: 62448
