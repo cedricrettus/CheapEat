@@ -30,128 +30,35 @@
         </div>
     </nav>
 
-    <!-- MODAL ANGEBOT ERSTELLEN -->
-
-    <div class="modal fade" id="angebotModal" tabindex="-1" role="dialog" aria-labelledby="angebotModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">CheapEat</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-angebot">
-                        <h1>Angebot erstellen</h1>
-                        <div class="panel panel-default">
-                            <form method="POST" id="angebotForm" action="/angebot"> <!--  routes.Application.getPerson() -->
-                                <div class="form-group">
-                                    <label for="titel" >Titel: </label>
-                                    <input type="text" name="titel" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="beschreibung" >Beschreibung: </label>
-                                    <input type="text" name="beschreibung" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="email" >Kontakt Email: </label>
-                                    <input type="email" name="email" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="zeit" >Zeit: </label>
-                                    <input type="text" name="zeit" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="datum" >Datum: </label>
-                                    <input type="date" name="datum" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="kueche" >Küche: </label>
-                                    <input type="text" name="kueche" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="menge" >Menge: </label>
-                                    <input type="text" name="menge" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="preis" >Preis: </label>
-                                    <input type="text" name="preis" class="form-control" />
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
-                    <button id="angebotSubmit" type="submit" class="btn btn-primary">Angebot erstellen</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="bestellenModal" tabindex="-1" role="dialog" aria-labelledby="bestellenModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">CheapEat</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-angebot">
-                        <h1>Angebot bestellen</h1>
-                        <div class="panel panel-default">
-                            <form method="POST" id="bestellenForm" action="/bestellen"> <!--  routes.Application.getPerson() -->
-                                <div class="form-group">
-                                    <label for="email" >Kontakt Email: </label>
-                                    <input type="email" name="email" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="email" >Menge </label>
-                                    <input type="email" name="email" class="form-control" />
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
-                    <button id="bestellenSubmit" type="submit" class="btn btn-primary">Bestellen!</button>
-                </div>
-            </div>
-        </div>
-    </div>
+@modals
 
 
     <div class="content">
-        <div class="container">
-                <h1>Angebote</h1>
-                <ul id="angebote"></ul>
-            <div class="cards-items" id="angebote-cards">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <img class="card-img-top" src="@routes.Assets.at("images/burger1.jpg")" alt="Card image cap">
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card-body">
-                                <h4 class="card-title">Card title</h4>
-                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="container">
+                    <h1>Angebote</h1>
+                    <ul id="angebote"></ul>
+                    <div class="cards-items" id="angebote-cards">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img class="card-img-top" src="@routes.Assets.at("images/burger1.jpg")" alt="Card image cap">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Card title</h4>
+                                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card-body">
+                                        <p class="card-text">Username <span class="">Bewertung</span></p>
+                                        <p class="card-text">Preis: 15.40 <span class="">Portionen: 4</span></p>
+                                        <a href="#" class="btn btn-primary">Bestellen</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="card-body">
-                                <p class="card-text">Username <span class="">Bewertung</span></p>
-                                <p class="card-text">Preis: 15.40 <span class="">Portionen: 4</span></p>
-                                <a href="#" class="btn btn-primary">Bestellen</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <!--  Items generated by home.js -->
 

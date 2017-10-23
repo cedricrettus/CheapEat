@@ -30,67 +30,7 @@
         </div>
     </nav>
 
-        <!-- MODAL ANGEBOT ERSTELLEN -->
-
-    <div class="modal fade" id="angebotModal" tabindex="-1" role="dialog" aria-labelledby="angebotModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">CheapEat</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-angebot">
-                        <h1>Angebot erstellen</h1>
-                        <div class="panel panel-default">
-                            <form method="POST" id="angebotForm" action="/angebot"> <!--  routes.Application.getPerson() -->
-                                <div class="form-group">
-                                    <label for="titel" >Titel: </label>
-                                    <input type="text" name="titel" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="beschreibung" >Beschreibung: </label>
-                                    <input type="text" name="beschreibung" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="email" >Kontakt Email: </label>
-                                    <input type="email" name="email" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="zeit" >Zeit: </label>
-                                    <input type="text" name="zeit" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="datum" >Datum: </label>
-                                    <input type="date" name="datum" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="kueche" >Küche: </label>
-                                    <input type="text" name="kueche" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="menge" >Menge: </label>
-                                    <input type="text" name="menge" class="form-control" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="preis" >Preis: </label>
-                                    <input type="text" name="preis" class="form-control" />
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
-                    <button id="angebotSubmit" type="submit" class="btn btn-primary">Angebot erstellen</button>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
+@modals
 
     <div class="content">
         <div class="container">
