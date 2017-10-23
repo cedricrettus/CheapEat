@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d251e1e6-312c-4a2c-9b76-c2872cdaf6a7" name="Default" comment="homeseite bearbeitet">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.sbtserver/connections/play-fork-run-16e2d9b6-a5b2-446e-bc1e-44f0a1876618.log" afterPath="" />
+    <list default="true" id="d251e1e6-312c-4a2c-9b76-c2872cdaf6a7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sbtserver/connections/master.log" afterPath="$PROJECT_DIR$/.sbtserver/connections/master.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sbtserver/master.log" afterPath="$PROJECT_DIR$/.sbtserver/master.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.sbtserver/previous.log" afterPath="$PROJECT_DIR$/.sbtserver/previous.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/index.scala.html" afterPath="$PROJECT_DIR$/app/views/index.scala.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project/.sbtserver" afterPath="$PROJECT_DIR$/project/.sbtserver" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/home.js" afterPath="$PROJECT_DIR$/public/js/home.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/coffeescript/" />
     <ignored path="$PROJECT_DIR$/target/jshint/" />
@@ -90,7 +82,7 @@
       <file leaf-file-name="index.scala.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/index.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
+            <state relative-caret-position="1140">
               <caret line="117" column="26" lean-forward="true" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
               <folding>
                 <marker date="1508774564412" expanded="true" signature="8439:8452" ph="..." />
@@ -1232,11 +1224,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508773265760</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="homeseite bearbeitet">
+      <created>1508774587563</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1508774587563</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75903000" />
+    <option name="totallyTimeSpent" value="76074000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1367,9 +1366,9 @@
     <MESSAGE value="sql code korrigieren" />
     <MESSAGE value="eingaben korrigieren" />
     <MESSAGE value="test" />
-    <MESSAGE value="homeseite bearbeitet" />
     <MESSAGE value="z index navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="z index navbar" />
+    <MESSAGE value="homeseite bearbeitet" />
+    <option name="LAST_COMMIT_MESSAGE" value="homeseite bearbeitet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1687,7 +1686,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/index.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
+        <state relative-caret-position="1140">
           <caret line="117" column="26" lean-forward="true" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
           <folding>
             <marker date="1508774564412" expanded="true" signature="8439:8452" ph="..." />
