@@ -1,0 +1,137 @@
+@(angebote: java.util.Collection[models.Angebot])
+
+@main("CheapEat - Suche") {
+
+    <script src="@routes.Assets.at("js/suche.js")" type="text/javascript"></script>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">CheapEat</h1>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-md sticky-top navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">CheapEat</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+                <form class="form-inline my-2 my-lg-0">
+                    <button type="button" id="callModal" class="btn" data-toggle="modal" data-target="#exampleModal">
+                        Angebot erstellen!
+                    </button>
+                </form>
+                <form id="suche" class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" id="fieldPlz" type="text" name="plz" placeholder="PLZ" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" action="/search" method="get"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+        <!-- MODAL ANGEBOT ERSTELLEN -->
+
+    <div class="modal fade" id="angebotModal" tabindex="-1" role="dialog" aria-labelledby="angebotModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">CheapEat</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-angebot">
+                        <h1>Angebot erstellen</h1>
+                        <div class="panel panel-default">
+                            <form method="POST" id="angebotForm" action="/angebot"> <!--  routes.Application.getPerson() -->
+                                <div class="form-group">
+                                    <label for="titel" >Titel: </label>
+                                    <input type="text" name="titel" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="beschreibung" >Beschreibung: </label>
+                                    <input type="text" name="beschreibung" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" >Kontakt Email: </label>
+                                    <input type="email" name="email" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="zeit" >Zeit: </label>
+                                    <input type="text" name="zeit" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="datum" >Datum: </label>
+                                    <input type="date" name="datum" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="kueche" >Küche: </label>
+                                    <input type="text" name="kueche" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="menge" >Menge: </label>
+                                    <input type="text" name="menge" class="form-control" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="preis" >Preis: </label>
+                                    <input type="text" name="preis" class="form-control" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
+                    <button id="angebotSubmit" type="submit" class="btn btn-primary">Angebot erstellen</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <div class="container">
+            <h1>Angebote</h1>
+            <ul id="angebote"></ul>
+            <div class="cards-items" id="angebote-cards">
+
+                @for(angebot <- angebote){
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img class="card-img-top" src="assets/images/burger1.jpg" alt="Card image cap">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <h4 class="card-title">@angebot.titel</h4>
+                                    <h6 class="card-subtitle mb-2 text-muted">@angebot.kueche</h6>
+                                    <p class="card-text">@angebot.beschreibung</p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card-body">
+                                    <p class="card-text">Username <span class="">Bewertung</span></p>
+                                    <p class="card-text">Ort: <span>@angebot.plz</span></p>
+                                    <p class="card-text"><span class="preis">@angebot.preis CHF</span>
+                                        <span class="">Portionen: @angebot.preis</span></p>
+                                    <a href="#" class="btn btn-primary" data-id="@angebot.id">Bestellen</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                }
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+}
