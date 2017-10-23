@@ -25,9 +25,9 @@ $(document).ready(function() {
     });*/
 
 
-    $.get('/angebote', function (data) {
+    /*$.get('/angebote', function (data) {
         showAngebote(data);
-    });
+    });*/
 
     $('#callModal').click(function(){
         $('#angebotModal').modal('toggle');
@@ -38,6 +38,10 @@ $(document).ready(function() {
     $('#angebotSubmit').click(function(){
         $('#angebotForm').submit();
     })
+
+    $('.bestellButton').click(function(){
+        $('#bestellenModal').modal('toggle');
+    });
 
 }); //document ready closing
 
@@ -82,9 +86,7 @@ function showAngebote(angebote){
 
 
         $('#angebote-cards').append(html);
-        $('.bestellButton').click(function(){
-            $('#bestellenModal').modal('toggle');
-        });
+
     });
 
 }

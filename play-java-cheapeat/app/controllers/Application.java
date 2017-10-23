@@ -46,8 +46,10 @@ public class Application extends Controller {
     @Inject
     FormFactory formFactory;
 
+    @Transactional
     public Result index() {
-        return ok(index.render());
+        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p").getResultList();
+        return ok(views.html.index.render(angebote));
     }
 
     @Transactional
