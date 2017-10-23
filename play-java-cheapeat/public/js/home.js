@@ -33,6 +33,8 @@ $(document).ready(function() {
         $('#angebotModal').modal('toggle');
     });
 
+
+
     $('#angebotSubmit').click(function(){
         $('#angebotForm').submit();
     })
@@ -61,7 +63,7 @@ function showAngebote(angebote){
             '<p class="card-text">Username <span class="">Bewertung</span></p>' +
             '<p class="card-text">Ort: <span>'+ angebot.plz +'</span></p>' +
         '<p class="card-text"><span class="preis">'+ angebot.preis +' CHF</span> <span class="">Portionen: '+ angebot.menge +'</span></p>' +
-        '<a href="#" class="btn btn-primary" data-id="' + angebot.id + '">Bestellen</a>' +
+        '<button class="bestellButton btn btn-primary" data-id="' + angebot.id + '">Bestellen</button>' +
         '</div>' +
         '</div>' +
         '</div>' +
@@ -80,5 +82,9 @@ function showAngebote(angebote){
 
 
         $('#angebote-cards').append(html);
+        $('.bestellButton').click(function(){
+            $('#bestellenModal').modal('toggle');
+        });
     });
+
 }
