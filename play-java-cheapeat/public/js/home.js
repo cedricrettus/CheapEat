@@ -41,7 +41,7 @@ $(document).ready(function() {
 
     $('#bestellenSubmit').click(function(){
         var data = {
-            'id': $('#bestellenSubmit').data('id'),
+            'angebot_id': $('#bestellenSubmit').data('id'),
             'email': $('#bestellenEmail').val(),
             'menge' : $('#bestellenMenge').val()
         }

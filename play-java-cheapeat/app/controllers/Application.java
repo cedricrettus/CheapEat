@@ -1,6 +1,8 @@
 package controllers;
 
 import models.Angebot;
+import models.Bestellung;
+import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.*;
 import play.db.jpa.*;
@@ -15,33 +17,6 @@ import static views.html.suche.*;
 
 public class Application extends Controller {
 
-    public static class CreateAngebot {
-        @Constraints.Required
-        public String titel;
-        @Constraints.Required
-        @Constraints.Min(0)
-        public Double preis;
-
-        @Constraints.Required
-        @Constraints.Min(0)
-        public Double menge;
-
-        public void setName(String name) {
-            this.titel = name;
-        }
-
-        public void setPrice(Double price) {
-            this.preis = preis;
-        }
-
-        public String getTitel() {
-            return this.titel;
-        }
-
-        public Double getPreis() {
-            return this.preis;
-        }
-    }
 
     @Inject
     FormFactory formFactory;
@@ -54,7 +29,7 @@ public class Application extends Controller {
 
     @Transactional
     public Result addAngebot() {
-        // TODO change to Angebot
+        // TODO auslagern in db controller addAngebot()
         Form<Angebot> submission = formFactory.form(Angebot.class).bindFromRequest();
         if(submission.hasErrors()){
             System.out.println("Form error");
@@ -90,8 +65,17 @@ public class Application extends Controller {
 
     @Transactional
     public Result addBestellung(){
-        //int id = bindFromRequest().get('id');
 
+        //Beispiel um FormData zu holen das nicht zu einem Model gehört!
+        //DynamicForm requestData = formFactory.form().bindFromRequest();
+        //String firstname = requestData.get("firstname");
+
+
+        Bestellung bestellung = formFactory.form(Bestellung.class).bindFromRequest().get();
+        bestellung.prozesscode = 1;
+        bestellung.benutzer_id = 0;
+
+        JPA.em().persist(bestellung);
 
         return ok();
     }
