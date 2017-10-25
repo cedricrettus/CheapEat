@@ -16,8 +16,8 @@ public class MailerService {
                 .setFrom("CheapEat <sepp.notter65@gmail.com>")
                 .addTo("Miss TO <" + empfaenger + ">")
 
-                .setBodyText("Bestellung ist Eingegangen von " + sender)
-                .setBodyHtml("<html><body><p>An <b>html</b> message with cid <img src=\"cid:" + cid + "\"></p></body></html>");
+                .setBodyText("Bestellung ist Eingegangen")
+                .setBodyHtml("<html><body><p>Sie haben eine Bestellung von <b>"+ sender +"</b></p></body></html>");
         mailerClient.send(email);
     }
 }
