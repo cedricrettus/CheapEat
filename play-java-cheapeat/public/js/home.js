@@ -37,10 +37,26 @@ $(document).ready(function() {
 
     $('#angebotSubmit').click(function(){
         $('#angebotForm').submit();
-    })
+    });
+
+    $('#bestellenSubmit').click(function(){
+        var data = {
+            'id': $('#bestellenSubmit').data('id'),
+            'email': $('#bestellenEmail').val(),
+            'menge' : $('#bestellenMenge').val()
+        }
+        $.post('/bestellen', data, function(){
+            alert('bestellung gesendet');
+            $('#bestellenModal').modal('hide');
+            });
+    });
 
     $('.bestellButton').click(function(){
+        var id = $(this).data('id');
+        console.log(id);
+        $('#bestellenSubmit').data('id', id);
         $('#bestellenModal').modal('toggle');
+
     });
 
 }); //document ready closing

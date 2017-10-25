@@ -18,9 +18,22 @@ public class Bestellung {
 
     public int angebot_id;
 
+    public String email;
+
     public int menge;
 
     public int prozesscode;
+
+    public Bestellung() {
+    }
+
+    public Bestellung(int benutzer_id, int angebot_id, String email, int menge, int prozesscode) {
+        this.benutzer_id = benutzer_id;
+        this.angebot_id = angebot_id;
+        this.email = email;
+        this.menge = menge;
+        this.prozesscode = prozesscode;
+    }
 
     @Override
     public String toString() {

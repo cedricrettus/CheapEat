@@ -13,8 +13,8 @@ import java.util.Date;
 public class Angebot {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-	public int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public int id;
 
     public int benutzer_id;
 
@@ -42,6 +42,23 @@ public class Angebot {
     public int menge;
 
     public String kueche;
+
+    public Angebot(int benutzer_id, int adressen_id, String titel, String beschreibung, String email, int plz, Date datum, String zeit, double preis, int menge, String kueche) {
+        this.benutzer_id = benutzer_id;
+        this.adressen_id = adressen_id;
+        this.titel = titel;
+        this.beschreibung = beschreibung;
+        this.email = email;
+        this.plz = plz;
+        this.datum = datum;
+        this.zeit = zeit;
+        this.preis = preis;
+        this.menge = menge;
+        this.kueche = kueche;
+    }
+
+    public Angebot() {
+    }
 
     @Override
     public String toString() {

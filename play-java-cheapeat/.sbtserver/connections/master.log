@@ -1,43 +1,10 @@
-New log file opened at Mon Oct 23 19:17:54 CEST 2017 by 13232@Fabio-SF
-Taking next connection to: 29103
-New client attempting to connect on port: 29104-29103
-  Address = /146.136.56.193:29103
-This client on port 29104 has uuid 2e2711f4-6893-40ef-a9c4-107727754bd2 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-2e2711f4-6893-40ef-a9c4-107727754bd2
-Taking next connection to: 29103
+New log file opened at Wed Oct 25 11:51:41 CEST 2017 by 3380@Fabio-SF
+Taking next connection to: 7029
+New client attempting to connect on port: 7030-7029
+  Address = /146.136.56.193:7029
+This client on port 7030 has uuid 3da1ef33-f241-4b07-bb6e-278139730463 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-3da1ef33-f241-4b07-bb6e-278139730463
+Taking next connection to: 7029
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 29103
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 29103
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 29103
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 29103
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 29103
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 29103
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 29103
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 29103
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 29103
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 29103
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 29103
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 29103
+Taking next connection to: 7029

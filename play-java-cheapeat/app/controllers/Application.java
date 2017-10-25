@@ -87,4 +87,12 @@ public class Application extends Controller {
         List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p where p.plz = "+ plz +"").getResultList();
         return ok(views.html.suche.render(angebote));
     }
+
+    @Transactional
+    public Result addBestellung(){
+        //int id = bindFromRequest().get('id');
+
+
+        return ok();
+    }
 }
