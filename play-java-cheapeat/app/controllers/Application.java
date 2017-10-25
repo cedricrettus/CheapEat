@@ -2,6 +2,7 @@ package controllers;
 
 import models.Angebot;
 import models.Bestellung;
+import play.api.libs.mailer.MailerClient;
 import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.*;
@@ -18,6 +19,13 @@ import static views.html.suche.*;
 public class Application extends Controller {
 
 
+    MailerService mc;
+
+    @Inject
+    public Application(MailerService mailer) {
+        this.mc = mailer;
+    }
+
     @Inject
     FormFactory formFactory;
 
@@ -31,11 +39,11 @@ public class Application extends Controller {
     public Result addAngebot() {
         // TODO auslagern in db controller addAngebot()
         Form<Angebot> submission = formFactory.form(Angebot.class).bindFromRequest();
-        if(submission.hasErrors()){
+        if (submission.hasErrors()) {
             System.out.println("Form error");
             System.out.println(submission.errors());
             //error ausgeben
-        }else{
+        } else {
             Angebot angebot = submission.get();
 
             System.out.println(angebot.toString());
@@ -53,18 +61,18 @@ public class Application extends Controller {
 
     @Transactional(readOnly = true)
     public Result suchePlz(int plz) {
-        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p where p.plz = "+ plz +"").getResultList();
+        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p where p.plz = " + plz + "").getResultList();
         return ok(toJson(angebote));
     }
 
     @Transactional(readOnly = true)
-    public Result suche(int plz){
-        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p where p.plz = "+ plz +"").getResultList();
+    public Result suche(int plz) {
+        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p where p.plz = " + plz + "").getResultList();
         return ok(views.html.suche.render(angebote));
     }
 
     @Transactional
-    public Result addBestellung(){
+    public Result addBestellung() {
 
         //Beispiel um FormData zu holen das nicht zu einem Model gehört!
         //DynamicForm requestData = formFactory.form().bindFromRequest();
@@ -76,7 +84,18 @@ public class Application extends Controller {
         bestellung.benutzer_id = 0;
 
         JPA.em().persist(bestellung);
+        JPA.em().flush();
+        int id =  bestellung.id;
 
+        System.out.println(id);
+
+        //List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p where id="+ id +"").getResultList();
+        Angebot angebot1 = JPA.em().find(Angebot.class, bestellung.angebot_id);
+        System.out.println(angebot1.email);
+        System.out.println(bestellung.email);
+        mc.sendEmail(angebot1.email, bestellung.email);
         return ok();
+
     }
+
 }
