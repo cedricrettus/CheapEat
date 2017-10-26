@@ -13,8 +13,8 @@ public class MailerService {
         String cid = "1234";
         Email email = new Email()
                 .setSubject("Sie haben eine Bestellung")
-                .setFrom("CheapEat <sepp.notter65@gmail.com>")
-                .addTo("Miss TO <" + empfaenger + ">")
+                .setFrom("CheapEat <noreply.cheapeat@gmail.com>")
+                .addTo("<" + empfaenger + ">")
 
                 .setBodyText("Bestellung ist Eingegangen")
                 .setBodyHtml("<html><body><p>Sie haben eine Bestellung von <b>"+ sender +"</b></p></body></html>");

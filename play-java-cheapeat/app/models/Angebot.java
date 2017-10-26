@@ -43,6 +43,8 @@ public class Angebot {
 
     public String kueche;
 
+    public int aktiv;
+
     public Angebot(int benutzer_id, int adressen_id, String titel, String beschreibung, String email, int plz, Date datum, String zeit, double preis, int menge, String kueche) {
         this.benutzer_id = benutzer_id;
         this.adressen_id = adressen_id;

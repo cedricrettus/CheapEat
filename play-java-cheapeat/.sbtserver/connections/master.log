@@ -1,31 +1,16 @@
-New log file opened at Wed Oct 25 21:36:19 CEST 2017 by 8412@Fabio-PC
-Taking next connection to: 62623
-New client attempting to connect on port: 62625-62623
-  Address = /192.168.0.126:62623
-This client on port 62625 has uuid 152b552e-cbf3-473b-bbd3-4461d00fbc42 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-152b552e-cbf3-473b-bbd3-4461d00fbc42
-Taking next connection to: 62623
-New client attempting to connect on port: 62731-62623
-  Address = /192.168.0.126:62623
-Handshake exception on socket: 62731
-sbt.impl.ipc.HandshakeException: Unable to perform handshake
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
-	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
-	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
-Caused by: java.net.SocketException: Software caused connection abort: recv failed
-	at java.net.SocketInputStream.socketRead0(Native Method)
-	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
-	at java.net.SocketInputStream.read(SocketInputStream.java:171)
-	at java.net.SocketInputStream.read(SocketInputStream.java:141)
-	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
-	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
-	at java.io.DataInputStream.readInt(DataInputStream.java:387)
-	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
-	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
-	... 2 more
-Taking next connection to: 62623
-New client attempting to connect on port: 62732-62623
-  Address = /192.168.0.126:62623
-This client on port 62732 has uuid 5c3eaaa2-231a-4e14-b992-e624719d00db configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: play-fork-run-5c3eaaa2-231a-4e14-b992-e624719d00db
-Taking next connection to: 62623
+New log file opened at Thu Oct 26 09:55:08 CEST 2017 by 12604@Fabio-SF
+Taking next connection to: 2042
+New client attempting to connect on port: 2043-2042
+  Address = /146.136.56.193:2042
+This client on port 2043 has uuid 420ecfd9-b9e3-4eac-95be-ef334f253a77 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-420ecfd9-b9e3-4eac-95be-ef334f253a77
+Taking next connection to: 2042
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2042
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 12604@Fabio-SF logs at Thu Oct 26 10:01:09 CEST 2017, goodbye.

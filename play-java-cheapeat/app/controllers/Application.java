@@ -60,14 +60,8 @@ public class Application extends Controller {
     }
 
     @Transactional(readOnly = true)
-    public Result suchePlz(int plz) {
-        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p where p.plz = " + plz + "").getResultList();
-        return ok(toJson(angebote));
-    }
-
-    @Transactional(readOnly = true)
     public Result suche(int plz) {
-        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p where p.plz = " + plz + "").getResultList();
+        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p where p.plz = " + plz).getResultList();
         return ok(views.html.suche.render(angebote));
     }
 
@@ -77,7 +71,6 @@ public class Application extends Controller {
         //Beispiel um FormData zu holen das nicht zu einem Model gehört!
         //DynamicForm requestData = formFactory.form().bindFromRequest();
         //String firstname = requestData.get("firstname");
-
 
         Bestellung bestellung = formFactory.form(Bestellung.class).bindFromRequest().get();
         bestellung.prozesscode = 1;
@@ -89,7 +82,6 @@ public class Application extends Controller {
 
         System.out.println(id);
 
-        //List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p where id="+ id +"").getResultList();
         Angebot angebot1 = JPA.em().find(Angebot.class, bestellung.angebot_id);
         System.out.println(angebot1.email);
         System.out.println(bestellung.email);
