@@ -45,7 +45,7 @@ $(document).ready(function() {
             'email': $('#bestellenEmail').val(),
             'menge' : $('#bestellenMenge').val()
         }
-        $.post('/bestellen', data, function(){
+        $.post('/bestellung', data, function(){
             alert('bestellung gesendet');
             $('#bestellenModal').modal('hide');
             });

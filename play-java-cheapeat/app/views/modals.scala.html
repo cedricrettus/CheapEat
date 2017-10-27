@@ -13,7 +13,7 @@
                 <div class="container-angebot">
                     <h1>Angebot erstellen</h1>
                     <div class="panel panel-default">
-                        <form method="POST" id="angebotForm" action="/angebot"> <!--  routes.Application.getPerson() -->
+                        <form method="POST" id="angebotForm" action="/angebote"> <!--  rouAngebotControllertion.getPerson() -->
                             <div class="form-group">
                                 <label for="titel" >Titel: </label>
                                 <input type="text" name="titel" class="form-control" />
@@ -33,6 +33,10 @@
                             <div class="form-group">
                                 <label for="datum" >Datum: </label>
                                 <input type="date" name="datum" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="datum" >PLZ: </label>
+                                <input type="number" name="plz" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="kueche" >Küche: </label>
@@ -74,7 +78,7 @@
                 <div class="container-angebot">
                     <h1>Angebot bestellen</h1>
                     <div class="panel panel-default">
-                        <form method="POST" id="bestellenForm" action="/bestellen"> <!--  routes.Application.getPerson() -->
+                        <form method="POST" id="bestellenForm" action="/bestellen"> <!--  rouAngebotControllertion.getPerson() -->
                             <div class="form-group">
                                 <label for="email" >Kontakt Email: </label>
                                 <input id="bestellenEmail" type="email" name="email" class="form-control" />

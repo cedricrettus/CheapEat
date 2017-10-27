@@ -27,6 +27,12 @@ public class BestellungController {
     FormFactory formFactory;
 
     @Transactional
+    public Result getBestellung(){
+
+        return null;
+    }
+
+    @Transactional
     public Result addBestellung() {
 
         //Beispiel um FormData zu holen das nicht zu einem Model gehört!
