@@ -21,6 +21,10 @@ nav.navbar {
 
 }
 
+#img-logo{
+    width: 200px;
+}
+
 /* layout.css Style */
 .upload-drop-zone {
     height: 200px;
