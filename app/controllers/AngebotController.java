@@ -10,8 +10,12 @@ import play.db.jpa.*;
 import views.html.*;
 import play.data.FormFactory;
 import javax.inject.Inject;
+import java.io.File;
 import java.util.List;
 import play.data.validation.Constraints;
+import com.amazonaws.auth.*;
+import com.amazonaws.services.s3.*;
+import com.amazonaws.services.s3.model.*;
 
 import static play.libs.Json.*;
 import static views.html.suche.*;
@@ -30,8 +34,23 @@ public class AngebotController extends Controller {
 
     @Transactional
     public Result addAngebot() {
+
+        //DynamicForm requestData = formFactory.form().bindFromRequest();
+        Http.MultipartFormData<File> body = request().body().asMultipartFormData();
+
         // TODO auslagern in db controller addAngebot()
         Form<Angebot> submission = formFactory.form(Angebot.class).bindFromRequest();
+
+        List<Http.MultipartFormData.FilePart<File>> bilder = body.getFiles();
+
+        System.out.println("files added");
+
+        System.out.println("files added 2");
+
+        for(int i = 0; i < bilder.size(); i++){
+            S3Service.uploadImage(bilder.get(i).getFile());
+        }
+
         if (submission.hasErrors()) {
             System.out.println("Form error");
             System.out.println(submission.errors());
@@ -43,6 +62,8 @@ public class AngebotController extends Controller {
             JPA.em().persist(angebot);
 
         }
+
+
         return redirect(routes.AngebotController.index());
     }
 

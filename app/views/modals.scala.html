@@ -13,7 +13,7 @@
                 <div class="container-angebot">
                     <h1>Angebot erstellen</h1>
                     <div class="panel panel-default">
-                        <form method="POST" id="angebotForm" action="/angebote"> <!--  rouAngebotControllertion.getPerson() -->
+                        <form method="POST" id="angebotForm" action="/angebote" enctype="multipart/form-data"> <!--  rouAngebotControllertion.getPerson() -->
                             <div class="form-group">
                                 <label for="titel" >Titel: </label>
                                 <input type="text" name="titel" class="form-control" />
@@ -52,7 +52,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="bilder">Bilder: </label>
-                                <input type="file" accept="image/*">
+                                <input type="file" name="bilder" accept="image/*" multiple>
 
                             </div>
                         </form>

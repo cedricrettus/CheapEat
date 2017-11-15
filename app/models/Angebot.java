@@ -4,6 +4,7 @@ import play.data.validation.Constraints;
 
 import javax.persistence.*;
 import javax.xml.crypto.Data;
+import java.io.File;
 import java.sql.Time;
 import java.time.LocalTime;
 import java.util.Date;
@@ -25,7 +26,6 @@ public class Angebot {
 
     public String beschreibung;
 
-    @Constraints.Email
     @Constraints.Required
     public String email;
 
@@ -45,8 +45,7 @@ public class Angebot {
 
     public int aktiv;
 
-    public Angebot(int benutzer_id, int adressen_id, String titel, String beschreibung, String email, int plz, Date datum, String zeit, double preis, int menge, String kueche) {
-        this.benutzer_id = benutzer_id;
+    /*public Angebot(int adressen_id, String titel, String beschreibung, String email, int plz, Date datum, String zeit, double preis, int menge, String kueche) {
         this.adressen_id = adressen_id;
         this.titel = titel;
         this.beschreibung = beschreibung;
@@ -60,6 +59,111 @@ public class Angebot {
     }
 
     public Angebot() {
+    }
+    */
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getBenutzer_id() {
+        return benutzer_id;
+    }
+
+    public void setBenutzer_id(int benutzer_id) {
+        this.benutzer_id = benutzer_id;
+    }
+
+    public int getAdressen_id() {
+        return adressen_id;
+    }
+
+    public void setAdressen_id(int adressen_id) {
+        this.adressen_id = adressen_id;
+    }
+
+    public String getTitel() {
+        return titel;
+    }
+
+    public void setTitel(String titel) {
+        this.titel = titel;
+    }
+
+    public String getBeschreibung() {
+        return beschreibung;
+    }
+
+    public void setBeschreibung(String beschreibung) {
+        this.beschreibung = beschreibung;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getPlz() {
+        return plz;
+    }
+
+    public void setPlz(int plz) {
+        this.plz = plz;
+    }
+
+    public Date getDatum() {
+        return datum;
+    }
+
+    public void setDatum(Date datum) {
+        this.datum = datum;
+    }
+
+    public String getZeit() {
+        return zeit;
+    }
+
+    public void setZeit(String zeit) {
+        this.zeit = zeit;
+    }
+
+    public double getPreis() {
+        return preis;
+    }
+
+    public void setPreis(double preis) {
+        this.preis = preis;
+    }
+
+    public int getMenge() {
+        return menge;
+    }
+
+    public void setMenge(int menge) {
+        this.menge = menge;
+    }
+
+    public String getKueche() {
+        return kueche;
+    }
+
+    public void setKueche(String kueche) {
+        this.kueche = kueche;
+    }
+
+    public int getAktiv() {
+        return aktiv;
+    }
+
+    public void setAktiv(int aktiv) {
+        this.aktiv = aktiv;
     }
 
     @Override

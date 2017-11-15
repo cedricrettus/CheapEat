@@ -16,11 +16,10 @@ libraryDependencies ++= Seq(
   "org.hibernate" % "hibernate-entitymanager" % "4.3.7.Final",
   "mysql" % "mysql-connector-java" % "5.1.35",
   "com.typesafe.play" %% "play-mailer" % "6.0.1",
-  "com.typesafe.play" %% "play-mailer-guice" % "6.0.1"
+  "com.typesafe.play" %% "play-mailer-guice" % "6.0.1",
+  "com.amazonaws" % "aws-java-sdk" % "1.11.229"
   //"org.hibernate" % "hibernate-core" % "4.2.3.Final"
 )
-
-
 
 
   fork in run := false

@@ -18,6 +18,10 @@ public class Bilderangebote {
 
     public int bilder_id;
 
+    public Bilderangebote(){
+
+    }
+
     @Override
     public String toString() {
         return "Bilderangebote{" +
