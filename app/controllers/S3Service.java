@@ -21,8 +21,8 @@ public class S3Service {
 
     Config conf = ConfigFactory.load();
 
-    private static String bucketNameBig     = "images.cheapeat.fgoeldi.com/big";
-    private static String bucketNameThumb     = "images.cheapeat.fgoeldi.com/thumb";
+    private static String bucketNameBig     = "s3.fgoeldi.com/big";
+    private static String bucketNameThumb     = "s3.fgoeldi.com/thumb";
     private  String accessKey = conf.getString("aws.accessKey");
     private  String secretKey = conf.getString("aws.secretKey");
     //private static String fileName        = "filename.jpg";

@@ -1,0 +1,17 @@
+2017-11-16 09:46:16,644 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2017-11-16 09:46:17,460 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-1 - datasource [default] bound to JNDI as DefaultDS
+2017-11-16 09:46:17,685 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://fgoeldi.com:3306/cheapeat
+2017-11-16 09:46:19,816 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2017-11-16 09:46:20,059 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-4 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-11-16 09:46:20,061 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-4 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-11-16 09:46:20,061 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-4 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-11-16 10:05:16,857 [INFO] from application in application-akka.actor.default-dispatcher-33 - Shutting down connection pool.
+2017-11-16 10:05:22,601 [INFO] from application in application-akka.actor.default-dispatcher-33 - Creating Pool for datasource 'default'
+2017-11-16 10:05:22,826 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-33 - datasource [default] bound to JNDI as DefaultDS
+2017-11-16 10:05:23,069 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-33 - Database [default] connected at jdbc:mysql://fgoeldi.com:3306/cheapeat
+2017-11-16 10:05:23,609 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-33 - Application started (Dev)
+2017-11-16 10:05:23,726 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-9 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-11-16 10:05:23,726 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-9 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-11-16 10:05:23,726 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-9 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-11-16 10:07:48,906 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-2 housekeeper - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=55s800ms565µs825ns).
+2017-11-16 10:22:00,736 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-2 housekeeper - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=13m41s610ms680µs364ns).
