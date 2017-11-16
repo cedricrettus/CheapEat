@@ -1,0 +1,9 @@
+[debug] Copy resource mappings: 
+[debug] 	(C:\dev\git\CheapEat\conf\application.conf,C:\dev\git\CheapEat\target\scala-2.11\classes\application.conf)
+[debug] 	(C:\dev\git\CheapEat\conf\evolutions,C:\dev\git\CheapEat\target\scala-2.11\classes\evolutions)
+[debug] 	(C:\dev\git\CheapEat\conf\logback.xml,C:\dev\git\CheapEat\target\scala-2.11\classes\logback.xml)
+[debug] 	(C:\dev\git\CheapEat\conf\META-INF,C:\dev\git\CheapEat\target\scala-2.11\classes\META-INF)
+[debug] 	(C:\dev\git\CheapEat\conf\routes,C:\dev\git\CheapEat\target\scala-2.11\classes\routes)
+[debug] 	(C:\dev\git\CheapEat\conf\evolutions\default,C:\dev\git\CheapEat\target\scala-2.11\classes\evolutions\default)
+[debug] 	(C:\dev\git\CheapEat\conf\evolutions\default\1.sql,C:\dev\git\CheapEat\target\scala-2.11\classes\evolutions\default\1.sql)
+[debug] 	(C:\dev\git\CheapEat\conf\META-INF\persistence.xml,C:\dev\git\CheapEat\target\scala-2.11\classes\META-INF\persistence.xml)

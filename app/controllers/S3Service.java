@@ -11,24 +11,42 @@ import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.amazonaws.services.s3.model.PutObjectResult;
+import com.typesafe.config.Config;
+import com.typesafe.config.ConfigFactory;
+import play.api.Play;
 import play.mvc.Http;
 
 public class S3Service {
 
-    private static String bucketName     = "images.cheapeat.fgoeldi.com/big";
-    private static String keyName        = "filename.jpg";
+    Config conf = ConfigFactory.load();
+
+    private static String bucketNameBig     = "images.cheapeat.fgoeldi.com/big";
+    private static String bucketNameThumb     = "images.cheapeat.fgoeldi.com/thumb";
+    private  String accessKey = conf.getString("aws.accessKey");
+    private  String secretKey = conf.getString("aws.secretKey");
+    //private static String fileName        = "filename.jpg";
     //private static String uploadFileName = "*** Provide file name ***";
 
-    public static void uploadImage(File file){
-        AWSCredentials awsCredentials = new BasicAWSCredentials("AKIAJMSRSEWBG5FZIDLQ","xcg5E5bJhcQD7Rx6SlLQbWdoVIWcvb/P0M3wXtxT");
+    public S3Service(){
 
+    }
+
+
+    public boolean uploadImage(File file, String fileName){
+        AWSCredentials awsCredentials = new BasicAWSCredentials(accessKey, secretKey);
         AmazonS3 s3client = new AmazonS3Client(awsCredentials);
         try {
 
             System.out.println("Uploading a new object to S3 from a file\n");
             //File file = new File(uploadFileName);
-            s3client.putObject(new PutObjectRequest(
-                    bucketName, keyName, file));
+            PutObjectResult res = s3client.putObject(new PutObjectRequest(bucketNameBig, fileName, file));
+
+            System.out.println("Image uploaded");
+            if(res.getETag() != null){
+                return true;
+            }
+
 
         } catch (AmazonServiceException ase) {
             System.out.println("Caught an AmazonServiceException, which " +
@@ -48,5 +66,7 @@ public class S3Service {
                     "such as not being able to access the network.");
             System.out.println("Error Message: " + ace.getMessage());
         }
+
+        return false;
     }
 }
