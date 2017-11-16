@@ -10,6 +10,8 @@ import java.util.Date;
 @Table(name = "bilder")
 public class Bild {
 
+
+
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
@@ -18,8 +20,7 @@ public class Bild {
 
     private String beschreibung;
 
-    public Bild(String url) {
-        this.url = url;
+    public Bild() {
     }
 
     public int getId() {
@@ -28,6 +29,10 @@ public class Bild {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Bild(String url) {
+        this.url = url;
     }
 
     public String getUrl() {

@@ -18,6 +18,9 @@ public class Bilderangebote {
 
     private int bilder_id;
 
+    public Bilderangebote() {
+    }
+
     public Bilderangebote(int angebote_id, int bilder_id) {
         this.angebote_id = angebote_id;
         this.bilder_id = bilder_id;

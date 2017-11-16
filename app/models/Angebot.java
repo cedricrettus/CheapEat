@@ -7,7 +7,9 @@ import javax.xml.crypto.Data;
 import java.io.File;
 import java.sql.Time;
 import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "angebote")
@@ -45,6 +47,8 @@ public class Angebot {
 
     public int aktiv;
 
+    public int bild;
+
     /*public Angebot(int adressen_id, String titel, String beschreibung, String email, int plz, Date datum, String zeit, double preis, int menge, String kueche) {
         this.adressen_id = adressen_id;
         this.titel = titel;
@@ -57,10 +61,19 @@ public class Angebot {
         this.menge = menge;
         this.kueche = kueche;
     }
+    */
 
     public Angebot() {
     }
-    */
+
+
+    public int getBild() {
+        return bild;
+    }
+
+    public void setBild(int bild) {
+        this.bild = bild;
+    }
 
     public int getId() {
         return id;

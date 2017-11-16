@@ -7,8 +7,11 @@ import play.data.Form;
 import play.mvc.*;
 import play.db.jpa.*;
 import play.data.FormFactory;
+import views.html.suche;
+
 import javax.inject.Inject;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 import static play.libs.Json.*;
@@ -52,7 +55,6 @@ public class AngebotController extends Controller {
 
             List<Http.MultipartFormData.FilePart<File>> bilder = body.getFiles();
             System.out.println("files added");
-            System.out.println("files added 2");
 
             if (bilder.size() > 0) {
                 for (int i = 0; i < bilder.size(); i++) {
@@ -67,6 +69,9 @@ public class AngebotController extends Controller {
                         Bilderangebote ba = new Bilderangebote(angebot.getId(), bild.getId());
                         JPA.em().persist(ba);
 
+                        angebot.setBild(1);
+                        JPA.em().persist(angebot);
+
                     } else {
                         System.out.println("upload failed!");
                     }
@@ -80,7 +85,27 @@ public class AngebotController extends Controller {
 
     @Transactional(readOnly = true)
     public Result getAngeboteList() {
-        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p").getResultList();
+
+        //List angebote = JPA.em().createQuery("select p, y.url from Angebot p, Bilderangebote x, Bild y where (x.angebote_id = p.id and x.bilder_id = y.id and p.bild = 1)").getResultList();
+
+        List angebote = JPA.em().createQuery("select p from Angebot p").getResultList();
+
+        for(int i = 0; i < angebote.size(); i++){
+                List urls = JPA.em().createQuery("select b.url from Bild b, Bilderangebote ba where ba.angebote_id ="+ angebote.get(i) +" and  ba.bilder_id = b.id").getResultList();
+                if(urls.size() > 0){
+                    angebote.add(i, urls);
+                }
+
+        }
+
+
+        //List alleAngebote = new ArrayList<Object>(angeboteMBild);
+        //alleAngebote.addAll(angeboteOBild);
+
+
+        System.out.println("test");
+
+        //List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p, x, y from Angebot p, Bilderangebote x, Bild y where (x.angebote_id = p.id and x.bilder_id = y.id) or p.bild = 0").getResultList();
         return ok(toJson(angebote));
     }
 
@@ -93,8 +118,10 @@ public class AngebotController extends Controller {
 
     @Transactional(readOnly = true)
     public Result sucheAngebot(int plz) {
+
+
         List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p where p.plz = " + plz).getResultList();
-        return ok(views.html.suche.render(angebote));
+        return ok(suche.render(angebote));
     }
 
 }

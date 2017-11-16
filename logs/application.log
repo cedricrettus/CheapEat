@@ -1,17 +1,112 @@
-2017-11-16 09:46:16,644 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2017-11-16 09:46:17,460 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-1 - datasource [default] bound to JNDI as DefaultDS
-2017-11-16 09:46:17,685 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:mysql://fgoeldi.com:3306/cheapeat
-2017-11-16 09:46:19,816 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2017-11-16 09:46:20,059 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-4 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2017-11-16 09:46:20,061 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-4 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2017-11-16 09:46:20,061 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-4 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2017-11-16 10:05:16,857 [INFO] from application in application-akka.actor.default-dispatcher-33 - Shutting down connection pool.
-2017-11-16 10:05:22,601 [INFO] from application in application-akka.actor.default-dispatcher-33 - Creating Pool for datasource 'default'
-2017-11-16 10:05:22,826 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-33 - datasource [default] bound to JNDI as DefaultDS
-2017-11-16 10:05:23,069 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-33 - Database [default] connected at jdbc:mysql://fgoeldi.com:3306/cheapeat
-2017-11-16 10:05:23,609 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-33 - Application started (Dev)
-2017-11-16 10:05:23,726 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-9 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2017-11-16 10:05:23,726 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-9 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2017-11-16 10:05:23,726 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-9 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2017-11-16 10:07:48,906 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-2 housekeeper - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=55s800ms565µs825ns).
-2017-11-16 10:22:00,736 [WARN] from com.zaxxer.hikari.pool.HikariPool in HikariPool-2 housekeeper - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=13m41s610ms680µs364ns).
+2017-11-16 16:13:41,971 [INFO] from application in ForkJoinPool-1-worker-9 - Creating Pool for datasource 'default'
+2017-11-16 16:13:43,291 [INFO] from play.api.db.HikariCPConnectionPool in ForkJoinPool-1-worker-9 - datasource [default] bound to JNDI as DefaultDS
+2017-11-16 16:13:43,324 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-9 - Database [default] connected at jdbc:mysql://fgoeldi.com:3306/cheapeat
+2017-11-16 16:13:43,936 [INFO] from play.api.Play in ForkJoinPool-1-worker-9 - Application started (Dev)
+2017-11-16 16:13:44,089 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-3 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-11-16 16:13:44,091 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-3 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-11-16 16:13:44,091 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-3 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-11-16 16:20:09,144 [ERROR] from application in application-akka.actor.default-dispatcher-6 - 
+
+! @762kldhjc - Internal server error, for (GET) [/angebote/all] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[PersistenceException: org.hibernate.InstantiationException: No default constructor for entity:  : models.Bilderangebote]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:293)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:220)
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:160)
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:188)
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:100)
+	at play.core.server.netty.PlayRequestHandler$$anonfun$2$$anonfun$apply$1.applyOrElse(PlayRequestHandler.scala:99)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:346)
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:345)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:36)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:44)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:252)
+	at scala.concurrent.impl.Promise$DefaultPromise.link(Promise.scala:308)
+	at scala.concurrent.impl.Promise$DefaultPromise.linkRootOf(Promise.scala:293)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:255)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:251)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:36)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:415)
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: javax.persistence.PersistenceException: org.hibernate.InstantiationException: No default constructor for entity:  : models.Bilderangebote
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1763)
+	at org.hibernate.jpa.spi.AbstractEntityManagerImpl.convert(AbstractEntityManagerImpl.java:1677)
+	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:458)
+	at controllers.AngebotController.getAngeboteList(AngebotController.java:100)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(Routes.scala:241)
+	at router.Routes$$anonfun$routes$1$$anonfun$applyOrElse$3$$anonfun$apply$3.apply(Routes.scala:241)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:157)
+	at play.core.routing.HandlerInvokerFactory$$anon$4.resultCall(HandlerInvoker.scala:156)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$14$$anon$3$$anon$1.invocation(HandlerInvoker.scala:136)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:73)
+	at play.http.HttpRequestHandler$1.call(HttpRequestHandler.java:54)
+	at play.db.jpa.TransactionalAction.lambda$call$4(TransactionalAction.java:28)
+	at play.db.jpa.DefaultJPAApi.lambda$withTransaction$3(DefaultJPAApi.java:196)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:137)
+	at play.db.jpa.DefaultJPAApi.withTransaction(DefaultJPAApi.java:195)
+	at play.db.jpa.TransactionalAction.call(TransactionalAction.java:25)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at play.core.j.JavaAction$$anonfun$7.apply(JavaAction.scala:108)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:56)
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:48)
+	at scala.concurrent.impl.Future$.apply(Future.scala:31)
+	at scala.concurrent.Future$.apply(Future.scala:494)
+	at play.core.j.JavaAction.apply(JavaAction.scala:108)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5$$anonfun$apply$6.apply(Action.scala:112)
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:111)
+	at play.api.mvc.Action$$anonfun$apply$2$$anonfun$apply$5.apply(Action.scala:110)
+	at scala.Option.map(Option.scala:146)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:110)
+	at play.api.mvc.Action$$anonfun$apply$2.apply(Action.scala:103)
+	at scala.concurrent.Future$$anonfun$flatMap$1.apply(Future.scala:253)
+	... 14 common frames omitted
+Caused by: org.hibernate.InstantiationException: No default constructor for entity:  : models.Bilderangebote
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:120)
+	at org.hibernate.tuple.PojoInstantiator.instantiate(PojoInstantiator.java:136)
+	at org.hibernate.tuple.entity.AbstractEntityTuplizer.instantiate(AbstractEntityTuplizer.java:737)
+	at org.hibernate.persister.entity.AbstractEntityPersister.instantiate(AbstractEntityPersister.java:4761)
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1391)
+	at org.hibernate.internal.SessionImpl.instantiate(SessionImpl.java:1379)
+	at org.hibernate.loader.Loader.instanceNotYetLoaded(Loader.java:1619)
+	at org.hibernate.loader.Loader.getRow(Loader.java:1515)
+	at org.hibernate.loader.Loader.getRowFromResultSet(Loader.java:726)
+	at org.hibernate.loader.Loader.processResultSet(Loader.java:953)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:921)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:355)
+	at org.hibernate.loader.Loader.doList(Loader.java:2554)
+	at org.hibernate.loader.Loader.doList(Loader.java:2540)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2370)
+	at org.hibernate.loader.Loader.list(Loader.java:2365)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:497)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:387)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:236)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1264)
+	at org.hibernate.internal.QueryImpl.list(QueryImpl.java:103)
+	at org.hibernate.jpa.internal.QueryImpl.list(QueryImpl.java:573)
+	at org.hibernate.jpa.internal.QueryImpl.getResultList(QueryImpl.java:449)
+	... 46 common frames omitted
+2017-11-16 16:22:14,060 [INFO] from application in application-akka.actor.default-dispatcher-12 - Shutting down connection pool.
+2017-11-16 16:22:14,153 [INFO] from application in application-akka.actor.default-dispatcher-12 - Creating Pool for datasource 'default'
+2017-11-16 16:22:14,169 [INFO] from play.api.db.HikariCPConnectionPool in application-akka.actor.default-dispatcher-12 - datasource [default] bound to JNDI as DefaultDS
+2017-11-16 16:22:14,191 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-12 - Database [default] connected at jdbc:mysql://fgoeldi.com:3306/cheapeat
+2017-11-16 16:22:14,276 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-12 - Application started (Dev)
+2017-11-16 16:22:14,276 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-3 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-11-16 16:22:14,276 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-3 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-11-16 16:22:14,276 [WARN] from org.hibernate.ejb.HibernatePersistence in application-akka.actor.default-dispatcher-3 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
