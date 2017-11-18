@@ -4,13 +4,15 @@
 
 # Home page
 GET     /                           controllers.AngebotController.index()
-POST    /angebote                     controllers.AngebotController.addAngebot()
-GET     /angebote/all                    controllers.AngebotController.getAngeboteList()
-GET     /angebote/:id                    controllers.AngebotController.getAngebote(id:Int)
+POST    /angebote                       controllers.AngebotController.addAngebot()
+GET     /angebote/all                controllers.AngebotController.getAngeboteList()
+GET     /angebote/:id                 controllers.AngebotController.getAngebote(id:Int)
 #GET     /suche                       controllers.AngebotControllerroller.suchePlz(plz:Int ?= 0)
 GET     /search                      controllers.AngebotController.sucheAngebot(plz:Int ?= 0)
 POST    /bestellung                   controllers.BestellungController.addBestellung()
 GET    /bestellung                   controllers.BestellungController.getBestellung()
+
+GET     /test                       controllers.BestellungController.test()
 
 GET     /upload                     controllers.Application.imageUpload()
 

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Thu Nov 16 15:35:37 CET 2017
+// @DATE:Sat Nov 18 09:17:03 CET 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -39,6 +39,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "bestellung"})
+        }
+      """
+    )
+  
+    // @LINE:15
+    def test: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.BestellungController.test",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "test"})
         }
       """
     )
@@ -105,7 +115,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:18
+  // @LINE:20
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -113,7 +123,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:18
+    // @LINE:20
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -125,7 +135,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:15
+  // @LINE:17
   class ReverseApplication(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -133,7 +143,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:15
+    // @LINE:17
     def imageUpload: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.imageUpload",
       """

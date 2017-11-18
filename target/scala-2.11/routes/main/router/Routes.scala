@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Thu Nov 16 15:35:37 CET 2017
+// @DATE:Sat Nov 18 09:17:03 CET 2017
 
 package router
 
@@ -20,9 +20,9 @@ class Routes(
   AngebotController_3: controllers.AngebotController,
   // @LINE:12
   BestellungController_0: controllers.BestellungController,
-  // @LINE:15
+  // @LINE:17
   Application_2: controllers.Application,
-  // @LINE:18
+  // @LINE:20
   Assets_1: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -33,9 +33,9 @@ class Routes(
     AngebotController_3: controllers.AngebotController,
     // @LINE:12
     BestellungController_0: controllers.BestellungController,
-    // @LINE:15
+    // @LINE:17
     Application_2: controllers.Application,
-    // @LINE:18
+    // @LINE:20
     Assets_1: controllers.Assets
   ) = this(errorHandler, AngebotController_3, BestellungController_0, Application_2, Assets_1, "/")
 
@@ -58,6 +58,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search""", """controllers.AngebotController.sucheAngebot(plz:Int ?= 0)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """bestellung""", """controllers.BestellungController.addBestellung()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """bestellung""", """controllers.BestellungController.getBestellung()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """test""", """controllers.BestellungController.test()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """upload""", """controllers.Application.imageUpload()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public", file:String)"""),
     Nil
@@ -187,10 +188,27 @@ class Routes(
   )
 
   // @LINE:15
-  private[this] lazy val controllers_Application_imageUpload7_route = Route("GET",
+  private[this] lazy val controllers_BestellungController_test7_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("test")))
+  )
+  private[this] lazy val controllers_BestellungController_test7_invoker = createInvoker(
+    BestellungController_0.test(),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.BestellungController",
+      "test",
+      Nil,
+      "GET",
+      """""",
+      this.prefix + """test"""
+    )
+  )
+
+  // @LINE:17
+  private[this] lazy val controllers_Application_imageUpload8_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("upload")))
   )
-  private[this] lazy val controllers_Application_imageUpload7_invoker = createInvoker(
+  private[this] lazy val controllers_Application_imageUpload8_invoker = createInvoker(
     Application_2.imageUpload(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -203,11 +221,11 @@ class Routes(
     )
   )
 
-  // @LINE:18
-  private[this] lazy val controllers_Assets_at8_route = Route("GET",
+  // @LINE:20
+  private[this] lazy val controllers_Assets_at9_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at8_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_at9_invoker = createInvoker(
     Assets_1.at(fakeValue[String], fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -266,15 +284,21 @@ class Routes(
       }
   
     // @LINE:15
-    case controllers_Application_imageUpload7_route(params) =>
+    case controllers_BestellungController_test7_route(params) =>
       call { 
-        controllers_Application_imageUpload7_invoker.call(Application_2.imageUpload())
+        controllers_BestellungController_test7_invoker.call(BestellungController_0.test())
       }
   
-    // @LINE:18
-    case controllers_Assets_at8_route(params) =>
+    // @LINE:17
+    case controllers_Application_imageUpload8_route(params) =>
+      call { 
+        controllers_Application_imageUpload8_invoker.call(Application_2.imageUpload())
+      }
+  
+    // @LINE:20
+    case controllers_Assets_at9_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at8_invoker.call(Assets_1.at(path, file))
+        controllers_Assets_at9_invoker.call(Assets_1.at(path, file))
       }
   }
 }

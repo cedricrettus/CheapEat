@@ -16,11 +16,26 @@ public class Bild {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
 
+    private int angebote_id;
+
     private String url;
 
     private String beschreibung;
 
     public Bild() {
+    }
+
+    public Bild(String url, int angebote_id) {
+        this.url = url;
+        this.angebote_id = angebote_id;
+    }
+
+    public int getAngebote_id() {
+        return angebote_id;
+    }
+
+    public void setAngebote_id(int angebote_id) {
+        this.angebote_id = angebote_id;
     }
 
     public int getId() {
@@ -31,9 +46,7 @@ public class Bild {
         this.id = id;
     }
 
-    public Bild(String url) {
-        this.url = url;
-    }
+
 
     public String getUrl() {
         return url;

@@ -5,21 +5,21 @@ import java.util.List;
 /**
  * Created by Fabio on 17.11.2017.
  */
-public class AngebotBilder {
+public class AngebotUrls {
     private List urls;
 
     private Angebot angebot;
 
-    public AngebotBilder(){
+    public AngebotUrls(){
 
     }
 
-    public AngebotBilder(List urls, Angebot angebote) {
+    public AngebotUrls(List urls, Angebot angebote) {
         this.urls = urls;
         this.angebot = angebote;
     }
 
-    public AngebotBilder(List urls) {
+    public AngebotUrls(List urls) {
 
     }
 
