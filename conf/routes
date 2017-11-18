@@ -12,7 +12,7 @@ GET     /search                      controllers.AngebotController.sucheAngebot(
 POST    /bestellung                   controllers.BestellungController.addBestellung()
 GET    /bestellung                   controllers.BestellungController.getBestellung()
 
-GET     /test                       controllers.BestellungController.test()
+GET     /test                       controllers.AngebotController.test()
 
 GET     /upload                     controllers.Application.imageUpload()
 

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Sat Nov 18 09:17:03 CET 2017
+// @DATE:Sat Nov 18 16:35:14 CET 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -43,16 +43,6 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:15
-    def test: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.BestellungController.test",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "test"})
-        }
-      """
-    )
-  
   }
 
   // @LINE:6
@@ -79,6 +69,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "angebote/all"})
+        }
+      """
+    )
+  
+    // @LINE:15
+    def test: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.AngebotController.test",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "test"})
         }
       """
     )

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Sat Nov 18 09:17:03 CET 2017
+// @DATE:Sat Nov 18 16:35:14 CET 2017
 
 package router
 
@@ -58,7 +58,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search""", """controllers.AngebotController.sucheAngebot(plz:Int ?= 0)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """bestellung""", """controllers.BestellungController.addBestellung()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """bestellung""", """controllers.BestellungController.getBestellung()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """test""", """controllers.BestellungController.test()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """test""", """controllers.AngebotController.test()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """upload""", """controllers.Application.imageUpload()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public", file:String)"""),
     Nil
@@ -188,14 +188,14 @@ class Routes(
   )
 
   // @LINE:15
-  private[this] lazy val controllers_BestellungController_test7_route = Route("GET",
+  private[this] lazy val controllers_AngebotController_test7_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("test")))
   )
-  private[this] lazy val controllers_BestellungController_test7_invoker = createInvoker(
-    BestellungController_0.test(),
+  private[this] lazy val controllers_AngebotController_test7_invoker = createInvoker(
+    AngebotController_3.test(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.BestellungController",
+      "controllers.AngebotController",
       "test",
       Nil,
       "GET",
@@ -284,9 +284,9 @@ class Routes(
       }
   
     // @LINE:15
-    case controllers_BestellungController_test7_route(params) =>
+    case controllers_AngebotController_test7_route(params) =>
       call { 
-        controllers_BestellungController_test7_invoker.call(BestellungController_0.test())
+        controllers_AngebotController_test7_invoker.call(AngebotController_3.test())
       }
   
     // @LINE:17

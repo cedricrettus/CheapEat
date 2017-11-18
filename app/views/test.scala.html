@@ -41,6 +41,7 @@
 
                 <script id="angebote-template" type="text/x-handlebars-template">
 
+                    {{#objects}}
                     <div class="card">
                         <div class="row">
                             <div class="col-md-3">
@@ -48,22 +49,23 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="card-body">
-                                    <h4 class="card-title"> {{titel}} </h4>
-                                    <h6 class="card-subtitle mb-2 text-muted"> {{kueche}} </h6>
-                                    <p class="card-text"> {{beschreibung}} </p>
+                                    <h4 class="card-title"> {{this.angebot.titel}} </h4>
+                                    <h6 class="card-subtitle mb-2 text-muted"> {{this.angebot.kueche}} </h6>
+                                    <p class="card-text"> {{this.angebot.beschreibung}} </p>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="card-body">
                                     <p class="card-text">Username <span class="">Bewertung</span></p>
-                                    <p class="card-text">Ort: <span> {{plz}} </span> </p>
-                                    <p class="card-text"><span class="preis">{{preis}} CHF</span>
-                                    <span class="">Portionen: {{menge}}</span></p>
-                                    <button class="btn btn-primary bestellButton" data-id="{{id}}">Bestellen</button>
+                                    <p class="card-text">Ort: <span> {{this.angebot.plz}} </span> </p>
+                                    <p class="card-text"><span class="preis">{{this.angebot.preis}} CHF</span>
+                                    <span class="">Portionen: {{this.angebot.menge}}</span></p>
+                                    <button class="btn btn-primary bestellButton" data-id="{{this.angebot.id}}">Bestellen</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {{/objects}}
 
                 </script>
 

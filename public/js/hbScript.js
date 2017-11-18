@@ -5,16 +5,28 @@ $(document).ready(function () {
     // Compile the template
     var theTemplate = Handlebars.compile(theTemplateScript);
 
-    // Define our data object
-    var context={
-        "city": "London",
-        "street": "Baker Street",
-        "number": "221B"
-    };
+    var angebote;
 
-    // Pass our data to the template
-    var theCompiledHtml = theTemplate(context);
+    $.get('/angebote/all', function(data){
+        angeboteAll = data;
 
-    // Add the compiled html to the page
-    $('.content-placeholder').html(theCompiledHtml);
+        console.log(data);
+        /*var context={
+            "titel": data.angebot.titel,
+            "kueche": data.angebot.kueche,
+            "beschreibung": data.angebot.beschreibung,
+            "plz": data.angebot.plz,
+            "menge" : data.angebot.menge,
+            "preis" : data.angebot.preis,
+            "id" : data.angebot.id
+        };*/
+        // Pass our data to the template
+        var theCompiledHtml = theTemplate(data);
+
+        // Add the compiled html to the page
+        $('#angebote-cards').html(theCompiledHtml);
+
+    })
+
+
 });
