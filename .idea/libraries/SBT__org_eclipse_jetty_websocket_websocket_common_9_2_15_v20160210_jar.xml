@@ -2,6 +2,7 @@
   <library name="SBT: org.eclipse.jetty.websocket:websocket-common:9.2.15.v20160210:jar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../play/activator/repository/org.eclipse.jetty.websocket/websocket-common/9.2.15.v20160210/jars/websocket-common.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.eclipse.jetty.websocket/websocket-common/jars/websocket-common-9.2.15.v20160210.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

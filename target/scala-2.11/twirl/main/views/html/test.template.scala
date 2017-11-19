@@ -67,41 +67,69 @@ Seq[Any](_display_(/*1.2*/main("CheapEat - Home")/*1.25*/ {_display_(Seq[Any](fo
     """),format.raw/*36.5*/("""<div class="content">
         <div class="container">
             <h1>Angebote</h1>
-            <ul id="angebote"></ul>
-            <div class="cards-items" id="angebote-cards">
+            <script id="angebote-template" type="text/x-handlebars-template">
 
-                <script id="angebote-template" type="text/x-handlebars-template">
+                """),format.raw/*41.17*/("""{"""),format.raw/*41.18*/("""{"""),format.raw/*41.19*/("""#each this"""),format.raw/*41.29*/("""}"""),format.raw/*41.30*/("""}"""),format.raw/*41.31*/("""
+                """),format.raw/*42.17*/("""<div class="card">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <!-- <img class="card-img-top" src="assets/images/burger1.jpg" alt="Card image cap"> -->
+                            <div id="thumbnail-carousel"""),format.raw/*46.56*/("""{"""),format.raw/*46.57*/("""{"""),format.raw/*46.58*/("""@index"""),format.raw/*46.65*/("""}"""),format.raw/*46.66*/("""}"""),format.raw/*46.67*/("""" class="carousel slide" data-ride=false data-interval="3000">
+                                <div class="carousel-inner">
+                                    """),format.raw/*48.37*/("""{"""),format.raw/*48.38*/("""{"""),format.raw/*48.39*/("""#each this.urls"""),format.raw/*48.54*/("""}"""),format.raw/*48.55*/("""}"""),format.raw/*48.56*/("""
+                                        """),format.raw/*49.41*/("""{"""),format.raw/*49.42*/("""{"""),format.raw/*49.43*/("""#if @first"""),format.raw/*49.54*/("""}"""),format.raw/*49.55*/("""}"""),format.raw/*49.56*/("""
+                                            """),format.raw/*50.45*/("""<div class="carousel-item active">
+                                                <img class="d-block img-fluid mh-100 card-img-top" src="http://s3.fgoeldi.com/big/"""),format.raw/*51.131*/("""{"""),format.raw/*51.132*/("""{"""),format.raw/*51.133*/("""this"""),format.raw/*51.137*/("""}"""),format.raw/*51.138*/("""}"""),format.raw/*51.139*/("""" alt="Angebot Bild">
+                                            </div>
+                                        """),format.raw/*53.41*/("""{"""),format.raw/*53.42*/("""{"""),format.raw/*53.43*/("""else"""),format.raw/*53.47*/("""}"""),format.raw/*53.48*/("""}"""),format.raw/*53.49*/("""
+                                            """),format.raw/*54.45*/("""<div class="carousel-item">
+                                                <img class="d-block img-fluid mh-100 card-img-top" src="http://s3.fgoeldi.com/big/"""),format.raw/*55.131*/("""{"""),format.raw/*55.132*/("""{"""),format.raw/*55.133*/("""this"""),format.raw/*55.137*/("""}"""),format.raw/*55.138*/("""}"""),format.raw/*55.139*/("""" alt="Angebot Bild">
+                                            </div>
+                                        """),format.raw/*57.41*/("""{"""),format.raw/*57.42*/("""{"""),format.raw/*57.43*/("""/if"""),format.raw/*57.46*/("""}"""),format.raw/*57.47*/("""}"""),format.raw/*57.48*/("""
+                                        """),format.raw/*58.41*/("""{"""),format.raw/*58.42*/("""{"""),format.raw/*58.43*/("""else"""),format.raw/*58.47*/("""}"""),format.raw/*58.48*/("""}"""),format.raw/*58.49*/("""
+                                        """),format.raw/*59.41*/("""<div class="carousel-item active">
+                                            <img class="d-block img-fluid mh-100 card-img-top" src="assets/images/burger1.jpg" alt="Angebot Bild">
+                                        </div>
+                                    """),format.raw/*62.37*/("""{"""),format.raw/*62.38*/("""{"""),format.raw/*62.39*/("""/each"""),format.raw/*62.44*/("""}"""),format.raw/*62.45*/("""}"""),format.raw/*62.46*/("""
+                                """),format.raw/*63.33*/("""</div>
+                                <a class="carousel-control-prev" href="#thumbnail-carousel"""),format.raw/*64.91*/("""{"""),format.raw/*64.92*/("""{"""),format.raw/*64.93*/("""@index"""),format.raw/*64.100*/("""}"""),format.raw/*64.101*/("""}"""),format.raw/*64.102*/("""" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#thumbnail-carousel"""),format.raw/*68.91*/("""{"""),format.raw/*68.92*/("""{"""),format.raw/*68.93*/("""@index"""),format.raw/*68.100*/("""}"""),format.raw/*68.101*/("""}"""),format.raw/*68.102*/("""" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
 
-                    """),format.raw/*44.21*/("""{"""),format.raw/*44.22*/("""{"""),format.raw/*44.23*/("""#objects"""),format.raw/*44.31*/("""}"""),format.raw/*44.32*/("""}"""),format.raw/*44.33*/("""
-                    """),format.raw/*45.21*/("""<div class="card">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img class="card-img-top" src="assets/images/burger1.jpg" alt="Card image cap">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h4 class="card-title"> """),format.raw/*77.57*/("""{"""),format.raw/*77.58*/("""{"""),format.raw/*77.59*/("""this.angebot.titel"""),format.raw/*77.77*/("""}"""),format.raw/*77.78*/("""}"""),format.raw/*77.79*/(""" """),format.raw/*77.80*/("""</h4>
+                                <h6 class="card-subtitle mb-2 text-muted"> """),format.raw/*78.76*/("""{"""),format.raw/*78.77*/("""{"""),format.raw/*78.78*/("""this.angebot.kueche"""),format.raw/*78.97*/("""}"""),format.raw/*78.98*/("""}"""),format.raw/*78.99*/(""" """),format.raw/*78.100*/("""</h6>
+                                <p class="card-text"> """),format.raw/*79.55*/("""{"""),format.raw/*79.56*/("""{"""),format.raw/*79.57*/("""this.angebot.beschreibung"""),format.raw/*79.82*/("""}"""),format.raw/*79.83*/("""}"""),format.raw/*79.84*/(""" """),format.raw/*79.85*/("""</p>
                             </div>
-                            <div class="col-md-6">
-                                <div class="card-body">
-                                    <h4 class="card-title"> """),format.raw/*52.61*/("""{"""),format.raw/*52.62*/("""{"""),format.raw/*52.63*/("""this.angebot.titel"""),format.raw/*52.81*/("""}"""),format.raw/*52.82*/("""}"""),format.raw/*52.83*/(""" """),format.raw/*52.84*/("""</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted"> """),format.raw/*53.80*/("""{"""),format.raw/*53.81*/("""{"""),format.raw/*53.82*/("""this.angebot.kueche"""),format.raw/*53.101*/("""}"""),format.raw/*53.102*/("""}"""),format.raw/*53.103*/(""" """),format.raw/*53.104*/("""</h6>
-                                    <p class="card-text"> """),format.raw/*54.59*/("""{"""),format.raw/*54.60*/("""{"""),format.raw/*54.61*/("""this.angebot.beschreibung"""),format.raw/*54.86*/("""}"""),format.raw/*54.87*/("""}"""),format.raw/*54.88*/(""" """),format.raw/*54.89*/("""</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card-body">
-                                    <p class="card-text">Username <span class="">Bewertung</span></p>
-                                    <p class="card-text">Ort: <span> """),format.raw/*60.70*/("""{"""),format.raw/*60.71*/("""{"""),format.raw/*60.72*/("""this.angebot.plz"""),format.raw/*60.88*/("""}"""),format.raw/*60.89*/("""}"""),format.raw/*60.90*/(""" """),format.raw/*60.91*/("""</span> </p>
-                                    <p class="card-text"><span class="preis">"""),format.raw/*61.78*/("""{"""),format.raw/*61.79*/("""{"""),format.raw/*61.80*/("""this.angebot.preis"""),format.raw/*61.98*/("""}"""),format.raw/*61.99*/("""}"""),format.raw/*61.100*/(""" """),format.raw/*61.101*/("""CHF</span>
-                                    <span class="">Portionen: """),format.raw/*62.63*/("""{"""),format.raw/*62.64*/("""{"""),format.raw/*62.65*/("""this.angebot.menge"""),format.raw/*62.83*/("""}"""),format.raw/*62.84*/("""}"""),format.raw/*62.85*/("""</span></p>
-                                    <button class="btn btn-primary bestellButton" data-id=""""),format.raw/*63.92*/("""{"""),format.raw/*63.93*/("""{"""),format.raw/*63.94*/("""this.angebot.id"""),format.raw/*63.109*/("""}"""),format.raw/*63.110*/("""}"""),format.raw/*63.111*/("""">Bestellen</button>
-                                </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-body">
+                                <p class="card-text">Username <span class="">Bewertung</span></p>
+                                <p class="card-text">Ort: <span> """),format.raw/*85.66*/("""{"""),format.raw/*85.67*/("""{"""),format.raw/*85.68*/("""this.angebot.plz"""),format.raw/*85.84*/("""}"""),format.raw/*85.85*/("""}"""),format.raw/*85.86*/(""" """),format.raw/*85.87*/("""</span> </p>
+                                <p class="card-text"><span class="preis">"""),format.raw/*86.74*/("""{"""),format.raw/*86.75*/("""{"""),format.raw/*86.76*/("""this.angebot.preis"""),format.raw/*86.94*/("""}"""),format.raw/*86.95*/("""}"""),format.raw/*86.96*/(""" """),format.raw/*86.97*/("""CHF</span>
+                                    <span class="">Portionen: """),format.raw/*87.63*/("""{"""),format.raw/*87.64*/("""{"""),format.raw/*87.65*/("""this.angebot.menge"""),format.raw/*87.83*/("""}"""),format.raw/*87.84*/("""}"""),format.raw/*87.85*/("""</span></p>
+                                <button class="btn btn-primary bestellButton" data-id=""""),format.raw/*88.88*/("""{"""),format.raw/*88.89*/("""{"""),format.raw/*88.90*/("""this.angebot.id"""),format.raw/*88.105*/("""}"""),format.raw/*88.106*/("""}"""),format.raw/*88.107*/("""">Bestellen</button>
                             </div>
                         </div>
                     </div>
-                    """),format.raw/*68.21*/("""{"""),format.raw/*68.22*/("""{"""),format.raw/*68.23*/("""/objects"""),format.raw/*68.31*/("""}"""),format.raw/*68.32*/("""}"""),format.raw/*68.33*/("""
+                </div>
+                """),format.raw/*93.17*/("""{"""),format.raw/*93.18*/("""{"""),format.raw/*93.19*/("""/each"""),format.raw/*93.24*/("""}"""),format.raw/*93.25*/("""}"""),format.raw/*93.26*/("""
 
-                """),format.raw/*70.17*/("""</script>
+            """),format.raw/*95.13*/("""</script>
 
+            <div class="cards-items angebote-cards" id="angebote-cards">
 
             </div>
+
+
         </div>
     </div>
 
@@ -128,11 +156,11 @@ Seq[Any](_display_(/*1.2*/main("CheapEat - Home")/*1.25*/ {_display_(Seq[Any](fo
 object test extends test_Scope0.test
               /*
                   -- GENERATED --
-                  DATE: Sat Nov 18 16:50:59 CET 2017
+                  DATE: Sun Nov 19 16:01:57 CET 2017
                   SOURCE: C:/dev/git/CheapEat/app/views/test.scala.html
-                  HASH: e46897d53140b78eea597b9067f5aa1a5bdacc2a
-                  MATRIX: 825->1|856->24|895->26|931->36|971->50|985->56|1029->80|1109->134|1123->140|1171->168|2717->1688|2746->1696|2783->1706|3101->1996|3130->1997|3159->1998|3195->2006|3224->2007|3253->2008|3303->2030|3764->2463|3793->2464|3822->2465|3868->2483|3897->2484|3926->2485|3955->2486|4069->2572|4098->2573|4127->2574|4175->2593|4205->2594|4235->2595|4265->2596|4358->2661|4387->2662|4416->2663|4469->2688|4498->2689|4527->2690|4556->2691|4947->3054|4976->3055|5005->3056|5049->3072|5078->3073|5107->3074|5136->3075|5255->3166|5284->3167|5313->3168|5359->3186|5388->3187|5418->3188|5448->3189|5550->3263|5579->3264|5608->3265|5654->3283|5683->3284|5712->3285|5844->3389|5873->3390|5902->3391|5946->3406|5976->3407|6006->3408|6212->3586|6241->3587|6270->3588|6306->3596|6335->3597|6364->3598|6412->3618
-                  LINES: 32->1|32->1|32->1|35->4|35->4|35->4|35->4|36->5|36->5|36->5|64->33|64->33|67->36|75->44|75->44|75->44|75->44|75->44|75->44|76->45|83->52|83->52|83->52|83->52|83->52|83->52|83->52|84->53|84->53|84->53|84->53|84->53|84->53|84->53|85->54|85->54|85->54|85->54|85->54|85->54|85->54|91->60|91->60|91->60|91->60|91->60|91->60|91->60|92->61|92->61|92->61|92->61|92->61|92->61|92->61|93->62|93->62|93->62|93->62|93->62|93->62|94->63|94->63|94->63|94->63|94->63|94->63|99->68|99->68|99->68|99->68|99->68|99->68|101->70
+                  HASH: 91a05c42707b14923112bb936fe9986a916e06b1
+                  MATRIX: 825->1|856->24|895->26|931->36|971->50|985->56|1029->80|1109->134|1123->140|1171->168|2717->1688|2746->1696|2783->1706|2995->1890|3024->1891|3053->1892|3091->1902|3120->1903|3149->1904|3195->1922|3503->2202|3532->2203|3561->2204|3595->2211|3624->2212|3653->2213|3843->2375|3872->2376|3901->2377|3944->2392|3973->2393|4002->2394|4072->2436|4101->2437|4130->2438|4168->2449|4197->2450|4226->2451|4300->2497|4495->2663|4525->2664|4555->2665|4588->2669|4618->2670|4648->2671|4791->2786|4820->2787|4849->2788|4881->2792|4910->2793|4939->2794|5013->2840|5201->2999|5231->3000|5261->3001|5294->3005|5324->3006|5354->3007|5497->3122|5526->3123|5555->3124|5586->3127|5615->3128|5644->3129|5714->3171|5743->3172|5772->3173|5804->3177|5833->3178|5862->3179|5932->3221|6228->3489|6257->3490|6286->3491|6319->3496|6348->3497|6377->3498|6439->3532|6565->3630|6594->3631|6623->3632|6658->3639|6688->3640|6718->3641|7090->3985|7119->3986|7148->3987|7183->3994|7213->3995|7243->3996|7748->4473|7777->4474|7806->4475|7852->4493|7881->4494|7910->4495|7939->4496|8049->4578|8078->4579|8107->4580|8154->4599|8183->4600|8212->4601|8242->4602|8331->4663|8360->4664|8389->4665|8442->4690|8471->4691|8500->4692|8529->4693|8896->5032|8925->5033|8954->5034|8998->5050|9027->5051|9056->5052|9085->5053|9200->5140|9229->5141|9258->5142|9304->5160|9333->5161|9362->5162|9391->5163|9493->5237|9522->5238|9551->5239|9597->5257|9626->5258|9655->5259|9783->5359|9812->5360|9841->5361|9885->5376|9915->5377|9945->5378|10131->5536|10160->5537|10189->5538|10222->5543|10251->5544|10280->5545|10324->5561
+                  LINES: 32->1|32->1|32->1|35->4|35->4|35->4|35->4|36->5|36->5|36->5|64->33|64->33|67->36|72->41|72->41|72->41|72->41|72->41|72->41|73->42|77->46|77->46|77->46|77->46|77->46|77->46|79->48|79->48|79->48|79->48|79->48|79->48|80->49|80->49|80->49|80->49|80->49|80->49|81->50|82->51|82->51|82->51|82->51|82->51|82->51|84->53|84->53|84->53|84->53|84->53|84->53|85->54|86->55|86->55|86->55|86->55|86->55|86->55|88->57|88->57|88->57|88->57|88->57|88->57|89->58|89->58|89->58|89->58|89->58|89->58|90->59|93->62|93->62|93->62|93->62|93->62|93->62|94->63|95->64|95->64|95->64|95->64|95->64|95->64|99->68|99->68|99->68|99->68|99->68|99->68|108->77|108->77|108->77|108->77|108->77|108->77|108->77|109->78|109->78|109->78|109->78|109->78|109->78|109->78|110->79|110->79|110->79|110->79|110->79|110->79|110->79|116->85|116->85|116->85|116->85|116->85|116->85|116->85|117->86|117->86|117->86|117->86|117->86|117->86|117->86|118->87|118->87|118->87|118->87|118->87|118->87|119->88|119->88|119->88|119->88|119->88|119->88|124->93|124->93|124->93|124->93|124->93|124->93|126->95
                   -- GENERATED --
               */
           

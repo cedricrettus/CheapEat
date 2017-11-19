@@ -2,6 +2,7 @@
   <library name="SBT: com.typesafe.netty:netty-reactive-streams:1.0.8:jar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../play/activator/repository/com.typesafe.netty/netty-reactive-streams/1.0.8/jars/netty-reactive-streams.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.typesafe.netty/netty-reactive-streams/jars/netty-reactive-streams-1.0.8.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

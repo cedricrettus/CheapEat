@@ -2,6 +2,7 @@
   <library name="SBT: org.yaml:snakeyaml:1.16:jar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../play/activator/repository/org.yaml/snakeyaml/1.16/bundles/snakeyaml.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.yaml/snakeyaml/bundles/snakeyaml-1.16.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

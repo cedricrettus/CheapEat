@@ -2,6 +2,7 @@
   <library name="SBT: io.netty:netty-codec-http:4.0.41.Final:jar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../play/activator/repository/io.netty/netty-codec-http/4.0.41.Final/jars/netty-codec-http.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/io.netty/netty-codec-http/jars/netty-codec-http-4.0.41.Final.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

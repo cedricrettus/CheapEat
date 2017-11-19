@@ -2,6 +2,7 @@
   <library name="SBT: org.reflections:reflections:0.9.10:jar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../../play/activator/repository/org.reflections/reflections/0.9.10/jars/reflections.jar!/" />
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.10.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
