@@ -52,7 +52,7 @@ public class BestellungController {
         Angebot angebot1 = JPA.em().find(Angebot.class, bestellung.angebot_id);
         System.out.println(angebot1.email);
         System.out.println(bestellung.email);
-        mc.sendEmail(angebot1.email, bestellung.email);
+        mc.sendOrderNotification(angebot1.email, bestellung.email);
         return ok();
 
     }

@@ -9,14 +9,14 @@ import org.apache.commons.mail.EmailAttachment;
 public class MailerService {
     @Inject MailerClient mailerClient;
 
-    public void sendEmail(String empfaenger, String sender) {
+    public void sendOrderNotification(String empfaenger, String sender) {
         String cid = "1234";
         Email email = new Email()
                 .setSubject("Sie haben eine Bestellung")
                 .setFrom("CheapEat <noreply.cheapeat@gmail.com>")
                 .addTo("<" + empfaenger + ">")
 
-                .setBodyText("Bestellung ist Eingegangen")
+                .setBodyText("CheapEat Bestellung ist Eingegangen")
                 .setBodyHtml("<html><body><p>Sie haben eine Bestellung von <b>"+ sender +"</b></p></body></html>");
         mailerClient.send(email);
     }
