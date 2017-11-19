@@ -8,6 +8,7 @@
         <non-jta-data-source>DefaultDS</non-jta-data-source>
         <class>models.Angebot</class>
         <class>models.Bestellung</class>
+        <class>models.Bild</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>

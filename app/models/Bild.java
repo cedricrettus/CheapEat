@@ -5,6 +5,7 @@ import javax.xml.crypto.Data;
 import java.sql.Time;
 import java.time.LocalTime;
 import java.util.Date;
+import play.data.validation.Constraints;
 
 @Entity
 @Table(name = "bilder")

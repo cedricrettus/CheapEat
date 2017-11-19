@@ -1,7 +1,6 @@
 package models;
 
 import play.data.validation.Constraints;
-
 import javax.persistence.*;
 import javax.xml.crypto.Data;
 import java.io.File;

@@ -91,8 +91,6 @@ public class AngebotController extends Controller {
 
         List<Angebot> angebote = JPA.em().createQuery("select p from Angebot p").getResultList();
 
-        System.out.println("test");
-
         //List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p, x, y from Angebot p, Bilderangebote x, Bild y where (x.angebote_id = p.id and x.bilder_id = y.id) or p.bild = 0").getResultList();
         return ok(toJson(buildUrlsFromOffers(angebote)));
     }
