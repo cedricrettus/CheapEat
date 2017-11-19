@@ -26,8 +26,7 @@ public class AngebotController extends Controller {
 
     @Transactional
     public Result index() {
-        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p").getResultList();
-        return ok(views.html.index.render(angebote));
+        return ok(views.html.index.render());
     }
 
     @Transactional
@@ -92,24 +91,10 @@ public class AngebotController extends Controller {
 
         List<Angebot> angebote = JPA.em().createQuery("select p from Angebot p").getResultList();
 
-
-        List<AngebotUrls> angebotUrls = new ArrayList<AngebotUrls>();
-        List urls = new ArrayList<String>();
-
-        for(int i = 0; i < angebote.size(); i++){
-            if(angebote.get(i).getBild() == 1){
-                urls = JPA.em().createQuery("select b.url from Bild b where b.angebote_id ="+ angebote.get(i).getId()).getResultList();
-                angebotUrls.add(new AngebotUrls(urls, angebote.get(i)));
-            }else{
-                angebotUrls.add(new AngebotUrls(null, angebote.get(i)));
-            }
-
-        }
-
         System.out.println("test");
 
         //List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p, x, y from Angebot p, Bilderangebote x, Bild y where (x.angebote_id = p.id and x.bilder_id = y.id) or p.bild = 0").getResultList();
-        return ok(toJson(angebotUrls));
+        return ok(toJson(buildUrlsFromOffers(angebote)));
     }
 
     @Transactional(readOnly = true)
@@ -122,9 +107,31 @@ public class AngebotController extends Controller {
     @Transactional(readOnly = true)
     public Result sucheAngebot(int plz) {
 
+        List<Angebot> angebote = JPA.em().createQuery("select p from Angebot p where p.plz = "+ plz).getResultList();
 
-        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p where p.plz = " + plz).getResultList();
-        return ok(suche.render(angebote));
+        System.out.println("test");
+
+        //List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p, x, y from Angebot p, Bilderangebote x, Bild y where (x.angebote_id = p.id and x.bilder_id = y.id) or p.bild = 0").getResultList();
+        return ok(toJson(buildUrlsFromOffers(angebote)));
+    }
+
+    private List<AngebotUrls> buildUrlsFromOffers(List<Angebot> angebote){
+        List<AngebotUrls> angebotUrls = new ArrayList<AngebotUrls>();
+        List urls = new ArrayList<String>();
+
+        for (int i = 0; i < angebote.size(); i++) {
+            if (angebote.get(i).getBild() == 1) {
+                urls = JPA.em().createQuery("select b.url from Bild b where b.angebote_id =" + angebote.get(i).getId()).getResultList();
+                angebotUrls.add(new AngebotUrls(urls, angebote.get(i)));
+            } else {
+                angebotUrls.add(new AngebotUrls(null, angebote.get(i)));
+            }
+
+        }
+
+        return angebotUrls;
     }
 
 }
+
+

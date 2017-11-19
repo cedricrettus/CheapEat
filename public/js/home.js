@@ -1,38 +1,20 @@
 $(document).ready(function() {
-    /*$.get('/angebote', function(angebote){
-        $.each(angebote, function(index, angebot){
-            $('#angebote').append(
 
-                $('<li>').append(angebot.titel));
-        })
-    })*/
+    //--------------handlebars.js initialisierung------------------
+    // Grab the template script
+    var theTemplateScript = $("#angebote-template").html();
 
-    /*$.get('/angebote', function(angebote){
-        $.each(angebote, function(index, angebot){
-            $.('#angebote-cards').append(
-                $('<div>').addClass("card").append(
+    // Compile the template
+    var theTemplate = Handlebars.compile(theTemplateScript);
 
-                )
-            )
-        })
-    })*/
-    /*$('#suche').submit(function(e){
-        console.log(e);
-        e.preventDefault();
-        $.get('/suche', {'plz': $('#fieldPlz').val()},  function(data){
-            showAngebote(data);
-        });
-    });*/
+    var angeboteAll;
 
-
-    /*$.get('/angebote', function (data) {
-        showAngebote(data);
-    });*/
+    //alle angebote anzeigen, bei Seitenaufruf
+    listAngebote(theTemplate);
 
     $('#callModal').click(function(){
         $('#angebotModal').modal('toggle');
     });
-
 
 
     $('#angebotSubmit').click(function(){
@@ -45,6 +27,7 @@ $(document).ready(function() {
             'email': $('#bestellenEmail').val(),
             'menge' : $('#bestellenMenge').val()
         }
+
         $.post('/bestellung', data, function(){
             alert('bestellung gesendet');
             $('#bestellenModal').modal('hide');
@@ -59,50 +42,48 @@ $(document).ready(function() {
 
     });
 
+    $('#suche').submit(function(e){
+        var sucheplz = $('#fieldPlz').val();
+
+        filterAngebote(theTemplate, sucheplz);
+
+        e.preventDefault();
+    });
+
 }); //document ready closing
 
 
 function showAngebote(angebote){
-    $('#angebote-cards').empty()
-    $.each(angebote, function (index, angebot) {
-        var html = '';
-        html += '<div class="card">' +
-            '<div class="row">' +
-            '<div class="col-md-3">' +
-            '<img class="card-img-top" src="assets/images/burger1.jpg" alt="Card image cap">' +
-            '</div>' +
-            '<div class="col-md-6">' +
-            '<div class="card-body">' +
-            '<h4 class="card-title">'+ angebot.titel +'</h4>' +
-            '<h6 class="card-subtitle mb-2 text-muted">'+ angebot.kueche +'</h6>' +
-            '<p class="card-text">'+ angebot.beschreibung +'</p>' +
-            '</div>' +
-            '</div>' +
-            '<div class="col-md-3">' +
-            '<div class="card-body">' +
-            '<p class="card-text">Username <span class="">Bewertung</span></p>' +
-            '<p class="card-text">Ort: <span>'+ angebot.plz +'</span></p>' +
-        '<p class="card-text"><span class="preis">'+ angebot.preis +' CHF</span> <span class="">Portionen: '+ angebot.menge +'</span></p>' +
-        '<button class="bestellButton btn btn-primary" data-id="' + angebot.id + '">Bestellen</button>' +
-        '</div>' +
-        '</div>' +
-        '</div>' +
-        '</div>';
-        /*
-        html += '<div class="card">';
-        html += '<img class="card-img-top" src="" alt="Card image cap">';
-        html += '<div class="card-block">'
-        html += '<h4 class="card-title">' + angebot.titel + '</h4>';
-        html += '<h6 class="card-subtitle mb-2 text-muted">' + angebot.kueche + '</h6>';
-        html += '<p class="card-text">' + angebot.beschreibung + '</p>';
-        html += '<a href="/bestellen" class="btn btn-primary" data-id="' + angebot.id + '">Bestellen</a>';
-        html += '</div>';
-        html += '</div>';
-        */
 
+}
 
-        $('#angebote-cards').append(html);
+function listAngebote(template){
+    $.get('/angebote/all', function(data){
+        angeboteAll = data;
 
-    });
+        console.log(data);
 
+        // Pass our data to the template
+        var theCompiledHtml = template(data);
+
+        // Add the compiled html to the page
+        $('.angebote-cards').html(theCompiledHtml);
+
+    })
+
+}
+
+function filterAngebote(template, plz){
+    $.get('/search', {'plz' : plz} , function(data){
+        angeboteFiltered = data;
+
+        console.log(data);
+
+        // Pass our data to the template
+        var theCompiledHtml = template(data);
+
+        // Add the compiled html to the page
+        $('.angebote-cards').html(theCompiledHtml);
+
+    })
 }
