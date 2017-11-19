@@ -5,7 +5,7 @@ $(document).ready(function () {
     // Compile the template
     var theTemplate = Handlebars.compile(theTemplateScript);
 
-    var angebote;
+    var angeboteAll;
 
     $.get('/angebote/all', function(data){
         angeboteAll = data;
@@ -24,7 +24,7 @@ $(document).ready(function () {
         var theCompiledHtml = theTemplate(data);
 
         // Add the compiled html to the page
-        $('#angebote-cards').html(theCompiledHtml);
+        $('.angebote-cards').html(theCompiledHtml);
 
     })
 
