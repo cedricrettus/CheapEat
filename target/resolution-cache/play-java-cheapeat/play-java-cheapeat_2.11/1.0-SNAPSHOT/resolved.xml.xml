@@ -4,7 +4,7 @@
 		module="play-java-cheapeat_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20171118163504"
+		publication="20171121221604"
 	>
 		<description>
 		play-java-cheapeat
@@ -50,5 +50,6 @@
 		<dependency org="com.typesafe.play" name="play-mailer_2.11" rev="6.0.1" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-mailer-guice_2.11" rev="6.0.1" conf="compile->default(compile)"/>
 		<dependency org="com.amazonaws" name="aws-java-sdk" rev="1.11.229" conf="compile->default(compile)"/>
+		<dependency org="org.mindrot" name="jbcrypt" rev="0.3m" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

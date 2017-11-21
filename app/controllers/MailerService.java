@@ -20,4 +20,7 @@ public class MailerService {
                 .setBodyHtml("<html><body><p>Sie haben eine Bestellung von <b>"+ sender +"</b></p></body></html>");
         mailerClient.send(email);
     }
+
+    public void sendRegistrationInfo() {
+    }
 }
