@@ -1,5 +1,8 @@
 package models;
 
+import models.utils.AppException;
+import models.utils.Hash;
+import org.hibernate.Criteria;
 import play.db.jpa.JPA;
 
 import javax.persistence.*;
@@ -29,15 +32,63 @@ public class Benutzer {
 
     public int bewertung;
 
-    public Boolean validiert = false;
+    public int validiert = 0;
 
     public static Benutzer findByEmail(String email) {
-        List<Benutzer> benutzer = JPA.em().createQuery("select u from Benutzer u where u.email = "+ email).getResultList();
-        return benutzer.get(0);
+        List<Benutzer> benutzer = JPA.em().createQuery("select u from Benutzer u where u.email = '"+ email+"'").getResultList();
+        if(benutzer.size() > 0){
+           return benutzer.get(0);
+        }else{
+            return null;
+        }
+    }
+
+    public static Benutzer findByConfirmationToken(String token){
+        //TODO testen  mit getSingleResult
+        List<Benutzer> benutzer = JPA.em().createQuery("select u from Benutzer u where u.confirmationToken = '"+ token+"'").getResultList();
+        if(benutzer.size() > 0){
+            return benutzer.get(0);
+        }else{
+            return null;
+        }
     }
 
     public void save(){
         JPA.em().persist(this);
+    }
+
+    public boolean confirm(){
+        this.validiert = 1;
+        JPA.em().persist(this);
+        return true;
+    }
+
+    public static boolean confirm(Benutzer benutzer) throws AppException {
+        if (benutzer == null) {
+            return false;
+        }
+
+        benutzer.confirmationToken = null;
+        benutzer.validiert = 1;
+        benutzer.save();
+        return true;
+    }
+
+
+    public static Benutzer authenticate(String email, String clearPasswort) throws AppException {
+        List<Benutzer> benutzer = JPA.em().createQuery("select u from Benutzer u where u.email = '"+ email+"'").getResultList();
+        if(benutzer.size() > 0){
+            // get the user with email only to keep the salt password
+            if (benutzer.get(0) != null) {
+                // get the hash password from the salt + clear password
+                if (Hash.checkPassword(clearPasswort, benutzer.get(0).pwhash)) {
+                    return benutzer.get(0);
+                }
+            }
+        }else{
+            return null;
+        }
+        return null;
     }
 
     public int getId() {
@@ -96,11 +147,11 @@ public class Benutzer {
         this.bewertung = bewertung;
     }
 
-    public Boolean getValidiert() {
+    public int getValidiert() {
         return validiert;
     }
 
-    public void setValidiert(Boolean validiert) {
+    public void setValidiert(int validiert) {
         this.validiert = validiert;
     }
 
@@ -114,4 +165,6 @@ public class Benutzer {
                 ", bewertung=" + bewertung +
                 '}';
     }
+
+
 }

@@ -59,23 +59,23 @@ public class Authentication {
          *
          * @return null if validation ok, string with details otherwise
          */
-/*
+
         public String validate() {
 
-            User user = null;
+            Benutzer benutzer;
             try {
-                user = User.authenticate(email, password);
+                benutzer = Benutzer.authenticate(email, password);
             } catch (AppException e) {
-                return Messages.get("error.technical");
+                return ("servererror");
             }
-            if (user == null) {
-                return Messages.get("invalid.user.or.password");
-            } else if (!user.validated) {
-                return Messages.get("account.not.validated.check.mail");
+            if (benutzer == null) {
+                return ("invalid.user.or.password");
+            } else if (benutzer.validiert != 1) {
+                return ("account.not.validated.check.mail");
             }
             return null;
         }
-*/
+
 
     }
 
@@ -98,6 +98,8 @@ public class Authentication {
          *
          * @return null if validation ok, string with details otherwise
          */
+
+
         public String validate() {
             if (isBlank(email)) {
                 return "Email is required";
@@ -112,6 +114,38 @@ public class Authentication {
             }
 
             return null;
+        }
+
+        public String getEmail() {
+            return email;
+        }
+
+        public void setEmail(String email) {
+            this.email = email;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getPasswort() {
+            return passwort;
+        }
+
+        public void setPasswort(String passwort) {
+            this.passwort = passwort;
+        }
+
+        public String getBenutzername() {
+            return benutzername;
+        }
+
+        public void setBenutzername(String benutzername) {
+            this.benutzername = benutzername;
         }
 
         private boolean isBlank(String input) {

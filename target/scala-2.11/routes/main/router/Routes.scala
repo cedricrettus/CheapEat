@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Tue Nov 21 22:16:12 CET 2017
+// @DATE:Wed Nov 22 15:27:17 CET 2017
 
 package router
 
@@ -66,6 +66,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """upload""", """controllers.Application.imageUpload()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signup""", """controllers.account.Signup.create()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signup""", """controllers.account.Signup.save()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """confirm/""" + "$" + """confirmToken<[^/]+>""", """controllers.account.Signup.confirm(confirmToken:String)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public", file:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -274,11 +275,29 @@ POST    /settings/email             controllers.account.settings.Email.runEmail(
     )
   )
 
+  // @LINE:39
+  private[this] lazy val controllers_account_Signup_confirm11_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("confirm/"), DynamicPart("confirmToken", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_account_Signup_confirm11_invoker = createInvoker(
+    Signup_2.confirm(fakeValue[String]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.account.Signup",
+      "confirm",
+      Seq(classOf[String]),
+      "GET",
+      """
+# Wenn der Benutzer das Bestätigungsm""",
+      this.prefix + """confirm/""" + "$" + """confirmToken<[^/]+>"""
+    )
+  )
+
   // @LINE:55
-  private[this] lazy val controllers_Assets_at11_route = Route("GET",
+  private[this] lazy val controllers_Assets_at12_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at11_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_at12_invoker = createInvoker(
     Assets_1.at(fakeValue[String], fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -360,10 +379,16 @@ POST    /settings/email             controllers.account.settings.Email.runEmail(
         controllers_account_Signup_save10_invoker.call(Signup_2.save())
       }
   
+    // @LINE:39
+    case controllers_account_Signup_confirm11_route(params) =>
+      call(params.fromPath[String]("confirmToken", None)) { (confirmToken) =>
+        controllers_account_Signup_confirm11_invoker.call(Signup_2.confirm(confirmToken))
+      }
+  
     // @LINE:55
-    case controllers_Assets_at11_route(params) =>
+    case controllers_Assets_at12_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at11_invoker.call(Assets_1.at(path, file))
+        controllers_Assets_at12_invoker.call(Assets_1.at(path, file))
       }
   }
 }
