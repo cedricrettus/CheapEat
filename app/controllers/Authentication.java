@@ -6,6 +6,7 @@ import play.Logger;
 import play.data.Form;
 import play.data.FormFactory;
 import play.data.validation.Constraints;
+import play.db.jpa.Transactional;
 import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -63,7 +64,7 @@ public class Authentication {
         @Constraints.Required
         public String email;
         @Constraints.Required
-        public String password;
+        public String passwort;
 
         /**
          * Validate the authentication.
@@ -75,30 +76,46 @@ public class Authentication {
 
             Benutzer benutzer;
             try {
-                benutzer = Benutzer.authenticate(email, password);
+                benutzer = Benutzer.authenticate(email, passwort);
             } catch (AppException e) {
-                return ("servererror");
+                return ("Server error");
             }
             if (benutzer == null) {
-                return ("invalid.user.or.password");
+                return ("Falsches Email oder Passwprt");
             } else if (benutzer.validiert != 1) {
-                return ("account.not.validated.check.mail");
+                return ("Account ist nicht validiert, mit Email bestätigen");
             }
             return null;
         }
 
+        public String getEmail() {
+            return email;
+        }
 
+        public void setEmail(String email) {
+            this.email = email;
+        }
+
+        public String getPasswort() {
+            return passwort;
+        }
+
+        public void setPasswort(String passwort) {
+            this.passwort = passwort;
+        }
     }
 
     public static class Register {
 
         @Constraints.Required
+        @Constraints.Email
         public String email;
 
         @Constraints.Required
         public String name;
 
         @Constraints.Required
+        @Constraints.MinLength(7)
         public String passwort;
 
         @Constraints.Required
@@ -109,8 +126,6 @@ public class Authentication {
          *
          * @return null if validation ok, string with details otherwise
          */
-
-
         public String validate() {
             if (isBlank(email)) {
                 return "Email is required";
@@ -169,6 +184,7 @@ public class Authentication {
      *
      * @return Dashboard if auth OK or login form if auth KO
      */
+    @Transactional
     public Result authenticate() {
         Form<Authentication.Login> submission = formFactory.form(Authentication.Login.class).bindFromRequest();
 
@@ -177,7 +193,7 @@ public class Authentication {
             System.out.println("Login error");
             System.out.println(submission.errors());
             //TODO error zurückgeben
-            return badRequest();
+            return badRequest("Login error");
         } else {
             session("email", submission.get().email);
             return GO_DASHBOARD;
@@ -189,9 +205,8 @@ public class Authentication {
      *
      * @return Index page
      */
-/*    public Result logout() {
+    public Result logout() {
         session().clear();
-        flash("success", Messages.get("youve.been.logged.out"));
         return GO_HOME;
-    }*/
+    }
 }

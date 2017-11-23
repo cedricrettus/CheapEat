@@ -4,11 +4,11 @@
 
 # Home page
 GET     /                           controllers.Application.index()
-POST    /angebote                       controllers.AngebotController.addAngebot()
+POST    /angebote                       controllers.AngebotController.addOffer()
 GET     /angebote/all                controllers.AngebotController.getAngeboteList()
 GET     /angebote/:id                 controllers.AngebotController.getAngebote(id:Int)
-#GET     /suche                       controllers.AngebotControllerroller.suchePlz(plz:Int ?= 0)
-GET     /search                      controllers.AngebotController.sucheAngebot(plz:Int ?= 0)
+GET     /search                       controllers.Application.search()
+GET     /search/:plz                      controllers.AngebotController.searchOffers(plz:Int)
 POST    /bestellung                   controllers.BestellungController.addBestellung()
 GET    /bestellung                   controllers.BestellungController.getBestellung()
 
@@ -16,14 +16,18 @@ GET     /test                       controllers.Application.test()
 
 GET     /upload                     controllers.Application.imageUpload()
 
+GET     /me/bestellungen            controllers.Profile.getOrders()
+GET     /me/angebote                controllers.Profile.getOffers()
+
 #Authentication
 
 # Home page
 #GET     /                           controllers.Application.index()
 GET     /profile                     controllers.Profile.index()
 #
+GET     /login                      controllers.Application.login()
 POST    /login                      controllers.Authentication.authenticate()
-#GET     /logout                     controllers.Application.logout()
+GET     /logout                     controllers.Authentication.logout()
 #
 #GET     /settings                   controllers.account.settings.Index.index()
 #GET     /settings/password          controllers.account.settings.Password.index()

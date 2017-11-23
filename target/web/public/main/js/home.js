@@ -12,43 +12,16 @@ $(document).ready(function() {
     //alle angebote anzeigen, bei Seitenaufruf
     listAngebote(theTemplate);
 
-    $('#callModal').click(function(){
-        $('#angebotModal').modal('toggle');
-    });
 
 
-    $('#angebotSubmit').click(function(){
-        $('#angebotForm').submit();
-    });
-
-    $('#bestellenSubmit').click(function(){
-        var data = {
-            'angebot_id': $('#bestellenSubmit').data('id'),
-            'email': $('#bestellenEmail').val(),
-            'menge' : $('#bestellenMenge').val()
-        }
-
-        $.post('/bestellung', data, function(){
-            alert('bestellung gesendet');
-            $('#bestellenModal').modal('hide');
-            });
-    });
-
-    $('.bestellButton').click(function(){
-        var id = $(this).data('id');
-        console.log(id);
-        $('#bestellenSubmit').data('id', id);
-        $('#bestellenModal').modal('toggle');
-
-    });
-
-    $('#suche').submit(function(e){
+    /*$('#suche').submit(function(e){
+    //TODO delete event listener
         var sucheplz = $('#fieldPlz').val();
 
         filterAngebote(theTemplate, sucheplz);
 
         e.preventDefault();
-    });
+    });*/
 
 }); //document ready closing
 
@@ -69,6 +42,8 @@ function listAngebote(template){
         // Add the compiled html to the page
         $('.angebote-cards').html(theCompiledHtml);
 
+        addEventListeners();
+
     })
 
 }
@@ -84,6 +59,8 @@ function filterAngebote(template, plz){
 
         // Add the compiled html to the page
         $('.angebote-cards').html(theCompiledHtml);
+
+        addEventListeners();
 
     })
 }

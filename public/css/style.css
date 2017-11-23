@@ -44,3 +44,8 @@ nav.navbar {
     color: #222;
     border-color: #222;
 }
+
+.alert{
+    margin-top: 15px;
+    display: none;
+}

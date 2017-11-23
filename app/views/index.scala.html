@@ -21,9 +21,9 @@
                         Angebot erstellen!
                     </button>
                 </form>
-                <form id="suche" class="form-inline my-2 my-lg-0">
+                <form id="suche" class="form-inline my-2 my-lg-0" action="/search">
                     <input class="form-control mr-sm-2" id="fieldPlz" type="text" name="plz" placeholder="PLZ" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" action="" formmethod="get"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </form>
             </div>
         </div>
@@ -34,6 +34,8 @@
 
     <div class="content">
                 <div class="container">
+
+                    @alerts()
                     <h1>Angebote</h1>
                     <script id="angebote-template" type="text/x-handlebars-template">
 

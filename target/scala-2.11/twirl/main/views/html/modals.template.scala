@@ -82,7 +82,7 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
                                 <input type="text" name="preis" class="form-control" />
                             </div>
                             <div class="form-group">
-                                <label for="bilder">Bild: </label>
+                                <label for="bilder">Bilder: </label>
                                 <input type="file" name="bilder" accept="image/*" multiple>
 
                             </div>
@@ -115,10 +115,6 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
                     <h1>Angebot bestellen</h1>
                     <div class="panel panel-default">
                         <form method="POST" id="bestellenForm" action="/bestellen"> <!--  rouAngebotControllertion.getPerson() -->
-                            <div class="form-group">
-                                <label for="email" >Kontakt Email: </label>
-                                <input id="bestellenEmail" type="email" name="email" class="form-control" />
-                            </div>
                             <div class="form-group">
                                 <label for="email" >Menge </label>
                                 <input id="bestellenMenge" type="email" name="email" class="form-control" />
@@ -153,9 +149,9 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
 object modals extends modals_Scope0.modals
               /*
                   -- GENERATED --
-                  DATE: Thu Nov 16 09:07:17 CET 2017
+                  DATE: Thu Nov 23 22:38:16 CET 2017
                   SOURCE: C:/dev/git/CheapEat/app/views/modals.scala.html
-                  HASH: 06093a5be730d56f6e5a8aaee2cd70430adafc0f
+                  HASH: 719755afc6646dac99d2a4789a846c0a0b90bc00
                   MATRIX: 829->0
                   LINES: 32->1
                   -- GENERATED --

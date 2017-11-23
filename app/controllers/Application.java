@@ -34,4 +34,12 @@ public class Application extends Controller{
     public Result test() {
         return ok(views.html.test.render());
     }
+
+    public Result login() {
+        return ok(views.html.login.render());
+    }
+
+    public Result search(){
+        return ok(views.html.suche.render());
+    }
 }

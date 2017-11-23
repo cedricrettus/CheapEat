@@ -61,14 +61,6 @@ public class Signup extends Controller {
         return ok(views.html.register.render());
     }
 
-    /**
-     * Display the create form only (for the index page).
-     *
-     * @return create form
-     */
-    /*public Result createFormOnly() {
-        return ok(create.render(form(Authentication.Register.class)));
-    }*/
 
     /**
      * Save the new user.
@@ -77,17 +69,16 @@ public class Signup extends Controller {
      */
     @Transactional
     public Result save() {
-        //Form<Authentication.Register> registerForm = form(Authentication.Register.class).bindFromRequest();
 
         Form<Authentication.Register> submission = formFactory.form(Authentication.Register.class).bindFromRequest();
 
-        //DynamicForm requestData = formFactory.form().bindFromRequest();
-
+        //TODO prüfen ob username bereits existiert
         //Form auf Errors prüfen
         if (submission.hasErrors()) {
             System.out.println("Form error");
             System.out.println(submission.errors());
             //TODO error zurückgeben
+            return badRequest(submission.errorsAsJson());
         } else {
 
             Authentication.Register register = submission.get();
@@ -109,7 +100,7 @@ public class Signup extends Controller {
                 benutzer.save();
                 sendMailAskForConfirmation(benutzer);
 
-                return ok(views.html.created.render());
+                return ok("erstellt");
             } catch (EmailException e) {
                 Logger.debug("Signup.save Cannot send email", e);
                 flash("error", Messages.get("error.sending.email"));
@@ -117,11 +108,9 @@ public class Signup extends Controller {
                 Logger.error("Signup.save error", e);
                 flash("error", Messages.get("error.technical"));
             }
-            return badRequest(views.html.register.render());
+            return badRequest("servererror");
         }
 
-        //richtige confirm seite zurückgeben
-        return ok("user erstellt");
     }
 
     /**
@@ -135,7 +124,7 @@ public class Signup extends Controller {
     private Result checkBeforeSave(Form<Authentication.Register> registerForm, String email) {
         // Check unique email
         if (Benutzer.findByEmail(email) != null) {
-            flash("error", Messages.get("error.email.already.exist"));
+            // TODO richtige fehlermeldung zurückgeben flash("error", Messages.get("error.email.already.exist"));
             return badRequest();
         }
 

@@ -26,7 +26,7 @@ public class AngebotController extends Controller {
 
 
     @Transactional
-    public Result addAngebot() {
+    public Result addOffer() {
         Form<Angebot> submission = formFactory.form(Angebot.class).bindFromRequest();
 
         //DynamicForm requestData = formFactory.form().bindFromRequest();
@@ -94,7 +94,7 @@ public class AngebotController extends Controller {
     }
 
     @Transactional(readOnly = true)
-    public Result sucheAngebot(int plz) {
+    public Result searchOffers(int plz) {
 
         List<Angebot> angebote = JPA.em().createQuery("select p from Angebot p where p.plz = "+ plz).getResultList();
 

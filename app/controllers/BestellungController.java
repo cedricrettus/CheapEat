@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Angebot;
+import models.Benutzer;
 import models.Bestellung;
 import play.data.FormFactory;
 import play.db.jpa.JPA;
@@ -40,9 +41,18 @@ public class BestellungController extends Controller {
         //DynamicForm requestData = formFactory.form().bindFromRequest();
         //String firstname = requestData.get("firstname");
 
+        //TODO prüfen ob bestellmenge verfügbar ist
+
+        if(session("email").isEmpty()){
+            //TODO nutzer soll sich anmelden um die bestellung fortzuführen
+            return badRequest("Bitte anmelden um zu bestellen");
+        }
+
+        Benutzer benutzer = Benutzer.findByEmail(session("email"));
+
         Bestellung bestellung = formFactory.form(Bestellung.class).bindFromRequest().get();
         bestellung.prozesscode = 1;
-        bestellung.benutzer_id = 0;
+        bestellung.benutzer_id = benutzer.getId();
 
         JPA.em().persist(bestellung);
         JPA.em().flush();
@@ -52,9 +62,8 @@ public class BestellungController extends Controller {
 
         Angebot angebot1 = JPA.em().find(Angebot.class, bestellung.angebot_id);
         System.out.println(angebot1.email);
-        System.out.println(bestellung.email);
-        mc.sendOrderNotification(angebot1.email, bestellung.email);
+        System.out.println(benutzer.getEmail());
+        mc.sendOrderNotification(angebot1.email, benutzer.getEmail());
         return ok();
-
     }
 }

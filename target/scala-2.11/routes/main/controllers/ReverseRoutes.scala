@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Thu Nov 23 11:28:14 CET 2017
+// @DATE:Thu Nov 23 22:21:11 CET 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -13,14 +13,14 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers {
 
-  // @LINE:55
+  // @LINE:59
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:55
+    // @LINE:59
     def at(file:String): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -28,14 +28,20 @@ package controllers {
   
   }
 
-  // @LINE:25
+  // @LINE:29
   class ReverseAuthentication(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:25
+    // @LINE:30
+    def logout(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "logout")
+    }
+  
+    // @LINE:29
     def authenticate(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "login")
@@ -43,17 +49,29 @@ package controllers {
   
   }
 
-  // @LINE:23
+  // @LINE:19
   class ReverseProfile(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:23
+    // @LINE:26
     def index(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "profile")
+    }
+  
+    // @LINE:20
+    def getOffers(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "me/angebote")
+    }
+  
+    // @LINE:19
+    def getOrders(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "me/bestellungen")
     }
   
   }
@@ -87,9 +105,9 @@ package controllers {
 
   
     // @LINE:11
-    def sucheAngebot(plz:Int = 0): Call = {
+    def searchOffers(plz:Int): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "search" + queryString(List(if(plz == 0) None else Some(implicitly[QueryStringBindable[Int]].unbind("plz", plz)))))
+      Call("GET", _prefix + { _defaultPrefix } + "search/" + implicitly[PathBindable[Int]].unbind("plz", plz))
     }
   
     // @LINE:8
@@ -98,16 +116,16 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "angebote/all")
     }
   
+    // @LINE:7
+    def addOffer(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "angebote")
+    }
+  
     // @LINE:9
     def getAngebote(id:Int): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "angebote/" + implicitly[PathBindable[Int]].unbind("id", id))
-    }
-  
-    // @LINE:7
-    def addAngebot(): Call = {
-      import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "angebote")
     }
   
   }
@@ -125,16 +143,28 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "upload")
     }
   
+    // @LINE:15
+    def test(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "test")
+    }
+  
+    // @LINE:10
+    def search(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "search")
+    }
+  
     // @LINE:6
     def index(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix)
     }
   
-    // @LINE:15
-    def test(): Call = {
+    // @LINE:28
+    def login(): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "test")
+      Call("GET", _prefix + { _defaultPrefix } + "login")
     }
   
   }

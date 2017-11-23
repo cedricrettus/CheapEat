@@ -4,6 +4,7 @@ import models.utils.AppException;
 import models.utils.Hash;
 import org.hibernate.Criteria;
 import play.db.jpa.JPA;
+import play.db.jpa.Transactional;
 
 import javax.persistence.*;
 import javax.xml.crypto.Data;
@@ -34,6 +35,7 @@ public class Benutzer {
 
     public int validiert = 0;
 
+    @Transactional
     public static Benutzer findByEmail(String email) {
         List<Benutzer> benutzer = JPA.em().createQuery("select u from Benutzer u where u.email = '"+ email+"'").getResultList();
         if(benutzer.size() > 0){
@@ -43,11 +45,36 @@ public class Benutzer {
         }
     }
 
+    @Transactional
     public static Benutzer findByConfirmationToken(String token){
         //TODO testen  mit getSingleResult
         List<Benutzer> benutzer = JPA.em().createQuery("select u from Benutzer u where u.confirmationToken = '"+ token+"'").getResultList();
         if(benutzer.size() > 0){
             return benutzer.get(0);
+        }else{
+            return null;
+        }
+    }
+
+    @Transactional
+    public static List<Angebot> findOffersByUser(String email){
+        Benutzer benutzer = findByEmail(email);
+
+        List<Angebot> angebote = JPA.em().createQuery("select p from Angebot p where p.benutzer_id = "+ benutzer.getId()).getResultList();
+        if(angebote.size() > 0){
+            return angebote;
+        }else{
+            return null;
+        }
+    }
+
+    @Transactional
+    public static List<Bestellung> findOrdersByUser(String email){
+        Benutzer benutzer = findByEmail(email);
+
+        List<Bestellung> bestellungen = JPA.em().createQuery("select b from Bestellung b where b.benutzer_id = "+ benutzer.getId()).getResultList();
+        if(bestellungen.size() > 0){
+            return bestellungen;
         }else{
             return null;
         }
@@ -63,6 +90,7 @@ public class Benutzer {
         return true;
     }
 
+    @Transactional
     public static boolean confirm(Benutzer benutzer) throws AppException {
         if (benutzer == null) {
             return false;
@@ -75,6 +103,7 @@ public class Benutzer {
     }
 
 
+    @Transactional
     public static Benutzer authenticate(String email, String clearPasswort) throws AppException {
         List<Benutzer> benutzer = JPA.em().createQuery("select u from Benutzer u where u.email = '"+ email+"'").getResultList();
         if(benutzer.size() > 0){

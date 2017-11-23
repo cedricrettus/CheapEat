@@ -2,6 +2,7 @@
 
     <script src="@routes.Assets.at("js/home.js")" type="text/javascript"></script>
     <script src="@routes.Assets.at("js/hbScript.js")" type="text/javascript"></script>
+    <script src="@routes.Assets.at("js/authentication.js")" type="text/javascript"></script>
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -30,17 +31,17 @@
     </nav>
 
     <div class="container">
-        <div class="content"></div>
+        <div class="content">
+        @alerts()
         <h1>Login bestehender Benutzer</h1>
 
         <form id="login-form">
             <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <label for="email">Email Adresse</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email eingeben">
             </div>
             <div class="form-group">
-                <label for="passwort">Password</label>
+                <label for="passwort">Passwort</label>
                 <input type="password" class="form-control" id="passwort" placeholder="Passwort">
             </div>
             <div class="form-check">
@@ -49,11 +50,11 @@
                     Check me out
                 </label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Anmelden</button>
         </form>
 
 
-
+        </div>
 
     </div> <!-- /container -->
 }
