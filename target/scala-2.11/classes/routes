@@ -3,7 +3,7 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.AngebotController.index()
+GET     /                           controllers.Application.index()
 POST    /angebote                       controllers.AngebotController.addAngebot()
 GET     /angebote/all                controllers.AngebotController.getAngeboteList()
 GET     /angebote/:id                 controllers.AngebotController.getAngebote(id:Int)
@@ -12,7 +12,7 @@ GET     /search                      controllers.AngebotController.sucheAngebot(
 POST    /bestellung                   controllers.BestellungController.addBestellung()
 GET    /bestellung                   controllers.BestellungController.getBestellung()
 
-GET     /test                       controllers.AngebotController.test()
+GET     /test                       controllers.Application.test()
 
 GET     /upload                     controllers.Application.imageUpload()
 
@@ -20,9 +20,9 @@ GET     /upload                     controllers.Application.imageUpload()
 
 # Home page
 #GET     /                           controllers.Application.index()
-#GET     /dashboard                  controllers.Dashboard.index()
+GET     /profile                     controllers.Profile.index()
 #
-#POST    /login                      controllers.Application.authenticate()
+POST    /login                      controllers.Authentication.authenticate()
 #GET     /logout                     controllers.Application.logout()
 #
 #GET     /settings                   controllers.account.settings.Index.index()

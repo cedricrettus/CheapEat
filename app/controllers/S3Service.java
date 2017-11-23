@@ -32,6 +32,7 @@ public class S3Service {
 
     }
 
+    //TODO image url anpassen, damit 2 images mit gleichem dateiname keine Probleme verursachen
 
     public boolean uploadImage(File file, String fileName){
         AWSCredentials awsCredentials = new BasicAWSCredentials(accessKey, secretKey);

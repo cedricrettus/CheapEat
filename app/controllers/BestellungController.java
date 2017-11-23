@@ -5,6 +5,7 @@ import models.Bestellung;
 import play.data.FormFactory;
 import play.db.jpa.JPA;
 import play.db.jpa.Transactional;
+import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.inject.Inject;
@@ -14,7 +15,7 @@ import static play.mvc.Results.ok;
 /**
  * Created by Fabio on 27.10.2017.
  */
-public class BestellungController {
+public class BestellungController extends Controller {
 
     MailerService mc;
 

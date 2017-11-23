@@ -15,15 +15,23 @@ import play.data.validation.Constraints;
 
 import static play.libs.Json.*;
 import static play.mvc.Results.ok;
-import static views.html.suche.*;
 
 /**
  * Created by Fabio on 27.10.2017.
  */
-public class Application {
+public class Application extends Controller{
 
+
+    //TODO entfernen nach test
     public Result imageUpload(){
-
         return ok(views.html.upload.render());
+    }
+
+    public Result index() {
+        return ok(views.html.index.render());
+    }
+
+    public Result test() {
+        return ok(views.html.test.render());
     }
 }

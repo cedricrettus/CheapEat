@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Wed Nov 22 15:27:17 CET 2017
+// @DATE:Thu Nov 23 11:28:14 CET 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -12,6 +12,51 @@ import _root_.play.libs.F
 
 // @LINE:6
 package controllers {
+
+  // @LINE:55
+  class ReverseAssets(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:55
+    def at(file:String): Call = {
+      implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
+      Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
+    }
+  
+  }
+
+  // @LINE:25
+  class ReverseAuthentication(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:25
+    def authenticate(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "login")
+    }
+  
+  }
+
+  // @LINE:23
+  class ReverseProfile(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:23
+    def index(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "profile")
+    }
+  
+  }
 
   // @LINE:12
   class ReverseBestellungController(_prefix: => String) {
@@ -34,17 +79,17 @@ package controllers {
   
   }
 
-  // @LINE:6
+  // @LINE:7
   class ReverseAngebotController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:7
-    def addAngebot(): Call = {
+    // @LINE:11
+    def sucheAngebot(plz:Int = 0): Call = {
       import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "angebote")
+      Call("GET", _prefix + { _defaultPrefix } + "search" + queryString(List(if(plz == 0) None else Some(implicitly[QueryStringBindable[Int]].unbind("plz", plz)))))
     }
   
     // @LINE:8
@@ -53,48 +98,21 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "angebote/all")
     }
   
-    // @LINE:15
-    def test(): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "test")
-    }
-  
     // @LINE:9
     def getAngebote(id:Int): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "angebote/" + implicitly[PathBindable[Int]].unbind("id", id))
     }
   
-    // @LINE:11
-    def sucheAngebot(plz:Int = 0): Call = {
+    // @LINE:7
+    def addAngebot(): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "search" + queryString(List(if(plz == 0) None else Some(implicitly[QueryStringBindable[Int]].unbind("plz", plz)))))
-    }
-  
-    // @LINE:6
-    def index(): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix)
+      Call("POST", _prefix + { _defaultPrefix } + "angebote")
     }
   
   }
 
-  // @LINE:55
-  class ReverseAssets(_prefix: => String) {
-    def _defaultPrefix: String = {
-      if (_prefix.endsWith("/")) "" else "/"
-    }
-
-  
-    // @LINE:55
-    def at(file:String): Call = {
-      implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
-      Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
-    }
-  
-  }
-
-  // @LINE:17
+  // @LINE:6
   class ReverseApplication(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
@@ -105,6 +123,18 @@ package controllers {
     def imageUpload(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "upload")
+    }
+  
+    // @LINE:6
+    def index(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix)
+    }
+  
+    // @LINE:15
+    def test(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "test")
     }
   
   }

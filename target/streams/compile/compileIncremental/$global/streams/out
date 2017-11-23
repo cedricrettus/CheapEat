@@ -2,61 +2,14 @@
 [debug] [naha] Initial source changes: 
 [debug] [naha] 	removed:Set()
 [debug] [naha] 	added: Set()
-[debug] [naha] 	modified: Set(C:\dev\git\CheapEat\app\models\Benutzer.java, C:\dev\git\CheapEat\app\controllers\Authentication.java)
+[debug] [naha] 	modified: Set()
 [debug] [naha] Invalidated products: Set()
 [debug] [naha] External API changes: API Changes: Set()
 [debug] [naha] Modified binary dependencies: Set()
-[debug] [naha] Initial directly invalidated sources: Set(C:\dev\git\CheapEat\app\models\Benutzer.java, C:\dev\git\CheapEat\app\controllers\Authentication.java)
+[debug] [naha] Initial directly invalidated sources: Set()
 [debug] [naha] 
 [debug] [naha] Sources indirectly invalidated by:
 [debug] [naha] 	product: Set()
 [debug] [naha] 	binary dep: Set()
 [debug] [naha] 	external source: Set()
-[debug] All initially invalidated sources: Set(C:\dev\git\CheapEat\app\models\Benutzer.java, C:\dev\git\CheapEat\app\controllers\Authentication.java)
-[info] Compiling 2 Java sources to C:\dev\git\CheapEat\target\scala-2.11\classes...
-[debug] Attempting to call com.sun.tools.javac.api.JavacTool@6e51e901 directly...
-[error] C:\dev\git\CheapEat\app\models\Benutzer.java:79: method authenticate(java.lang.String,java.lang.String) is already defined in class models.Benutzer
-[error]     public static Benutzer authenticate(String email, String clearPasswort) throws AppException {
-[error] C:\dev\git\CheapEat\app\models\Benutzer.java:82: cannot find symbol
-[error]   symbol:   class YourClass
-[error]   location: class models.Benutzer
-[error]         Criteria criteria = session.createCriteria(YourClass.class);
-[error] C:\dev\git\CheapEat\app\models\Benutzer.java:83: cannot find symbol
-[error]   symbol:   class YourObject
-[error]   location: class models.Benutzer
-[error]         YourObject yourObject = criteria.add(Restrictions.eq("yourField", yourFieldValue))
-[error] C:\dev\git\CheapEat\app\models\Benutzer.java:83: cannot find symbol
-[error]   symbol:   variable yourFieldValue
-[error]   location: class models.Benutzer
-[error]         YourObject yourObject = criteria.add(Restrictions.eq("yourField", yourFieldValue))
-[error] C:\dev\git\CheapEat\app\models\Benutzer.java:83: cannot find symbol
-[error]   symbol:   variable Restrictions
-[error]   location: class models.Benutzer
-[error]         YourObject yourObject = criteria.add(Restrictions.eq("yourField", yourFieldValue))
-[error] C:\dev\git\CheapEat\app\models\Benutzer.java:87: cannot find symbol
-[error]   symbol:   variable find
-[error]   location: class models.Benutzer
-[error]         Benutzer benutzer = find.where().eq("email", email).findUnique();
-[error] C:\dev\git\CheapEat\app\models\Benutzer.java:88: cannot find symbol
-[error]   symbol:   variable user
-[error]   location: class models.Benutzer
-[error]         if (user != null) {
-[error] C:\dev\git\CheapEat\app\models\Benutzer.java:90: cannot find symbol
-[error]   symbol:   variable clearPassword
-[error]   location: class models.Benutzer
-[error]             if (Hash.checkPassword(clearPassword, user.passwordHash)) {
-[error] C:\dev\git\CheapEat\app\models\Benutzer.java:90: cannot find symbol
-[error]   symbol:   variable user
-[error]   location: class models.Benutzer
-[error]             if (Hash.checkPassword(clearPassword, user.passwordHash)) {
-[error] C:\dev\git\CheapEat\app\models\Benutzer.java:90: cannot find symbol
-[error]   symbol:   variable Hash
-[error]   location: class models.Benutzer
-[error]             if (Hash.checkPassword(clearPassword, user.passwordHash)) {
-[error] C:\dev\git\CheapEat\app\models\Benutzer.java:91: cannot find symbol
-[error]   symbol:   variable user
-[error]   location: class models.Benutzer
-[error]                 return user;
-[info] C:\dev\git\CheapEat\app\models\Benutzer.java: C:\dev\git\CheapEat\app\models\Benutzer.java uses unchecked or unsafe operations.
-[info] C:\dev\git\CheapEat\app\models\Benutzer.java: Recompile with -Xlint:unchecked for details.
-[error] (compile:compileIncremental) javac returned nonzero exit code
+[debug] All initially invalidated sources: Set()

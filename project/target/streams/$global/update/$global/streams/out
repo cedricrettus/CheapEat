@@ -15476,7 +15476,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.11!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 6109ms :: artifacts dl 153ms
+[debug] :: resolution report :: resolve 14124ms :: artifacts dl 234ms
 [debug] 	report for default#cheapeat-build;0.1-SNAPSHOT compile produced in C:\dev\git\CheapEat\project\target\resolution-cache\reports\default-cheapeat-build-compile.xml
 [debug] 	report for default#cheapeat-build;0.1-SNAPSHOT runtime produced in C:\dev\git\CheapEat\project\target\resolution-cache\reports\default-cheapeat-build-runtime.xml
 [debug] 	report for default#cheapeat-build;0.1-SNAPSHOT test produced in C:\dev\git\CheapEat\project\target\resolution-cache\reports\default-cheapeat-build-test.xml
@@ -15490,5 +15490,5 @@
 [debug] 	report for default#cheapeat-build;0.1-SNAPSHOT docs produced in C:\dev\git\CheapEat\project\target\resolution-cache\reports\default-cheapeat-build-docs.xml
 [debug] 	report for default#cheapeat-build;0.1-SNAPSHOT pom produced in C:\dev\git\CheapEat\project\target\resolution-cache\reports\default-cheapeat-build-pom.xml
 [debug] 	report for default#cheapeat-build;0.1-SNAPSHOT scala-tool produced in C:\dev\git\CheapEat\project\target\resolution-cache\reports\default-cheapeat-build-scala-tool.xml
-[debug] 	resolve done (6109ms resolve - 153ms download)
+[debug] 	resolve done (14124ms resolve - 234ms download)
 [info] Done updating.

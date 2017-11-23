@@ -4,23 +4,34 @@ import models.Benutzer;
 import models.utils.AppException;
 import play.Logger;
 import play.data.Form;
+import play.data.FormFactory;
 import play.data.validation.Constraints;
 import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.index;
+
+import javax.inject.Inject;
+
 import static play.data.Form.form;
+import static play.mvc.Controller.session;
+import static play.mvc.Results.badRequest;
+import static play.mvc.Results.ok;
+import static play.mvc.Results.redirect;
 
 
 public class Authentication {
 
-    /*public static Result GO_HOME = redirect(
+    @Inject
+    FormFactory formFactory;
+
+
+    public static Result GO_HOME = redirect(
             routes.Application.index()
     );
 
     public static Result GO_DASHBOARD = redirect(
-            routes.Dashboard.index()
-    );*/
+            routes.Profile.index()
+    );
 
     /**
      * Display the login page or dashboard if connected
@@ -158,18 +169,20 @@ public class Authentication {
      *
      * @return Dashboard if auth OK or login form if auth KO
      */
-/*    public Result authenticate() {
-        Form<Login> loginForm = form(Login.class).bindFromRequest();
+    public Result authenticate() {
+        Form<Authentication.Login> submission = formFactory.form(Authentication.Login.class).bindFromRequest();
 
-        Form<Register> registerForm = form(Register.class);
-
-        if (loginForm.hasErrors()) {
-            return badRequest(index.render(registerForm, loginForm));
+        //Form auf Errors prüfen
+        if (submission.hasErrors()) {
+            System.out.println("Login error");
+            System.out.println(submission.errors());
+            //TODO error zurückgeben
+            return badRequest();
         } else {
-            session("email", loginForm.get().email);
+            session("email", submission.get().email);
             return GO_DASHBOARD;
         }
-    }*/
+    }
 
     /**
      * Logout and clean the session.

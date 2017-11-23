@@ -24,15 +24,6 @@ public class AngebotController extends Controller {
 
     private S3Service s3 = new S3Service();
 
-    @Transactional
-    public Result index() {
-        return ok(views.html.index.render());
-    }
-
-    @Transactional
-    public Result test() {
-        return ok(views.html.test.render());
-    }
 
     @Transactional
     public Result addAngebot() {
@@ -81,7 +72,7 @@ public class AngebotController extends Controller {
                 System.out.println("Keine Bild hochgeladen");
             }
         }
-        return redirect(routes.AngebotController.index());
+        return redirect(routes.Application.index());
     }
 
     @Transactional(readOnly = true)
