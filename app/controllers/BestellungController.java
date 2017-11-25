@@ -37,6 +37,8 @@ public class BestellungController extends Controller {
     @Transactional
     public Result addBestellung() {
 
+        //TODO class secured, dann über getusername()
+
         //Beispiel um FormData zu holen das nicht zu einem Model gehört!
         //DynamicForm requestData = formFactory.form().bindFromRequest();
         //String firstname = requestData.get("firstname");

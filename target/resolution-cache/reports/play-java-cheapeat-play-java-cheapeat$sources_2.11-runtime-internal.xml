@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20171123160030"/>
+		date="20171124113602"/>
 	<dependencies>
 		<module organisation="com.amazonaws" name="aws-java-sdk-ecr">
 			<revision name="1.11.229" status="release" pubdate="20171115065019" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://aws.amazon.com/sdkforjava" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="201">
@@ -156,7 +156,7 @@
 		<module organisation="com.typesafe.play" name="play-logback_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118032839" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="181">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="2989" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-logback_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-logback_2.11/2.5.10/play-logback_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="2862" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-logback_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-logback_2.11/2.5.10/play-logback_2.11-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-logback_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="5622" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-logback_2.11\srcs\play-logback_2.11-2.5.10-sources.jar">
@@ -528,7 +528,7 @@
 		<module organisation="org.hibernate" name="hibernate-entitymanager">
 			<revision name="4.3.7.Final" status="release" pubdate="20141030140900" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hibernate.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="119">
 				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-				<metadata-artifact status="no" details="" size="3903" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate\hibernate-entitymanager\ivy-4.3.7.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hibernate/hibernate-entitymanager/4.3.7.Final/hibernate-entitymanager-4.3.7.Final.pom"/>
+				<metadata-artifact status="no" details="" size="3776" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate\hibernate-entitymanager\ivy-4.3.7.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hibernate/hibernate-entitymanager/4.3.7.Final/hibernate-entitymanager-4.3.7.Final.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.3.7.Final" rev-constraint-default="4.3.7.Final" rev-constraint-dynamic="4.3.7.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="hibernate-entitymanager" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="470573" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate\hibernate-entitymanager\srcs\hibernate-entitymanager-4.3.7.Final-sources.jar">
@@ -660,7 +660,7 @@
 		<module organisation="com.typesafe.play" name="play-java-jpa_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118033018" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="91">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="3441" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-java-jpa_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-jpa_2.11/2.5.10/play-java-jpa_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="3314" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-java-jpa_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-jpa_2.11/2.5.10/play-java-jpa_2.11-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-java-jpa_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="8619" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-java-jpa_2.11\srcs\play-java-jpa_2.11-2.5.10-sources.jar">
@@ -828,7 +828,7 @@
 		<module organisation="org.hibernate" name="hibernate-core">
 			<revision name="4.3.7.Final" status="release" pubdate="20141030140724" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hibernate.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="77">
 				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-				<metadata-artifact status="no" details="" size="4001" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate\hibernate-core\ivy-4.3.7.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hibernate/hibernate-core/4.3.7.Final/hibernate-core-4.3.7.Final.pom"/>
+				<metadata-artifact status="no" details="" size="3874" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate\hibernate-core\ivy-4.3.7.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hibernate/hibernate-core/4.3.7.Final/hibernate-core-4.3.7.Final.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.3.7.Final" rev-constraint-default="4.3.7.Final" rev-constraint-dynamic="4.3.7.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="hibernate-core" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="4787877" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate\hibernate-core\srcs\hibernate-core-4.3.7.Final-sources.jar">
@@ -840,11 +840,11 @@
 		<module organisation="org.jboss" name="jandex">
 			<revision name="1.1.0.Final" status="release" pubdate="20130522215722" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="124">
 				<license name="AL 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="6740" time="0" location="C:\Users\Fabio\.ivy2\cache\org.jboss\jandex\ivy-1.1.0.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.pom"/>
+				<metadata-artifact status="no" details="" size="6613" time="0" location="C:\Users\Fabio\.ivy2\cache\org.jboss\jandex\ivy-1.1.0.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.1.0.Final" rev-constraint-default="1.1.0.Final" rev-constraint-dynamic="1.1.0.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="jandex" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="50584" time="0" location="C:\Users\Fabio\.ivy2\cache\org.jboss\jandex\srcs\jandex-1.1.0.Final-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -852,7 +852,7 @@
 		<module organisation="org.hibernate.common" name="hibernate-commons-annotations">
 			<revision name="4.0.5.Final" status="release" pubdate="20140712002350" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hibernate.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="137">
 				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
-				<metadata-artifact status="no" details="" size="2961" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate.common\hibernate-commons-annotations\ivy-4.0.5.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hibernate/common/hibernate-commons-annotations/4.0.5.Final/hibernate-commons-annotations-4.0.5.Final.pom"/>
+				<metadata-artifact status="no" details="" size="2834" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate.common\hibernate-commons-annotations\ivy-4.0.5.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hibernate/common/hibernate-commons-annotations/4.0.5.Final/hibernate-commons-annotations-4.0.5.Final.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.0.5.Final" rev-constraint-default="4.0.5.Final" rev-constraint-dynamic="4.0.5.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="hibernate-commons-annotations" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="65779" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate.common\hibernate-commons-annotations\srcs\hibernate-commons-annotations-4.0.5.Final-sources.jar">
@@ -863,12 +863,11 @@
 		</module>
 		<module organisation="org.jboss.logging" name="jboss-logging-annotations">
 			<revision name="1.2.0.Beta1" status="release" pubdate="20130619014159" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="107">
-				<license name="Public Domain" url="http://repository.jboss.org/licenses/cc0-1.0.txt"/>
-				<metadata-artifact status="no" details="" size="9440" time="0" location="C:\Users\Fabio\.ivy2\cache\org.jboss.logging\jboss-logging-annotations\ivy-1.2.0.Beta1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.pom"/>
+				<metadata-artifact status="no" details="" size="9695" time="0" location="C:\Users\Fabio\.ivy2\cache\org.jboss.logging\jboss-logging-annotations\ivy-1.2.0.Beta1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.2.0.Beta1" rev-constraint-default="1.2.0.Beta1" rev-constraint-dynamic="1.2.0.Beta1" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="jboss-logging-annotations" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="14314" time="0" location="C:\Users\Fabio\.ivy2\cache\org.jboss.logging\jboss-logging-annotations\srcs\jboss-logging-annotations-1.2.0.Beta1-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -948,7 +947,7 @@
 		<module organisation="com.typesafe.play" name="play-java-jdbc_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118033036" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="68">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="3261" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-jdbc_2.11/2.5.10/play-java-jdbc_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="3134" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java-jdbc_2.11/2.5.10/play-java-jdbc_2.11-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-java-jdbc_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="7277" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\srcs\play-java-jdbc_2.11-2.5.10-sources.jar">
@@ -960,7 +959,7 @@
 		<module organisation="com.typesafe.play" name="play-java_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118033145" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="204">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="6947" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-java_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java_2.11/2.5.10/play-java_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="6820" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-java_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-java_2.11/2.5.10/play-java_2.11-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-java_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="57225" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-java_2.11\srcs\play-java_2.11-2.5.10-sources.jar">
@@ -970,9 +969,9 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.tomcat" name="tomcat-servlet-api">
-			<revision name="8.0.33" status="release" pubdate="20160318214342" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tomcat.apache.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="126">
+			<revision name="8.0.33" status="release" pubdate="20160318164342" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://tomcat.apache.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="126">
 				<license name="         Apache License, Version 2.0 and         Common Development And Distribution License (CDDL) Version 1.0       " url="         http://www.apache.org/licenses/LICENSE-2.0.txt and         http://www.opensource.org/licenses/cddl1.txt       "/>
-				<metadata-artifact status="no" details="" size="2701" time="0" location="C:\Users\Fabio\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\ivy-8.0.33.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/tomcat/tomcat-servlet-api/8.0.33/tomcat-servlet-api-8.0.33.pom"/>
+				<metadata-artifact status="no" details="" size="2662" time="0" location="C:\Users\Fabio\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\ivy-8.0.33.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\org.apache.tomcat\tomcat-servlet-api\8.0.33\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="8.0.33" rev-constraint-default="8.0.33" rev-constraint-dynamic="8.0.33" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="tomcat-servlet-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="307772" time="0" location="C:\Users\Fabio\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\srcs\tomcat-servlet-api-8.0.33-sources.jar">
@@ -982,9 +981,9 @@
 			</revision>
 		</module>
 		<module organisation="com.google.code.findbugs" name="jsr305">
-			<revision name="3.0.1" status="release" pubdate="20151009070635" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://findbugs.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="75">
+			<revision name="3.0.1" status="release" pubdate="20151009010635" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://findbugs.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="75">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3301" time="0" location="C:\Users\Fabio\.ivy2\cache\com.google.code.findbugs\jsr305\ivy-3.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.pom"/>
+				<metadata-artifact status="no" details="" size="3259" time="0" location="C:\Users\Fabio\.ivy2\cache\com.google.code.findbugs\jsr305\ivy-3.0.1.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\com.google.code.findbugs\jsr305\3.0.1\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="jsr305" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="16622" time="0" location="C:\Users\Fabio\.ivy2\cache\com.google.code.findbugs\jsr305\srcs\jsr305-3.0.1-sources.jar">
@@ -994,9 +993,9 @@
 			</revision>
 		</module>
 		<module organisation="net.jodah" name="typetools">
-			<revision name="0.4.4" status="release" pubdate="20151028204345" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/jhalterman/typetools/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="114">
+			<revision name="0.4.4" status="release" pubdate="20151028154345" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/jhalterman/typetools/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="114">
 				<license name="Apache License, Version 2.0" url="http://apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="3310" time="0" location="C:\Users\Fabio\.ivy2\cache\net.jodah\typetools\ivy-0.4.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/jodah/typetools/0.4.4/typetools-0.4.4.pom"/>
+				<metadata-artifact status="no" details="" size="3264" time="0" location="C:\Users\Fabio\.ivy2\cache\net.jodah\typetools\ivy-0.4.4.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\net.jodah\typetools\0.4.4\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="0.4.4" rev-constraint-default="0.4.4" rev-constraint-dynamic="0.4.4" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="typetools" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="8299" time="0" location="C:\Users\Fabio\.ivy2\cache\net.jodah\typetools\srcs\typetools-0.4.4-sources.jar">
@@ -1006,9 +1005,9 @@
 			</revision>
 		</module>
 		<module organisation="org.springframework" name="spring-context">
-			<revision name="4.2.7.RELEASE" status="release" pubdate="20160704125115" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/spring-projects/spring-framework" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="127">
+			<revision name="4.2.7.RELEASE" status="release" pubdate="20160704065115" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/spring-projects/spring-framework" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="127">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="4921" time="0" location="C:\Users\Fabio\.ivy2\cache\org.springframework\spring-context\ivy-4.2.7.RELEASE.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/springframework/spring-context/4.2.7.RELEASE/spring-context-4.2.7.RELEASE.pom"/>
+				<metadata-artifact status="no" details="" size="4863" time="0" location="C:\Users\Fabio\.ivy2\cache\org.springframework\spring-context\ivy-4.2.7.RELEASE.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\org.springframework\spring-context\4.2.7.RELEASE\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.2.7.RELEASE" rev-constraint-default="4.2.7.RELEASE" rev-constraint-dynamic="4.2.7.RELEASE" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="spring-context" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1098889" time="0" location="C:\Users\Fabio\.ivy2\cache\org.springframework\spring-context\srcs\spring-context-4.2.7.RELEASE-sources.jar">
@@ -1018,9 +1017,9 @@
 			</revision>
 		</module>
 		<module organisation="org.hibernate" name="hibernate-validator">
-			<revision name="5.2.4.Final" status="release" pubdate="20160217161525" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="186">
+			<revision name="5.2.4.Final" status="release" pubdate="20160217101525" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="186">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="21792" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate\hibernate-validator\ivy-5.2.4.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hibernate/hibernate-validator/5.2.4.Final/hibernate-validator-5.2.4.Final.pom"/>
+				<metadata-artifact status="no" details="" size="21636" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate\hibernate-validator\ivy-5.2.4.Final.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\org.hibernate\hibernate-validator\5.2.4.Final\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="5.2.4.Final" rev-constraint-default="5.2.4.Final" rev-constraint-dynamic="5.2.4.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="hibernate-validator" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="516544" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate\hibernate-validator\srcs\hibernate-validator-5.2.4.Final-sources.jar">
@@ -1033,19 +1032,19 @@
 			<revision name="1.0.0.Final" status="release" pubdate="20130726190144" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://hibernate.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="108">
 				<license name="Eclipse Public License (EPL), Version 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
 				<license name="Eclipse Distribution License (EDL), Version 1.0" url="http://www.eclipse.org/org/documents/edl-v10.php"/>
-				<metadata-artifact status="no" details="" size="2791" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.1-api\ivy-1.0.0.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.pom"/>
+				<metadata-artifact status="no" details="" size="2664" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.1-api\ivy-1.0.0.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.0.0.Final" rev-constraint-default="1.0.0.Final" rev-constraint-dynamic="1.0.0.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="hibernate-jpa-2.1-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="199617" time="0" location="C:\Users\Fabio\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.1-api\srcs\hibernate-jpa-2.1-api-1.0.0.Final-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.fasterxml" name="classmate">
-			<revision name="1.1.0" status="release" pubdate="20140820022148" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/cowtowncoder/java-classmate" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="83">
+			<revision name="1.1.0" status="release" pubdate="20140819202148" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/cowtowncoder/java-classmate" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="83">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3421" time="0" location="C:\Users\Fabio\.ivy2\cache\com.fasterxml\classmate\ivy-1.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/classmate/1.1.0/classmate-1.1.0.pom"/>
+				<metadata-artifact status="no" details="" size="3376" time="0" location="C:\Users\Fabio\.ivy2\cache\com.fasterxml\classmate\ivy-1.1.0.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\com.fasterxml\classmate\1.1.0\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.1.0" rev-constraint-default="1.1.0" rev-constraint-dynamic="1.1.0" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="classmate" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="45131" time="0" location="C:\Users\Fabio\.ivy2\cache\com.fasterxml\classmate\srcs\classmate-1.1.0-sources.jar">
@@ -1055,33 +1054,33 @@
 			</revision>
 		</module>
 		<module organisation="org.jboss.logging" name="jboss-logging">
-			<revision name="3.2.1.Final" status="release" pubdate="20150120172222" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jboss.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="163">
+			<revision name="3.2.1.Final" status="release" pubdate="20150120112222" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jboss.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="163">
 				<license name="Apache License, version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="9590" time="0" location="C:\Users\Fabio\.ivy2\cache\org.jboss.logging\jboss-logging\ivy-3.2.1.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.2.1.Final/jboss-logging-3.2.1.Final.pom"/>
+				<metadata-artifact status="no" details="" size="9477" time="0" location="C:\Users\Fabio\.ivy2\cache\org.jboss.logging\jboss-logging\ivy-3.2.1.Final.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/org.jboss.logging/jboss-logging/3.2.1.Final/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="3.2.1.Final" rev-constraint-default="3.2.1.Final" rev-constraint-dynamic="3.2.1.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="jboss-logging" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="51702" time="0" location="C:\Users\Fabio\.ivy2\cache\org.jboss.logging\jboss-logging\srcs\jboss-logging-3.2.1.Final-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.2.1.Final/jboss-logging-3.2.1.Final-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.2.1.Final/jboss-logging-3.2.1.Final-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="javax.validation" name="validation-api">
-			<revision name="1.1.0.Final" status="release" pubdate="20130410150303" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://beanvalidation.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="156">
+			<revision name="1.1.0.Final" status="release" pubdate="20130410090303" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://beanvalidation.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="156">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3235" time="0" location="C:\Users\Fabio\.ivy2\cache\javax.validation\validation-api\ivy-1.1.0.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.pom"/>
+				<metadata-artifact status="no" details="" size="3191" time="0" location="C:\Users\Fabio\.ivy2\cache\javax.validation\validation-api\ivy-1.1.0.Final.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/javax.validation/validation-api/1.1.0.Final/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.1.0.Final" rev-constraint-default="1.1.0.Final" rev-constraint-dynamic="1.1.0.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="validation-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="94671" time="0" location="C:\Users\Fabio\.ivy2\cache\javax.validation\validation-api\srcs\validation-api-1.1.0.Final-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.yaml" name="snakeyaml">
-			<revision name="1.16" status="release" pubdate="20150818220808" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.snakeyaml.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="177">
+			<revision name="1.16" status="release" pubdate="20150818160808" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.snakeyaml.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="177">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3739" time="0" location="C:\Users\Fabio\.ivy2\cache\org.yaml\snakeyaml\ivy-1.16.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/yaml/snakeyaml/1.16/snakeyaml-1.16.pom"/>
+				<metadata-artifact status="no" details="" size="3691" time="0" location="C:\Users\Fabio\.ivy2\cache\org.yaml\snakeyaml\ivy-1.16.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\org.yaml\snakeyaml\1.16\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.16" rev-constraint-default="1.16" rev-constraint-dynamic="1.16" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="snakeyaml" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="169194" time="0" location="C:\Users\Fabio\.ivy2\cache\org.yaml\snakeyaml\srcs\snakeyaml-1.16-sources.jar">
@@ -1103,10 +1102,10 @@
 			</revision>
 		</module>
 		<module organisation="org.reflections" name="reflections">
-			<revision name="0.9.10" status="release" pubdate="20150516114630" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/ronmamo/reflections" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="62">
+			<revision name="0.9.10" status="release" pubdate="20150516054630" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/ronmamo/reflections" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="62">
 				<license name="WTFPL" url="http://www.wtfpl.net/"/>
 				<license name="The New BSD License" url="http://www.opensource.org/licenses/bsd-license.html"/>
-				<metadata-artifact status="no" details="" size="4295" time="0" location="C:\Users\Fabio\.ivy2\cache\org.reflections\reflections\ivy-0.9.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/reflections/reflections/0.9.10/reflections-0.9.10.pom"/>
+				<metadata-artifact status="no" details="" size="4238" time="0" location="C:\Users\Fabio\.ivy2\cache\org.reflections\reflections\ivy-0.9.10.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\org.reflections\reflections\0.9.10\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="0.9.10" rev-constraint-default="0.9.10" rev-constraint-dynamic="0.9.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="reflections" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="53049" time="0" location="C:\Users\Fabio\.ivy2\cache\org.reflections\reflections\srcs\reflections-0.9.10-sources.jar">
@@ -1164,9 +1163,9 @@
 			</revision>
 		</module>
 		<module organisation="javax.el" name="javax.el-api">
-			<revision name="3.0.0" status="release" pubdate="20130426005245" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://uel-spec.java.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="52">
+			<revision name="3.0.0" status="release" pubdate="20130425185245" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://uel-spec.java.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="52">
 				<license name="CDDL + GPLv2 with classpath exception" url="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html"/>
-				<metadata-artifact status="no" details="" size="3790" time="0" location="C:\Users\Fabio\.ivy2\cache\javax.el\javax.el-api\ivy-3.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/el/javax.el-api/3.0.0/javax.el-api-3.0.0.pom"/>
+				<metadata-artifact status="no" details="" size="3742" time="0" location="C:\Users\Fabio\.ivy2\cache\javax.el\javax.el-api\ivy-3.0.0.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\javax.el\javax.el-api\3.0.0\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="3.0.0" rev-constraint-default="3.0.0" rev-constraint-dynamic="3.0.0" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="javax.el-api" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="122510" time="0" location="C:\Users\Fabio\.ivy2\cache\javax.el\javax.el-api\srcs\javax.el-api-3.0.0-sources.jar">
@@ -1368,9 +1367,9 @@
 			</revision>
 		</module>
 		<module organisation="org.springframework" name="spring-beans">
-			<revision name="4.2.7.RELEASE" status="release" pubdate="20160704125126" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/spring-projects/spring-framework" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="36">
+			<revision name="4.2.7.RELEASE" status="release" pubdate="20160704065126" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/spring-projects/spring-framework" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="36">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3246" time="0" location="C:\Users\Fabio\.ivy2\cache\org.springframework\spring-beans\ivy-4.2.7.RELEASE.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/springframework/spring-beans/4.2.7.RELEASE/spring-beans-4.2.7.RELEASE.pom"/>
+				<metadata-artifact status="no" details="" size="3200" time="0" location="C:\Users\Fabio\.ivy2\cache\org.springframework\spring-beans\ivy-4.2.7.RELEASE.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\org.springframework\spring-beans\4.2.7.RELEASE\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.2.7.RELEASE" rev-constraint-default="4.2.7.RELEASE" rev-constraint-dynamic="4.2.7.RELEASE" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="spring-beans" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="699228" time="0" location="C:\Users\Fabio\.ivy2\cache\org.springframework\spring-beans\srcs\spring-beans-4.2.7.RELEASE-sources.jar">
@@ -1380,9 +1379,9 @@
 			</revision>
 		</module>
 		<module organisation="org.springframework" name="spring-core">
-			<revision name="4.2.7.RELEASE" status="release" pubdate="20160704125117" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/spring-projects/spring-framework" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="166">
+			<revision name="4.2.7.RELEASE" status="release" pubdate="20160704065117" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/spring-projects/spring-framework" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="166">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3235" time="0" location="C:\Users\Fabio\.ivy2\cache\org.springframework\spring-core\ivy-4.2.7.RELEASE.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/springframework/spring-core/4.2.7.RELEASE/spring-core-4.2.7.RELEASE.pom"/>
+				<metadata-artifact status="no" details="" size="3189" time="0" location="C:\Users\Fabio\.ivy2\cache\org.springframework\spring-core\ivy-4.2.7.RELEASE.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\org.springframework\spring-core\4.2.7.RELEASE\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.2.7.RELEASE" rev-constraint-default="4.2.7.RELEASE" rev-constraint-dynamic="4.2.7.RELEASE" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="spring-core" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="711218" time="0" location="C:\Users\Fabio\.ivy2\cache\org.springframework\spring-core\srcs\spring-core-4.2.7.RELEASE-sources.jar">
@@ -1418,7 +1417,7 @@
 		<module organisation="com.typesafe.play" name="play-netty-server_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118032908" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="30">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="3811" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-netty-server_2.11/2.5.10/play-netty-server_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="3684" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-netty-server_2.11/2.5.10/play-netty-server_2.11-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-netty-server_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="17317" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-netty-server_2.11\srcs\play-netty-server_2.11-2.5.10-sources.jar">
@@ -1428,21 +1427,21 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty-transport-native-epoll">
-			<revision name="4.0.41.Final" status="release" pubdate="20160829192626" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="178">
+			<revision name="4.0.41.Final" status="release" pubdate="20160829132626" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="178">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="15842" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-transport-native-epoll\ivy-4.0.41.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.0.41.Final/netty-transport-native-epoll-4.0.41.Final.pom"/>
+				<metadata-artifact status="no" details="" size="15605" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-transport-native-epoll\ivy-4.0.41.Final.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\io.netty\netty-transport-native-epoll\4.0.41.Final\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="netty-transport-native-epoll" type="jar" ext="jar" extra-classifier="linux-x86_64" status="no" details="" size="147943" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-transport-native-epoll\jars\netty-transport-native-epoll-4.0.41.Final-linux-x86_64.jar">
-						<origin-location is-local="false" location="UNKNOWN"/>
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.0.41.Final/netty-transport-native-epoll-4.0.41.Final-linux-x86_64.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.netty" name="netty-reactive-streams-http">
-			<revision name="1.0.8" status="release" pubdate="20160912100045" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="57">
+			<revision name="1.0.8" status="release" pubdate="20160912040045" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="57">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="5085" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\ivy-1.0.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/netty/netty-reactive-streams-http/1.0.8/netty-reactive-streams-http-1.0.8.pom"/>
+				<metadata-artifact status="no" details="" size="5027" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\ivy-1.0.8.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\com.typesafe.netty\netty-reactive-streams-http\1.0.8\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.0.8" rev-constraint-default="1.0.8" rev-constraint-dynamic="1.0.8" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="netty-reactive-streams-http" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="16176" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.netty\netty-reactive-streams-http\srcs\netty-reactive-streams-http-1.0.8-sources.jar">
@@ -1452,9 +1451,9 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty-codec-http">
-			<revision name="4.0.41.Final" status="release" pubdate="20160829185921" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="34">
+			<revision name="4.0.41.Final" status="release" pubdate="20160829125921" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="34">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="15127" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-codec-http\ivy-4.0.41.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-codec-http/4.0.41.Final/netty-codec-http-4.0.41.Final.pom"/>
+				<metadata-artifact status="no" details="" size="14998" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-codec-http\ivy-4.0.41.Final.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\io.netty\netty-codec-http\4.0.41.Final\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="netty-codec-http" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="355490" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-codec-http\srcs\netty-codec-http-4.0.41.Final-sources.jar">
@@ -1466,7 +1465,7 @@
 		<module organisation="com.typesafe.play" name="play-server_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118032904" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="33">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="3607" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-server_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-server_2.11/2.5.10/play-server_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="3480" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-server_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-server_2.11/2.5.10/play-server_2.11-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-server_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="34409" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-server_2.11\srcs\play-server_2.11-2.5.10-sources.jar">
@@ -1575,25 +1574,25 @@
 			<revision name="1.0.0.Final" status="release" pubdate="20131008214408" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="18">
 				<license name="Common Development and Distribution License" url="http://repository.jboss.org/licenses/cddl.txt"/>
 				<license name="GNU General Public License, Version 2 with the Classpath Exception" url="http://repository.jboss.org/licenses/gpl-2.0-ce.txt"/>
-				<metadata-artifact status="no" details="" size="8558" time="0" location="C:\Users\Fabio\.ivy2\cache\org.jboss.spec.javax.transaction\jboss-transaction-api_1.2_spec\ivy-1.0.0.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.pom"/>
+				<metadata-artifact status="no" details="" size="8431" time="0" location="C:\Users\Fabio\.ivy2\cache\org.jboss.spec.javax.transaction\jboss-transaction-api_1.2_spec\ivy-1.0.0.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.0.0.Final" rev-constraint-default="1.0.0.Final" rev-constraint-dynamic="1.0.0.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="jboss-transaction-api_1.2_spec" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="20822" time="0" location="C:\Users\Fabio\.ivy2\cache\org.jboss.spec.javax.transaction\jboss-transaction-api_1.2_spec\srcs\jboss-transaction-api_1.2_spec-1.0.0.Final-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.javassist" name="javassist">
-			<revision name="3.18.2-GA" status="release" pubdate="20140527185509" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.javassist.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
+			<revision name="3.18.2-GA" status="release" pubdate="20140527125509" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.javassist.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
 				<license name="MPL 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
 				<license name="LGPL 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
 				<license name="Apache License 2.0" url="http://www.apache.org/licenses/"/>
-				<metadata-artifact status="no" details="" size="3235" time="0" location="C:\Users\Fabio\.ivy2\cache\org.javassist\javassist\ivy-3.18.2-GA.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/javassist/javassist/3.18.2-GA/javassist-3.18.2-GA.pom"/>
+				<metadata-artifact status="no" details="" size="3188" time="0" location="C:\Users\Fabio\.ivy2\cache\org.javassist\javassist\ivy-3.18.2-GA.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/org.javassist/javassist/3.18.2-GA/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="3.18.2-GA" rev-constraint-default="3.18.2-GA" rev-constraint-dynamic="3.18.2-GA" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="javassist" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="513516" time="0" location="C:\Users\Fabio\.ivy2\cache\org.javassist\javassist\srcs\javassist-3.18.2-GA-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/javassist/javassist/3.18.2-GA/javassist-3.18.2-GA-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/javassist/javassist/3.18.2-GA/javassist-3.18.2-GA-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -1719,9 +1718,9 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.netty" name="netty-reactive-streams">
-			<revision name="1.0.8" status="release" pubdate="20160912100042" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+			<revision name="1.0.8" status="release" pubdate="20160912040042" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="4936" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\ivy-1.0.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/netty/netty-reactive-streams/1.0.8/netty-reactive-streams-1.0.8.pom"/>
+				<metadata-artifact status="no" details="" size="4879" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\ivy-1.0.8.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\com.typesafe.netty\netty-reactive-streams\1.0.8\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.0.8" rev-constraint-default="1.0.8" rev-constraint-dynamic="1.0.8" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="netty-reactive-streams" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="6826" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.netty\netty-reactive-streams\srcs\netty-reactive-streams-1.0.8-sources.jar">
@@ -1731,9 +1730,9 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty-handler">
-			<revision name="4.0.41.Final" status="release" pubdate="20160829185840" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="203">
+			<revision name="4.0.41.Final" status="release" pubdate="20160829125840" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="203">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="15865" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-handler\ivy-4.0.41.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-handler/4.0.41.Final/netty-handler-4.0.41.Final.pom"/>
+				<metadata-artifact status="no" details="" size="15627" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-handler\ivy-4.0.41.Final.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\io.netty\netty-handler\4.0.41.Final\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="netty-handler" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="214946" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-handler\srcs\netty-handler-4.0.41.Final-sources.jar">
@@ -1743,9 +1742,9 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty-codec">
-			<revision name="4.0.41.Final" status="release" pubdate="20160829185741" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="150">
+			<revision name="4.0.41.Final" status="release" pubdate="20160829125741" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="150">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="15549" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-codec\ivy-4.0.41.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-codec/4.0.41.Final/netty-codec-4.0.41.Final.pom"/>
+				<metadata-artifact status="no" details="" size="15417" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-codec\ivy-4.0.41.Final.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\io.netty\netty-codec\4.0.41.Final\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="netty-codec" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="137545" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-codec\srcs\netty-codec-4.0.41.Final-sources.jar">
@@ -1755,9 +1754,9 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty-transport">
-			<revision name="4.0.41.Final" status="release" pubdate="20160829185711" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="167">
+			<revision name="4.0.41.Final" status="release" pubdate="20160829125711" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="167">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="14862" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-transport\ivy-4.0.41.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-transport/4.0.41.Final/netty-transport-4.0.41.Final.pom"/>
+				<metadata-artifact status="no" details="" size="14735" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-transport\ivy-4.0.41.Final.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\io.netty\netty-transport\4.0.41.Final\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="netty-transport" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="254671" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-transport\srcs\netty-transport-4.0.41.Final-sources.jar">
@@ -1767,9 +1766,9 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty-buffer">
-			<revision name="4.0.41.Final" status="release" pubdate="20160829185556" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="97">
+			<revision name="4.0.41.Final" status="release" pubdate="20160829125556" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="97">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="14856" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-buffer\ivy-4.0.41.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-buffer/4.0.41.Final/netty-buffer-4.0.41.Final.pom"/>
+				<metadata-artifact status="no" details="" size="14729" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-buffer\ivy-4.0.41.Final.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\io.netty\netty-buffer\4.0.41.Final\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="netty-buffer" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="143324" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-buffer\srcs\netty-buffer-4.0.41.Final-sources.jar">
@@ -1779,9 +1778,9 @@
 			</revision>
 		</module>
 		<module organisation="io.netty" name="netty-common">
-			<revision name="4.0.41.Final" status="release" pubdate="20160829185431" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="197">
+			<revision name="4.0.41.Final" status="release" pubdate="20160829125431" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="197">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="16796" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-common\ivy-4.0.41.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/netty/netty-common/4.0.41.Final/netty-common-4.0.41.Final.pom"/>
+				<metadata-artifact status="no" details="" size="16646" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-common\ivy-4.0.41.Final.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\io.netty\netty-common\4.0.41.Final\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.0.41.Final" rev-constraint-default="4.0.41.Final" rev-constraint-dynamic="4.0.41.Final" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="netty-common" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="329721" time="0" location="C:\Users\Fabio\.ivy2\cache\io.netty\netty-common\srcs\netty-common-4.0.41.Final-sources.jar">
@@ -1805,7 +1804,7 @@
 		<module organisation="com.typesafe.play" name="play-jdbc_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118033113" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="2">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="4293" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc_2.11/2.5.10/play-jdbc_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="4166" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc_2.11/2.5.10/play-jdbc_2.11-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-jdbc_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="14626" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\srcs\play-jdbc_2.11-2.5.10-sources.jar">
@@ -1827,9 +1826,9 @@
 			</revision>
 		</module>
 		<module organisation="com.zaxxer" name="HikariCP">
-			<revision name="2.5.1" status="release" pubdate="20160919134722" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/brettwooldridge/HikariCP" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="182">
+			<revision name="2.5.1" status="release" pubdate="20160919074722" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/brettwooldridge/HikariCP" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="182">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="7498" time="0" location="C:\Users\Fabio\.ivy2\cache\com.zaxxer\HikariCP\ivy-2.5.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/zaxxer/HikariCP/2.5.1/HikariCP-2.5.1.pom"/>
+				<metadata-artifact status="no" details="" size="7412" time="0" location="C:\Users\Fabio\.ivy2\cache\com.zaxxer\HikariCP\ivy-2.5.1.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\com.zaxxer\HikariCP\2.5.1\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.1" rev-constraint-default="2.5.1" rev-constraint-dynamic="2.5.1" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="HikariCP" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="70281" time="0" location="C:\Users\Fabio\.ivy2\cache\com.zaxxer\HikariCP\srcs\HikariCP-2.5.1-sources.jar">
@@ -1839,9 +1838,9 @@
 			</revision>
 		</module>
 		<module organisation="com.h2database" name="h2">
-			<revision name="1.4.192" status="release" pubdate="20160526092838" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.h2database.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="158">
+			<revision name="1.4.192" status="release" pubdate="20160526032838" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.h2database.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="158">
 				<license name="MPL 2.0 or EPL 1.0" url="http://h2database.com/html/license.html"/>
-				<metadata-artifact status="no" details="" size="2484" time="0" location="C:\Users\Fabio\.ivy2\cache\com.h2database\h2\ivy-1.4.192.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/h2database/h2/1.4.192/h2-1.4.192.pom"/>
+				<metadata-artifact status="no" details="" size="2445" time="0" location="C:\Users\Fabio\.ivy2\cache\com.h2database\h2\ivy-1.4.192.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\com.h2database\h2\1.4.192\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.4.192" rev-constraint-default="1.4.192" rev-constraint-dynamic="1.4.192" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="h2" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1243347" time="0" location="C:\Users\Fabio\.ivy2\cache\com.h2database\h2\srcs\h2-1.4.192-sources.jar">
@@ -1851,13 +1850,13 @@
 			</revision>
 		</module>
 		<module organisation="com.jolbox" name="bonecp">
-			<revision name="0.8.0.RELEASE" status="release" pubdate="20131023134844" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="148">
+			<revision name="0.8.0.RELEASE" status="release" pubdate="20131023074844" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="148">
 				<license name="Apache v2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="8194" time="0" location="C:\Users\Fabio\.ivy2\cache\com.jolbox\bonecp\ivy-0.8.0.RELEASE.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/jolbox/bonecp/0.8.0.RELEASE/bonecp-0.8.0.RELEASE.pom"/>
+				<metadata-artifact status="no" details="" size="8109" time="0" location="C:\Users\Fabio\.ivy2\cache\com.jolbox\bonecp\ivy-0.8.0.RELEASE.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/com.jolbox/bonecp/0.8.0.RELEASE/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="0.8.0.RELEASE" rev-constraint-default="0.8.0.RELEASE" rev-constraint-dynamic="0.8.0.RELEASE" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="bonecp" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="101324" time="0" location="C:\Users\Fabio\.ivy2\cache\com.jolbox\bonecp\srcs\bonecp-0.8.0.RELEASE-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/jolbox/bonecp/0.8.0.RELEASE/bonecp-0.8.0.RELEASE-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/jolbox/bonecp/0.8.0.RELEASE/bonecp-0.8.0.RELEASE-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -1865,7 +1864,7 @@
 		<module organisation="com.typesafe.play" name="play-jdbc-api_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118032843" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="66">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="2843" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-api_2.11/2.5.10/play-jdbc-api_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="2716" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-jdbc-api_2.11/2.5.10/play-jdbc-api_2.11-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-jdbc-api_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="5388" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\srcs\play-jdbc-api_2.11-2.5.10-sources.jar">
@@ -1877,7 +1876,7 @@
 		<module organisation="com.typesafe.play" name="play_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118033203" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="165">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="8268" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play_2.11/2.5.10/play_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="8141" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play_2.11/2.5.10/play_2.11-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="410824" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play_2.11\srcs\play_2.11-2.5.10-sources.jar">
@@ -1887,9 +1886,9 @@
 			</revision>
 		</module>
 		<module organisation="com.google.guava" name="guava">
-			<revision name="19.0" status="release" pubdate="20151209215835" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="96">
+			<revision name="19.0" status="release" pubdate="20151209155835" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="96">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="6414" time="0" location="C:\Users\Fabio\.ivy2\cache\com.google.guava\guava\ivy-19.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/guava/guava/19.0/guava-19.0.pom"/>
+				<metadata-artifact status="no" details="" size="6347" time="0" location="C:\Users\Fabio\.ivy2\cache\com.google.guava\guava\ivy-19.0.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\com.google.guava\guava\19.0\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="19.0" rev-constraint-default="19.0" rev-constraint-dynamic="19.0" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="guava" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1319216" time="0" location="C:\Users\Fabio\.ivy2\cache\com.google.guava\guava\srcs\guava-19.0-sources.jar">
@@ -1899,98 +1898,98 @@
 			</revision>
 		</module>
 		<module organisation="com.google.inject.extensions" name="guice-assistedinject">
-			<revision name="4.0" status="release" pubdate="20150428223500" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="99">
+			<revision name="4.0" status="release" pubdate="20150428163500" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="99">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="5150" time="0" location="C:\Users\Fabio\.ivy2\cache\com.google.inject.extensions\guice-assistedinject\ivy-4.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/4.0/guice-assistedinject-4.0.pom"/>
+				<metadata-artifact status="no" details="" size="5089" time="0" location="C:\Users\Fabio\.ivy2\cache\com.google.inject.extensions\guice-assistedinject\ivy-4.0.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/com.google.inject.extensions/guice-assistedinject/4.0/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.0" rev-constraint-default="4.0" rev-constraint-dynamic="4.0" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="guice-assistedinject" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="33987" time="0" location="C:\Users\Fabio\.ivy2\cache\com.google.inject.extensions\guice-assistedinject\srcs\guice-assistedinject-4.0-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/4.0/guice-assistedinject-4.0-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/google/inject/extensions/guice-assistedinject/4.0/guice-assistedinject-4.0-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.google.inject" name="guice">
-			<revision name="4.0" status="release" pubdate="20150428223326" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="135">
+			<revision name="4.0" status="release" pubdate="20150428163326" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="135">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="5504" time="0" location="C:\Users\Fabio\.ivy2\cache\com.google.inject\guice\ivy-4.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/inject/guice/4.0/guice-4.0.pom"/>
+				<metadata-artifact status="no" details="" size="5440" time="0" location="C:\Users\Fabio\.ivy2\cache\com.google.inject\guice\ivy-4.0.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/com.google.inject/guice/4.0/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="4.0" rev-constraint-default="4.0" rev-constraint-dynamic="4.0" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="guice" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="305803" time="0" location="C:\Users\Fabio\.ivy2\cache\com.google.inject\guice\srcs\guice-4.0-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/inject/guice/4.0/guice-4.0-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/google/inject/guice/4.0/guice-4.0-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="aopalliance" name="aopalliance">
-			<revision name="1.0" status="release" pubdate="20070226234340" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://aopalliance.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="168">
+			<revision name="1.0" status="release" pubdate="20070226174340" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://aopalliance.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="168">
 				<license name="Public Domain"/>
-				<metadata-artifact status="no" details="" size="2447" time="0" location="C:\Users\Fabio\.ivy2\cache\aopalliance\aopalliance\ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.pom"/>
+				<metadata-artifact status="no" details="" size="2408" time="0" location="C:\Users\Fabio\.ivy2\cache\aopalliance\aopalliance\ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/aopalliance/aopalliance/1.0/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="aopalliance" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="21188" time="0" location="C:\Users\Fabio\.ivy2\cache\aopalliance\aopalliance\srcs\aopalliance-1.0-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="javax.inject" name="javax.inject">
-			<revision name="1" status="release" pubdate="20091014013500" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/atinject/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="192">
+			<revision name="1" status="release" pubdate="20091013193500" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/atinject/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="192">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="2536" time="0" location="C:\Users\Fabio\.ivy2\cache\javax.inject\javax.inject\ivy-1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/inject/javax.inject/1/javax.inject-1.pom"/>
+				<metadata-artifact status="no" details="" size="2497" time="0" location="C:\Users\Fabio\.ivy2\cache\javax.inject\javax.inject\ivy-1.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/javax.inject/javax.inject/1/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1" rev-constraint-default="1" rev-constraint-dynamic="1" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="javax.inject" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="10928" time="0" location="C:\Users\Fabio\.ivy2\cache\javax.inject\javax.inject\srcs\javax.inject-1-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/inject/javax.inject/1/javax.inject-1-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/javax/inject/javax.inject/1/javax.inject-1-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="javax.transaction" name="jta">
-			<revision name="1.1" status="release" pubdate="20081028022721" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://java.sun.com/products/jta" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="154">
-				<metadata-artifact status="no" details="" size="2508" time="0" location="C:\Users\Fabio\.ivy2\cache\javax.transaction\jta\ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/transaction/jta/1.1/jta-1.1.pom"/>
+			<revision name="1.1" status="release" pubdate="20081027212721" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://java.sun.com/products/jta" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="154">
+				<metadata-artifact status="no" details="" size="2471" time="0" location="C:\Users\Fabio\.ivy2\cache\javax.transaction\jta\ivy-1.1.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/javax.transaction/jta/1.1/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="jta" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="25014" time="0" location="C:\Users\Fabio\.ivy2\cache\javax.transaction\jta\srcs\jta-1.1-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/transaction/jta/1.1/jta-1.1-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/javax/transaction/jta/1.1/jta-1.1-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="xerces" name="xercesImpl">
-			<revision name="2.11.0" status="release" pubdate="20130220212006" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://xerces.apache.org/xerces2-j/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="32">
+			<revision name="2.11.0" status="release" pubdate="20130220152006" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://xerces.apache.org/xerces2-j/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="32">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="4432" time="0" location="C:\Users\Fabio\.ivy2\cache\xerces\xercesImpl\ivy-2.11.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.pom"/>
+				<metadata-artifact status="no" details="" size="4389" time="0" location="C:\Users\Fabio\.ivy2\cache\xerces\xercesImpl\ivy-2.11.0.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/xerces/xercesImpl/2.11.0/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.11.0" rev-constraint-default="2.11.0" rev-constraint-dynamic="2.11.0" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="xercesImpl" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="2081596" time="0" location="C:\Users\Fabio\.ivy2\cache\xerces\xercesImpl\srcs\xercesImpl-2.11.0-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="xml-apis" name="xml-apis">
-			<revision name="1.4.01" status="release" pubdate="20110820021111" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://xml.apache.org/commons/components/external/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="171">
+			<revision name="1.4.01" status="release" pubdate="20110819201111" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://xml.apache.org/commons/components/external/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), master(compile), runtime, compile(*), master" position="171">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<license name="The SAX License" url="http://www.saxproject.org/copying.html"/>
 				<license name="The W3C License" url="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/java-binding.zip"/>
-				<metadata-artifact status="no" details="" size="3290" time="0" location="C:\Users\Fabio\.ivy2\cache\xml-apis\xml-apis\ivy-1.4.01.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.pom"/>
+				<metadata-artifact status="no" details="" size="3247" time="0" location="C:\Users\Fabio\.ivy2\cache\xml-apis\xml-apis\ivy-1.4.01.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/xml-apis/xml-apis/1.4.01/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.4.01" rev-constraint-default="1.4.01" rev-constraint-dynamic="1.4.01" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="xml-apis" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="656529" time="0" location="C:\Users\Fabio\.ivy2\cache\xml-apis\xml-apis\srcs\xml-apis-1.4.01-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="commons-codec" name="commons-codec">
-			<revision name="1.10" status="release" pubdate="20141106151535" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-codec/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="132">
+			<revision name="1.10" status="release" pubdate="20141106091535" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-codec/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="132">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="10706" time="0" location="C:\Users\Fabio\.ivy2\cache\commons-codec\commons-codec\ivy-1.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10.pom"/>
+				<metadata-artifact status="no" details="" size="10599" time="0" location="C:\Users\Fabio\.ivy2\cache\commons-codec\commons-codec\ivy-1.10.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/commons-codec/commons-codec/1.10/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.10" rev-constraint-default="1.10" rev-constraint-dynamic="1.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="commons-codec" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="301032" time="0" location="C:\Users\Fabio\.ivy2\cache\commons-codec\commons-codec\srcs\commons-codec-1.10-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/commons-codec/commons-codec/1.10/commons-codec-1.10-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -2008,25 +2007,25 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe.play" name="twirl-api_2.11">
-			<revision name="1.1.1" status="release" pubdate="20150514070045" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/twirl" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="56">
+			<revision name="1.1.1" status="release" pubdate="20150514010045" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/playframework/twirl" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="56">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="3495" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\twirl-api_2.11\ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/twirl-api_2.11/1.1.1/twirl-api_2.11-1.1.1.pom"/>
+				<metadata-artifact status="no" details="" size="3447" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\twirl-api_2.11\ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/com.typesafe.play/twirl-api_2.11/1.1.1/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="twirl-api_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="6270" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\twirl-api_2.11\srcs\twirl-api_2.11-1.1.1-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/twirl-api_2.11/1.1.1/twirl-api_2.11-1.1.1-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/typesafe/play/twirl-api_2.11/1.1.1/twirl-api_2.11-1.1.1-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.scala-lang.modules" name="scala-xml_2.11">
-			<revision name="1.0.1" status="release" pubdate="20140416112108" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="70">
+			<revision name="1.0.1" status="release" pubdate="20140416052108" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="70">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
-				<metadata-artifact status="no" details="" size="3175" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.1/scala-xml_2.11-1.0.1.pom"/>
+				<metadata-artifact status="no" details="" size="3128" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="file:////C:/dev/play/activator/repository/org.scala-lang.modules/scala-xml_2.11/1.0.1/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="scala-xml_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="109171" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\srcs\scala-xml_2.11-1.0.1-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.1/scala-xml_2.11-1.0.1-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.1/scala-xml_2.11-1.0.1-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -2034,7 +2033,7 @@
 		<module organisation="com.typesafe.play" name="play-streams_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118032814" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="100">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="4291" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-streams_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-streams_2.11/2.5.10/play-streams_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="4164" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-streams_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-streams_2.11/2.5.10/play-streams_2.11-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-streams_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="26767" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-streams_2.11\srcs\play-streams_2.11-2.5.10-sources.jar">
@@ -2056,9 +2055,9 @@
 			</revision>
 		</module>
 		<module organisation="com.typesafe" name="ssl-config-core_2.11">
-			<revision name="0.2.1" status="release" pubdate="20160408143507" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/ssl-config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="103">
+			<revision name="0.2.1" status="release" pubdate="20160408083507" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/ssl-config" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="103">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="no" details="" size="3036" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe\ssl-config-core_2.11\ivy-0.2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.11/0.2.1/ssl-config-core_2.11-0.2.1.pom"/>
+				<metadata-artifact status="no" details="" size="2992" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe\ssl-config-core_2.11\ivy-0.2.1.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\com.typesafe\ssl-config-core_2.11\0.2.1\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="0.2.1" rev-constraint-default="0.2.1" rev-constraint-dynamic="0.2.1" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="ssl-config-core_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="49384" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe\ssl-config-core_2.11\srcs\ssl-config-core_2.11-0.2.1-sources.jar">
@@ -2068,13 +2067,13 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang.modules" name="scala-parser-combinators_2.11">
-			<revision name="1.0.4" status="release" pubdate="20150430160747" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="63">
+			<revision name="1.0.4" status="release" pubdate="20150430100747" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="63">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
-				<metadata-artifact status="no" details="" size="2964" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\ivy-1.0.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4.pom"/>
+				<metadata-artifact status="no" details="" size="2920" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\ivy-1.0.4.xml" searched="false" origin-is-local="false" origin-location="file:////C:/dev/play/activator/repository/org.scala-lang.modules/scala-parser-combinators_2.11/1.0.4/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.0.4" rev-constraint-default="1.0.4" rev-constraint-dynamic="1.0.4" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="scala-parser-combinators_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="42276" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\srcs\scala-parser-combinators_2.11-1.0.4-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/modules/scala-parser-combinators_2.11/1.0.4/scala-parser-combinators_2.11-1.0.4-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -2092,9 +2091,9 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang.modules" name="scala-java8-compat_2.11">
-			<revision name="0.7.0" status="release" pubdate="20150831130233" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="43">
+			<revision name="0.7.0" status="release" pubdate="20150831070233" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="43">
 				<license name="BSD 3-clause" url="http://opensource.org/licenses/BSD-3-Clause"/>
-				<metadata-artifact status="no" details="" size="3072" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\ivy-0.7.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.11/0.7.0/scala-java8-compat_2.11-0.7.0.pom"/>
+				<metadata-artifact status="no" details="" size="3027" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\ivy-0.7.0.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\org.scala-lang.modules\scala-java8-compat_2.11\0.7.0\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="0.7.0" rev-constraint-default="0.7.0" rev-constraint-dynamic="0.7.0" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="scala-java8-compat_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="12469" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-lang.modules\scala-java8-compat_2.11\srcs\scala-java8-compat_2.11-0.7.0-sources.jar">
@@ -2104,13 +2103,13 @@
 			</revision>
 		</module>
 		<module organisation="org.apache.commons" name="commons-lang3">
-			<revision name="3.4" status="release" pubdate="20150403143112" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="38">
+			<revision name="3.4" status="release" pubdate="20150403083112" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="38">
 				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="11782" time="0" location="C:\Users\Fabio\.ivy2\cache\org.apache.commons\commons-lang3\ivy-3.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.pom"/>
+				<metadata-artifact status="no" details="" size="11664" time="0" location="C:\Users\Fabio\.ivy2\cache\org.apache.commons\commons-lang3\ivy-3.4.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/org.apache.commons/commons-lang3/3.4/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="3.4" rev-constraint-default="3.4" rev-constraint-dynamic="3.4" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="commons-lang3" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="487156" time="0" location="C:\Users\Fabio\.ivy2\cache\org.apache.commons\commons-lang3\srcs\commons-lang3-3.4-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -2130,7 +2129,7 @@
 		<module organisation="com.typesafe.play" name="play-netty-utils">
 			<revision name="2.5.10" status="release" pubdate="20161118032548" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="65">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="2972" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-netty-utils\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-netty-utils/2.5.10/play-netty-utils-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="2845" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-netty-utils\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-netty-utils/2.5.10/play-netty-utils-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-netty-utils" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="19011" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-netty-utils\srcs\play-netty-utils-2.5.10-sources.jar">
@@ -2140,9 +2139,9 @@
 			</revision>
 		</module>
 		<module organisation="org.slf4j" name="jcl-over-slf4j">
-			<revision name="1.7.21" status="release" pubdate="20160404203836" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="64">
+			<revision name="1.7.21" status="release" pubdate="20160404143836" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="64">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="no" details="" size="5328" time="0" location="C:\Users\Fabio\.ivy2\cache\org.slf4j\jcl-over-slf4j\ivy-1.7.21.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/jcl-over-slf4j/1.7.21/jcl-over-slf4j-1.7.21.pom"/>
+				<metadata-artifact status="no" details="" size="5266" time="0" location="C:\Users\Fabio\.ivy2\cache\org.slf4j\jcl-over-slf4j\ivy-1.7.21.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\org.slf4j\jcl-over-slf4j\1.7.21\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="jcl-over-slf4j" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="23213" time="0" location="C:\Users\Fabio\.ivy2\cache\org.slf4j\jcl-over-slf4j\srcs\jcl-over-slf4j-1.7.21-sources.jar">
@@ -2152,9 +2151,9 @@
 			</revision>
 		</module>
 		<module organisation="org.slf4j" name="jul-to-slf4j">
-			<revision name="1.7.21" status="release" pubdate="20160404203912" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="128">
+			<revision name="1.7.21" status="release" pubdate="20160404143912" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="128">
 				<license name="MIT License" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="no" details="" size="5313" time="0" location="C:\Users\Fabio\.ivy2\cache\org.slf4j\jul-to-slf4j\ivy-1.7.21.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/jul-to-slf4j/1.7.21/jul-to-slf4j-1.7.21.pom"/>
+				<metadata-artifact status="no" details="" size="5251" time="0" location="C:\Users\Fabio\.ivy2\cache\org.slf4j\jul-to-slf4j\ivy-1.7.21.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\org.slf4j\jul-to-slf4j\1.7.21\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.7.21" rev-constraint-default="1.7.21" rev-constraint-dynamic="1.7.21" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="jul-to-slf4j" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="4872" time="0" location="C:\Users\Fabio\.ivy2\cache\org.slf4j\jul-to-slf4j\srcs\jul-to-slf4j-1.7.21-sources.jar">
@@ -2166,7 +2165,7 @@
 		<module organisation="com.typesafe.play" name="play-json_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118032758" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="173">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="4909" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-json_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.10/play-json_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="4782" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-json_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.11/2.5.10/play-json_2.11-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-json_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="35821" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-json_2.11\srcs\play-json_2.11-2.5.10-sources.jar">
@@ -2177,8 +2176,7 @@
 		</module>
 		<module organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310">
 			<revision name="2.7.8" status="release" pubdate="20160926174750" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://wiki.fasterxml.com/JacksonModuleJSR310" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="172">
-				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="7741" time="0" location="C:\Users\Fabio\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\ivy-2.7.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.7.8/jackson-datatype-jsr310-2.7.8.pom"/>
+				<metadata-artifact status="no" details="" size="7731" time="0" location="C:\Users\Fabio\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\ivy-2.7.8.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.7.8/jackson-datatype-jsr310-2.7.8.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.7.8" rev-constraint-default="2.7.8" rev-constraint-dynamic="2.7.8" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="jackson-datatype-jsr310" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="61361" time="0" location="C:\Users\Fabio\.ivy2\cache\com.fasterxml.jackson.datatype\jackson-datatype-jsr310\srcs\jackson-datatype-jsr310-2.7.8-sources.jar">
@@ -2236,21 +2234,21 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-reflect">
-			<revision name="2.11.7" status="release" pubdate="20150622221746" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.7/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="123">
+			<revision name="2.11.7" status="release" pubdate="20150622161746" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.7/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="123">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
-				<metadata-artifact status="no" details="" size="2860" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-lang\scala-reflect\ivy-2.11.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.pom"/>
+				<metadata-artifact status="no" details="" size="2814" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-lang\scala-reflect\ivy-2.11.7.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/org.scala-lang/scala-reflect/2.11.7/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.11.7" rev-constraint-default="2.11.7" rev-constraint-dynamic="2.11.7" callerrev="1.0-SNAPSHOT" extra-info.apiURL="http://www.scala-lang.org/api/2.11.7/"/>
 				<artifacts>
 					<artifact name="scala-reflect" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="561516" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-lang\scala-reflect\srcs\scala-reflect-2.11.7-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.joda" name="joda-convert">
-			<revision name="1.8.1" status="release" pubdate="20151002125804" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.joda.org/joda-convert/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="93">
+			<revision name="1.8.1" status="release" pubdate="20151002065804" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.joda.org/joda-convert/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="93">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="6503" time="0" location="C:\Users\Fabio\.ivy2\cache\org.joda\joda-convert\ivy-1.8.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/joda/joda-convert/1.8.1/joda-convert-1.8.1.pom"/>
+				<metadata-artifact status="no" details="" size="6425" time="0" location="C:\Users\Fabio\.ivy2\cache\org.joda\joda-convert\ivy-1.8.1.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\org.joda\joda-convert\1.8.1\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.8.1" rev-constraint-default="1.8.1" rev-constraint-dynamic="1.8.1" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="joda-convert" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="45686" time="0" location="C:\Users\Fabio\.ivy2\cache\org.joda\joda-convert\srcs\joda-convert-1.8.1-sources.jar">
@@ -2262,7 +2260,7 @@
 		<module organisation="joda-time" name="joda-time">
 			<revision name="2.9.6" status="release" pubdate="20161110220929" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.joda.org/joda-time/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="116">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="6773" time="0" location="C:\Users\Fabio\.ivy2\cache\joda-time\joda-time\ivy-2.9.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/joda-time/joda-time/2.9.6/joda-time-2.9.6.pom"/>
+				<metadata-artifact status="no" details="" size="6646" time="0" location="C:\Users\Fabio\.ivy2\cache\joda-time\joda-time\ivy-2.9.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/joda-time/joda-time/2.9.6/joda-time-2.9.6.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.9.6" rev-constraint-default="2.9.6" rev-constraint-dynamic="2.9.6" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="joda-time" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="777466" time="0" location="C:\Users\Fabio\.ivy2\cache\joda-time\joda-time\srcs\joda-time-2.9.6-sources.jar">
@@ -2274,7 +2272,7 @@
 		<module organisation="com.typesafe.play" name="play-functional_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118032732" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="161">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="2702" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-functional_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.10/play-functional_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="2575" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-functional_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.11/2.5.10/play-functional_2.11-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-functional_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="9828" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-functional_2.11\srcs\play-functional_2.11-2.5.10-sources.jar">
@@ -2286,7 +2284,7 @@
 		<module organisation="com.typesafe.play" name="play-iteratees_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118032818" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="27">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="3478" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.10/play-iteratees_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="3351" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-iteratees_2.11/2.5.10/play-iteratees_2.11-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-iteratees_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="38040" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\srcs\play-iteratees_2.11-2.5.10-sources.jar">
@@ -2296,10 +2294,10 @@
 			</revision>
 		</module>
 		<module organisation="ch.qos.logback" name="logback-classic">
-			<revision name="1.1.7" status="release" pubdate="20160329222502" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="92">
+			<revision name="1.1.7" status="release" pubdate="20160329162502" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="92">
 				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
 				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
-				<metadata-artifact status="no" details="" size="10386" time="0" location="C:\Users\Fabio\.ivy2\cache\ch.qos.logback\logback-classic\ivy-1.1.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.1.7/logback-classic-1.1.7.pom"/>
+				<metadata-artifact status="no" details="" size="10278" time="0" location="C:\Users\Fabio\.ivy2\cache\ch.qos.logback\logback-classic\ivy-1.1.7.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\ch.qos.logback\logback-classic\1.1.7\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.1.7" rev-constraint-default="1.1.7" rev-constraint-dynamic="1.1.7" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="logback-classic" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="226208" time="0" location="C:\Users\Fabio\.ivy2\cache\ch.qos.logback\logback-classic\srcs\logback-classic-1.1.7-sources.jar">
@@ -2310,20 +2308,20 @@
 		</module>
 		<module organisation="dom4j" name="dom4j">
 			<revision name="1.6.1" status="release" pubdate="20060210133318" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://dom4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="162">
-				<metadata-artifact status="no" details="" size="3895" time="0" location="C:\Users\Fabio\.ivy2\cache\dom4j\dom4j\ivy-1.6.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/dom4j/dom4j/1.6.1/dom4j-1.6.1.pom"/>
+				<metadata-artifact status="no" details="" size="3696" time="0" location="C:\Users\Fabio\.ivy2\cache\dom4j\dom4j\ivy-1.6.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/dom4j/dom4j/1.6.1/dom4j-1.6.1.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="dom4j" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="432186" time="0" location="C:\Users\Fabio\.ivy2\cache\dom4j\dom4j\srcs\dom4j-1.6.1-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="ch.qos.logback" name="logback-core">
-			<revision name="1.1.7" status="release" pubdate="20160329222356" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="69">
+			<revision name="1.1.7" status="release" pubdate="20160329162356" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="69">
 				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
 				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
-				<metadata-artifact status="no" details="" size="8089" time="0" location="C:\Users\Fabio\.ivy2\cache\ch.qos.logback\logback-core\ivy-1.1.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.1.7/logback-core-1.1.7.pom"/>
+				<metadata-artifact status="no" details="" size="8002" time="0" location="C:\Users\Fabio\.ivy2\cache\ch.qos.logback\logback-core\ivy-1.1.7.xml" searched="false" origin-is-local="true" origin-location="C:\dev\play\activator\repository\ch.qos.logback\logback-core\1.1.7\ivys\ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.1.7" rev-constraint-default="1.1.7" rev-constraint-dynamic="1.1.7" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="logback-core" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="396578" time="0" location="C:\Users\Fabio\.ivy2\cache\ch.qos.logback\logback-core\srcs\logback-core-1.1.7-sources.jar">
@@ -2333,13 +2331,13 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-stm" name="scala-stm_2.11">
-			<revision name="0.7" status="release" pubdate="20140418064442" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://nbronson.github.com/scala-stm/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="146">
+			<revision name="0.7" status="release" pubdate="20140418004442" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://nbronson.github.com/scala-stm/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="146">
 				<license name="BSD" url="https://github.com/nbronson/scala-stm/blob/master/LICENSE.txt"/>
-				<metadata-artifact status="no" details="" size="2696" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-stm\scala-stm_2.11\ivy-0.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.11/0.7/scala-stm_2.11-0.7.pom"/>
+				<metadata-artifact status="no" details="" size="2654" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-stm\scala-stm_2.11\ivy-0.7.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/org.scala-stm/scala-stm_2.11/0.7/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="0.7" rev-constraint-default="0.7" rev-constraint-dynamic="0.7" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="scala-stm_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="116149" time="0" location="C:\Users\Fabio\.ivy2\cache\org.scala-stm\scala-stm_2.11\srcs\scala-stm_2.11-0.7-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.11/0.7/scala-stm_2.11-0.7-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-stm/scala-stm_2.11/0.7/scala-stm_2.11-0.7-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -2347,7 +2345,7 @@
 		<module organisation="com.typesafe.play" name="build-link">
 			<revision name="2.5.10" status="release" pubdate="20161118032551" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="2682" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\build-link\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.5.10/build-link-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="2555" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\build-link\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/build-link/2.5.10/build-link-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="build-link" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="4397" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\build-link\srcs\build-link-2.5.10-sources.jar">
@@ -2359,7 +2357,7 @@
 		<module organisation="com.typesafe.play" name="play-exceptions">
 			<revision name="2.5.10" status="release" pubdate="20161118032554" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="195">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="2509" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-exceptions\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.5.10/play-exceptions-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="2382" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-exceptions\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-exceptions/2.5.10/play-exceptions-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-exceptions" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="2292" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-exceptions\srcs\play-exceptions-2.5.10-sources.jar">
@@ -2371,7 +2369,7 @@
 		<module organisation="com.typesafe.play" name="play-datacommons_2.11">
 			<revision name="2.5.10" status="release" pubdate="20161118032707" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="1">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
-				<metadata-artifact status="no" details="" size="2705" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.10/play-datacommons_2.11-2.5.10.pom"/>
+				<metadata-artifact status="no" details="" size="2578" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\ivy-2.5.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-datacommons_2.11/2.5.10/play-datacommons_2.11-2.5.10.pom"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="2.5.10" rev-constraint-default="2.5.10" rev-constraint-dynamic="2.5.10" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="play-datacommons_2.11" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="1620" time="0" location="C:\Users\Fabio\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\srcs\play-datacommons_2.11-2.5.10-sources.jar">
@@ -2465,13 +2463,13 @@
 			</revision>
 		</module>
 		<module organisation="commons-logging" name="commons-logging">
-			<revision name="1.1.3" status="release" pubdate="20130516220523" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-logging/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
+			<revision name="1.1.3" status="release" pubdate="20130516160523" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-logging/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="10440" time="0" location="C:\Users\Fabio\.ivy2\cache\commons-logging\commons-logging\ivy-1.1.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.pom"/>
+				<metadata-artifact status="no" details="" size="10341" time="0" location="C:\Users\Fabio\.ivy2\cache\commons-logging\commons-logging\ivy-1.1.3.xml" searched="false" origin-is-local="false" origin-location="file:/C:/dev/play/activator/repository/commons-logging/commons-logging/1.1.3/ivys/ivy.xml"/>
 				<caller organisation="play-java-cheapeat" name="play-java-cheapeat$sources_2.11" conf="compile, runtime-internal, runtime, optional" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
 					<artifact name="commons-logging" type="src" ext="jar" extra-classifier="sources" status="no" details="" size="73915" time="0" location="C:\Users\Fabio\.ivy2\cache\commons-logging\commons-logging\srcs\commons-logging-1.1.3-sources.jar">
-						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3-sources.jar"/>
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3-sources.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
