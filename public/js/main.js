@@ -44,13 +44,13 @@ function addEventListeners(){
     });
 
     $('#bestellenSubmit').click(function(){
-        var data = {
+        var postData = {
             'angebot_id': $('#bestellenSubmit').data('id'),
             'email': $('#bestellenEmail').val(),
             'menge' : $('#bestellenMenge').val()
         }
 
-        $.post('/bestellung', data, function(){
+        $.post('/bestellung', postData, function(){
             alert('bestellung gesendet');
             $('#bestellenModal').modal('hide');
         });

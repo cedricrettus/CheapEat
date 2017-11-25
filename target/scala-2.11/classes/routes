@@ -10,13 +10,15 @@ GET     /angebote/:id                 controllers.AngebotController.getAngebote(
 GET     /search                       controllers.Application.search()
 GET     /search/:plz                      controllers.AngebotController.searchOffers(plz:Int)
 POST    /bestellung                   controllers.BestellungController.addBestellung()
+# TODO prüfen wird nicht benötigt glaube ich
 GET    /bestellung                   controllers.BestellungController.getBestellung()
 
 GET     /test                       controllers.Application.test()
 
 GET     /upload                     controllers.Application.imageUpload()
 
-GET     /me/bestellungen            controllers.Profile.getOrders()
+GET     /me/bestellungen            controllers.Profile.getOrdersBuy()
+GET     /me/anfragen                 controllers.Profile.getOrdersSell()
 GET     /me/angebote                controllers.Profile.getOffers()
 
 #Authentication

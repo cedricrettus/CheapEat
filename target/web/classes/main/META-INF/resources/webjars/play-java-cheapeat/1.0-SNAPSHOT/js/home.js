@@ -43,7 +43,6 @@ function listAngebote(template){
         $('.angebote-cards').html(theCompiledHtml);
 
         addEventListeners();
-
     })
 
 }
@@ -61,6 +60,5 @@ function filterAngebote(template, plz){
         $('.angebote-cards').html(theCompiledHtml);
 
         addEventListeners();
-
     })
 }

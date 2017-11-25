@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Fri Nov 24 11:32:26 CET 2017
+// @DATE:Sat Nov 25 15:42:26 CET 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,7 +15,7 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:59
+  // @LINE:61
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:59
+    // @LINE:61
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -35,7 +35,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:29
+  // @LINE:31
   class ReverseAuthentication(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -43,7 +43,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:30
+    // @LINE:32
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Authentication.logout",
       """
@@ -53,7 +53,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:29
+    // @LINE:31
     def authenticate: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Authentication.authenticate",
       """
@@ -65,7 +65,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:19
+  // @LINE:20
   class ReverseProfile(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -73,7 +73,17 @@ package controllers.javascript {
     }
 
   
-    // @LINE:26
+    // @LINE:21
+    def getOrdersSell: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Profile.getOrdersSell",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "me/anfragen"})
+        }
+      """
+    )
+  
+    // @LINE:28
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Profile.index",
       """
@@ -83,7 +93,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:20
+    // @LINE:22
     def getOffers: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Profile.getOffers",
       """
@@ -93,9 +103,9 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
-    def getOrders: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Profile.getOrders",
+    // @LINE:20
+    def getOrdersBuy: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Profile.getOrdersBuy",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "me/bestellungen"})
@@ -123,7 +133,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:13
+    // @LINE:14
     def getBestellung: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.BestellungController.getBestellung",
       """
@@ -193,7 +203,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:17
+    // @LINE:18
     def imageUpload: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.imageUpload",
       """
@@ -203,7 +213,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:15
+    // @LINE:16
     def test: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.test",
       """
@@ -233,7 +243,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:28
+    // @LINE:30
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.login",
       """

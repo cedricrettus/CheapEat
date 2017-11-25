@@ -3,6 +3,7 @@
     <script src="@routes.Assets.at("js/home.js")" type="text/javascript"></script>
     <script src="@routes.Assets.at("js/hbScript.js")" type="text/javascript"></script>
 
+
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <img id="img-logo" src="/assets/images/logo.png">
@@ -37,8 +38,8 @@
 
                     @alerts()
                     <h1>Angebote</h1>
-                    <script id="angebote-template" type="text/x-handlebars-template">
 
+                    <script id="angebote-template" type="text/x-handlebars-template">
                         {{#each this}}
                         <div class="card">
                             <div class="row">
@@ -92,16 +93,12 @@
                             </div>
                         </div>
                         {{/each}}
-
                     </script>
+
                     <div class="cards-items angebote-cards" id="angebote-cards">
 
                     </div>
                 </div>
     </div>
-
-
-
-
 
 }

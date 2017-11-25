@@ -1,6 +1,7 @@
 package controllers;
 
 import models.Angebot;
+import models.AngebotUrls;
 import models.Benutzer;
 import models.Bestellung;
 import play.db.jpa.*;
@@ -26,7 +27,16 @@ public class Profile extends Controller {
     }
 
     @Transactional
-    public Result getOrders(){
+    public Result getOrdersBuy(){
+        Benutzer benutzer = Benutzer.findByEmail(request().username());
+
+        List<Bestellung> bestellungen = JPA.em().createQuery("select b from Bestellung b where b.benutzer_id ="+benutzer.getId()).getResultList();
+
+        return ok(toJson(bestellungen));
+    }
+
+    @Transactional
+    public Result getOrdersSell(){
         Benutzer benutzer = Benutzer.findByEmail(request().username());
 
         List<Bestellung> bestellungen = JPA.em().createQuery("select b from Bestellung b where b.benutzer_id ="+benutzer.getId()).getResultList();
@@ -39,12 +49,11 @@ public class Profile extends Controller {
         Benutzer benutzer = Benutzer.findByEmail(request().username());
 
         List<Angebot> angebote = JPA.em().createQuery("select a from Angebot a where a.benutzer_id ="+ benutzer.getId()).getResultList();
-        return ok(toJson(benutzer));
+        return ok(toJson(AngebotUrls.buildUrlsFromOffers(angebote)));
     }
 
     public Result editOffer(){
         Benutzer benutzer = Benutzer.findByEmail(request().username());
-
 
 
         return ok();

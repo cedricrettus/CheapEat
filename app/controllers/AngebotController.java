@@ -83,7 +83,7 @@ public class AngebotController extends Controller {
         List<Angebot> angebote = JPA.em().createQuery("select p from Angebot p").getResultList();
 
         //List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p, x, y from Angebot p, Bilderangebote x, Bild y where (x.angebote_id = p.id and x.bilder_id = y.id) or p.bild = 0").getResultList();
-        return ok(toJson(buildUrlsFromOffers(angebote)));
+        return ok(toJson(AngebotUrls.buildUrlsFromOffers(angebote)));
     }
 
     @Transactional(readOnly = true)
@@ -101,9 +101,10 @@ public class AngebotController extends Controller {
         System.out.println("test");
 
         //List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p, x, y from Angebot p, Bilderangebote x, Bild y where (x.angebote_id = p.id and x.bilder_id = y.id) or p.bild = 0").getResultList();
-        return ok(toJson(buildUrlsFromOffers(angebote)));
+        return ok(toJson(AngebotUrls.buildUrlsFromOffers(angebote)));
     }
 
+    /* TODO delete unneeded function
     private List<AngebotUrls> buildUrlsFromOffers(List<Angebot> angebote){
         List<AngebotUrls> angebotUrls = new ArrayList<AngebotUrls>();
         List urls = new ArrayList<String>();
@@ -119,7 +120,7 @@ public class AngebotController extends Controller {
         }
 
         return angebotUrls;
-    }
+    }*/
 
 }
 
