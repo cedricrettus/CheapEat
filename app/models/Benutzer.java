@@ -80,6 +80,11 @@ public class Benutzer {
         }
     }
 
+    @Transactional
+    public static Benutzer findById(int userId){
+        return JPA.em().find(Benutzer.class, userId);
+    }
+
     public void save(){
         JPA.em().persist(this);
     }

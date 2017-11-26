@@ -17,8 +17,8 @@ GET     /test                       controllers.Application.test()
 
 GET     /upload                     controllers.Application.imageUpload()
 
-GET     /me/bestellungen            controllers.Profile.getOrdersBuy()
-GET     /me/anfragen                 controllers.Profile.getOrdersSell()
+GET     /me/bestellungen            controllers.Profile.getOrders()
+GET     /me/anfragen                 controllers.Profile.getRequests()
 GET     /me/angebote                controllers.Profile.getOffers()
 
 #Authentication

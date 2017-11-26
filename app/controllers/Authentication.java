@@ -81,7 +81,7 @@ public class Authentication {
                 return ("Server error");
             }
             if (benutzer == null) {
-                return ("Falsches Email oder Passwprt");
+                return ("Falsches Email oder Passwort");
             } else if (benutzer.validiert != 1) {
                 return ("Account ist nicht validiert, mit Email bestätigen");
             }
@@ -121,6 +121,10 @@ public class Authentication {
         @Constraints.Required
         public String benutzername;
 
+        public String strasse;
+        public int plz;
+        public String ort;
+
         /**
          * Validate the authentication.
          *
@@ -140,6 +144,30 @@ public class Authentication {
             }
 
             return null;
+        }
+
+        public String getStrasse() {
+            return strasse;
+        }
+
+        public void setStrasse(String strasse) {
+            this.strasse = strasse;
+        }
+
+        public int getPlz() {
+            return plz;
+        }
+
+        public void setPlz(int plz) {
+            this.plz = plz;
+        }
+
+        public String getOrt() {
+            return ort;
+        }
+
+        public void setOrt(String ort) {
+            this.ort = ort;
         }
 
         public String getEmail() {

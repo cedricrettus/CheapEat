@@ -5,6 +5,7 @@ import com.typesafe.config.ConfigFactory;
 import controllers.Application;
 import controllers.Authentication;
 import controllers.MailerService;
+import models.Adresse;
 import models.Benutzer;
 import models.utils.AppException;
 import models.utils.Hash;
@@ -97,6 +98,12 @@ public class Signup extends Controller {
                 benutzer.validiert = 0;
                 benutzer.confirmationToken = UUID.randomUUID().toString();
 
+                Adresse adresse = new Adresse();
+                adresse.setOrt(register.ort);
+                adresse.setPlz(register.plz);
+                adresse.setStrasse(register.strasse);
+
+                adresse.save();
                 benutzer.save();
                 sendMailAskForConfirmation(benutzer);
 

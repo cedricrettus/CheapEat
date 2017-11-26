@@ -63,9 +63,10 @@ public class BestellungController extends Controller {
         System.out.println(id);
 
         Angebot angebot1 = JPA.em().find(Angebot.class, bestellung.angebot_id);
-        System.out.println(angebot1.email);
+        Benutzer anbieter = Benutzer.findById(bestellung.benutzer_id);
+
         System.out.println(benutzer.getEmail());
-        mc.sendOrderNotification(angebot1.email, benutzer.getEmail());
+        mc.sendOrderNotification(anbieter.getEmail(), benutzer.getEmail());
         return ok();
     }
 }

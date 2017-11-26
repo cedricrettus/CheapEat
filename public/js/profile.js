@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+    /*Handlebars.registerHelper('if_eq', function(a, b, opts) {
+        if (a == b) {
+            return opts.fn(this);
+        } else {
+            return opts.inverse(this);
+        }
+    });
+*/
     //--------------handlebars.js initialisierung------------------
     // Grab the template script für template angebote
     var templateScriptAngebote = $("#angebote-template").html();
@@ -16,22 +24,29 @@ $(document).ready(function() {
     //angebote anzeigen, bei Seitenaufruf
     listAngebote(templateAngebote);
 
+    //TODO evt mit js funtionen tab show etc arbeiten
 
     $('#link-anfragen').click(function(){
         $('#angebote-cards').empty();
         $('#bestellungen-cards').empty();
+        $('.active').removeClass("active");
+        $(this).addClass("active");
         listAnfragen(templateAnfragen);
     });
 
     $('#link-angebote').click(function(){
         $('#anfragen-cards').empty();
         $('#bestellungen-cards').empty();
+        $('.active').removeClass("active");
+        $(this).addClass("active");
         listAngebote(templateAngebote);
     });
 
     $('#link-bestellungen').click(function(){
         $('#angebote-cards').empty();
         $('#anfragen-cards').empty();
+        $('.active').removeClass("active");
+        $(this).addClass("active");
         listBestellungen(templateBestellung);
     });
 
@@ -41,7 +56,7 @@ $(document).ready(function() {
 
 
 function listAngebote(template){
-    $.get('/angebote/all', function(data){
+    $.get('/me/angebote', function(data){
 
         console.log(data);
 
@@ -85,7 +100,6 @@ function listAnfragen(template){
         // Add the compiled html to the page
         $('#anfragen-cards').html(theCompiledHtml);
         addEventListeners();
-
 
     })
 

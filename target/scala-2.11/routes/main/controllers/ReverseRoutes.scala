@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Sat Nov 25 15:42:26 CET 2017
+// @DATE:Sun Nov 26 17:52:32 CET 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -57,7 +57,7 @@ package controllers {
 
   
     // @LINE:21
-    def getOrdersSell(): Call = {
+    def getRequests(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "me/anfragen")
     }
@@ -75,7 +75,7 @@ package controllers {
     }
   
     // @LINE:20
-    def getOrdersBuy(): Call = {
+    def getOrders(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "me/bestellungen")
     }

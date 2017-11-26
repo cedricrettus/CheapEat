@@ -93,18 +93,19 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h4 class="card-title"> Bestellung Nr. {{this.id}} </h4>
-                            <h6 class="card-subtitle mb-2 text-muted"> Angebot von Benutzer {{this.benutzer_id}} </h6>
-                            <p class="card-text"> Bestellte Portionen {{this.menge}} </p>
+                            <h4 class="card-title"> Bestellung Nr. {{this.bestellungsId}} vom {{this.datum}}</h4>
+                            <h6 class="card-subtitle mb-2 text-muted"> Angebot von Benutzer {{this.benutzername}} </h6>
+                            <p class="card-text"> Bestellte Portionen: {{this.menge}} </p>
+                            <p class="card-text">Abholort: <span>{{this.plz}} {{this.ort}}</span> </p>
+                            <p class="card-text">Adresse: <span>{{this.strasse}}</span> </p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card-body">
-                            <p class="card-text">Username <span class="">Bewertung</span></p>
-                            <p class="card-text">Ort: <span>  </span> </p>
+
                             <p class="card-text">Bestellung hat Status: <span class="status">{{this.prozesscode}}</span>
                                 <span class=""></span></p>
-                            <button class="btn btn-primary button-rate" data-id="{{this.id}}">Bewerten</button>
+                            <button class="btn btn-primary button-rate" data-id="{{this.bestellungsId}}">Bewerten</button>
                         </div>
                     </div>
                 </div>
@@ -117,7 +118,28 @@
         </div>
 
         <script id="anfragen-template" type="text/x-handlebars-template">
+            {{#each this}}
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4 class="card-title"> Anfrage Nr. {{this.bestellungsId}} vom {{this.datum}}</h4>
+                            <h6 class="card-subtitle mb-2 text-muted"> Frage von Benutzer {{this.name}} für Angebot {{this.titel}} </h6>
+                            <p class="card-text"> Bestellte Portionen: {{this.menge}} <!--TODO von Anzahl verfügbar einfügen --></p>
+                            <p class="card-text">Adresse Abholer: <span>{{this.strasse}} {{this.plz}} {{this.ort}}</span> </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-body">
 
+                            <p class="card-text">Bestellung hat Status: <span class="status">{{this.prozesscode}}</span>
+                            <button class="btn btn-primary button-rate" data-id="{{this.bestellungsId}}">Akzeptieren</button>
+                            <button class="btn btn-inverse button-rate" data-id="{{this.bestellungsId}}">Ablehnen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
         </script>
 
 

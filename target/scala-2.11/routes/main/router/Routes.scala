@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Sat Nov 25 15:42:26 CET 2017
+// @DATE:Sun Nov 26 17:52:32 CET 2017
 
 package router
 
@@ -73,8 +73,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """bestellung""", """controllers.BestellungController.getBestellung()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """test""", """controllers.Application.test()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """upload""", """controllers.Application.imageUpload()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/bestellungen""", """controllers.Profile.getOrdersBuy()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/anfragen""", """controllers.Profile.getOrdersSell()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/bestellungen""", """controllers.Profile.getOrders()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/anfragen""", """controllers.Profile.getRequests()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/angebote""", """controllers.Profile.getOffers()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """profile""", """controllers.Profile.index()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.Application.login()"""),
@@ -262,15 +262,15 @@ class Routes(
   )
 
   // @LINE:20
-  private[this] lazy val controllers_Profile_getOrdersBuy10_route = Route("GET",
+  private[this] lazy val controllers_Profile_getOrders10_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("me/bestellungen")))
   )
-  private[this] lazy val controllers_Profile_getOrdersBuy10_invoker = createInvoker(
-    Profile_2.getOrdersBuy(),
+  private[this] lazy val controllers_Profile_getOrders10_invoker = createInvoker(
+    Profile_2.getOrders(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Profile",
-      "getOrdersBuy",
+      "getOrders",
       Nil,
       "GET",
       """""",
@@ -279,15 +279,15 @@ class Routes(
   )
 
   // @LINE:21
-  private[this] lazy val controllers_Profile_getOrdersSell11_route = Route("GET",
+  private[this] lazy val controllers_Profile_getRequests11_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("me/anfragen")))
   )
-  private[this] lazy val controllers_Profile_getOrdersSell11_invoker = createInvoker(
-    Profile_2.getOrdersSell(),
+  private[this] lazy val controllers_Profile_getRequests11_invoker = createInvoker(
+    Profile_2.getRequests(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Profile",
-      "getOrdersSell",
+      "getRequests",
       Nil,
       "GET",
       """""",
@@ -521,15 +521,15 @@ POST    /settings/email             controllers.account.settings.Email.runEmail(
       }
   
     // @LINE:20
-    case controllers_Profile_getOrdersBuy10_route(params) =>
+    case controllers_Profile_getOrders10_route(params) =>
       call { 
-        controllers_Profile_getOrdersBuy10_invoker.call(Profile_2.getOrdersBuy())
+        controllers_Profile_getOrders10_invoker.call(Profile_2.getOrders())
       }
   
     // @LINE:21
-    case controllers_Profile_getOrdersSell11_route(params) =>
+    case controllers_Profile_getRequests11_route(params) =>
       call { 
-        controllers_Profile_getOrdersSell11_invoker.call(Profile_2.getOrdersSell())
+        controllers_Profile_getRequests11_invoker.call(Profile_2.getRequests())
       }
   
     // @LINE:22

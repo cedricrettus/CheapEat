@@ -8,12 +8,14 @@ $(document).ready(function(){
 
 function addSuccess(msg){
     $('.alert').hide();
+    $('.alert-success').empty();
     $('.alert-success').append(msg);
     $('.alert-success').show();
 }
 
 function addDanger(msg){
     $('.alert').hide();
+    $('.alert-danger').empty();
     $('.alert-danger').append(msg);
     $('.alert-danger').show();
 }
