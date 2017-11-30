@@ -69,6 +69,18 @@ public class Benutzer {
     }
 
     @Transactional
+    public static Benutzer findByOrder(int id){
+        List<Benutzer> benutzerList = JPA.em().createQuery("select u from Benutzer u, Angebot a, Bestellung b where b.id ="+id+" b.angebot_id = a.id and a.benutzer_id = u.id ").getResultList();
+
+        if(benutzerList.size() > 0){
+            return benutzerList.get(0);
+        }
+
+        return null;
+
+    }
+
+    @Transactional
     public static List<Bestellung> findOrdersByUser(String email){
         Benutzer benutzer = findByEmail(email);
 

@@ -7,6 +7,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
 
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +19,13 @@ import static play.libs.Json.*;
  */
 @Security.Authenticated(Secured.class)
 public class Profile extends Controller {
+
+    MailerService mc;
+
+    @Inject
+    public Profile(MailerService mailer) {
+        this.mc = mailer;
+    }
 
     @Transactional
     public Result index() {
@@ -52,14 +60,66 @@ public class Profile extends Controller {
 
             if(bestellung.getProzesscode() <= 1){
                 bestellung.setStrasse("Strasse wird erst nach bestätigung angezeigt");
-            }else {
+            }else if (bestellung.getProzesscode() == 2 || bestellung.getProzesscode() == 3){
                 bestellung.setStrasse(dbResultAdresse.get(i).getStrasse());
+            }else{
+                bestellung.setStrasse("Bestellung ist abgelehnt worden");
             }
 
             bestellungen.add(i,bestellung);
         }
 
         return ok(toJson(bestellungen));
+    }
+
+    //Anfragen für angebote werden aktzeptiert vom user
+    @Transactional
+    public Result acceptRequest(int bestellungId){
+        Benutzer benutzerReq = Benutzer.findByEmail(request().username());
+        Benutzer benutzerAng = Benutzer.findByOrder(bestellungId);
+
+
+        if(benutzerAng.id == benutzerReq.id ){
+            //Benutzer ist autorisieret dieses Angebot zu bestätigen
+
+            Bestellung bestellung = Bestellung.findById(bestellungId);
+
+            if(bestellung.getProzesscode() != 2){
+                Benutzer besteller = Benutzer.findById(bestellung.getBenutzer_id());
+                Adresse adresse = Adresse.findByUserId(benutzerAng.getId());
+                bestellung.setProzesscode(2); //Prozersscode auf 2, heisst diese Bestellung ist freigegeben und der Käufer sieht die Adresse
+                bestellung.save();
+                mc.sendOrderAccept(benutzerAng.getName(), adresse.getStrasse(), besteller.getEmail() );
+            }
+            return ok();
+        }else{
+            return badRequest("nicht authorisiert!");
+        }
+
+
+    }
+
+    @Transactional
+    public Result denyRequest(int bestellungId){
+        Benutzer benutzerReq = Benutzer.findByEmail(request().username());
+        Benutzer benutzerAng = Benutzer.findByOrder(bestellungId);
+
+
+
+        if(benutzerAng.getId() == benutzerReq.getId()){
+            //Benutzer ist autorisieret dieses Angebot zu bestätigen
+            Bestellung bestellung = Bestellung.findById(bestellungId);
+            if(bestellung.getProzesscode() != 10){
+                Benutzer besteller = Benutzer.findById(bestellung.getBenutzer_id());
+                bestellung.setProzesscode(10); //Prozersscode auf 10, heisst bestellung wurde abgelehnt
+                bestellung.save();
+                mc.sendOrderDeny(benutzerAng.getBenutzername(), besteller.getEmail());
+            }
+
+            return ok();
+        }else{
+            return badRequest("nicht authorisiert!");
+        }
     }
 
     @Transactional
@@ -102,10 +162,10 @@ public class Profile extends Controller {
         return ok(toJson(AngebotUrls.buildUrlsFromOffers(angebote)));
     }
 
-    public Result editOffer(){
+    /*public Result editOffer(){
         Benutzer benutzer = Benutzer.findByEmail(request().username());
 
 
         return ok();
-    }
+    }*/
 }

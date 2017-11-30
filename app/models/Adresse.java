@@ -81,7 +81,13 @@ public class Adresse {
         this.ort = ort;
     }
 
+    public int getBenutzer_id() {
+        return benutzer_id;
+    }
 
+    public void setBenutzer_id(int benutzer_id) {
+        this.benutzer_id = benutzer_id;
+    }
 
     @Override
     public String toString() {

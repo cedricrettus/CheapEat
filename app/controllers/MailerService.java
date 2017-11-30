@@ -34,4 +34,28 @@ public class MailerService {
                 .setBodyHtml("<html><body><p>Sie haben sich registriert <br/>Hier klicken um zu bestätigen "+ url.toString() +"</b></p></body></html>");
         mailerClient.send(email);
     }
+
+    public void sendOrderDeny(String absenderName, String empfaenger) {
+        String cid = "1234";
+        Email email = new Email()
+                .setSubject("Sie haben sich Registriert")
+                .setFrom("CheapEat <noreply.cheapeat@gmail.com>")
+                .addTo("<" + empfaenger + ">")
+
+                .setBodyText("CheapEat Bestellung wurde abgelehnt")
+                .setBodyHtml("<html><body><p>Ihre Bestellung wurde von Benutzer "+absenderName+" abgelehnt</b></p></body></html>");
+        mailerClient.send(email);
+    }
+
+    public void sendOrderAccept(String absenderName, String absenderStrasse, String empfaenger) {
+        String cid = "1234";
+        Email email = new Email()
+                .setSubject("Sie haben sich Registriert")
+                .setFrom("CheapEat <noreply.cheapeat@gmail.com>")
+                .addTo("<" + empfaenger + ">")
+
+                .setBodyText("CheapEat Bestellung wurde akzeptiert")
+                .setBodyHtml("<html><body><p>Ihre Bestellung wurde von Benutzer "+absenderName+" angenommen. Sie ist bereit zur Abholung zur gegebene Zeit. Strasse zum abholen ist: "+absenderStrasse+"</b></p></body></html>");
+        mailerClient.send(email);
+    }
 }
