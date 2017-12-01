@@ -101,6 +101,30 @@ function listAnfragen(template){
         $('#anfragen-cards').html(theCompiledHtml);
         addEventListeners();
 
+        $('.button-accept').click(function(){
+            $.post('/me/anfragen/accept/'+ $(this).data('id'), function(data) {
+                    console.log(data);
+                    addSuccess("Erfolgreich Aktzeptiert");
+                })
+                .fail(function (jqXHR, textStatus) {
+                    console.log(jqXHR);
+                    console.log(textStatus);
+                    addDanger(jqXHR.responseText);
+                });
+        });
+
+        $('.button-deny').click(function(){
+            $.post('/me/anfragen/deny/'+ $(this).data('id'), function(data) {
+                console.log(data);
+                addSuccess("Erfolgreich Abgelehnt");
+            })
+                .fail(function (jqXHR, textStatus) {
+                    console.log(jqXHR);
+                    console.log(textStatus);
+                    addDanger(jqXHR.responseText);
+                });
+        });
+
     })
 
 }

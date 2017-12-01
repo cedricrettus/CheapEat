@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Sun Nov 26 17:52:32 CET 2017
+// @DATE:Fri Dec 01 11:51:24 CET 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,7 +15,7 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:61
+  // @LINE:63
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:61
+    // @LINE:63
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -35,7 +35,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:31
+  // @LINE:33
   class ReverseAuthentication(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -43,7 +43,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:32
+    // @LINE:34
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Authentication.logout",
       """
@@ -53,7 +53,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:31
+    // @LINE:33
     def authenticate: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Authentication.authenticate",
       """
@@ -73,6 +73,26 @@ package controllers.javascript {
     }
 
   
+    // @LINE:24
+    def getOffers: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Profile.getOffers",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "me/angebote"})
+        }
+      """
+    )
+  
+    // @LINE:23
+    def acceptRequest: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Profile.acceptRequest",
+      """
+        function(id0) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "me/anfragen/accept/" + (""" + implicitly[PathBindable[Int]].javascriptUnbind + """)("id", id0)})
+        }
+      """
+    )
+  
     // @LINE:21
     def getRequests: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Profile.getRequests",
@@ -83,22 +103,12 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:28
-    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Profile.index",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profile"})
-        }
-      """
-    )
-  
     // @LINE:22
-    def getOffers: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Profile.getOffers",
+    def denyRequest: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Profile.denyRequest",
       """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "me/angebote"})
+        function(id0) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "me/anfragen/deny/" + (""" + implicitly[PathBindable[Int]].javascriptUnbind + """)("id", id0)})
         }
       """
     )
@@ -109,6 +119,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "me/bestellungen"})
+        }
+      """
+    )
+  
+    // @LINE:30
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Profile.index",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profile"})
         }
       """
     )
@@ -243,7 +263,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:30
+    // @LINE:32
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.login",
       """

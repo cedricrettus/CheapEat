@@ -42,7 +42,8 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
             </div>
             <div class="modal-body">
                 <div class="container-angebot">
-                    <h1>Angebot erstellen</h1>
+                    """),_display_(/*14.22*/alerts()),format.raw/*14.30*/("""
+                    """),format.raw/*15.21*/("""<h1>Angebot erstellen</h1>
                     <div class="panel panel-default">
                         <form method="POST" id="angebotForm" action="/angebote" enctype="multipart/form-data"> <!--  rouAngebotControllertion.getPerson() -->
                             <div class="form-group">
@@ -112,7 +113,8 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
             </div>
             <div class="modal-body">
                 <div class="container-angebot">
-                    <h1>Angebot bestellen</h1>
+                    """),_display_(/*85.22*/alerts()),format.raw/*85.30*/("""
+                    """),format.raw/*86.21*/("""<h1>Angebot bestellen</h1>
                     <div class="panel panel-default">
                         <form method="POST" id="bestellenForm" action="/bestellen"> <!--  rouAngebotControllertion.getPerson() -->
                             <div class="form-group">
@@ -149,11 +151,11 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
 object modals extends modals_Scope0.modals
               /*
                   -- GENERATED --
-                  DATE: Thu Nov 23 22:38:16 CET 2017
+                  DATE: Fri Dec 01 14:29:54 CET 2017
                   SOURCE: C:/dev/git/CheapEat/app/views/modals.scala.html
-                  HASH: 719755afc6646dac99d2a4789a846c0a0b90bc00
-                  MATRIX: 829->0
-                  LINES: 32->1
+                  HASH: 88ee322d9e6d45a954bbf3c896a77397b9d001bf
+                  MATRIX: 829->0|1532->676|1561->684|1611->706|5497->4565|5526->4573|5576->4595
+                  LINES: 32->1|45->14|45->14|46->15|116->85|116->85|117->86
                   -- GENERATED --
               */
           
