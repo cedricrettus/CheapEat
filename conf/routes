@@ -16,8 +16,6 @@ GET    /bestellung                    controllers.BestellungController.getBestel
 
 GET     /test                         controllers.Application.test()
 
-GET     /upload                       controllers.Application.imageUpload()
-
 GET     /me/bestellungen              controllers.Profile.getOrders()
 GET     /me/anfragen                  controllers.Profile.getRequests()
 POST    /me/anfragen/deny/:id         controllers.Profile.denyRequest(id:Int)
