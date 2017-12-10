@@ -26,10 +26,6 @@ public class Application extends Controller{
         return ok(views.html.index.render());
     }
 
-    public Result test() {
-        return ok(views.html.test.render());
-    }
-
     public Result login() {
         return ok(views.html.login.render());
     }
