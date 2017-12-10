@@ -22,11 +22,6 @@ import static play.mvc.Results.ok;
 public class Application extends Controller{
 
 
-    //TODO entfernen nach test
-    public Result imageUpload(){
-        return ok(views.html.upload.render());
-    }
-
     public Result index() {
         return ok(views.html.index.render());
     }
