@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Fri Dec 01 11:51:24 CET 2017
+// @DATE:Sun Dec 10 20:46:57 CET 2017
 
 package controllers;
 
@@ -15,6 +15,7 @@ public class routes {
   public static final controllers.ReverseBestellungController BestellungController = new controllers.ReverseBestellungController(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseAngebotController AngebotController = new controllers.ReverseAngebotController(RoutesPrefix.byNamePrefix());
   public static final controllers.ReverseApplication Application = new controllers.ReverseApplication(RoutesPrefix.byNamePrefix());
+  public static final controllers.ReverseSignup Signup = new controllers.ReverseSignup(RoutesPrefix.byNamePrefix());
 
   public static class javascript {
     
@@ -24,6 +25,7 @@ public class routes {
     public static final controllers.javascript.ReverseBestellungController BestellungController = new controllers.javascript.ReverseBestellungController(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseAngebotController AngebotController = new controllers.javascript.ReverseAngebotController(RoutesPrefix.byNamePrefix());
     public static final controllers.javascript.ReverseApplication Application = new controllers.javascript.ReverseApplication(RoutesPrefix.byNamePrefix());
+    public static final controllers.javascript.ReverseSignup Signup = new controllers.javascript.ReverseSignup(RoutesPrefix.byNamePrefix());
   }
 
 }

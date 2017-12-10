@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Fri Dec 01 11:51:24 CET 2017
+// @DATE:Sun Dec 10 20:46:57 CET 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,7 +15,7 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:63
+  // @LINE:45
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:63
+    // @LINE:45
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -35,7 +35,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:33
+  // @LINE:32
   class ReverseAuthentication(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -43,7 +43,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:34
+    // @LINE:33
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Authentication.logout",
       """
@@ -53,7 +53,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:33
+    // @LINE:32
     def authenticate: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Authentication.authenticate",
       """
@@ -65,7 +65,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:20
+  // @LINE:21
   class ReverseProfile(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -73,7 +73,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:24
+    // @LINE:25
     def getOffers: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Profile.getOffers",
       """
@@ -83,7 +83,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:23
+    // @LINE:24
     def acceptRequest: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Profile.acceptRequest",
       """
@@ -93,7 +93,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:21
+    // @LINE:22
     def getRequests: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Profile.getRequests",
       """
@@ -103,7 +103,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:22
+    // @LINE:23
     def denyRequest: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Profile.denyRequest",
       """
@@ -113,7 +113,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:20
+    // @LINE:21
     def getOrders: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Profile.getOrders",
       """
@@ -123,7 +123,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:30
+    // @LINE:29
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Profile.index",
       """
@@ -153,7 +153,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:14
+    // @LINE:15
     def getBestellung: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.BestellungController.getBestellung",
       """
@@ -223,7 +223,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:18
+    // @LINE:19
     def imageUpload: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.imageUpload",
       """
@@ -233,7 +233,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:16
+    // @LINE:17
     def test: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.test",
       """
@@ -263,12 +263,52 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:32
+    // @LINE:31
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.login",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:37
+  class ReverseSignup(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:41
+    def confirm: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Signup.confirm",
+      """
+        function(confirmToken0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "confirm/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("confirmToken", encodeURIComponent(confirmToken0))})
+        }
+      """
+    )
+  
+    // @LINE:38
+    def save: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Signup.save",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "signup"})
+        }
+      """
+    )
+  
+    // @LINE:37
+    def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Signup.create",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "signup"})
         }
       """
     )

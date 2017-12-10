@@ -49,3 +49,14 @@ nav.navbar {
     margin-top: 15px;
     display: none;
 }
+
+.nav-icon{
+    font-size: 1.5em;
+    padding-left: 8px;
+
+}
+
+.profile-title{
+    margin-top: 10px;
+    margin-bottom: 25px;
+}

@@ -3,61 +3,43 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index()
-POST    /angebote                       controllers.AngebotController.addOffer()
-GET     /angebote/all                controllers.AngebotController.getAngeboteList()
+GET     /                             controllers.Application.index()
+POST    /angebote                     controllers.AngebotController.addOffer()
+GET     /angebote/all                 controllers.AngebotController.getAngeboteList()
 GET     /angebote/:id                 controllers.AngebotController.getAngebote(id:Int)
 GET     /search                       controllers.Application.search()
-GET     /search/:plz                      controllers.AngebotController.searchOffers(plz:Int)
+GET     /search/:plz                  controllers.AngebotController.searchOffers(plz:Int)
 POST    /bestellung                   controllers.BestellungController.addBestellung()
+
 # TODO prüfen wird nicht benötigt glaube ich
-GET    /bestellung                   controllers.BestellungController.getBestellung()
+GET    /bestellung                    controllers.BestellungController.getBestellung()
 
-GET     /test                       controllers.Application.test()
+GET     /test                         controllers.Application.test()
 
-GET     /upload                     controllers.Application.imageUpload()
+GET     /upload                       controllers.Application.imageUpload()
 
-GET     /me/bestellungen                controllers.Profile.getOrders()
-GET     /me/anfragen                    controllers.Profile.getRequests()
-POST    /me/anfragen/deny/:id           controllers.Profile.denyRequest(id:Int)
-POST    /me/anfragen/accept/:id         controllers.Profile.acceptRequest(id:Int)
-GET     /me/angebote                    controllers.Profile.getOffers()
+GET     /me/bestellungen              controllers.Profile.getOrders()
+GET     /me/anfragen                  controllers.Profile.getRequests()
+POST    /me/anfragen/deny/:id         controllers.Profile.denyRequest(id:Int)
+POST    /me/anfragen/accept/:id        controllers.Profile.acceptRequest(id:Int)
+GET     /me/angebote                   controllers.Profile.getOffers()
 
 #Authentication
 
-# Home page
-#GET     /                           controllers.Application.index()
-GET     /profile                     controllers.Profile.index()
+GET     /profile                       controllers.Profile.index()
 #
-GET     /login                      controllers.Application.login()
-POST    /login                      controllers.Authentication.authenticate()
-GET     /logout                     controllers.Authentication.logout()
+GET     /login                         controllers.Application.login()
+POST    /login                         controllers.Authentication.authenticate()
+GET     /logout                        controllers.Authentication.logout()
 #
-#GET     /settings                   controllers.account.settings.Index.index()
-#GET     /settings/password          controllers.account.settings.Password.index()
-#POST    /settings/password          controllers.account.settings.Password.runPassword()
-#GET     /settings/email             controllers.account.settings.Email.index()
-#POST    /settings/email             controllers.account.settings.Email.runEmail()
-#
-## Registers the user, sending an email to confirm the account.
-GET     /signup                     controllers.account.Signup.create()
-POST    /signup                     controllers.account.Signup.save()
-#
-## Wenn der Benutzer das Bestätigungsm
-GET     /confirm/:confirmToken      controllers.account.Signup.confirm(confirmToken:String)
-#
-## Displays a page to send a reset email given the user's email.
-#GET     /reset/ask                  controllers.account.Reset.ask()
-#POST    /reset/ask                  controllers.account.Reset.runAsk()
-#
-## Resets the password using the password.
-#GET     /reset/:token               controllers.account.Reset.reset(token:String)
-#POST    /reset/:token               controllers.account.Reset.runReset(token:String)
-#
-#GET     /email/:token               controllers.account.settings.Email.validateEmail(token:String)
 
-
+## Einen neun Benutzer registrieren
+GET     /signup                        controllers.Signup.create()
+POST    /signup                        controllers.Signup.save()
+#
+## Wenn der Benutzer das Bestätigungsmail anklickt, wird der Token überprüft und der neue Benutzer bestätigt
+GET     /confirm/:confirmToken         controllers.Signup.confirm(confirmToken:String)
 
 
 # Map static resources from the /public folder to the /assets URL path
-GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /assets/*file                  controllers.Assets.at(path="/public", file)

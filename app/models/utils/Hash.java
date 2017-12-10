@@ -6,7 +6,7 @@ import java.util.UUID;
 
 /**
  * Password utility class.  This handles password encryption and validation.
- * User: yesnault
+ * Kopiert von github user: yesnault
  * Date: 25/01/12
  */
 public class Hash {

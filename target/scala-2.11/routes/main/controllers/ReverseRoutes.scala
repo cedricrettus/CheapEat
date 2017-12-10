@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Fri Dec 01 11:51:24 CET 2017
+// @DATE:Sun Dec 10 20:46:57 CET 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -13,14 +13,14 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers {
 
-  // @LINE:63
+  // @LINE:45
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:63
+    // @LINE:45
     def at(file:String): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -28,20 +28,20 @@ package controllers {
   
   }
 
-  // @LINE:33
+  // @LINE:32
   class ReverseAuthentication(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:34
+    // @LINE:33
     def logout(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "logout")
     }
   
-    // @LINE:33
+    // @LINE:32
     def authenticate(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "login")
@@ -49,44 +49,44 @@ package controllers {
   
   }
 
-  // @LINE:20
+  // @LINE:21
   class ReverseProfile(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:24
+    // @LINE:25
     def getOffers(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "me/angebote")
     }
   
-    // @LINE:23
+    // @LINE:24
     def acceptRequest(id:Int): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "me/anfragen/accept/" + implicitly[PathBindable[Int]].unbind("id", id))
     }
   
-    // @LINE:21
+    // @LINE:22
     def getRequests(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "me/anfragen")
     }
   
-    // @LINE:22
+    // @LINE:23
     def denyRequest(id:Int): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "me/anfragen/deny/" + implicitly[PathBindable[Int]].unbind("id", id))
     }
   
-    // @LINE:20
+    // @LINE:21
     def getOrders(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "me/bestellungen")
     }
   
-    // @LINE:30
+    // @LINE:29
     def index(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "profile")
@@ -107,7 +107,7 @@ package controllers {
       Call("POST", _prefix + { _defaultPrefix } + "bestellung")
     }
   
-    // @LINE:14
+    // @LINE:15
     def getBestellung(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "bestellung")
@@ -155,13 +155,13 @@ package controllers {
     }
 
   
-    // @LINE:18
+    // @LINE:19
     def imageUpload(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "upload")
     }
   
-    // @LINE:16
+    // @LINE:17
     def test(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "test")
@@ -179,10 +179,37 @@ package controllers {
       Call("GET", _prefix)
     }
   
-    // @LINE:32
+    // @LINE:31
     def login(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "login")
+    }
+  
+  }
+
+  // @LINE:37
+  class ReverseSignup(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:41
+    def confirm(confirmToken:String): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "confirm/" + implicitly[PathBindable[String]].unbind("confirmToken", dynamicString(confirmToken)))
+    }
+  
+    // @LINE:38
+    def save(): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "signup")
+    }
+  
+    // @LINE:37
+    def create(): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "signup")
     }
   
   }
