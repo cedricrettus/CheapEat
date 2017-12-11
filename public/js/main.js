@@ -8,15 +8,15 @@ $(document).ready(function(){
 
 function addSuccess(msg){
     $('.alert').hide();
-    $('.alert-success').empty();
-    $('.alert-success').append(msg);
+    $('.alert-success-text').empty();
+    $('.alert-success-text').append(msg);
     $('.alert-success').show();
 }
 
 function addDanger(msg){
     $('.alert').hide();
-    $('.alert-danger').empty();
-    $('.alert-danger').append(msg);
+    $('.alert-danger-text').empty();
+    $('.alert-danger-text').append(msg);
     $('.alert-danger').show();
 }
 
@@ -48,14 +48,20 @@ function addEventListeners(){
     $('#bestellenSubmit').click(function(){
         var postData = {
             'angebot_id': $('#bestellenSubmit').data('id'),
-            'email': $('#bestellenEmail').val(),
             'menge' : $('#bestellenMenge').val()
         }
 
-        $.post('/bestellung', postData, function(){
-            alert('bestellung gesendet');
+        $.post('/bestellung', postData, function(data){
+            console.log(data);
             $('#bestellenModal').modal('hide');
-        });
+            addSuccess('Bestellung gesendet');
+
+        })
+            .fail(function (jqXHR, textStatus) {
+                console.log(jqXHR);
+                console.log(textStatus);
+                addDanger(jqXHR.responseText);
+            });
     });
 
     $('.bestellButton').click(function(){
@@ -63,6 +69,5 @@ function addEventListeners(){
         console.log(id);
         $('#bestellenSubmit').data('id', id);
         $('#bestellenModal').modal('toggle');
-
     });
 }

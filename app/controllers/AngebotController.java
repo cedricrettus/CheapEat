@@ -104,23 +104,9 @@ public class AngebotController extends Controller {
         return ok(toJson(AngebotUrls.buildUrlsFromOffers(angebote)));
     }
 
-    /* TODO delete unneeded function
-    private List<AngebotUrls> buildUrlsFromOffers(List<Angebot> angebote){
-        List<AngebotUrls> angebotUrls = new ArrayList<AngebotUrls>();
-        List urls = new ArrayList<String>();
-
-        for (int i = 0; i < angebote.size(); i++) {
-            if (angebote.get(i).getBild() == 1) {
-                urls = JPA.em().createQuery("select b.url from Bild b where b.angebote_id =" + angebote.get(i).getId()).getResultList();
-                angebotUrls.add(new AngebotUrls(urls, angebote.get(i)));
-            } else {
-                angebotUrls.add(new AngebotUrls(null, angebote.get(i)));
-            }
-
-        }
-
-        return angebotUrls;
-    }*/
+    public Result getUserRating(int id){
+        return ok();
+    }
 
 }
 

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Sun Dec 10 20:46:57 CET 2017
+// @DATE:Mon Dec 11 16:45:18 CET 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -13,14 +13,14 @@ import _root_.play.libs.F
 // @LINE:6
 package controllers {
 
-  // @LINE:45
+  // @LINE:47
   class ReverseAssets(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:45
+    // @LINE:47
     def at(file:String): Call = {
       implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
       Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -28,20 +28,20 @@ package controllers {
   
   }
 
-  // @LINE:32
+  // @LINE:34
   class ReverseAuthentication(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:33
+    // @LINE:35
     def logout(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "logout")
     }
   
-    // @LINE:32
+    // @LINE:34
     def authenticate(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "login")
@@ -49,44 +49,50 @@ package controllers {
   
   }
 
-  // @LINE:21
+  // @LINE:17
   class ReverseProfile(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:25
+    // @LINE:21
     def getOffers(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "me/angebote")
     }
   
-    // @LINE:24
+    // @LINE:27
+    def rateOrder(id:Int): Call = {
+      import ReverseRouteContext.empty
+      Call("POST", _prefix + { _defaultPrefix } + "bestellung/bewertung/" + implicitly[PathBindable[Int]].unbind("id", id))
+    }
+  
+    // @LINE:20
     def acceptRequest(id:Int): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "me/anfragen/accept/" + implicitly[PathBindable[Int]].unbind("id", id))
     }
   
-    // @LINE:22
+    // @LINE:18
     def getRequests(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "me/anfragen")
     }
   
-    // @LINE:23
+    // @LINE:19
     def denyRequest(id:Int): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "me/anfragen/deny/" + implicitly[PathBindable[Int]].unbind("id", id))
     }
   
-    // @LINE:21
+    // @LINE:17
     def getOrders(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "me/bestellungen")
     }
   
-    // @LINE:29
+    // @LINE:31
     def index(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "profile")
@@ -122,12 +128,6 @@ package controllers {
     }
 
   
-    // @LINE:11
-    def searchOffers(plz:Int): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "search/" + implicitly[PathBindable[Int]].unbind("plz", plz))
-    }
-  
     // @LINE:8
     def getAngeboteList(): Call = {
       import ReverseRouteContext.empty
@@ -138,6 +138,18 @@ package controllers {
     def addOffer(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "angebote")
+    }
+  
+    // @LINE:11
+    def searchOffers(plz:Int): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "search/" + implicitly[PathBindable[Int]].unbind("plz", plz))
+    }
+  
+    // @LINE:24
+    def getUserRating(id:Int): Call = {
+      import ReverseRouteContext.empty
+      Call("GET", _prefix + { _defaultPrefix } + "benutzer/bewertung/" + implicitly[PathBindable[Int]].unbind("id", id))
     }
   
     // @LINE:9
@@ -155,16 +167,10 @@ package controllers {
     }
 
   
-    // @LINE:19
-    def imageUpload(): Call = {
+    // @LINE:6
+    def index(): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "upload")
-    }
-  
-    // @LINE:17
-    def test(): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "test")
+      Call("GET", _prefix)
     }
   
     // @LINE:10
@@ -173,13 +179,7 @@ package controllers {
       Call("GET", _prefix + { _defaultPrefix } + "search")
     }
   
-    // @LINE:6
-    def index(): Call = {
-      import ReverseRouteContext.empty
-      Call("GET", _prefix)
-    }
-  
-    // @LINE:31
+    // @LINE:33
     def login(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "login")
@@ -187,26 +187,26 @@ package controllers {
   
   }
 
-  // @LINE:37
+  // @LINE:39
   class ReverseSignup(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:41
+    // @LINE:43
     def confirm(confirmToken:String): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "confirm/" + implicitly[PathBindable[String]].unbind("confirmToken", dynamicString(confirmToken)))
     }
   
-    // @LINE:38
+    // @LINE:40
     def save(): Call = {
       import ReverseRouteContext.empty
       Call("POST", _prefix + { _defaultPrefix } + "signup")
     }
   
-    // @LINE:37
+    // @LINE:39
     def create(): Call = {
       import ReverseRouteContext.empty
       Call("GET", _prefix + { _defaultPrefix } + "signup")

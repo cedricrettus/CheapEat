@@ -13,6 +13,12 @@ public class Secured extends Security.Authenticator {
 
     @Override
     public Result onUnauthorized(Http.Context ctx) {
-        return redirect(routes.Application.login());
+        if(ctx._requestHeader().path().toLowerCase().equals("/profile")){
+            return redirect(routes.Application.login());
+        }else{
+            return badRequest("Benutzer muss angemeldet sein - <a href='/login'>Hier anmelden</a>" );
+        }
+
+
     }
 }

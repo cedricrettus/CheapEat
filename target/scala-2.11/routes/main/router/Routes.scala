@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Sun Dec 10 20:46:57 CET 2017
+// @DATE:Mon Dec 11 16:45:18 CET 2017
 
 package router
 
@@ -22,13 +22,13 @@ class Routes(
   AngebotController_6: controllers.AngebotController,
   // @LINE:12
   BestellungController_0: controllers.BestellungController,
-  // @LINE:21
+  // @LINE:17
   Profile_3: controllers.Profile,
-  // @LINE:32
+  // @LINE:34
   Authentication_2: controllers.Authentication,
-  // @LINE:37
+  // @LINE:39
   Signup_1: controllers.Signup,
-  // @LINE:45
+  // @LINE:47
   Assets_4: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -41,13 +41,13 @@ class Routes(
     AngebotController_6: controllers.AngebotController,
     // @LINE:12
     BestellungController_0: controllers.BestellungController,
-    // @LINE:21
+    // @LINE:17
     Profile_3: controllers.Profile,
-    // @LINE:32
+    // @LINE:34
     Authentication_2: controllers.Authentication,
-    // @LINE:37
+    // @LINE:39
     Signup_1: controllers.Signup,
-    // @LINE:45
+    // @LINE:47
     Assets_4: controllers.Assets
   ) = this(errorHandler, Application_5, AngebotController_6, BestellungController_0, Profile_3, Authentication_2, Signup_1, Assets_4, "/")
 
@@ -71,13 +71,13 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search/""" + "$" + """plz<[^/]+>""", """controllers.AngebotController.searchOffers(plz:Int)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """bestellung""", """controllers.BestellungController.addBestellung()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """bestellung""", """controllers.BestellungController.getBestellung()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """test""", """controllers.Application.test()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """upload""", """controllers.Application.imageUpload()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/bestellungen""", """controllers.Profile.getOrders()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/anfragen""", """controllers.Profile.getRequests()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/anfragen/deny/""" + "$" + """id<[^/]+>""", """controllers.Profile.denyRequest(id:Int)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/anfragen/accept/""" + "$" + """id<[^/]+>""", """controllers.Profile.acceptRequest(id:Int)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/angebote""", """controllers.Profile.getOffers()"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """benutzer/bewertung/""" + "$" + """id<[^/]+>""", """controllers.AngebotController.getUserRating(id:Int)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """bestellung/bewertung/""" + "$" + """id<[^/]+>""", """controllers.Profile.rateOrder(id:Int)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """profile""", """controllers.Profile.index()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.Application.login()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.Authentication.authenticate()"""),
@@ -230,44 +230,10 @@ class Routes(
   )
 
   // @LINE:17
-  private[this] lazy val controllers_Application_test8_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("test")))
-  )
-  private[this] lazy val controllers_Application_test8_invoker = createInvoker(
-    Application_5.test(),
-    HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.Application",
-      "test",
-      Nil,
-      "GET",
-      """""",
-      this.prefix + """test"""
-    )
-  )
-
-  // @LINE:19
-  private[this] lazy val controllers_Application_imageUpload9_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("upload")))
-  )
-  private[this] lazy val controllers_Application_imageUpload9_invoker = createInvoker(
-    Application_5.imageUpload(),
-    HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.Application",
-      "imageUpload",
-      Nil,
-      "GET",
-      """""",
-      this.prefix + """upload"""
-    )
-  )
-
-  // @LINE:21
-  private[this] lazy val controllers_Profile_getOrders10_route = Route("GET",
+  private[this] lazy val controllers_Profile_getOrders8_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("me/bestellungen")))
   )
-  private[this] lazy val controllers_Profile_getOrders10_invoker = createInvoker(
+  private[this] lazy val controllers_Profile_getOrders8_invoker = createInvoker(
     Profile_3.getOrders(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -280,11 +246,11 @@ class Routes(
     )
   )
 
-  // @LINE:22
-  private[this] lazy val controllers_Profile_getRequests11_route = Route("GET",
+  // @LINE:18
+  private[this] lazy val controllers_Profile_getRequests9_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("me/anfragen")))
   )
-  private[this] lazy val controllers_Profile_getRequests11_invoker = createInvoker(
+  private[this] lazy val controllers_Profile_getRequests9_invoker = createInvoker(
     Profile_3.getRequests(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -297,11 +263,11 @@ class Routes(
     )
   )
 
-  // @LINE:23
-  private[this] lazy val controllers_Profile_denyRequest12_route = Route("POST",
+  // @LINE:19
+  private[this] lazy val controllers_Profile_denyRequest10_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("me/anfragen/deny/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_Profile_denyRequest12_invoker = createInvoker(
+  private[this] lazy val controllers_Profile_denyRequest10_invoker = createInvoker(
     Profile_3.denyRequest(fakeValue[Int]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -314,11 +280,11 @@ class Routes(
     )
   )
 
-  // @LINE:24
-  private[this] lazy val controllers_Profile_acceptRequest13_route = Route("POST",
+  // @LINE:20
+  private[this] lazy val controllers_Profile_acceptRequest11_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("me/anfragen/accept/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_Profile_acceptRequest13_invoker = createInvoker(
+  private[this] lazy val controllers_Profile_acceptRequest11_invoker = createInvoker(
     Profile_3.acceptRequest(fakeValue[Int]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -331,11 +297,11 @@ class Routes(
     )
   )
 
-  // @LINE:25
-  private[this] lazy val controllers_Profile_getOffers14_route = Route("GET",
+  // @LINE:21
+  private[this] lazy val controllers_Profile_getOffers12_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("me/angebote")))
   )
-  private[this] lazy val controllers_Profile_getOffers14_invoker = createInvoker(
+  private[this] lazy val controllers_Profile_getOffers12_invoker = createInvoker(
     Profile_3.getOffers(),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -348,7 +314,41 @@ class Routes(
     )
   )
 
-  // @LINE:29
+  // @LINE:24
+  private[this] lazy val controllers_AngebotController_getUserRating13_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("benutzer/bewertung/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_AngebotController_getUserRating13_invoker = createInvoker(
+    AngebotController_6.getUserRating(fakeValue[Int]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.AngebotController",
+      "getUserRating",
+      Seq(classOf[Int]),
+      "GET",
+      """Bewertung""",
+      this.prefix + """benutzer/bewertung/""" + "$" + """id<[^/]+>"""
+    )
+  )
+
+  // @LINE:27
+  private[this] lazy val controllers_Profile_rateOrder14_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("bestellung/bewertung/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_Profile_rateOrder14_invoker = createInvoker(
+    Profile_3.rateOrder(fakeValue[Int]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Profile",
+      "rateOrder",
+      Seq(classOf[Int]),
+      "POST",
+      """Bestellung wird bewertet -> benutzer hinter der bestellung wird bewertung zugewiesen""",
+      this.prefix + """bestellung/bewertung/""" + "$" + """id<[^/]+>"""
+    )
+  )
+
+  // @LINE:31
   private[this] lazy val controllers_Profile_index15_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("profile")))
   )
@@ -365,7 +365,7 @@ class Routes(
     )
   )
 
-  // @LINE:31
+  // @LINE:33
   private[this] lazy val controllers_Application_login16_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
   )
@@ -382,7 +382,7 @@ class Routes(
     )
   )
 
-  // @LINE:32
+  // @LINE:34
   private[this] lazy val controllers_Authentication_authenticate17_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
   )
@@ -399,7 +399,7 @@ class Routes(
     )
   )
 
-  // @LINE:33
+  // @LINE:35
   private[this] lazy val controllers_Authentication_logout18_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("logout")))
   )
@@ -416,7 +416,7 @@ class Routes(
     )
   )
 
-  // @LINE:37
+  // @LINE:39
   private[this] lazy val controllers_Signup_create19_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("signup")))
   )
@@ -433,7 +433,7 @@ class Routes(
     )
   )
 
-  // @LINE:38
+  // @LINE:40
   private[this] lazy val controllers_Signup_save20_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("signup")))
   )
@@ -450,7 +450,7 @@ class Routes(
     )
   )
 
-  // @LINE:41
+  // @LINE:43
   private[this] lazy val controllers_Signup_confirm21_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("confirm/"), DynamicPart("confirmToken", """[^/]+""",true)))
   )
@@ -468,7 +468,7 @@ class Routes(
     )
   )
 
-  // @LINE:45
+  // @LINE:47
   private[this] lazy val controllers_Assets_at22_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
@@ -537,90 +537,90 @@ class Routes(
       }
   
     // @LINE:17
-    case controllers_Application_test8_route(params) =>
+    case controllers_Profile_getOrders8_route(params) =>
       call { 
-        controllers_Application_test8_invoker.call(Application_5.test())
+        controllers_Profile_getOrders8_invoker.call(Profile_3.getOrders())
+      }
+  
+    // @LINE:18
+    case controllers_Profile_getRequests9_route(params) =>
+      call { 
+        controllers_Profile_getRequests9_invoker.call(Profile_3.getRequests())
       }
   
     // @LINE:19
-    case controllers_Application_imageUpload9_route(params) =>
-      call { 
-        controllers_Application_imageUpload9_invoker.call(Application_5.imageUpload())
+    case controllers_Profile_denyRequest10_route(params) =>
+      call(params.fromPath[Int]("id", None)) { (id) =>
+        controllers_Profile_denyRequest10_invoker.call(Profile_3.denyRequest(id))
+      }
+  
+    // @LINE:20
+    case controllers_Profile_acceptRequest11_route(params) =>
+      call(params.fromPath[Int]("id", None)) { (id) =>
+        controllers_Profile_acceptRequest11_invoker.call(Profile_3.acceptRequest(id))
       }
   
     // @LINE:21
-    case controllers_Profile_getOrders10_route(params) =>
+    case controllers_Profile_getOffers12_route(params) =>
       call { 
-        controllers_Profile_getOrders10_invoker.call(Profile_3.getOrders())
-      }
-  
-    // @LINE:22
-    case controllers_Profile_getRequests11_route(params) =>
-      call { 
-        controllers_Profile_getRequests11_invoker.call(Profile_3.getRequests())
-      }
-  
-    // @LINE:23
-    case controllers_Profile_denyRequest12_route(params) =>
-      call(params.fromPath[Int]("id", None)) { (id) =>
-        controllers_Profile_denyRequest12_invoker.call(Profile_3.denyRequest(id))
+        controllers_Profile_getOffers12_invoker.call(Profile_3.getOffers())
       }
   
     // @LINE:24
-    case controllers_Profile_acceptRequest13_route(params) =>
+    case controllers_AngebotController_getUserRating13_route(params) =>
       call(params.fromPath[Int]("id", None)) { (id) =>
-        controllers_Profile_acceptRequest13_invoker.call(Profile_3.acceptRequest(id))
+        controllers_AngebotController_getUserRating13_invoker.call(AngebotController_6.getUserRating(id))
       }
   
-    // @LINE:25
-    case controllers_Profile_getOffers14_route(params) =>
-      call { 
-        controllers_Profile_getOffers14_invoker.call(Profile_3.getOffers())
+    // @LINE:27
+    case controllers_Profile_rateOrder14_route(params) =>
+      call(params.fromPath[Int]("id", None)) { (id) =>
+        controllers_Profile_rateOrder14_invoker.call(Profile_3.rateOrder(id))
       }
   
-    // @LINE:29
+    // @LINE:31
     case controllers_Profile_index15_route(params) =>
       call { 
         controllers_Profile_index15_invoker.call(Profile_3.index())
       }
   
-    // @LINE:31
+    // @LINE:33
     case controllers_Application_login16_route(params) =>
       call { 
         controllers_Application_login16_invoker.call(Application_5.login())
       }
   
-    // @LINE:32
+    // @LINE:34
     case controllers_Authentication_authenticate17_route(params) =>
       call { 
         controllers_Authentication_authenticate17_invoker.call(Authentication_2.authenticate())
       }
   
-    // @LINE:33
+    // @LINE:35
     case controllers_Authentication_logout18_route(params) =>
       call { 
         controllers_Authentication_logout18_invoker.call(Authentication_2.logout())
       }
   
-    // @LINE:37
+    // @LINE:39
     case controllers_Signup_create19_route(params) =>
       call { 
         controllers_Signup_create19_invoker.call(Signup_1.create())
       }
   
-    // @LINE:38
+    // @LINE:40
     case controllers_Signup_save20_route(params) =>
       call { 
         controllers_Signup_save20_invoker.call(Signup_1.save())
       }
   
-    // @LINE:41
+    // @LINE:43
     case controllers_Signup_confirm21_route(params) =>
       call(params.fromPath[String]("confirmToken", None)) { (confirmToken) =>
         controllers_Signup_confirm21_invoker.call(Signup_1.confirm(confirmToken))
       }
   
-    // @LINE:45
+    // @LINE:47
     case controllers_Assets_at22_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         controllers_Assets_at22_invoker.call(Assets_4.at(path, file))

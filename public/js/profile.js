@@ -24,14 +24,13 @@ $(document).ready(function() {
     //angebote anzeigen, bei Seitenaufruf
     listAngebote(templateAngebote);
 
-    //TODO evt mit js funtionen tab show etc arbeiten
-
     $('#link-anfragen').click(function(){
         $('#angebote-cards').empty();
         $('#bestellungen-cards').empty();
         $('.active').removeClass("active");
         $(this).addClass("active");
         listAnfragen(templateAnfragen);
+
     });
 
     $('#link-angebote').click(function(){
@@ -83,6 +82,7 @@ function listBestellungen(template){
         // Add the compiled html to the page
         $('#bestellungen-cards').html(theCompiledHtml);
         addEventListeners();
+        addRateEventListener();
 
 
     })
@@ -100,30 +100,9 @@ function listAnfragen(template){
         // Add the compiled html to the page
         $('#anfragen-cards').html(theCompiledHtml);
         addEventListeners();
+        addRateEventListener();
 
-        $('.button-accept').click(function(){
-            $.post('/me/anfragen/accept/'+ $(this).data('id'), function(data) {
-                    console.log(data);
-                    addSuccess("Erfolgreich Aktzeptiert");
-                })
-                .fail(function (jqXHR, textStatus) {
-                    console.log(jqXHR);
-                    console.log(textStatus);
-                    addDanger(jqXHR.responseText);
-                });
-        });
-
-        $('.button-deny').click(function(){
-            $.post('/me/anfragen/deny/'+ $(this).data('id'), function(data) {
-                console.log(data);
-                addSuccess("Erfolgreich Abgelehnt");
-            })
-                .fail(function (jqXHR, textStatus) {
-                    console.log(jqXHR);
-                    console.log(textStatus);
-                    addDanger(jqXHR.responseText);
-                });
-        });
+        addDenyAcceptEventListener();
 
     })
 
@@ -132,5 +111,58 @@ function listAnfragen(template){
 function addEditEventListener(){
     $('.button-edit').click(function(e){
        console.log("edit clicked");
+    });
+}
+
+function addRateEventListener(){
+    $('.button-rate').click(function(){
+        $('#bewertungModal').modal('toggle');
+        $('[id^=btn-bewertung]').data('id', $(this).data('id'));
+        $('[id^=btn-bewertung]').data('token', $(this).data('token'));
+        $('[id^=btn-bewertung]').data('who', $(this).data('who'));
+
+        $('[id^=btn-bewertung]').click(function(){
+            var postData = {
+                'token' : $(this).data('token'),
+                'who' : $(this).data('who'),
+                'rating' : $(this).text()
+            }
+            $.post('/bestellung/bewertung/'+ $(this).data('id'), postData, function(data){
+                addSuccess("Bewertung abgegeben");
+                //TODO reload timer kürzen
+                setTimeout(function(){ location.reload(); }, 10000);
+
+            }).fail(function (jqXHR, textStatus) {
+                console.log(jqXHR);
+                console.log(textStatus);
+                addDanger(jqXHR.responseText);
+            });
+        })
+    });
+}
+
+function addDenyAcceptEventListener(){
+    $('.button-accept').click(function(){
+        $.post('/me/anfragen/accept/'+ $(this).data('id'), function(data) {
+            console.log(data);
+            addSuccess("Erfolgreich Aktzeptiert");
+        })
+            .fail(function (jqXHR, textStatus) {
+                console.log(jqXHR);
+                console.log(textStatus);
+                addDanger(jqXHR.responseText);
+            });
+    });
+
+    $('.button-deny').click(function(){
+        $.post('/me/anfragen/deny/'+ $(this).data('id'), function(data) {
+            console.log(data);
+            addSuccess("Erfolgreich Abgelehnt");
+        })
+            .fail(function (jqXHR, textStatus) {
+                console.log(jqXHR);
+                console.log(textStatus);
+                addDanger(jqXHR.responseText);
+            });
     });
 }

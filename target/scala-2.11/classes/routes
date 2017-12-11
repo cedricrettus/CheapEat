@@ -14,15 +14,17 @@ POST    /bestellung                   controllers.BestellungController.addBestel
 # TODO prüfen wird nicht benötigt glaube ich
 GET    /bestellung                    controllers.BestellungController.getBestellung()
 
-GET     /test                         controllers.Application.test()
-
-GET     /upload                       controllers.Application.imageUpload()
-
 GET     /me/bestellungen              controllers.Profile.getOrders()
 GET     /me/anfragen                  controllers.Profile.getRequests()
 POST    /me/anfragen/deny/:id         controllers.Profile.denyRequest(id:Int)
 POST    /me/anfragen/accept/:id        controllers.Profile.acceptRequest(id:Int)
 GET     /me/angebote                   controllers.Profile.getOffers()
+
+#Bewertung
+GET     /benutzer/bewertung/:id        controllers.AngebotController.getUserRating(id:Int)
+
+#Bestellung wird bewertet -> benutzer hinter der bestellung wird bewertung zugewiesen
+POST    /bestellung/bewertung/:id         controllers.Profile.rateOrder(id:Int)
 
 #Authentication
 

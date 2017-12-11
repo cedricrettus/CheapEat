@@ -20,6 +20,12 @@ POST    /me/anfragen/deny/:id         controllers.Profile.denyRequest(id:Int)
 POST    /me/anfragen/accept/:id        controllers.Profile.acceptRequest(id:Int)
 GET     /me/angebote                   controllers.Profile.getOffers()
 
+#Bewertung
+GET     /benutzer/bewertung/:id        controllers.AngebotController.getUserRating(id:Int)
+
+#Bestellung wird bewertet -> benutzer hinter der bestellung wird bewertung zugewiesen
+POST    /bestellung/bewertung/:id         controllers.Profile.rateOrder(id:Int)
+
 #Authentication
 
 GET     /profile                       controllers.Profile.index()

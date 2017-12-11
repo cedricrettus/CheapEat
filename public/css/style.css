@@ -60,3 +60,9 @@ nav.navbar {
     margin-top: 10px;
     margin-bottom: 25px;
 }
+.alert > p {
+    display: inline;
+}
+.btn-bewertungen > button {
+    display: inline-block;
+}

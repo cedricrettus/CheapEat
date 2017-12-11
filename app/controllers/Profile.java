@@ -1,6 +1,8 @@
 package controllers;
 
 import models.*;
+import play.data.DynamicForm;
+import play.data.FormFactory;
 import play.db.jpa.*;
 import play.db.jpa.Transactional;
 import play.mvc.Controller;
@@ -10,6 +12,7 @@ import play.mvc.Security;
 import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import static play.mvc.Results.ok;
 import static play.libs.Json.*;
@@ -21,6 +24,9 @@ import static play.libs.Json.*;
 public class Profile extends Controller {
 
     MailerService mc;
+
+    @Inject
+    FormFactory formFactory;
 
     @Inject
     public Profile(MailerService mailer) {
@@ -57,6 +63,7 @@ public class Profile extends Controller {
             bestellung.setProzesscode(dbResultBestellung.get(i).getProzesscode());
             bestellung.setDatum(dbResultAngebot.get(i).getDatum());
             bestellung.setBestellungsId(dbResultBestellung.get(i).getId());
+            bestellung.setBewToken_besteller(dbResultBestellung.get(i).getBewToken_besteller());
 
             if(bestellung.getProzesscode() <= 1){
                 bestellung.setStrasse("Strasse wird erst nach bestätigung angezeigt");
@@ -88,6 +95,8 @@ public class Profile extends Controller {
                 Benutzer besteller = Benutzer.findById(bestellung.getBenutzer_id());
                 Adresse adresse = Adresse.findByUserId(benutzerAng.getId());
                 bestellung.setProzesscode(2); //Prozersscode auf 2, heisst diese Bestellung ist freigegeben und der Käufer sieht die Adresse
+                bestellung.setBewToken_anbieter(UUID.randomUUID().toString());
+                bestellung.setBewToken_besteller(UUID.randomUUID().toString());
                 bestellung.save();
                 mc.sendOrderAccept(benutzerAng.getName(), adresse.getStrasse(), besteller.getEmail() );
             }
@@ -96,15 +105,12 @@ public class Profile extends Controller {
             return badRequest("nicht authorisiert!");
         }
 
-
     }
 
     @Transactional
     public Result denyRequest(int bestellungId){
         Benutzer benutzerReq = Benutzer.findByEmail(request().username());
         Benutzer benutzerAng = Benutzer.findByOrder(bestellungId);
-
-
 
         if(benutzerAng.getId() == benutzerReq.getId()){
             //Benutzer ist autorisieret dieses Angebot zu bestätigen
@@ -147,6 +153,7 @@ public class Profile extends Controller {
             anfrage.setBestellungsId(dbResultBestellung.get(i).getId());
             anfrage.setName(dbResultBenutzer.get(i).getName());
             anfrage.setStrasse(dbResultAdresse.get(i).getStrasse());
+            anfrage.setBewToken_anbieter(dbResultBestellung.get(i).getBewToken_anbieter());
 
             anfragen.add(i,anfrage);
         }
@@ -162,10 +169,43 @@ public class Profile extends Controller {
         return ok(toJson(AngebotUrls.buildUrlsFromOffers(angebote)));
     }
 
-    /*public Result editOffer(){
-        Benutzer benutzer = Benutzer.findByEmail(request().username());
+    @Transactional
+    public Result rateOrder(int id){
+        DynamicForm requestData = formFactory.form().bindFromRequest();
+        String token = requestData.get("token");
+        String who = requestData.get("who");
+        String rating = requestData.get("rating");
 
+        int bewReq = Integer.parseInt(rating);
 
-        return ok();
-    }*/
+        //Benutzer benutzerReq = Benutzer.findByEmail(request().username());
+        Bestellung bestellung = Bestellung.findById(id);
+
+        if(who.equals("besteller") && token.equals(bestellung.getBewToken_besteller())){
+            Benutzer benutzerBew = Benutzer.findByOrder(id);
+            double bew = benutzerBew.getBewertung();
+            int anzBew = benutzerBew.getAnzBewertung();
+            double bewNeu = (bew * anzBew + bewReq) / (anzBew + 1);
+            benutzerBew.setBewertung(bewNeu);
+            benutzerBew.setAnzBewertung(anzBew + 1);
+            benutzerBew.save();
+            //TODO token aus db entfernen
+            //TODO nach einmaliger bewertung kein bewertung button mehr anzeigen
+            return ok();
+        }else if(who.equals("anbieter") && token.equals(bestellung.getBewToken_anbieter())){
+            Benutzer benutzerBew = Benutzer.findById(bestellung.getBenutzer_id());
+            double bew = benutzerBew.getBewertung();
+            int anzBew = benutzerBew.getAnzBewertung();
+            double bewNeu = (bew * anzBew + bewReq) / (anzBew + 1);
+            benutzerBew.setBewertung(bewNeu);
+            benutzerBew.setAnzBewertung(anzBew + 1);
+            benutzerBew.save();
+
+            return ok();
+        }else{
+            return badRequest("Ungültige Anfrage!");
+        }
+
+    }
+
 }

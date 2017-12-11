@@ -131,6 +131,38 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
             </div>
         </div>
     </div>
+</div>
+
+    <!-- MODAL BEWERTUNG ABGEBEN -->
+
+<div class="modal fade" id="bewertungModal" tabindex="-1" role="dialog" aria-labelledby="bewertungModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">CheapEat - Bewertung</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-angebot">
+                    """),_display_(/*118.22*/alerts()),format.raw/*118.30*/("""
+                """),format.raw/*119.17*/("""<h1>Bewertung abgeben</h1>
+                <p>Bewertung von 1 - 5 für diesen Benutzer abgeben</p>
+                <div class="panel panel-default btn-bewertungen">
+                    <button id="btn-bewertung-1" data-token="0">1</button>
+                    <button id="btn-bewertung-2" data-token="0">2</button>
+                    <button id="btn-bewertung-3" data-token="0">3</button>
+                    <button id="btn-bewertung-4" data-token="0">4</button>
+                    <button id="btn-bewertung-5" data-token="0">5</button>
+                </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
+            </div>
+        </div>
+    </div>
 </div>"""))
       }
     }
@@ -151,11 +183,11 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
 object modals extends modals_Scope0.modals
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 01 14:29:54 CET 2017
+                  DATE: Mon Dec 11 16:45:18 CET 2017
                   SOURCE: C:/dev/git/CheapEat/app/views/modals.scala.html
-                  HASH: 88ee322d9e6d45a954bbf3c896a77397b9d001bf
-                  MATRIX: 829->0|1532->676|1561->684|1611->706|5497->4565|5526->4573|5576->4595
-                  LINES: 32->1|45->14|45->14|46->15|116->85|116->85|117->86
+                  HASH: fe6d6b53f88418ce5d374ca5508a4f7336b8c591
+                  MATRIX: 829->0|1532->676|1561->684|1611->706|5497->4565|5526->4573|5576->4595|7206->6197|7236->6205|7283->6223
+                  LINES: 32->1|45->14|45->14|46->15|116->85|116->85|117->86|149->118|149->118|150->119
                   -- GENERATED --
               */
           

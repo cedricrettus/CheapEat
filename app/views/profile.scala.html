@@ -107,8 +107,10 @@
                         <div class="card-body">
 
                             <p class="card-text">Bestellung hat Status: <span class="status">{{this.prozesscode}}</span>
-                                <span class=""></span></p>
-                            <button class="btn btn-primary button-rate" data-id="{{this.bestellungsId}}">Bewerten</button>
+                            {{#if_eq this.prozesscode 2}}
+                                <p>Bestellung wurde angenommen. Nach erfolgter abholung kannst du den Benutzer bewerten.</p>
+                                <button class="btn btn-primary button-rate" data-id="{{this.bestellungsId}}" data-token="{{this.bewToken_besteller}}" data-who="besteller">Bewerten</button>
+                            {{/if_eq}}
                         </div>
                     </div>
                 </div>
@@ -140,7 +142,12 @@
                                 <button class="btn btn-primary button-accept" data-id="{{this.bestellungsId}}">Akzeptieren</button>
                                 <button class="btn btn-inverse button-deny" data-id="{{this.bestellungsId}}">Ablehnen</button>
                             {{else}}
-                                <p>Bestellung wurde bearbeitet</p>
+                                {{#if_eq this.prozesscode 2}}
+                                    <p>Du hast die Bestellung angenommen. Nach erfolgter Abholung kannst du den Abholer bewerten.</p>
+                                    <button class="btn btn-primary button-rate" data-id="{{this.bestellungsId}}" data-token="{{this.bewToken_anbieter}}" data-who="anbieter">Bewerten</button>
+                                {{else}}
+                                    <p>Du hast die Bestellung abgelehnt</p>
+                                {{/if_eq}}
                             {{/if_eq}}
                         </div>
                     </div>

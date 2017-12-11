@@ -17,6 +17,8 @@ import java.util.List;
 @Table(name = "benutzer")
 public class Benutzer {
 
+    //TODO alle felder in models auf private
+
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     public int id;
@@ -31,7 +33,9 @@ public class Benutzer {
 
     public String email;
 
-    public int bewertung;
+    public int anzBewertung;
+
+    public double bewertung;
 
     public int validiert = 0;
 
@@ -185,11 +189,19 @@ public class Benutzer {
         this.email = email;
     }
 
-    public int getBewertung() {
+    public int getAnzBewertung() {
+        return anzBewertung;
+    }
+
+    public void setAnzBewertung(int anzBewertung) {
+        this.anzBewertung = anzBewertung;
+    }
+
+    public double getBewertung() {
         return bewertung;
     }
 
-    public void setBewertung(int bewertung) {
+    public void setBewertung(double bewertung) {
         this.bewertung = bewertung;
     }
 

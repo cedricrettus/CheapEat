@@ -14,6 +14,7 @@ public class Joins {
         private int prozesscode;
         private Date datum;
         private int bestellungsId;
+        public String bewToken_besteller;
 
         public BestellungAlle() {
 
@@ -90,6 +91,15 @@ public class Joins {
         public void setBestellungsId(int bestellungsId) {
             this.bestellungsId = bestellungsId;
         }
+
+        public String getBewToken_besteller() {
+            return bewToken_besteller;
+        }
+
+        public void setBewToken_besteller(String bewToken_besteller) {
+            this.bewToken_besteller = bewToken_besteller;
+        }
+
     }
 
     public static class AnfragenAlle{
@@ -103,6 +113,7 @@ public class Joins {
         private String titel;
         private int prozesscode;
         private Date datum;
+        public String bewToken_anbieter;
 
         public AnfragenAlle(){
 
@@ -186,6 +197,16 @@ public class Joins {
 
         public void setDatum(Date datum) {
             this.datum = datum;
+        }
+
+
+
+        public String getBewToken_anbieter() {
+            return bewToken_anbieter;
+        }
+
+        public void setBewToken_anbieter(String bewToken_anbieter) {
+            this.bewToken_anbieter = bewToken_anbieter;
         }
     }
 

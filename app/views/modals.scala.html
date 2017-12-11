@@ -101,3 +101,35 @@
         </div>
     </div>
 </div>
+
+    <!-- MODAL BEWERTUNG ABGEBEN -->
+
+<div class="modal fade" id="bewertungModal" tabindex="-1" role="dialog" aria-labelledby="bewertungModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">CheapEat - Bewertung</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container-angebot">
+                    @alerts()
+                <h1>Bewertung abgeben</h1>
+                <p>Bewertung von 1 - 5 für diesen Benutzer abgeben</p>
+                <div class="panel panel-default btn-bewertungen">
+                    <button id="btn-bewertung-1" data-token="0">1</button>
+                    <button id="btn-bewertung-2" data-token="0">2</button>
+                    <button id="btn-bewertung-3" data-token="0">3</button>
+                    <button id="btn-bewertung-4" data-token="0">4</button>
+                    <button id="btn-bewertung-5" data-token="0">5</button>
+                </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Abbrechen</button>
+            </div>
+        </div>
+    </div>
+</div>

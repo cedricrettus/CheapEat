@@ -28,6 +28,10 @@ public class Bestellung {
     public int menge;
 
     public int prozesscode;
+
+    public String bewToken_besteller;
+    public String bewToken_anbieter;
+
     //Prozesscode werden verwendet um den Status der Bestellung zu zeigem.
     // 1: Bestellung aufgegeben, 2: Bestellung angenommen, 3: bestellung beendet -> bewertung, 10: bestellung abgelehnt
 
@@ -92,6 +96,21 @@ public class Bestellung {
         this.prozesscode = prozesscode;
     }
 
+    public String getBewToken_besteller() {
+        return bewToken_besteller;
+    }
+
+    public void setBewToken_besteller(String bewToken_besteller) {
+        this.bewToken_besteller = bewToken_besteller;
+    }
+
+    public String getBewToken_anbieter() {
+        return bewToken_anbieter;
+    }
+
+    public void setBewToken_anbieter(String bewToken_anbieter) {
+        this.bewToken_anbieter = bewToken_anbieter;
+    }
 
     @Override
     public String toString() {

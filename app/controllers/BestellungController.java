@@ -3,11 +3,13 @@ package controllers;
 import models.Angebot;
 import models.Benutzer;
 import models.Bestellung;
+import play.data.DynamicForm;
 import play.data.FormFactory;
 import play.db.jpa.JPA;
 import play.db.jpa.Transactional;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.Security;
 
 import javax.inject.Inject;
 
@@ -16,6 +18,7 @@ import static play.mvc.Results.ok;
 /**
  * Created by Fabio on 27.10.2017.
  */
+@Security.Authenticated(Secured.class)
 public class BestellungController extends Controller {
 
     MailerService mc;
@@ -30,7 +33,6 @@ public class BestellungController extends Controller {
 
     @Transactional
     public Result getBestellung(){
-
         return null;
     }
 
@@ -45,12 +47,12 @@ public class BestellungController extends Controller {
 
         //TODO prüfen ob bestellmenge verfügbar ist
 
-        if(session("email").isEmpty()){
+        /*if(session("email").isEmpty()){
             //TODO nutzer soll sich anmelden um die bestellung fortzuführen
             return badRequest("Bitte anmelden um zu bestellen");
-        }
+        }*/
 
-        Benutzer benutzer = Benutzer.findByEmail(session("email"));
+        Benutzer benutzer = Benutzer.findByEmail(request().username());
 
         Bestellung bestellung = formFactory.form(Bestellung.class).bindFromRequest().get();
         bestellung.prozesscode = 1;
@@ -69,4 +71,10 @@ public class BestellungController extends Controller {
         mc.sendOrderNotification(anbieter.getEmail(), benutzer.getEmail());
         return ok();
     }
+
+
+
+
+
+
 }

@@ -30,7 +30,7 @@ public class Authentication {
             routes.Application.index()
     );
 
-    public static Result GO_DASHBOARD = redirect(
+    public static Result GO_PROFILE = redirect(
             routes.Profile.index()
     );
 
@@ -66,11 +66,7 @@ public class Authentication {
         @Constraints.Required
         public String passwort;
 
-        /**
-         * Validate the authentication.
-         *
-         * @return null if validation ok, string with details otherwise
-         */
+       //Login validieren, prüft ob eingegebenes Passwort übereinstimmt und ob der Benutzer validiert ist.
 
         public String validate() {
 
@@ -125,22 +121,18 @@ public class Authentication {
         public int plz;
         public String ort;
 
-        /**
-         * Validate the authentication.
-         *
-         * @return null if validation ok, string with details otherwise
-         */
+        //Validierung des Registrierungsformular
         public String validate() {
             if (isBlank(email)) {
-                return "Email is required";
+                return "Email wird benötigt";
             }
 
             if (isBlank(name)) {
-                return "Full name is required";
+                return "Name wird benötigt";
             }
 
             if (isBlank(passwort)) {
-                return "Password is required";
+                return "Passwort wird benötigt";
             }
 
             return null;
@@ -207,11 +199,7 @@ public class Authentication {
         }
     }
 
-    /**
-     * Handle login form submission.
-     *
-     * @return Dashboard if auth OK or login form if auth KO
-     */
+    //Login Formular wird ausgewertet, wenn validation ok -> session mit login email wird erstellt
     @Transactional
     public Result authenticate() {
         Form<Authentication.Login> submission = formFactory.form(Authentication.Login.class).bindFromRequest();
@@ -224,15 +212,11 @@ public class Authentication {
             return badRequest("Login error");
         } else {
             session("email", submission.get().email);
-            return GO_DASHBOARD;
+            return GO_PROFILE;
         }
     }
 
-    /**
-     * Logout and clean the session.
-     *
-     * @return Index page
-     */
+    //Benutzer ausloggen, session wird geleert
     public Result logout() {
         session().clear();
         return GO_HOME;
