@@ -66,7 +66,7 @@ public class Profile extends Controller {
             bestellung.setBewToken_besteller(dbResultBestellung.get(i).getBewToken_besteller());
 
             if(bestellung.getProzesscode() <= 1){
-                bestellung.setStrasse("Strasse wird erst nach bestätigung angezeigt");
+                bestellung.setStrasse("Strasse wird erst nach Bestätigung angezeigt");
             }else if (bestellung.getProzesscode() == 2 || bestellung.getProzesscode() == 3){
                 bestellung.setStrasse(dbResultAdresse.get(i).getStrasse());
             }else{
@@ -132,7 +132,6 @@ public class Profile extends Controller {
     public Result getRequests(){
         Benutzer rbenutzer = Benutzer.findByEmail(request().username());
 
-        //TODO anfragen in model joins auslagern
         List<Angebot> dbResultAngebot = JPA.em().createQuery("select an from Angebot an, Bestellung be, Benutzer b, Adresse ad WHERE an.benutzer_id = "+rbenutzer.getId()+" AND be.angebot_id = an.id AND be.benutzer_id = b.id AND ad.benutzer_id = b.id order by be.id desc").getResultList();
         List<Bestellung> dbResultBestellung =JPA.em().createQuery("select be from Angebot an, Bestellung be, Benutzer b, Adresse ad WHERE an.benutzer_id = "+rbenutzer.getId()+" AND be.angebot_id = an.id AND be.benutzer_id = b.id AND ad.benutzer_id = b.id order by be.id desc").getResultList();
         List<Adresse> dbResultAdresse = JPA.em().createQuery("select ad from Angebot an, Bestellung be, Benutzer b, Adresse ad WHERE an.benutzer_id = "+rbenutzer.getId()+" AND be.angebot_id = an.id AND be.benutzer_id = b.id AND ad.benutzer_id = b.id order by be.id desc").getResultList();
@@ -166,7 +165,7 @@ public class Profile extends Controller {
         Benutzer benutzer = Benutzer.findByEmail(request().username());
 
         List<Angebot> angebote = JPA.em().createQuery("select a from Angebot a where a.benutzer_id ="+ benutzer.getId()).getResultList();
-        return ok(toJson(AngebotUrls.buildUrlsFromOffers(angebote)));
+        return ok(toJson(AngeboteAll.buildCompleteOfferFromId(angebote)));
     }
 
     @Transactional
@@ -181,7 +180,11 @@ public class Profile extends Controller {
         //Benutzer benutzerReq = Benutzer.findByEmail(request().username());
         Bestellung bestellung = Bestellung.findById(id);
 
-        if(who.equals("besteller") && token.equals(bestellung.getBewToken_besteller())){
+        if(who.equals("besteller") && token.equals(bestellung.getBewToken_besteller()) && token != null){
+           if(token.equals("rated")){
+               return badRequest("Bewertung wurde bereits abgegeben");
+           }
+
             Benutzer benutzerBew = Benutzer.findByOrder(id);
             double bew = benutzerBew.getBewertung();
             int anzBew = benutzerBew.getAnzBewertung();
@@ -189,10 +192,18 @@ public class Profile extends Controller {
             benutzerBew.setBewertung(bewNeu);
             benutzerBew.setAnzBewertung(anzBew + 1);
             benutzerBew.save();
-            //TODO token aus db entfernen
+            //Token auf rated setzen, damit die Bewertung kein 2. Mal gemacht werden kann.
+            bestellung.setBewToken_besteller("rated");
+            bestellung.save();
+
             //TODO nach einmaliger bewertung kein bewertung button mehr anzeigen
             return ok();
-        }else if(who.equals("anbieter") && token.equals(bestellung.getBewToken_anbieter())){
+        }else if(who.equals("anbieter") && token.equals(bestellung.getBewToken_anbieter()) && token != null){
+            //Analog zu Funktion oben, aber für den Anbieter der Bestellung
+
+            if(token.equals("rated")){
+                return badRequest("Bewertung wurde bereits abgegeben");
+            }
             Benutzer benutzerBew = Benutzer.findById(bestellung.getBenutzer_id());
             double bew = benutzerBew.getBewertung();
             int anzBew = benutzerBew.getAnzBewertung();
@@ -201,8 +212,12 @@ public class Profile extends Controller {
             benutzerBew.setAnzBewertung(anzBew + 1);
             benutzerBew.save();
 
+            bestellung.setBewToken_anbieter("rated");
+            bestellung.save();
+
             return ok();
         }else{
+            //Wenn der Token nicht übereinstimmt, dh eine ungültige Bewertung abgegeben wird
             return badRequest("Ungültige Anfrage!");
         }
 

@@ -1,17 +1,17 @@
 package controllers;
 
 import models.Angebot;
-import models.AngebotUrls;
+import models.AngeboteAll;
 import models.Bild;
+import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.*;
 import play.db.jpa.*;
 import play.data.FormFactory;
-import views.html.suche;
 
 import javax.inject.Inject;
 import java.io.File;
-import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import static play.libs.Json.*;
@@ -46,7 +46,6 @@ public class AngebotController extends Controller {
 
             //Bild hochladen
             Http.MultipartFormData<File> body = request().body().asMultipartFormData();
-            // TODO auslagern in db controller addAngebot()
 
             List<Http.MultipartFormData.FilePart<File>> bilder = body.getFiles();
             System.out.println("files added");
@@ -78,12 +77,9 @@ public class AngebotController extends Controller {
     @Transactional(readOnly = true)
     public Result getAngeboteList() {
 
-        //List angebote = JPA.em().createQuery("select p, y.url from Angebot p, Bilderangebote x, Bild y where (x.angebote_id = p.id and x.bilder_id = y.id and p.bild = 1)").getResultList();
-
         List<Angebot> angebote = JPA.em().createQuery("select p from Angebot p").getResultList();
 
-        //List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p, x, y from Angebot p, Bilderangebote x, Bild y where (x.angebote_id = p.id and x.bilder_id = y.id) or p.bild = 0").getResultList();
-        return ok(toJson(AngebotUrls.buildUrlsFromOffers(angebote)));
+        return ok(toJson(AngeboteAll.buildCompleteOfferFromId(angebote)));
     }
 
     @Transactional(readOnly = true)
@@ -95,13 +91,22 @@ public class AngebotController extends Controller {
 
     @Transactional(readOnly = true)
     public Result searchOffers(int plz) {
+        DynamicForm requestData = formFactory.form().bindFromRequest();
+        String datum = requestData.get("datum");
 
-        List<Angebot> angebote = JPA.em().createQuery("select p from Angebot p where p.plz = "+ plz).getResultList();
+        List<Angebot> angebote;
+
+        if(datum != null && datum != "null"){
+            Date date = new Date(datum);
+            angebote = JPA.em().createQuery("select p from Angebot p, Adresse a where p.datum = "+ date +" and a.plz like "+ plz +" and a.benutzer_id = p.benutzer_id").getResultList();
+        }else{
+            angebote = JPA.em().createQuery("select p from Angebot p, Adresse a where a.plz like "+ plz +" and a.benutzer_id = p.benutzer_id").getResultList();
+        }
 
         System.out.println("test");
 
         //List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p, x, y from Angebot p, Bilderangebote x, Bild y where (x.angebote_id = p.id and x.bilder_id = y.id) or p.bild = 0").getResultList();
-        return ok(toJson(AngebotUrls.buildUrlsFromOffers(angebote)));
+        return ok(toJson(AngeboteAll.buildCompleteOfferFromId(angebote)));
     }
 
     public Result getUserRating(int id){

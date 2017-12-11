@@ -27,10 +27,6 @@ public class Angebot {
 
     public String beschreibung;
 
-    @Constraints.Required
-    public String email;
-
-    public int plz;
 
     @Temporal(TemporalType.DATE)
     public Date datum;
@@ -48,19 +44,6 @@ public class Angebot {
 
     public int bild;
 
-    /*public Angebot(int adressen_id, String titel, String beschreibung, String email, int plz, Date datum, String zeit, double preis, int menge, String kueche) {
-        this.adressen_id = adressen_id;
-        this.titel = titel;
-        this.beschreibung = beschreibung;
-        this.email = email;
-        this.plz = plz;
-        this.datum = datum;
-        this.zeit = zeit;
-        this.preis = preis;
-        this.menge = menge;
-        this.kueche = kueche;
-    }
-    */
 
     public Angebot() {
     }
@@ -112,22 +95,6 @@ public class Angebot {
 
     public void setBeschreibung(String beschreibung) {
         this.beschreibung = beschreibung;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getPlz() {
-        return plz;
-    }
-
-    public void setPlz(int plz) {
-        this.plz = plz;
     }
 
     public Date getDatum() {

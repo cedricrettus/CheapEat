@@ -9,29 +9,56 @@ $(document).ready(function() {
 
     var plz = getUrlParameter("plz");
 
-    addEventListeners();
 
-    //TODO suche in seprates js auslagern
-    if(plz > 0 && plz < 10000){
-        $.get('/search/'+plz, function(data){
-            angeboteFiltered = data;
+    search(plz, null);
+    //addEventListeners();
 
-            console.log(data);
+    $('#filter-form').submit(function (e) {
+        e.preventDefault();
+        plz = getUrlParameter('plz');
+        datum = $('#filter-datum').val();
+        search(plz, datum);
 
-            // Pass our data to the template
-            var theCompiledHtml = theTemplate(data);
-
-            // Add the compiled html to the page
-            $('.angebote-cards').html(theCompiledHtml);
-
-            addEventListeners();
-
-        });
-
-    }else{
-        addDanger("Falsche Parameter");
-    }
-
-
+    })
 
 }); //document ready closing
+
+function search(plz, datum){
+    //TODO suche in seprates js auslagern
+    if(plz > 0 && plz < 10000){
+        if(datum == null){
+            $.get('/search/'+plz, function(data){
+
+                console.log(data);
+
+                // Pass our data to the template
+                var theCompiledHtml = theTemplate(data);
+
+                // Add the compiled html to the page
+                $('.angebote-cards').html(theCompiledHtml);
+
+                addEventListeners();
+
+            });
+        }else{
+            $.get('/search/'+plz, {'datum' : datum} , function(data){
+
+                console.log(data);
+
+                // Pass our data to the template
+                var theCompiledHtml = theTemplate(data);
+
+                // Add the compiled html to the page
+                $('.angebote-cards').html(theCompiledHtml);
+
+                addEventListeners();
+
+            });
+        }
+
+
+    }else{
+        addDanger("Ungültige PLZ");
+    }
+}
+

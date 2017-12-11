@@ -11,6 +11,11 @@
         <div class="container">
             @alerts()
             <h1>Angebote</h1>
+            <form id="filter-form">
+                <input id="filter-datum" type="date">
+                <small>Gib das gewünschte Abholdatum ein um die Suche einzuschränken</small>
+            </form>
+
             <script id="angebote-template" type="text/x-handlebars-template">
 
                 {{#each this}}

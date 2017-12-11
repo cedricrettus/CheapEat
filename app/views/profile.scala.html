@@ -71,11 +71,10 @@
                     </div>
                     <div class="col-md-3">
                         <div class="card-body">
-                            <p class="card-text">Username <span class="">Bewertung</span></p>
-                            <p class="card-text">Ort: <span> {{this.angebot.plz}} </span> </p>
-                            <p class="card-text"><span class="preis">{{this.angebot.preis}} CHF</span>
+                            <p class="card-text">Ort: <span> {{this.plz}} </span> </p>
+                            <p class="card-text"><span class="preis">Preis: <strong>CHF {{this.angebot.preis}}</strong></span>
                                 <span class="">Portionen: {{this.angebot.menge}}</span></p>
-                            <button class="btn btn-primary button-edit" data-id="{{this.angebot.id}}">Bearbeiten</button>
+                            <!--<button class="btn btn-primary button-edit" data-id="{{this.angebot.id}}">Bearbeiten</button>-->
                         </div>
                     </div>
                 </div>
@@ -100,7 +99,7 @@
                             <h6 class="card-subtitle mb-2 text-muted"> Angebot von Benutzer {{this.benutzername}} </h6>
                             <p class="card-text"> Bestellte Portionen: {{this.menge}} </p>
                             <p class="card-text">Abholort: <span>{{this.plz}} {{this.ort}}</span> </p>
-                            <p class="card-text">Adresse: <span>{{this.strasse}}</span> </p>
+                            <p class="card-text">Adresse: <strong>{{this.strasse}}</strong> </p>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -108,8 +107,12 @@
 
                             <p class="card-text">Bestellung hat Status: <span class="status">{{this.prozesscode}}</span>
                             {{#if_eq this.prozesscode 2}}
-                                <p>Bestellung wurde angenommen. Nach erfolgter abholung kannst du den Benutzer bewerten.</p>
-                                <button class="btn btn-primary button-rate" data-id="{{this.bestellungsId}}" data-token="{{this.bewToken_besteller}}" data-who="besteller">Bewerten</button>
+                                {{#if_eq this.bewToken_besteller "rated"}}
+                                    <p>Bewertung wurde abgegeben. Danke!</p>
+                                {{else}}
+                                    <p>Bestellung wurde angenommen. Nach erfolgter abholung kannst du den Benutzer bewerten.</p>
+                                    <button class="btn btn-primary button-rate" data-id="{{this.bestellungsId}}" data-token="{{this.bewToken_besteller}}" data-who="besteller">Bewerten</button>
+                                {{/if_eq}}
                             {{/if_eq}}
                         </div>
                     </div>
@@ -143,8 +146,12 @@
                                 <button class="btn btn-inverse button-deny" data-id="{{this.bestellungsId}}">Ablehnen</button>
                             {{else}}
                                 {{#if_eq this.prozesscode 2}}
-                                    <p>Du hast die Bestellung angenommen. Nach erfolgter Abholung kannst du den Abholer bewerten.</p>
-                                    <button class="btn btn-primary button-rate" data-id="{{this.bestellungsId}}" data-token="{{this.bewToken_anbieter}}" data-who="anbieter">Bewerten</button>
+                                    {{#if_eq this.bewToken_anbieter "rated"}}
+                                        <p>Bewertung wurde abgegeben. Danke!</p>
+                                    {{else}}
+                                        <p>Du hast die Bestellung angenommen. Nach erfolgter Abholung kannst du den Abholer bewerten.</p>
+                                        <button class="btn btn-primary button-rate" data-id="{{this.bestellungsId}}" data-token="{{this.bewToken_anbieter}}" data-who="anbieter">Bewerten</button>
+                                    {{/if_eq}}
                                 {{else}}
                                     <p>Du hast die Bestellung abgelehnt</p>
                                 {{/if_eq}}

@@ -39,18 +39,8 @@ public class BestellungController extends Controller {
     @Transactional
     public Result addBestellung() {
 
-        //TODO class secured, dann über getusername()
-
-        //Beispiel um FormData zu holen das nicht zu einem Model gehört!
-        //DynamicForm requestData = formFactory.form().bindFromRequest();
-        //String firstname = requestData.get("firstname");
-
         //TODO prüfen ob bestellmenge verfügbar ist
 
-        /*if(session("email").isEmpty()){
-            //TODO nutzer soll sich anmelden um die bestellung fortzuführen
-            return badRequest("Bitte anmelden um zu bestellen");
-        }*/
 
         Benutzer benutzer = Benutzer.findByEmail(request().username());
 

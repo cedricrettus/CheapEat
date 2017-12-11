@@ -55,20 +55,12 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
                                 <input type="text" name="beschreibung" class="form-control" />
                             </div>
                             <div class="form-group">
-                                <label for="email" >Kontakt Email: </label>
-                                <input type="email" name="email" class="form-control" />
-                            </div>
-                            <div class="form-group">
                                 <label for="zeit" >Zeit: </label>
                                 <input type="text" name="zeit" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="datum" >Datum: </label>
                                 <input type="date" name="datum" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label for="datum" >PLZ: </label>
-                                <input type="number" name="plz" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="kueche" >Küche: </label>
@@ -113,8 +105,8 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
             </div>
             <div class="modal-body">
                 <div class="container-angebot">
-                    """),_display_(/*85.22*/alerts()),format.raw/*85.30*/("""
-                    """),format.raw/*86.21*/("""<h1>Angebot bestellen</h1>
+                    """),_display_(/*77.22*/alerts()),format.raw/*77.30*/("""
+                    """),format.raw/*78.21*/("""<h1>Angebot bestellen</h1>
                     <div class="panel panel-default">
                         <form method="POST" id="bestellenForm" action="/bestellen"> <!--  rouAngebotControllertion.getPerson() -->
                             <div class="form-group">
@@ -146,8 +138,8 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
             </div>
             <div class="modal-body">
                 <div class="container-angebot">
-                    """),_display_(/*118.22*/alerts()),format.raw/*118.30*/("""
-                """),format.raw/*119.17*/("""<h1>Bewertung abgeben</h1>
+                    """),_display_(/*110.22*/alerts()),format.raw/*110.30*/("""
+                """),format.raw/*111.17*/("""<h1>Bewertung abgeben</h1>
                 <p>Bewertung von 1 - 5 für diesen Benutzer abgeben</p>
                 <div class="panel panel-default btn-bewertungen">
                     <button id="btn-bewertung-1" data-token="0">1</button>
@@ -183,11 +175,11 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
 object modals extends modals_Scope0.modals
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 11 16:45:18 CET 2017
+                  DATE: Mon Dec 11 20:46:39 CET 2017
                   SOURCE: C:/dev/git/CheapEat/app/views/modals.scala.html
-                  HASH: fe6d6b53f88418ce5d374ca5508a4f7336b8c591
-                  MATRIX: 829->0|1532->676|1561->684|1611->706|5497->4565|5526->4573|5576->4595|7206->6197|7236->6205|7283->6223
-                  LINES: 32->1|45->14|45->14|46->15|116->85|116->85|117->86|149->118|149->118|150->119
+                  HASH: 63904998d5830a6858b3dde18b7d87a8edd65c88
+                  MATRIX: 829->0|1532->676|1561->684|1611->706|4994->4062|5023->4070|5073->4092|6703->5694|6733->5702|6780->5720
+                  LINES: 32->1|45->14|45->14|46->15|108->77|108->77|109->78|141->110|141->110|142->111
                   -- GENERATED --
               */
           
