@@ -45,6 +45,7 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
                     """),_display_(/*14.22*/alerts()),format.raw/*14.30*/("""
                     """),format.raw/*15.21*/("""<h1>Angebot erstellen</h1>
                     <div class="panel panel-default">
+                        <p>Achtung! Um ein Angebot zu erstellen must du eingeloggt sein</p>
                         <form method="POST" id="angebotForm" action="/angebote" enctype="multipart/form-data"> <!--  rouAngebotControllertion.getPerson() -->
                             <div class="form-group">
                                 <label for="titel" >Titel: </label>
@@ -55,8 +56,8 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
                                 <input type="text" name="beschreibung" class="form-control" />
                             </div>
                             <div class="form-group">
-                                <label for="zeit" >Zeit: </label>
-                                <input type="text" name="zeit" class="form-control" />
+                                <label for="zeitForm" >Zeit: </label>
+                                <input type="time" name="zeitForm" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="datum" >Datum: </label>
@@ -105,8 +106,8 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
             </div>
             <div class="modal-body">
                 <div class="container-angebot">
-                    """),_display_(/*77.22*/alerts()),format.raw/*77.30*/("""
-                    """),format.raw/*78.21*/("""<h1>Angebot bestellen</h1>
+                    """),_display_(/*78.22*/alerts()),format.raw/*78.30*/("""
+                    """),format.raw/*79.21*/("""<h1>Angebot bestellen</h1>
                     <div class="panel panel-default">
                         <form method="POST" id="bestellenForm" action="/bestellen"> <!--  rouAngebotControllertion.getPerson() -->
                             <div class="form-group">
@@ -138,8 +139,8 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
             </div>
             <div class="modal-body">
                 <div class="container-angebot">
-                    """),_display_(/*110.22*/alerts()),format.raw/*110.30*/("""
-                """),format.raw/*111.17*/("""<h1>Bewertung abgeben</h1>
+                    """),_display_(/*111.22*/alerts()),format.raw/*111.30*/("""
+                """),format.raw/*112.17*/("""<h1>Bewertung abgeben</h1>
                 <p>Bewertung von 1 - 5 für diesen Benutzer abgeben</p>
                 <div class="panel panel-default btn-bewertungen">
                     <button id="btn-bewertung-1" data-token="0">1</button>
@@ -175,11 +176,11 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
 object modals extends modals_Scope0.modals
               /*
                   -- GENERATED --
-                  DATE: Mon Dec 11 20:46:39 CET 2017
+                  DATE: Wed Dec 13 20:43:29 CET 2017
                   SOURCE: C:/dev/git/CheapEat/app/views/modals.scala.html
-                  HASH: 63904998d5830a6858b3dde18b7d87a8edd65c88
-                  MATRIX: 829->0|1532->676|1561->684|1611->706|4994->4062|5023->4070|5073->4092|6703->5694|6733->5702|6780->5720
-                  LINES: 32->1|45->14|45->14|46->15|108->77|108->77|109->78|141->110|141->110|142->111
+                  HASH: a5c3b68f6a9836fdff2a57030b6d94b4280276b5
+                  MATRIX: 829->0|1532->676|1561->684|1611->706|5095->4163|5124->4171|5174->4193|6804->5795|6834->5803|6881->5821
+                  LINES: 32->1|45->14|45->14|46->15|109->78|109->78|110->79|142->111|142->111|143->112
                   -- GENERATED --
               */
           

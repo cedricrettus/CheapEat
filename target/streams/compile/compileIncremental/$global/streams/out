@@ -2,14 +2,27 @@
 [debug] [naha] Initial source changes: 
 [debug] [naha] 	removed:Set()
 [debug] [naha] 	added: Set()
-[debug] [naha] 	modified: Set()
+[debug] [naha] 	modified: Set(C:\dev\git\CheapEat\app\controllers\AngebotController.java)
 [debug] [naha] Invalidated products: Set()
 [debug] [naha] External API changes: API Changes: Set()
 [debug] [naha] Modified binary dependencies: Set()
-[debug] [naha] Initial directly invalidated sources: Set()
+[debug] [naha] Initial directly invalidated sources: Set(C:\dev\git\CheapEat\app\controllers\AngebotController.java)
 [debug] [naha] 
 [debug] [naha] Sources indirectly invalidated by:
 [debug] [naha] 	product: Set()
 [debug] [naha] 	binary dep: Set()
 [debug] [naha] 	external source: Set()
-[debug] All initially invalidated sources: Set()
+[debug] All initially invalidated sources: Set(C:\dev\git\CheapEat\app\controllers\AngebotController.java)
+[info] Compiling 1 Java source to C:\dev\git\CheapEat\target\scala-2.11\classes...
+[debug] Attempting to call com.sun.tools.javac.api.JavacTool@3fe18e19 directly...
+[info] C:\dev\git\CheapEat\app\controllers\AngebotController.java: C:\dev\git\CheapEat\app\controllers\AngebotController.java uses unchecked or unsafe operations.
+[info] C:\dev\git\CheapEat\app\controllers\AngebotController.java: Recompile with -Xlint:unchecked for details.
+[debug] Java compilation took 0.171739062 s
+[debug] Java analysis took 0.008642832 s
+[debug] Java compile + analysis took 0.193418534 s
+[debug] [naha] New invalidations:
+[debug] [naha] 	Set()
+[debug] [naha] Initial set of included nodes: Set()
+[debug] [naha] Previously invalidated, but (transitively) depend on new invalidations:
+[debug] [naha] 	Set()
+[debug] [naha] All newly invalidated sources after taking into account (previously) recompiled sources:Set()

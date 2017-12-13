@@ -14,9 +14,7 @@ import java.io.File;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 
 import static play.libs.Json.*;
 
@@ -27,40 +25,41 @@ public class AngebotController extends Controller {
     FormFactory formFactory;
 
     private S3Service s3 = new S3Service();
+    private String filename;
 
-
+    @Security.Authenticated(Secured.class)
     @Transactional
     public Result addOffer() {
         Form<Angebot> submission = formFactory.form(Angebot.class).bindFromRequest();
-
-        //DynamicForm requestData = formFactory.form().bindFromRequest();
 
         //Form auf Errors prüfen
         if (submission.hasErrors()) {
             System.out.println("Form error");
             System.out.println(submission.errors());
-            //error ausgeben
+            return badRequest("Ungültige Angaben");
+
         } else {
             Angebot angebot = submission.get();
+
+            //TODO angebot get zeitForm -> cast to time und dann als sql date persisten
 
             System.out.println(angebot.toString());
             JPA.em().persist(angebot);
             JPA.em().flush();
 
-
             //Bild hochladen
             Http.MultipartFormData<File> body = request().body().asMultipartFormData();
 
             List<Http.MultipartFormData.FilePart<File>> bilder = body.getFiles();
-            System.out.println("files added");
 
             if (bilder.size() > 0) {
                 for (int i = 0; i < bilder.size(); i++) {
-                    if (s3.uploadImage(bilder.get(i).getFile(), bilder.get(i).getFilename())) {
+                    filename = UUID.randomUUID().toString();
+                    if (s3.uploadImage(bilder.get(i).getFile(), filename)) {
                         System.out.println("image uploaded!");
 
                         //filename in db schreiben
-                        Bild bild = new Bild(bilder.get(i).getFilename(), angebot.getId());
+                        Bild bild = new Bild(filename, angebot.getId());
                         JPA.em().persist(bild);
                         JPA.em().flush();
 
@@ -89,8 +88,12 @@ public class AngebotController extends Controller {
     @Transactional(readOnly = true)
     public Result getAngebote(int id) {
         //TODO select angebot by id
-        List<Angebot> angebote = (List<Angebot>) JPA.em().createQuery("select p from Angebot p").getResultList();
-        return ok(toJson(angebote));
+        Angebot angebot = Angebot.findById(id);
+        List<Angebot> angebote = new ArrayList<Angebot>();
+        angebote.add(angebot);
+
+        return ok(toJson(AngeboteAll.buildCompleteOfferFromId(angebote)));
+
     }
 
     @Transactional(readOnly = true)

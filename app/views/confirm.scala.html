@@ -1,8 +1,19 @@
+@(meldung: String)
 @main("Registrierung"){
 
     @nav()
     @modals()
+    <div class="content">
+    @alerts()
 
-    <h1>Registrierung bestätigt</h1>
-    <a href="/">Zurück zur Startseite</a>
+    <script>
+        @if(meldung.equals("ok")){
+            addSuccess("Registrierung erfolgreich bestätigt <a '/login'>Hier anmelden </a>");
+        }else{
+            addDanger(meldung)
+        }
+    </script>
+
+    </div>
+
 }

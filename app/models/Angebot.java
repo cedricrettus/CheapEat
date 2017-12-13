@@ -1,6 +1,9 @@
 package models;
 
 import play.data.validation.Constraints;
+import play.db.jpa.JPA;
+import play.db.jpa.Transactional;
+
 import javax.persistence.*;
 import javax.xml.crypto.Data;
 import java.io.File;
@@ -20,7 +23,6 @@ public class Angebot {
 
     public int benutzer_id;
 
-    public int adressen_id;
 
     @Constraints.Required
     public String titel;
@@ -33,6 +35,8 @@ public class Angebot {
 
     @Temporal(TemporalType.TIME)
     public Date zeit;
+
+    public String dateForm;
 
     //TODO bei angebotserstellung string in zeit umwandeln
 
@@ -51,14 +55,16 @@ public class Angebot {
     public Angebot() {
     }
 
-
-    public int getBild() {
-        return bild;
+    @Transactional
+    public static Angebot findById(int id){
+        return JPA.em().find(Angebot.class, id);
     }
 
-    public void setBild(int bild) {
-        this.bild = bild;
+    @Transactional
+    public void save(){
+        JPA.em().persist(this);
     }
+
 
     public int getId() {
         return id;
@@ -74,14 +80,6 @@ public class Angebot {
 
     public void setBenutzer_id(int benutzer_id) {
         this.benutzer_id = benutzer_id;
-    }
-
-    public int getAdressen_id() {
-        return adressen_id;
-    }
-
-    public void setAdressen_id(int adressen_id) {
-        this.adressen_id = adressen_id;
     }
 
     public String getTitel() {
@@ -146,6 +144,22 @@ public class Angebot {
 
     public void setAktiv(int aktiv) {
         this.aktiv = aktiv;
+    }
+
+    public int getBild() {
+        return bild;
+    }
+
+    public void setBild(int bild) {
+        this.bild = bild;
+    }
+
+    public String getDateForm() {
+        return dateForm;
+    }
+
+    public void setDateForm(String dateForm) {
+        this.dateForm = dateForm;
     }
 
     @Override

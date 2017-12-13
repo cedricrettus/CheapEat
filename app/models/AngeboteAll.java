@@ -37,7 +37,6 @@ public class AngeboteAll {
         this.anzBewertung = anzBewertung;
     }
 
-
     public AngeboteAll(List urls) {
 
     }

@@ -13,12 +13,12 @@ public class Secured extends Security.Authenticator {
 
     @Override
     public Result onUnauthorized(Http.Context ctx) {
+        //Wenn unauthorisiert über einen Link auf das Profil aufgerufen wird, wird auf die login seite umgeleitet, sonst wird ein Fehler gesendet
         if(ctx._requestHeader().path().toLowerCase().equals("/profile")){
             return redirect(routes.Application.login());
         }else{
-            return badRequest("Benutzer muss angemeldet sein - <a href='/login'>Hier anmelden</a>" );
+            return forbidden("Benutzer muss angemeldet sein - <a href='/login'>Hier anmelden</a>" );
         }
-
 
     }
 }

@@ -30,10 +30,6 @@ public class Adresse {
 
     }
 
-    //public String hausart;
-
-    //public String stockwerk;
-
     @Transactional
     public static Adresse findByUserId(int userId){
         List<Adresse> adressen = JPA.em().createQuery("select p from Adresse p where p.benutzer_id = "+ userId).getResultList();

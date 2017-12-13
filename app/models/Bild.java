@@ -6,6 +6,8 @@ import java.sql.Time;
 import java.time.LocalTime;
 import java.util.Date;
 import play.data.validation.Constraints;
+import play.db.jpa.JPA;
+import play.db.jpa.Transactional;
 
 @Entity
 @Table(name = "bilder")
@@ -29,6 +31,11 @@ public class Bild {
     public Bild(String url, int angebote_id) {
         this.url = url;
         this.angebote_id = angebote_id;
+    }
+
+    @Transactional
+    public void save(){
+        JPA.em().persist(this);
     }
 
     public int getAngebote_id() {

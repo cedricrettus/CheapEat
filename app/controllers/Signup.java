@@ -91,12 +91,12 @@ public class Signup extends Controller {
 
             try {
                 Benutzer benutzer = new Benutzer();
-                benutzer.email = register.email;
-                benutzer.name = register.name;
-                benutzer.pwhash = Hash.createPassword(register.passwort);
-                benutzer.benutzername = register.benutzername;
-                benutzer.validiert = 0;
-                benutzer.confirmationToken = UUID.randomUUID().toString();
+                benutzer.setEmail(register.email);
+                benutzer.setName(register.name);
+                benutzer.setPwhash(Hash.createPassword(register.passwort));
+                benutzer.setBenutzername(register.benutzername);
+                benutzer.setValidiert(0);
+                benutzer.setConfirmationToken(UUID.randomUUID().toString());
 
                 Adresse adresse = new Adresse();
                 adresse.setOrt(register.ort);
@@ -110,96 +110,68 @@ public class Signup extends Controller {
                 return ok("erstellt");
             } catch (EmailException e) {
                 Logger.debug("Signup.save Cannot send email", e);
-                flash("error", Messages.get("error.sending.email"));
-            } catch (Exception e) {
+                            } catch (Exception e) {
                 Logger.error("Signup.save error", e);
-                flash("error", Messages.get("error.technical"));
             }
             return badRequest("servererror");
         }
 
     }
 
-    /**
-     * Check if the email already exists.
-     *
-     * @param registerForm User Form submitted
-     * @param email        email address
-     * @return Index if there was a problem, null otherwise
-     */
+    //Prüft ob die Email bereits existiert
     @Transactional
     private Result checkBeforeSave(Form<Authentication.Register> registerForm, String email) {
         // Check unique email
         if (Benutzer.findByEmail(email) != null) {
-            // TODO richtige fehlermeldung zurückgeben flash("error", Messages.get("error.email.already.exist"));
-            return badRequest();
+            return badRequest("Ein Benutzer mit dieser Email Adresse existiert bereits");
         }
 
         return null;
     }
 
 
-    /**
-     * Send the welcome Email with the link to confirm.
-     *
-     * @param benutzer user created
-     * @throws EmailException Exception when sending mail
-     */
+    //Sendet eine Email, die ein Link mit dem Bestätigungstoken verschickt, damit der Benutzer via Email sein Account validieren kann
     @Transactional
     private void sendMailAskForConfirmation(Benutzer benutzer) throws EmailException, MalformedURLException {
-        //String subject = Messages.get("mail.confirm.subject");
 
         String  urlString = "http://" + conf.getString("server.hostname");
-        //String urlString = "http://" + Configuration.root().getString("server.hostname");
-        urlString += "/confirm/" + benutzer.confirmationToken;
-        URL url = new URL(urlString); // validate the URL, will throw an exception if bad.
-        //String message = Messages.get("mail.confirm.message", url.toString());
 
-        //TODO korrektes Mails senden für angefragte registrierung
-        mc.sendRegistrationInfo(url, benutzer.email);
+        urlString += "/confirm/" + benutzer.getConfirmationToken();
+        URL url = new URL(urlString); //Throws Exception falls die URL falsch erstellt wurden
 
-        /*Mail.Envelop envelop = new Mail.Envelop(subject, message, user.email);
-        Mail mailer = new Mail(mailerClient);
-        mailer.sendMail(envelop);*/
+        mc.sendRegistrationInfo(url, benutzer.getEmail());
+
     }
 
-    /**
-     * Valid an account with the url in the confirm mail.
-     *
-     * @param token a token attached to the user we're confirming.
-     * @return Confirmationpage
-     */
+    //Wenn der Benutzer sein Bestätigungslink aufruft, wird das Token abgeglichen und der Benutzer wird auf validiert gesetzt
     @Transactional
     public Result confirm(String token) {
         Benutzer benutzer = Benutzer.findByConfirmationToken(token);
         if (benutzer == null) {
-            flash("error", Messages.get("error.unknown.email"));
-            return badRequest(views.html.confirm.render());
+            return badRequest(views.html.confirm.render("Unbekanntes Email"));
         }
 
         if (benutzer.validiert == 1) {
-            flash("error", Messages.get("error.account.already.validated"));
-            return badRequest(views.html.confirm.render());
+            return badRequest(views.html.confirm.render("Benutzer ist bereits validiert"));
         }
 
         try {
             if (Benutzer.confirm(benutzer)) {
+                //Mail an den Benutzer senden, dass dieser erfolgreich validiert wurde
                 sendMailConfirmation(benutzer);
-                flash("success", Messages.get("account.successfully.validated"));
-                return ok(views.html.confirm.render());
+
+                return ok(views.html.confirm.render("ok"));
             } else {
-                Logger.debug("Signup.confirm cannot confirm user");
-                flash("error", Messages.get("error.confirm"));
-                return badRequest(views.html.confirm.render());
+                return badRequest(views.html.confirm.render("Server Error"));
             }
         } catch (AppException e) {
-            Logger.error("Cannot signup", e);
-            flash("error", Messages.get("error.technical"));
+            Logger.error("Error", e);
+            return badRequest(views.html.confirm.render("Server Error"));
         } catch (EmailException e) {
-            Logger.debug("Cannot send email", e);
-            flash("error", Messages.get("error.sending.confirm.email"));
+            Logger.debug("Email Error", e);
+            return badRequest(views.html.confirm.render("Server Error"));
         }
-        return badRequest(views.html.confirm.render());
+
     }
 
     /**

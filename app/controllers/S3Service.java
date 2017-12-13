@@ -25,14 +25,10 @@ public class S3Service {
     private static String bucketNameThumb     = "s3.fgoeldi.com/thumb";
     private  String accessKey = conf.getString("aws.accessKey");
     private  String secretKey = conf.getString("aws.secretKey");
-    //private static String fileName        = "filename.jpg";
-    //private static String uploadFileName = "*** Provide file name ***";
 
     public S3Service(){
 
     }
-
-    //TODO image url anpassen, damit 2 images mit gleichem dateiname keine Probleme verursachen
 
     public boolean uploadImage(File file, String fileName){
         AWSCredentials awsCredentials = new BasicAWSCredentials(accessKey, secretKey);
