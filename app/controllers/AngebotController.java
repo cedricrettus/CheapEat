@@ -11,8 +11,12 @@ import play.data.FormFactory;
 
 import javax.inject.Inject;
 import java.io.File;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import static play.libs.Json.*;
 
@@ -96,9 +100,17 @@ public class AngebotController extends Controller {
 
         List<Angebot> angebote;
 
+
         if(datum != null && datum != "null"){
-            Date date = new Date(datum);
-            angebote = JPA.em().createQuery("select p from Angebot p, Adresse a where p.datum = "+ date +" and a.plz like "+ plz +" and a.benutzer_id = p.benutzer_id").getResultList();
+            DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+
+            Date date = null;
+            try {
+                date = format.parse(datum);
+            } catch (ParseException e) {
+               return badRequest("Ungültiges Datum");
+            }
+            angebote = JPA.em().createQuery("select p from Angebot p, Adresse a where p.datum = '"+ new java.sql.Date(date.getTime()) +"' and a.plz like "+ plz +" and a.benutzer_id = p.benutzer_id").getResultList();
         }else{
             angebote = JPA.em().createQuery("select p from Angebot p, Adresse a where a.plz like "+ plz +" and a.benutzer_id = p.benutzer_id").getResultList();
         }

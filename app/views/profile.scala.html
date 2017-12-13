@@ -9,7 +9,7 @@
     <div class="container">
         <div class="content">
             @alerts()
-        <h1 class="profile-title">Hallo @benutzer.name</h1>
+        <h1 class="site-title">Hallo @benutzer.name</h1>
         <a class="float-md-right" href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
 
         <ul class="nav nav-tabs">
@@ -132,7 +132,8 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h4 class="card-title"> Anfrage Nr. {{this.bestellungsId}} vom {{this.datum}}</h4>
-                            <h6 class="card-subtitle mb-2 text-muted"> Anfrage von Benutzer {{this.name}} für Angebot {{this.titel}} </h6>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                Anfrage von Benutzer {{this.name}} für Angebot {{this.titel}} </h6>
                             <p class="card-text"> Bestellte Portionen: {{this.menge}} <!--TODO von Anzahl verfügbar einfügen --></p>
                             <p class="card-text">Adresse Abholer: <span>{{this.strasse}} {{this.plz}} {{this.ort}}</span> </p>
                         </div>

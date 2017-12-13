@@ -1,13 +1,20 @@
+//Template, das übersetzt wird
+var theTemplateScript;
+//übersetztes temlate
+var theTemplate;
+//HTML mit zugewiesenen daten
+var theCompiledHtml;
+
 $(document).ready(function() {
 
     //--------------handlebars.js initialisierung------------------
     // Grab the template script
-    var theTemplateScript = $("#angebote-template").html();
+    theTemplateScript = $("#angebote-template").html();
 
     // Compile the template
-    var theTemplate = Handlebars.compile(theTemplateScript);
+    theTemplate = Handlebars.compile(theTemplateScript);
 
-    var plz = getUrlParameter("plz");
+    plz = getUrlParameter("plz");
 
 
     search(plz, null);
@@ -19,6 +26,13 @@ $(document).ready(function() {
         datum = $('#filter-datum').val();
         search(plz, datum);
 
+    });
+
+    $('#filter-datum').change(function (e) {
+        e.preventDefault();
+        plz = getUrlParameter('plz');
+        datum = $('#filter-datum').val();
+        search(plz, datum);
     })
 
 }); //document ready closing
@@ -32,7 +46,7 @@ function search(plz, datum){
                 console.log(data);
 
                 // Pass our data to the template
-                var theCompiledHtml = theTemplate(data);
+                theCompiledHtml = theTemplate(data);
 
                 // Add the compiled html to the page
                 $('.angebote-cards').html(theCompiledHtml);
@@ -46,7 +60,7 @@ function search(plz, datum){
                 console.log(data);
 
                 // Pass our data to the template
-                var theCompiledHtml = theTemplate(data);
+                theCompiledHtml = theTemplate(data);
 
                 // Add the compiled html to the page
                 $('.angebote-cards').html(theCompiledHtml);

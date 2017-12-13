@@ -1,11 +1,18 @@
+//Template, das übersetzt wird
+var theTemplateScript;
+//übersetztes temlate
+var theTemplate;
+//HTML mit zugewiesenen daten
+var theCompiledHtml;
+
 $(document).ready(function() {
 
     //--------------handlebars.js initialisierung------------------
     // Grab the template script
-    var theTemplateScript = $("#angebote-template").html();
+    theTemplateScript = $("#angebote-template").html();
 
     // Compile the template
-    var theTemplate = Handlebars.compile(theTemplateScript);
+    theTemplate = Handlebars.compile(theTemplateScript);
 
     var angeboteAll;
 
@@ -37,7 +44,7 @@ function listAngebote(template){
         console.log(data);
 
         // Pass our data to the template
-        var theCompiledHtml = template(data);
+        theCompiledHtml = template(data);
 
         // Add the compiled html to the page
         $('.angebote-cards').html(theCompiledHtml);
@@ -54,7 +61,7 @@ function filterAngebote(template, plz){
         console.log(data);
 
         // Pass our data to the template
-        var theCompiledHtml = template(data);
+        theCompiledHtml = template(data);
 
         // Add the compiled html to the page
         $('.angebote-cards').html(theCompiledHtml);

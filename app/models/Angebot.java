@@ -31,7 +31,10 @@ public class Angebot {
     @Temporal(TemporalType.DATE)
     public Date datum;
 
-    public String zeit;
+    @Temporal(TemporalType.TIME)
+    public Date zeit;
+
+    //TODO bei angebotserstellung string in zeit umwandeln
 
     @Constraints.Required
     public double preis;
@@ -105,11 +108,11 @@ public class Angebot {
         this.datum = datum;
     }
 
-    public String getZeit() {
+    public Date getZeit() {
         return zeit;
     }
 
-    public void setZeit(String zeit) {
+    public void setZeit(Date zeit) {
         this.zeit = zeit;
     }
 
