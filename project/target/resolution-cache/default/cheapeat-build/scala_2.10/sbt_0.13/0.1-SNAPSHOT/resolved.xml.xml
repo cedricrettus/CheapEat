@@ -4,7 +4,7 @@
 		module="cheapeat-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20171213202756"
+		publication="20171214104319"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

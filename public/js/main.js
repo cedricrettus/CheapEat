@@ -1,3 +1,5 @@
+var postData;
+
 $(document).ready(function(){
 
     //var danger = $('.alert-danger');
@@ -42,11 +44,54 @@ function addEventListeners(){
 
 
     $('#angebotSubmit').click(function(){
-        $('#angebotForm').submit();
+        //$('#angebotForm').submit();
+
+        var formData = new FormData();
+        formData.append('titel', $('#titel').val());
+        formData.append('beschreibung', $('#beschreibung').val());
+        formData.append('zeitForm', $('#zeitForm').val());
+        formData.append('kueche', $('#kueche').val());
+        formData.append('datum', $('#datum').val());
+        formData.append('menge', $('#menge').val());
+        formData.append('preis', $('#preis').val());
+        for(i = 0; i < $('#bilder')[0].files.length; i++){
+            formData.append('bilder[]', $('#bilder')[0].files[i]);
+        }
+
+        /*postData = {
+            'titel': $('#titel').val(),
+            'beschreibung': $('#beschreibung').val(),
+            'zeitForm': $('#zeitForm').val(),
+            'datum': $('#datum').val(),
+            'kueche': $('#kueche').val(),
+            'menge': $('#menge').val(),
+            'preis': $('#preis').val(),
+            'bilder': $('#bilder').attr('files')
+        }*/
+
+        $.ajax({
+            type: "POST",
+            url: '/angebote',
+            data: formData,
+            enctype: 'multipart/form-data',
+            contentType: false,
+            processData: false
+        }, function(data){
+            console.log(data);
+            $('#angebotModal').modal('hide');
+            addSuccess('Angebot erstellt');
+        }).fail(function (jqXHR, textStatus) {
+            console.log(jqXHR);
+            console.log(textStatus);
+            addDanger(jqXHR.responseText);
+        });
+
+
     });
 
+
     $('#bestellenSubmit').click(function(){
-        var postData = {
+        postData = {
             'angebot_id': $('#bestellenSubmit').data('id'),
             'menge' : $('#bestellenMenge').val()
         }

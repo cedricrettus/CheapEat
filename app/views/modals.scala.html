@@ -18,36 +18,36 @@
                         <form method="POST" id="angebotForm" action="/angebote" enctype="multipart/form-data"> <!--  rouAngebotControllertion.getPerson() -->
                             <div class="form-group">
                                 <label for="titel" >Titel: </label>
-                                <input type="text" name="titel" class="form-control" />
+                                <input id="titel" type="text" name="titel" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="beschreibung" >Beschreibung: </label>
-                                <input type="text" name="beschreibung" class="form-control" />
+                                <input id="beschreibung" type="text" name="beschreibung" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="zeitForm" >Zeit: </label>
-                                <input type="time" name="zeitForm" class="form-control" />
+                                <input id="zeitForm" type="time" name="zeitForm" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="datum" >Datum: </label>
-                                <input type="date" name="datum" class="form-control" />
+                                <input id="datum" type="date" name="datum" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="kueche" >Küche: </label>
-                                <input type="text" name="kueche" class="form-control" />
+                                <input id="kueche" type="text" name="kueche" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="menge" >Menge: </label>
-                                <input type="text" name="menge" class="form-control" />
+                                <input id="menge" type="text" name="menge" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="preis" >Preis: </label>
-                                <input type="text" name="preis" class="form-control" />
+                                <input id="preis" type="text" name="preis" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="bilder">Bilder: </label>
-                                <input type="file" name="bilder" accept="image/*" multiple>
-
+                                <input class="btn btn-inverse" id="bilder" type="file" name="bilder" accept="image/*" multiple>
+                                <small>Du kannst mehrere Bilder zu deinem Angebot hinzufügen um dein Essen zu zeigen.</small>
                             </div>
                         </form>
                     </div>

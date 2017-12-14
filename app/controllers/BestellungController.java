@@ -36,17 +36,18 @@ public class BestellungController extends Controller {
         return null;
     }
 
+    /*
+     *
+     */
     @Transactional
     public Result addBestellung() {
 
         //TODO prüfen ob bestellmenge verfügbar ist
-
-
         Benutzer benutzer = Benutzer.findByEmail(request().username());
 
         Bestellung bestellung = formFactory.form(Bestellung.class).bindFromRequest().get();
-        bestellung.prozesscode = 1;
-        bestellung.benutzer_id = benutzer.getId();
+        bestellung.setProzesscode(1);
+        bestellung.setBenutzer_id(benutzer.getId());
 
         JPA.em().persist(bestellung);
         JPA.em().flush();
@@ -54,8 +55,8 @@ public class BestellungController extends Controller {
 
         System.out.println(id);
 
-        Angebot angebot1 = JPA.em().find(Angebot.class, bestellung.angebot_id);
-        Benutzer anbieter = Benutzer.findById(bestellung.benutzer_id);
+        Angebot angebot1 = JPA.em().find(Angebot.class, bestellung.getAngebot_id());
+        Benutzer anbieter = Benutzer.findById(bestellung.getBenutzer_id());
 
         System.out.println(benutzer.getEmail());
         mc.sendOrderNotification(anbieter.getEmail(), benutzer.getEmail());

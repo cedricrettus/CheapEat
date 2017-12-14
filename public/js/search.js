@@ -53,6 +53,10 @@ function search(plz, datum){
 
                 addEventListeners();
 
+            }).fail(function (jqXHR, textStatus) {
+                console.log(jqXHR);
+                console.log(textStatus);
+                addDanger(jqXHR.responseText);
             });
         }else{
             $.get('/search/'+plz, {'datum' : datum} , function(data){
@@ -67,7 +71,11 @@ function search(plz, datum){
 
                 addEventListeners();
 
-            });
+            }).fail(function (jqXHR, textStatus) {
+                console.log(jqXHR);
+                console.log(textStatus);
+                addDanger(jqXHR.responseText);
+            });;
         }
 
 

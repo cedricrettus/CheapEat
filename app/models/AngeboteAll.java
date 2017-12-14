@@ -80,7 +80,7 @@ public class AngeboteAll {
 
             if (angebote.get(i).getBild() == 1) {
                 urls = JPA.em().createQuery("select b.url from Bild b where b.angebote_id =" + angebote.get(i).getId()).getResultList();
-                angeboteAll.add(new AngeboteAll(adresse.getPlz(), urls, benutzer.getBenutzername() , benutzer.getBewertung(), benutzer.getAnzBewertung(), angebote.get(i)));
+                angeboteAll.add(new AngeboteAll(adresse.getPlz(), urls, benutzer.getBenutzername(), benutzer.getBewertung(), benutzer.getAnzBewertung(), angebote.get(i)));
             } else {
                 angeboteAll.add(new AngeboteAll(adresse.getPlz(), null, benutzer.getBenutzername() , benutzer.getBewertung(), benutzer.getAnzBewertung(), angebote.get(i)));
             }

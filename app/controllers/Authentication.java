@@ -6,12 +6,15 @@ import play.Logger;
 import play.data.Form;
 import play.data.FormFactory;
 import play.data.validation.Constraints;
+import play.data.validation.ValidationError;
 import play.db.jpa.Transactional;
 import play.i18n.Messages;
 import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.inject.Inject;
+
+import java.util.List;
 
 import static play.data.Form.form;
 import static play.mvc.Controller.session;
@@ -34,30 +37,10 @@ public class Authentication {
             routes.Profile.index()
     );
 
-    /**
-     * Display the login page or dashboard if connected
-     *
-     * @return login page or dashboard
-     */
- /*   public Result index() {
-        // Check that the email matches a confirmed user before we redirect
-        String email = ctx().session().get("email");
-        if (email != null) {
-            User user = User.findByEmail(email);
-            if (user != null && user.validated) {
-                return GO_DASHBOARD;
-            } else {
-                Logger.debug("Clearing invalid session credentials");
-                session().clear();
-            }
-        }
 
-        return ok(index.render(form(Register.class), form(Login.class)));
-    }
-    */
 
     /**
-     * Login class used by Login Form.
+     * Login klasse für das Anmeldeformular
      */
     public static class Login {
 
@@ -199,7 +182,9 @@ public class Authentication {
         }
     }
 
-    //Login Formular wird ausgewertet, wenn validation ok -> session mit login email wird erstellt
+    /*
+     * Login Formular wird ausgewertet, wenn validation ok -> session mit login email wird erstellt
+     */
     @Transactional
     public Result authenticate() {
         Form<Authentication.Login> submission = formFactory.form(Authentication.Login.class).bindFromRequest();
@@ -207,8 +192,10 @@ public class Authentication {
         //Form auf Errors prüfen
         if (submission.hasErrors()) {
             System.out.println("Login error");
+
             System.out.println(submission.errors());
-            //TODO error zurückgeben
+
+            //TODO korrekte errormeldung zurückgeben
             return badRequest("Login error");
         } else {
             session("email", submission.get().email);

@@ -49,36 +49,36 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
                         <form method="POST" id="angebotForm" action="/angebote" enctype="multipart/form-data"> <!--  rouAngebotControllertion.getPerson() -->
                             <div class="form-group">
                                 <label for="titel" >Titel: </label>
-                                <input type="text" name="titel" class="form-control" />
+                                <input id="titel" type="text" name="titel" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="beschreibung" >Beschreibung: </label>
-                                <input type="text" name="beschreibung" class="form-control" />
+                                <input id="beschreibung" type="text" name="beschreibung" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="zeitForm" >Zeit: </label>
-                                <input type="time" name="zeitForm" class="form-control" />
+                                <input id="zeitForm" type="time" name="zeitForm" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="datum" >Datum: </label>
-                                <input type="date" name="datum" class="form-control" />
+                                <input id="datum" type="date" name="datum" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="kueche" >Küche: </label>
-                                <input type="text" name="kueche" class="form-control" />
+                                <input id="kueche" type="text" name="kueche" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="menge" >Menge: </label>
-                                <input type="text" name="menge" class="form-control" />
+                                <input id="menge" type="text" name="menge" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="preis" >Preis: </label>
-                                <input type="text" name="preis" class="form-control" />
+                                <input id="preis" type="text" name="preis" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label for="bilder">Bilder: </label>
-                                <input type="file" name="bilder" accept="image/*" multiple>
-
+                                <input class="btn btn-inverse" id="bilder" type="file" name="bilder" accept="image/*" multiple>
+                                <small>Du kannst mehrere Bilder zu deinem Angebot hinzufügen um dein Essen zu zeigen.</small>
                             </div>
                         </form>
                     </div>
@@ -176,10 +176,10 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
 object modals extends modals_Scope0.modals
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 13 20:43:29 CET 2017
+                  DATE: Thu Dec 14 17:14:31 CET 2017
                   SOURCE: C:/dev/git/CheapEat/app/views/modals.scala.html
-                  HASH: a5c3b68f6a9836fdff2a57030b6d94b4280276b5
-                  MATRIX: 829->0|1532->676|1561->684|1611->706|5095->4163|5124->4171|5174->4193|6804->5795|6834->5803|6881->5821
+                  HASH: 3b05b658d757ce2ae78afc7e90918c608cc09515
+                  MATRIX: 829->0|1532->676|1561->684|1611->706|5344->4412|5373->4420|5423->4442|7053->6044|7083->6052|7130->6070
                   LINES: 32->1|45->14|45->14|46->15|109->78|109->78|110->79|142->111|142->111|143->112
                   -- GENERATED --
               */

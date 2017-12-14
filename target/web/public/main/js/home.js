@@ -50,7 +50,11 @@ function listAngebote(template){
         $('.angebote-cards').html(theCompiledHtml);
 
         addEventListeners();
-    })
+    }).fail(function (jqXHR, textStatus) {
+        console.log(jqXHR);
+        console.log(textStatus);
+        addDanger(jqXHR.responseText);
+    });
 
 }
 
@@ -67,5 +71,9 @@ function filterAngebote(template, plz){
         $('.angebote-cards').html(theCompiledHtml);
 
         addEventListeners();
-    })
+    }).fail(function (jqXHR, textStatus) {
+        console.log(jqXHR);
+        console.log(textStatus);
+        addDanger(jqXHR.responseText);
+    });
 }

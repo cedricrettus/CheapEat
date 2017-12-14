@@ -36,14 +36,15 @@ public class Angebot {
     @Temporal(TemporalType.TIME)
     public Date zeit;
 
-    public String dateForm;
+    public String zeitForm;
 
-    //TODO bei angebotserstellung string in zeit umwandeln
 
     @Constraints.Required
     public double preis;
 
     public int menge;
+
+    private int mengeVerfuegbar;
 
     public String kueche;
 
@@ -154,12 +155,20 @@ public class Angebot {
         this.bild = bild;
     }
 
-    public String getDateForm() {
-        return dateForm;
+    public String getZeitForm() {
+        return zeitForm;
     }
 
-    public void setDateForm(String dateForm) {
-        this.dateForm = dateForm;
+    public void setZeitForm(String zeitForm) {
+        this.zeitForm = zeitForm;
+    }
+
+    public int getMengeVerfuegbar() {
+        return mengeVerfuegbar;
+    }
+
+    public void setMengeVerfuegbar(int mengeVerfuegbar) {
+        this.mengeVerfuegbar = mengeVerfuegbar;
     }
 
     @Override

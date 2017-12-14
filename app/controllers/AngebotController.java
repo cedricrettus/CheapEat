@@ -1,7 +1,9 @@
 package controllers;
 
+import com.google.gson.Gson;
 import models.Angebot;
 import models.AngeboteAll;
+import models.Benutzer;
 import models.Bild;
 import play.data.DynamicForm;
 import play.data.Form;
@@ -24,9 +26,15 @@ public class AngebotController extends Controller {
     @Inject
     FormFactory formFactory;
 
+    //Service für das Hochladen der Bilder zum s3 bucket
     private S3Service s3 = new S3Service();
+    //Dateiname für die hochgeladenen BIlder
     private String filename;
 
+    /*
+     * Ein angebot wird erstellt mit den Angaben des Requests, bilder werden zum s3 Bucket hochgeladen. Der Request mus authentifiziert sein
+     * damit die unique Benutzer Email ausgelesen werden kann
+     */
     @Security.Authenticated(Secured.class)
     @Transactional
     public Result addOffer() {
@@ -40,51 +48,105 @@ public class AngebotController extends Controller {
 
         } else {
             Angebot angebot = submission.get();
+            Benutzer benutzer;
 
-            //TODO angebot get zeitForm -> cast to time und dann als sql date persisten
+            if(request().username() != null){
+                 benutzer = Benutzer.findByEmail(request().username());
+            }else{
+                return badRequest("Benutzer muss angemeldet sein um ein Angebot zu erstellen!");
+            }
 
             System.out.println(angebot.toString());
+
+            DateFormat format = new SimpleDateFormat("HH:mm");
+            Date time = null;
+            try {
+                time = format.parse(angebot.getZeitForm());
+            } catch (ParseException e) {
+                e.printStackTrace();
+                return badRequest("Ungültige Zeitangabe");
+            }
+
+            angebot.setZeit(time);
+            //Dem angebot wird die BenutzerId des Angeboterstellers zugewiesen
+            angebot.setBenutzer_id(benutzer.getId());
+
             JPA.em().persist(angebot);
             JPA.em().flush();
 
             //Bild hochladen
             Http.MultipartFormData<File> body = request().body().asMultipartFormData();
 
-            List<Http.MultipartFormData.FilePart<File>> bilder = body.getFiles();
+            if(body != null){
+                List<Http.MultipartFormData.FilePart<File>> bilder = body.getFiles();
+                //TODO maximale Anzahl an Bilder beschränken
+                //TODO bilder als Thumbnail und big hochladen
+                if (bilder.size() > 0) {
+                    for (int i = 0; i < bilder.size(); i++) {
+                        filename = UUID.randomUUID().toString();
+                        if (s3.uploadImage(bilder.get(i).getFile(), filename)) {
+                            System.out.println("image uploaded!");
 
-            if (bilder.size() > 0) {
-                for (int i = 0; i < bilder.size(); i++) {
-                    filename = UUID.randomUUID().toString();
-                    if (s3.uploadImage(bilder.get(i).getFile(), filename)) {
-                        System.out.println("image uploaded!");
+                            //filename in db schreiben
+                            Bild bild = new Bild(filename, angebot.getId());
+                            JPA.em().persist(bild);
+                            JPA.em().flush();
 
-                        //filename in db schreiben
-                        Bild bild = new Bild(filename, angebot.getId());
-                        JPA.em().persist(bild);
-                        JPA.em().flush();
+                            angebot.setBild(1);
+                            JPA.em().persist(angebot);
 
-                        angebot.setBild(1);
-                        JPA.em().persist(angebot);
-
-                    } else {
-                        System.out.println("upload failed!");
+                        } else {
+                            System.out.println("upload failed!");
+                        }
                     }
+                } else {
+                    System.out.println("Keine Bild hochgeladen");
                 }
-            } else {
-                System.out.println("Keine Bild hochgeladen");
             }
+
         }
-        return redirect(routes.Application.index());
+        return ok("Angebot erstellt");
     }
 
+    /*
+     * Es wird eine Liste von 15 zufälligen Angeboten zurückgegeben, inkl URLs der Bilder und PLZs
+     */
     @Transactional(readOnly = true)
     public Result getAngeboteList() {
 
         List<Angebot> angebote = JPA.em().createQuery("select p from Angebot p").getResultList();
+        List<Angebot> zufAngebote = new ArrayList<Angebot>();
 
-        return ok(toJson(AngeboteAll.buildCompleteOfferFromId(angebote)));
+        //Anzahl der Elemente in der Zufallsliste
+        int noElements = 0;
+
+        if(angebote.size()>= 15){
+            noElements = 15;
+        }else{
+            noElements = angebote.size();
+        }
+
+        Random rand = new Random();
+
+        for (int i = 0; i < noElements; i++) {
+            //Wählt einen zufälligen index aus allen angeboten
+            int randomIndex = rand.nextInt(angebote.size());
+            //fügt das ausgewählte angebot der neuen zufallsListe hinzu und entfernt das Angabot aus der bestehenden liste
+            //damit es nicht 2mal ausgewählt wird
+            zufAngebote.add(angebote.get(randomIndex));
+            angebote.remove(randomIndex);
+        }
+        List<AngeboteAll> alle = AngeboteAll.buildCompleteOfferFromId(zufAngebote);
+
+        System.out.println("test");
+        //TODO json richtig machen
+        String json = new Gson().toJson(alle);
+        return ok(new Gson().toJson(alle));
     }
 
+    /*
+     * EIn Angebot wird nach seiner ID zurückgegeben, inkl URLs der Bilder und PLZs
+     */
     @Transactional(readOnly = true)
     public Result getAngebote(int id) {
         //TODO select angebot by id
@@ -96,6 +158,9 @@ public class AngebotController extends Controller {
 
     }
 
+    /*
+     * Angebote werden nach PLZ durchsucht, falls eine Datum mitgegeben wird, wird auch nach Datum gefiltert
+     */
     @Transactional(readOnly = true)
     public Result searchOffers(int plz) {
         DynamicForm requestData = formFactory.form().bindFromRequest();
@@ -124,8 +189,12 @@ public class AngebotController extends Controller {
         return ok(toJson(AngeboteAll.buildCompleteOfferFromId(angebote)));
     }
 
+    /*
+     * Bewertung eines Benutzers wird über seine ID zurückgegeben
+     */
     public Result getUserRating(int id){
-        return ok();
+        Benutzer benutzer = Benutzer.findById(id);
+        return ok(toJson(benutzer.getBewertung()));
     }
 
 }
