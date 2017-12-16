@@ -9,7 +9,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form method="POST" id="angebotForm" enctype="multipart/form-data"> <!--  rouAngebotControllertion.getPerson() -->
+            <form method="POST" id="angebotForm" action="#" enctype="multipart/form-data" novalidate> <!--  rouAngebotControllertion.getPerson() -->
             <div class="modal-body">
                 <div class="container-angebot">
                     @alerts()
@@ -41,7 +41,10 @@
                             </div>
                             <div class="form-group">
                                 <label for="datum" >Abholdatum: </label>
-                                <input id="datum" type="date" name="datum" class="form-control" />
+                                <input id="datum" type="date" name="datum" class="form-control" required/>
+                                <div class="invalid-feedback">
+                                    Bitte gebe ein gültiges Datum für dein Angebot ein.
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="kueche" >Küche: </label>
@@ -95,7 +98,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form method="POST" id="bestellenForm" action="/bestellen"> <!--  rouAngebotControllertion.getPerson() -->
+            <form method="POST" id="bestellenForm" action="#" novalidate>
             <div class="modal-body">
                 <div class="container-angebot">
                     @alerts()

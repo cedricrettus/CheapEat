@@ -20,16 +20,6 @@ $(document).ready(function() {
     listAngebote(theTemplate);
 
 
-
-    /*$('#suche').submit(function(e){
-    //TODO delete event listener
-        var sucheplz = $('#fieldPlz').val();
-
-        filterAngebote(theTemplate, sucheplz);
-
-        e.preventDefault();
-    });*/
-
 }); //document ready closing
 
 

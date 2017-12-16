@@ -1,0 +1,4 @@
+[error] C:\dev\git\CheapEat\app\views\index.scala.html:81: Not parsed?
+[error] }
+[error] ^
+[error] (compile:twirlCompileTemplates) Twirl compilation failed

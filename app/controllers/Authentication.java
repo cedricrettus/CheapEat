@@ -29,19 +29,7 @@ public class Authentication {
     @Inject
     FormFactory formFactory;
 
-    /*
-     * Umleitung bei ungültigem Login
-     */
-    public static Result GO_HOME = redirect(
-            routes.Application.index()
-    );
 
-    /*
-     * Umleitung bei erfolgreichem Login
-     */
-    public static Result GO_PROFILE = redirect(
-            routes.Profile.index()
-    );
 
     /**
      * Login klasse für das Anmeldeformular
@@ -216,7 +204,7 @@ public class Authentication {
             return badRequest("Benutzer kann nicht angemeldet werden, Passwort oder Email falsch");
         } else {
             session("email", submission.get().email);
-            return GO_PROFILE;
+            return ok("Erfolgreich angemeldet");
         }
     }
 
@@ -225,6 +213,6 @@ public class Authentication {
      */
     public Result logout() {
         session().clear();
-        return GO_HOME;
+        return redirect(routes.Application.index());
     }
 }

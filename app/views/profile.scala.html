@@ -72,9 +72,9 @@
                     <div class="col-md-3">
                         <div class="card-body">
                             <p class="card-text">Ort: <span> {{this.plz}} </span> </p>
-                            <p class="card-text"><span class="preis">Preis: <strong>CHF {{this.angebot.preis}}</strong></span>
-                                <span class="">Portionen: {{this.angebot.menge}}</span></p>
-                            <!--<button class="btn btn-primary button-edit" data-id="{{this.angebot.id}}">Bearbeiten</button>-->
+                            <p class="card-text"><span class="preis">Preis: <strong>CHF {{this.angebot.preis}}</strong></span></p>
+                            <p class="">Portionen Verfügbar: {{this.angebot.mengeVerfuegbar}}</p>
+                            <!--TODO <button class="btn btn-primary button-edit" data-id="{{this.angebot.id}}">Bearbeiten</button>-->
                         </div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@
                             <h4 class="card-title"> Anfrage Nr. {{this.bestellungsId}} vom {{this.datum}}</h4>
                             <h6 class="card-subtitle mb-2 text-muted">
                                 Anfrage von Benutzer {{this.name}} für Angebot {{this.titel}} </h6>
-                            <p class="card-text"> Bestellte Portionen: {{this.menge}} <!--TODO von Anzahl verfügbar einfügen --></p>
+                            <p class="card-text"> Bestellte Portionen: {{this.menge}} </p>
                             <p class="card-text">Adresse Abholer: <span>{{this.strasse}} {{this.plz}} {{this.ort}}</span> </p>
                         </div>
                     </div>

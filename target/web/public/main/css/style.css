@@ -73,3 +73,10 @@ nav.navbar {
 .no-margin{
     margin: 0px;
 }
+.fa-star{
+    color: #ffce42;
+}
+.benutzername{
+    font-weight: 600;
+    color: #870200;
+}

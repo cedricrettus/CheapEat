@@ -84,7 +84,6 @@ function listBestellungen(template){
         addEventListeners();
         addRateEventListener();
 
-
     })
 
 }
@@ -129,8 +128,7 @@ function addRateEventListener(){
             }
             $.post('/bestellung/bewertung/'+ $(this).data('id'), postData, function(data){
                 addSuccess("Bewertung abgegeben");
-                //TODO reload timer kürzen
-                setTimeout(function(){ location.reload(); }, 10000);
+                setTimeout(function(){ location.reload(); }, 2000);
 
             }).fail(function (jqXHR, textStatus) {
                 console.log(jqXHR);

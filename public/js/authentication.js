@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     $("#register-form").submit(function(e){
         e.preventDefault();
-        if (this.checkValidity() === false) {
+        if ($("#register-form")[0].checkValidity() === false) {
             e.stopPropagation();
         }else {
             var postData = {
@@ -28,7 +28,7 @@ $(document).ready(function(){
 
     $("#login-form").submit(function(e){
         e.preventDefault();
-        if (this.checkValidity() === false) {
+        if ($("#login-form")[0].checkValidity() === false) {
             e.stopPropagation();
         }else {
             var postData = {
@@ -48,7 +48,5 @@ $(document).ready(function(){
         }
 
     });
-
-
 
 });
