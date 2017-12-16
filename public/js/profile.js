@@ -121,16 +121,19 @@ function addRateEventListener(){
         $('[id^=btn-bewertung]').data('who', $(this).data('who'));
 
         $('[id^=btn-bewertung]').click(function(){
+            $('#modal-wait').modal('show');
             var postData = {
                 'token' : $(this).data('token'),
                 'who' : $(this).data('who'),
                 'rating' : $(this).text()
             }
             $.post('/bestellung/bewertung/'+ $(this).data('id'), postData, function(data){
+                $('#modal-wait').modal('hide');
                 addSuccess("Bewertung abgegeben");
                 setTimeout(function(){ location.reload(); }, 2000);
 
             }).fail(function (jqXHR, textStatus) {
+                $('#modal-wait').modal('hide');
                 console.log(jqXHR);
                 console.log(textStatus);
                 addDanger(jqXHR.responseText);
@@ -141,8 +144,11 @@ function addRateEventListener(){
 
 function addDenyAcceptEventListener(){
     $('.button-accept').click(function(){
+        $('#modal-wait').modal('show');
         $.post('/me/anfragen/accept/'+ $(this).data('id'), function(data) {
             console.log(data);
+            $('#modal-wait').modal('hide');
+            setTimeout(function(){ location.reload(); }, 2000);
             addSuccess("Erfolgreich Aktzeptiert");
         })
             .fail(function (jqXHR, textStatus) {
@@ -153,11 +159,15 @@ function addDenyAcceptEventListener(){
     });
 
     $('.button-deny').click(function(){
+        $('#modal-wait').modal('show');
         $.post('/me/anfragen/deny/'+ $(this).data('id'), function(data) {
             console.log(data);
+            $('#modal-wait').modal('hide');
             addSuccess("Erfolgreich Abgelehnt");
+            setTimeout(function(){ location.reload(); }, 2000);
         })
             .fail(function (jqXHR, textStatus) {
+                $('#modal-wait').modal('hide');
                 console.log(jqXHR);
                 console.log(textStatus);
                 addDanger(jqXHR.responseText);

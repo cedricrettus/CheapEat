@@ -41,8 +41,10 @@ function search(plz, datum){
     //TODO suche in seprates js auslagern
     if(plz > 0 && plz < 10000){
         if(datum == null){
+            $('#modal-wait').modal('show');
             $.get('/search/'+plz, function(data){
 
+                $('#modal-wait').modal('hide');
                 console.log(data);
 
                 // Pass our data to the template
@@ -54,14 +56,17 @@ function search(plz, datum){
                 addEventListeners();
 
             }).fail(function (jqXHR, textStatus) {
+                $('#modal-wait').modal('hide');
                 console.log(jqXHR);
                 console.log(textStatus);
                 addDanger(jqXHR.responseText);
             });
         }else{
+            $('#modal-wait').modal('show');
             $.get('/search/'+plz, {'datum' : datum} , function(data){
 
                 console.log(data);
+                $('#modal-wait').modal('hide');
 
                 // Pass our data to the template
                 theCompiledHtml = theTemplate(data);
@@ -72,6 +77,7 @@ function search(plz, datum){
                 addEventListeners();
 
             }).fail(function (jqXHR, textStatus) {
+                $('#modal-wait').modal('hide');
                 console.log(jqXHR);
                 console.log(textStatus);
                 addDanger(jqXHR.responseText);

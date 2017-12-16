@@ -47,13 +47,15 @@ function getUrlParameter(sParam) {
 
 function addEventListeners(){
     $('#callModal').click(function(){
-        $('#angebotModal').modal('toggle');
+        $('#angebotModal').modal('show');
     });
 
     $('#angebotSubmit').click(function(e){
         //$('#angebotForm').submit();
 
         if ($('#angebotForm')[0].checkValidity()) {
+
+            $('#modal-wait').modal('show');
             e.preventDefault();
             e.stopPropagation();
             var formData = new FormData();
@@ -77,15 +79,17 @@ function addEventListeners(){
                 processData: false
             }, function(data){
                 console.log(data);
+                $('#modal-wait').modal('hide');
                 $('#angebotModal').modal('hide');
                 addSuccess('Angebot erstellt');
             }).fail(function (jqXHR, textStatus) {
+                $('#modal-wait').modal('hide');
                 console.log(jqXHR);
                 console.log(textStatus);
                 addDanger(jqXHR.responseText);
             });
         }
-        angebotForm.classList.add('was-validated');
+        //angebotForm.classList.add('was-validated');
 
     });
 
@@ -93,6 +97,7 @@ function addEventListeners(){
     $('#bestellenSubmit').click(function(e){
 
         if ($('#bestellenForm')[0].checkValidity()) {
+            $('#modal-wait').modal('show');
             e.preventDefault();
             e.stopPropagation();
             postData = {
@@ -102,17 +107,19 @@ function addEventListeners(){
 
             $.post('/bestellung', postData, function(data){
                 console.log(data);
+                $('#modal-wait').modal('hide');
                 $('#bestellenModal').modal('hide');
                 addSuccess('Bestellung gesendet');
 
             })
             .fail(function (jqXHR, textStatus) {
+                $('#modal-wait').modal('hide');
                 console.log(jqXHR);
                 console.log(textStatus);
                 addDanger(jqXHR.responseText);
             });
         }
-        bestellenForm.classList.add('was-validated');
+        //bestellenForm.classList.add('was-validated');
 
     });
 
@@ -120,6 +127,6 @@ function addEventListeners(){
         var id = $(this).data('id');
         console.log(id);
         $('#bestellenSubmit').data('id', id);
-        $('#bestellenModal').modal('toggle');
+        $('#bestellenModal').modal('show');
     });
 }

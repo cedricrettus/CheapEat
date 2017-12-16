@@ -5,6 +5,7 @@ $(document).ready(function(){
         e.preventDefault();
         e.stopPropagation();
         if ($("#register-form")[0].checkValidity()) {
+            $('#modal-wait').modal('show');
 
             var postData = {
                 'name': $('#name').val(),
@@ -18,9 +19,11 @@ $(document).ready(function(){
 
             $.post('/signup', postData, function (data) {
                 console.log(data);
+                $('#modal-wait').modal('hide');
                 addSuccess("Erfolgreich registriert. <a href='/'>Zurück zur Startseite </a>");
             })
                 .fail(function (jqXHR, textStatus) {
+                    $('#modal-wait').modal('hide');
                     console.log(jqXHR);
                     console.log(textStatus);
                     addDanger(jqXHR.responseText);
@@ -33,6 +36,7 @@ $(document).ready(function(){
         e.preventDefault();
         e.stopPropagation();
         if ($("#login-form")[0].checkValidity()) {
+            $('#modal-wait').modal('show');
 
             var postData = {
                 'email': $('#email').val(),
@@ -41,9 +45,11 @@ $(document).ready(function(){
 
             $.post('/login', postData, function (data) {
                 console.log(data);
+                $('#modal-wait').modal('hide');
                 addSuccess("Erfolgreich eingeloggt. <a href='/'>Zurück zur Startseite </a>");
             })
                 .fail(function (jqXHR, textStatus) {
+                    $('#modal-wait').modal('hide');
                     console.log(jqXHR);
                     console.log(textStatus);
                     addDanger(jqXHR.responseText);
