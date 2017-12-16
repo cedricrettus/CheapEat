@@ -10,7 +10,10 @@ $(document).ready(function(){
                 'name': $('#name').val(),
                 'email': $('#email').val(),
                 'benutzername': $('#benutzername').val(),
-                'passwort': $('#passwort').val()
+                'passwort': $('#passwort').val(),
+                'plz': $('#plz').val(),
+                'strasse': $('#strasse').val(),
+                'ort': $('#ort').val()
             };
 
             $.post('/signup', postData, function (data) {
