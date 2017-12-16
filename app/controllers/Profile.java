@@ -126,7 +126,7 @@ public class Profile extends Controller {
                 Benutzer besteller = Benutzer.findById(bestellung.getBenutzer_id());
                 bestellung.setProzesscode(10); //Prozersscode auf 10, heisst bestellung wurde abgelehnt
                 bestellung.save();
-                mc.sendOrderDeny(benutzerAng.getBenutzername(), besteller.getEmail());
+                mc.sendOrderDeny(besteller.getEmail());
             }
 
             return ok();

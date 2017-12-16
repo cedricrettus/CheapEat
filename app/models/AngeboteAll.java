@@ -92,8 +92,8 @@ public class AngeboteAll {
     }
 
     /*
-         * Komplettes Angebot wird gebildet, inkls aller Bilder URLs, sofern Bilder hochgeladen wurden. Zusätzlich benutzername, bewertungen und plz
-         */
+     * Komplettes Angebot wird gebildet, inkls aller Bilder URLs, sofern Bilder hochgeladen wurden. Zusätzlich benutzername, bewertungen und plz
+     */
     @Transactional
     public static List<AngeboteAll> buildCompleteOfferFromId(List<Angebot> angebote){
         List<AngeboteAll> angeboteAll = new ArrayList<AngeboteAll>();

@@ -14,6 +14,7 @@ import play.Configuration;
 import play.Logger;
 import play.data.Form;
 import play.data.FormFactory;
+import play.db.jpa.JPA;
 import play.db.jpa.Transactional;
 import play.i18n.Messages;
 import play.mvc.Controller;
@@ -93,13 +94,17 @@ public class Signup extends Controller {
                 benutzer.setValidiert(0);
                 benutzer.setConfirmationToken(UUID.randomUUID().toString());
 
+                benutzer.save();
+                JPA.em().flush();
+
                 Adresse adresse = new Adresse();
                 adresse.setOrt(register.getOrt());
                 adresse.setPlz(register.getPlz());
                 adresse.setStrasse(register.getStrasse());
+                adresse.setBenutzer_id(benutzer.getId());
 
                 adresse.save();
-                benutzer.save();
+
                 sendMailAskForConfirmation(benutzer);
 
                 return ok("erstellt");

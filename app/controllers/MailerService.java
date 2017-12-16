@@ -50,7 +50,7 @@ public class MailerService {
         mailerClient.send(email);
     }
 
-    public void sendOrderDeny(String absenderName, String empfaenger) {
+    public void sendOrderDeny(String empfaenger) {
         String cid = "1212";
         Email email = new Email()
                 .setSubject("Deine Bestellung wurde abgelehnt")
@@ -58,7 +58,7 @@ public class MailerService {
                 .addTo("<" + empfaenger + ">")
 
                 .setBodyText("CheapEat Bestellung wurde abgelehnt")
-                .setBodyHtml("<html><body><p>Deine Bestellung wurde von Benutzer "+absenderName+" abgelehnt</b></p></body></html>");
+                .setBodyHtml("<html><body><p>Deine Bestellung wurde abgelehnt</b></p></body></html>");
         mailerClient.send(email);
     }
 
