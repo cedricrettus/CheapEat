@@ -3,9 +3,9 @@ $(document).ready(function(){
 
     $("#register-form").submit(function(e){
         e.preventDefault();
-        if ($("#register-form")[0].checkValidity() === false) {
-            e.stopPropagation();
-        }else {
+        e.stopPropagation();
+        if ($("#register-form")[0].checkValidity()) {
+
             var postData = {
                 'name': $('#name').val(),
                 'email': $('#email').val(),
@@ -31,9 +31,9 @@ $(document).ready(function(){
 
     $("#login-form").submit(function(e){
         e.preventDefault();
-        if ($("#login-form")[0].checkValidity() === false) {
-            e.stopPropagation();
-        }else {
+        e.stopPropagation();
+        if ($("#login-form")[0].checkValidity()) {
+
             var postData = {
                 'email': $('#email').val(),
                 'passwort': $('#passwort').val()

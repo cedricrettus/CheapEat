@@ -53,10 +53,7 @@ function addEventListeners(){
     $('#angebotSubmit').click(function(e){
         //$('#angebotForm').submit();
 
-        if ($('#angebotForm')[0].checkValidity() === false) {
-            e.preventDefault();
-            e.stopPropagation();
-        }else{
+        if ($('#angebotForm')[0].checkValidity()) {
             e.preventDefault();
             e.stopPropagation();
             var formData = new FormData();
@@ -95,10 +92,7 @@ function addEventListeners(){
 
     $('#bestellenSubmit').click(function(e){
 
-        if ($('#bestellenForm')[0].checkValidity() === false) {
-            e.preventDefault();
-            e.stopPropagation();
-        }else{
+        if ($('#bestellenForm')[0].checkValidity()) {
             e.preventDefault();
             e.stopPropagation();
             postData = {
