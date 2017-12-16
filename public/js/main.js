@@ -52,6 +52,8 @@ function addEventListeners(){
 
     $('#angebotSubmit').click(function(e){
         //$('#angebotForm').submit();
+        e.preventDefault();
+        e.stopPropagation();
 
         if ($('#angebotForm')[0].checkValidity()) {
 
@@ -95,6 +97,9 @@ function addEventListeners(){
 
 
     $('#bestellenSubmit').click(function(e){
+
+        e.preventDefault();
+        e.stopPropagation();
 
         if ($('#bestellenForm')[0].checkValidity()) {
             $('#modal-wait').modal('show');
