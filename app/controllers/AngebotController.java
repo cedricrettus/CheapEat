@@ -118,12 +118,12 @@ public class AngebotController extends Controller {
     }
 
     /*
-     * Es wird eine Liste von 15 zufälligen Angeboten zurückgegeben, inkl URLs der Bilder und PLZs
+     * Es wird eine Liste von 15 zufälligen Angeboten zurückgegeben, inkl URLs der Bilder und PLZs, nur angebote, die noch Verfügbar sind
      */
     @Transactional(readOnly = true)
     public Result getAngeboteList() {
 
-        List<Angebot> angebote = JPA.em().createQuery("select p from Angebot p").getResultList();
+        List<Angebot> angebote = JPA.em().createQuery("select p from Angebot p where p.mengeVerfuegbar > 0").getResultList();
         List<Angebot> zufAngebote = new ArrayList<Angebot>();
 
         //Anzahl der Elemente in der Zufallsliste
@@ -183,9 +183,9 @@ public class AngebotController extends Controller {
             } catch (ParseException e) {
                return badRequest("Ungültiges Datum");
             }
-            angebote = JPA.em().createQuery("select p from Angebot p, Adresse a where p.datum = '"+ new java.sql.Date(date.getTime()) +"' and a.plz like "+ plz +" and a.benutzer_id = p.benutzer_id").getResultList();
+            angebote = JPA.em().createQuery("select p from Angebot p, Adresse a where p.mengeVerfuegbar > 0 and p.datum = '"+ new java.sql.Date(date.getTime()) +"' and a.plz like "+ plz +" and a.benutzer_id = p.benutzer_id").getResultList();
         }else{
-            angebote = JPA.em().createQuery("select p from Angebot p, Adresse a where a.plz like "+ plz +" and a.benutzer_id = p.benutzer_id").getResultList();
+            angebote = JPA.em().createQuery("select p from Angebot p, Adresse a where p.mengeVerfuegbar > 0 and a.plz like "+ plz +" and a.benutzer_id = p.benutzer_id").getResultList();
         }
 
         System.out.println("test");
