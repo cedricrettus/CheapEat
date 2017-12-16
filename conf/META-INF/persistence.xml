@@ -10,6 +10,7 @@
         <class>models.Bestellung</class>
         <class>models.Bild</class>
         <class>models.Benutzer</class>
+        <class>models.Adresse</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
