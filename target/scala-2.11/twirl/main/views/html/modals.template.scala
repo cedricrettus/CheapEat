@@ -40,7 +40,7 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form method="POST" id="angebotForm" action="#" enctype="multipart/form-data" novalidate> <!--  rouAngebotControllertion.getPerson() -->
+            <form id="angebotForm" enctype="multipart/form-data" novalidate> <!--  rouAngebotControllertion.getPerson() -->
             <div class="modal-body">
                 <div class="container-angebot">
                     """),_display_(/*15.22*/alerts()),format.raw/*15.30*/("""
@@ -86,14 +86,14 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
                             </div>
                             <div class="form-group">
                                 <label for="menge" >Anzahl zu verkaufende Portionen: </label>
-                                <input id="menge" type="number" placeholder="1" name="menge" min="1" max="99" step="1" class="form-control" />
+                                <input id="menge" type="number" placeholder="1" name="menge" min="1" max="99" step="1" class="form-control" required/>
                             </div>
                             <div class="form-group">
                                 <label for="preis" >Preis: </label>
                                 <div class="input-group">
 
                                     <span class="input-group-addon">CHF</span>
-                                    <input id="preis" type="number" name="preis" min="0.10" step="0.10" max="99.90" class="form-control" />
+                                    <input id="preis" type="number" name="preis" min="0.10" step="0.10" max="99.90" class="form-control" required/>
                                 </div>
                                 <div class="invalid-feedback">
                                     Bitte gebe einen korrekten Preis ein.
@@ -101,8 +101,8 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
                             </div>
                             <div class="form-group">
                                 <label for="bilder">Bilder: </label>
-                                <input class="form-control-file" id="bilder" type="file" name="bilder" accept="image/*" multiple>
-                                <small class="form-text text-muted">Du kannst mehrere Bilder zu deinem Angebot hinzufügen um dein Essen zu zeigen.</small>
+                                <input class="form-control-file" id="bilder" type="file" name="bilder" accept="image/jpeg" multiple>
+                                <small class="form-text text-muted">Du kannst mehrere Bilder zu deinem Angebot hinzufügen um dein Essen zu zeigen. Die Bilder müssen im .jpeg Format vorliegen</small>
                             </div>
                     </div>
                 </div>
@@ -129,7 +129,7 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form method="POST" id="bestellenForm" action="#" novalidate>
+            <form id="bestellenForm" novalidate>
             <div class="modal-body">
                 <div class="container-angebot">
                     """),_display_(/*104.22*/alerts()),format.raw/*104.30*/("""
@@ -204,10 +204,10 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
 object modals extends modals_Scope0.modals
               /*
                   -- GENERATED --
-                  DATE: Sat Dec 16 14:13:01 CET 2017
+                  DATE: Sat Dec 16 15:36:45 CET 2017
                   SOURCE: C:/dev/git/CheapEat/app/views/modals.scala.html
-                  HASH: 2043e15c5929a5943e5091972fa51edc0e155054
-                  MATRIX: 829->0|1682->826|1711->834|1761->856|7036->6103|7066->6111|7117->6133|8818->7806|8848->7814|8895->7832
+                  HASH: 51eedf3144e12b884cf8e901727fecb36470a1ba
+                  MATRIX: 829->0|1657->801|1686->809|1736->831|7049->6116|7079->6124|7130->6146|8831->7819|8861->7827|8908->7845
                   LINES: 32->1|46->15|46->15|47->16|135->104|135->104|136->105|170->139|170->139|171->140
                   -- GENERATED --
               */

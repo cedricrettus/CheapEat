@@ -56,35 +56,6 @@ public class AngebotController extends Controller {
                 return badRequest("Benutzer muss angemeldet sein um ein Angebot zu erstellen!");
             }
 
-            //Bilder hochladen, angebot wird nachher persisted, damit nicht ein angebot ohne Bilder besteht
-            Http.MultipartFormData<File> body = request().body().asMultipartFormData();
-
-            if(body != null){
-                List<Http.MultipartFormData.FilePart<File>> bilder = body.getFiles();
-                //TODO maximale Anzahl an Bilder beschränken
-                //TODO bilder als Thumbnail und big hochladen
-                if (bilder.size() > 0) {
-                    for (int i = 0; i < bilder.size(); i++) {
-                        filename = UUID.randomUUID().toString();
-                        if (s3.uploadImage(bilder.get(i).getFile(), filename)) {
-                            System.out.println("image uploaded!");
-
-                            //filename in db schreiben
-                            Bild bild = new Bild(filename, angebot.getId());
-                            bild.save();
-                            angebot.setBild(1);
-
-                        } else {
-                            System.out.println("upload failed!");
-                        }
-                    }
-                } else {
-                    System.out.println("Keine Bilder hochgeladen");
-                }
-            }else{
-                System.out.println("Keine Bilder ausgewählt");
-            }
-
             //Angebot persisten
 
             DateFormat format = new SimpleDateFormat("HH:mm");
@@ -104,7 +75,43 @@ public class AngebotController extends Controller {
             angebot.setMengeVerfuegbar(angebot.getMenge());
 
             angebot.save();
+            //Flush damit Query direkt executed wird, und die angebot id verfügbar ist für die Bild records
             JPA.em().flush();
+
+            //Bilder hochladen zu s3 bucket
+            Http.MultipartFormData<File> body = request().body().asMultipartFormData();
+
+            if(body != null){
+                List<Http.MultipartFormData.FilePart<File>> bilder = body.getFiles();
+                //TODO maximale Anzahl an Bilder beschränken
+                //TODO bilder als Thumbnail und big hochladen
+                if (bilder.size() > 0) {
+                    for (int i = 0; i < bilder.size(); i++) {
+                        if(bilder.get(i).getContentType() != "image/jpeg"){
+                            //Angebot wieder löschen, damit kein halbes Angebot erfasst ist
+                            //JPA.em().remove(angebot);
+                            //return badRequest("Ungültiges Dateiformat");
+                        }
+
+                        filename = UUID.randomUUID().toString() + ".jpg";
+                        if (s3.uploadImage(bilder.get(i).getFile(), filename)) {
+                            System.out.println("image uploaded!");
+
+                            //filename in db schreiben
+                            Bild bild = new Bild(filename, angebot.getId());
+                            bild.save();
+                            angebot.setBild(1);
+
+                        } else {
+                            System.out.println("upload failed!");
+                        }
+                    }
+                } else {
+                    System.out.println("Keine Bilder hochgeladen");
+                }
+            }else{
+                System.out.println("Keine Bilder ausgewählt");
+            }
 
         }
         return ok("Angebot erstellt");

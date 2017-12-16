@@ -57,7 +57,8 @@ function addEventListeners(){
             e.preventDefault();
             e.stopPropagation();
         }else{
-
+            e.preventDefault();
+            e.stopPropagation();
             var formData = new FormData();
             formData.append('titel', $('#titel').val());
             formData.append('beschreibung', $('#beschreibung').val());
@@ -93,10 +94,13 @@ function addEventListeners(){
 
 
     $('#bestellenSubmit').click(function(e){
+
         if ($('#bestellenForm')[0].checkValidity() === false) {
             e.preventDefault();
             e.stopPropagation();
         }else{
+            e.preventDefault();
+            e.stopPropagation();
             postData = {
                 'angebot_id': $('#bestellenSubmit').data('id'),
                 'menge' : $('#bestellenMenge').val()
