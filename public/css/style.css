@@ -83,3 +83,6 @@ nav.navbar {
 .rating-number{
     font-weight: 600;
 }
+#modal-wait{
+    z-index: 3000;
+}
