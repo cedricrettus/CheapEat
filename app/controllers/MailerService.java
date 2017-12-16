@@ -38,6 +38,18 @@ public class MailerService {
         mailerClient.send(email);
     }
 
+    public void sendValidationConfirmation(String empfaenger) {
+        String cid = "1212";
+        Email email = new Email()
+                .setSubject("Du hast dich erfolgreich validiert")
+                .setFrom("CheapEat <noreply.cheapeat@gmail.com>")
+                .addTo("<" + empfaenger + ">")
+
+                .setBodyText("CheapEat Registrierung vollständig")
+                .setBodyHtml("<html><body><p>Du hast dich erfolgreich Registriert, nun kannst du dich anmelden mit deinem Konto</p></body></html>");
+        mailerClient.send(email);
+    }
+
     public void sendOrderDeny(String absenderName, String empfaenger) {
         String cid = "1212";
         Email email = new Email()

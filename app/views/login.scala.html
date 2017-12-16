@@ -15,23 +15,23 @@
         <form id="login-form">
             <div class="form-group">
                 <label for="email">Email Adresse</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email eingeben">
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email eingeben" required>
+                <div class="invalid-feedback">
+                    Korrekte Email Adresse angeben!
+                </div>
             </div>
             <div class="form-group">
                 <label for="passwort">Passwort</label>
-                <input type="password" class="form-control" id="passwort" placeholder="Passwort">
+                <input type="password" class="form-control" id="passwort" placeholder="Passwort" required>
+                <div class="invalid-feedback">
+                    Korrektes Passwort angeben!
+                </div>
             </div>
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input">
-                    Check me out
-                </label>
-            </div>
+
             <button type="submit" class="btn btn-primary">Anmelden</button>
         </form>
 
             <p>Noch kein Benutzer erstellt? <a href="/signup">Hier erstellen</a></p>
-
 
         </div>
 

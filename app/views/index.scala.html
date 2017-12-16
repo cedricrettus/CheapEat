@@ -59,11 +59,11 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card-body">
-                                        <p class="card-text no-margin">{{this.benutzername}} <span class="rating">{{this.bewertung}} | {{this.anzBewertung}}</span></p>
+                                        <p class="card-text no-margin"><span class="benutzername">{{this.benutzername}}</span> <span class="rating"><i class="fa fa-star" aria-hidden="true"></i>{{this.bewertung}} ({{this.anzBewertung}} Bewertungen)</span></p>
                                         <p class="no-margin">Abholzeit: {{this.angebot.datum}} um {{this.angebot.zeit}}</p>
                                         <p class="no-margin">Ort: <span> {{this.plz}} </span> </p>
                                         <p class="card-text"><strong class="preis">CHF {{this.angebot.preis}}</strong>
-                                            <span class="">Portionen: {{this.angebot.menge}}</span></p>
+                                            <span class="">Verfügbare Portionen: {{this.angebot.menge}}</span></p>
                                         <button class="btn btn-primary bestellButton" data-id="{{this.angebot.id}}">Bestellen</button>
                                     </div>
                                 </div>

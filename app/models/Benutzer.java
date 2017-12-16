@@ -8,6 +8,8 @@ import play.db.jpa.Transactional;
 
 import javax.persistence.*;
 import javax.xml.crypto.Data;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.sql.Time;
 import java.time.LocalTime;
 import java.util.Date;
@@ -111,6 +113,15 @@ public class Benutzer {
         return true;
     }
 
+    public static Benutzer findByUsername(String benutzername) {
+        List<Benutzer> benutzer = JPA.em().createQuery("select p from Benutzer p where p.benutzername = "+ benutzername).getResultList();
+        if(benutzer.size() > 0){
+            return benutzer.get(0);
+        }else{
+            return null;
+        }
+    }
+
     @Transactional
     public static boolean confirm(Benutzer benutzer) throws AppException {
         if (benutzer == null) {
@@ -139,6 +150,15 @@ public class Benutzer {
             return null;
         }
         return null;
+    }
+
+    /*
+     * Benutzerbewertung auf .1 runden
+     */
+    public static double roundRating(double bewertung) {
+        BigDecimal bd = new BigDecimal(Double.toString(bewertung));
+        bd = bd.setScale(1, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 
     public int getId() {
@@ -223,6 +243,7 @@ public class Benutzer {
                 ", bewertung=" + bewertung +
                 '}';
     }
+
 
 
 }

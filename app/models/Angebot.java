@@ -5,6 +5,7 @@ import play.db.jpa.JPA;
 import play.db.jpa.Transactional;
 
 import javax.persistence.*;
+import javax.validation.Constraint;
 import javax.xml.crypto.Data;
 import java.io.File;
 import java.sql.Time;
@@ -26,23 +27,28 @@ public class Angebot {
     @Constraints.Required
     private String titel;
 
+    @Constraints.Required
     private String beschreibung;
 
+    @Constraints.Required
     @Temporal(TemporalType.DATE)
     private Date datum;
 
     @Temporal(TemporalType.TIME)
     private Date zeit;
 
+    @Constraints.Required
     private String zeitForm;
 
     @Constraints.Required
     private double preis;
 
+    @Constraints.Required
     private int menge;
 
     private int mengeVerfuegbar;
 
+    @Constraints.Required
     private String kueche;
 
     private int aktiv;

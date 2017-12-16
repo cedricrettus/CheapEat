@@ -13,6 +13,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.inject.Inject;
+import javax.validation.Constraint;
 
 import java.util.List;
 
@@ -28,16 +29,19 @@ public class Authentication {
     @Inject
     FormFactory formFactory;
 
-
+    /*
+     * Umleitung bei ungültigem Login
+     */
     public static Result GO_HOME = redirect(
             routes.Application.index()
     );
 
+    /*
+     * Umleitung bei erfolgreichem Login
+     */
     public static Result GO_PROFILE = redirect(
             routes.Profile.index()
     );
-
-
 
     /**
      * Login klasse für das Anmeldeformular
@@ -45,12 +49,14 @@ public class Authentication {
     public static class Login {
 
         @Constraints.Required
-        public String email;
+        private String email;
+
         @Constraints.Required
-        public String passwort;
+        private String passwort;
 
-       //Login validieren, prüft ob eingegebenes Passwort übereinstimmt und ob der Benutzer validiert ist.
-
+       /*
+        * Login validieren, prüft ob eingegebenes Passwort übereinstimmt und ob der Benutzer validiert ist.
+        */
         public String validate() {
 
             Benutzer benutzer;
@@ -86,26 +92,38 @@ public class Authentication {
 
     public static class Register {
 
+        @Constraints.MaxLength(255)
         @Constraints.Required
         @Constraints.Email
-        public String email;
+        private String email;
 
         @Constraints.Required
-        public String name;
+        @Constraints.MaxLength(50)
+        private String name;
 
         @Constraints.Required
         @Constraints.MinLength(7)
-        public String passwort;
+        private String passwort;
 
+        @Constraints.MaxLength(20)
         @Constraints.Required
-        public String benutzername;
+        private String benutzername;
 
-        public String strasse;
-        public int plz;
-        public String ort;
+        @Constraints.MaxLength(255)
+        @Constraints.Required
+        private String strasse;
+
+        @Constraints.Min(999)
+        @Constraints.Max(9999)
+        @Constraints.Required
+        private int plz;
+
+        @Constraints.MaxLength(255)
+        @Constraints.Required
+        private String ort;
 
         //Validierung des Registrierungsformular
-        public String validate() {
+        private String validate() {
             if (isBlank(email)) {
                 return "Email wird benötigt";
             }
@@ -192,18 +210,19 @@ public class Authentication {
         //Form auf Errors prüfen
         if (submission.hasErrors()) {
             System.out.println("Login error");
-
             System.out.println(submission.errors());
+            System.out.println();
 
-            //TODO korrekte errormeldung zurückgeben
-            return badRequest("Login error");
+            return badRequest("Benutzer kann nicht angemeldet werden, Passwort oder Email falsch");
         } else {
             session("email", submission.get().email);
             return GO_PROFILE;
         }
     }
 
-    //Benutzer ausloggen, session wird geleert
+    /*
+     * Benutzer ausloggen, session wird geleert
+     */
     public Result logout() {
         session().clear();
         return GO_HOME;

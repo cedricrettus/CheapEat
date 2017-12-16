@@ -53,27 +53,22 @@ public class Signup extends Controller {
 
     Config conf = ConfigFactory.load();
 
-    /**
-     * Display the create form.
-     *
-     * @return create form
+    /*
+     * Rendert das Registrierungsformular
      */
     public Result create() {
         return ok(views.html.register.render());
     }
 
 
-    /**
-     * Save the new user.
-     *
-     * @return Successfull page or created form if bad
+    /*
+     * Der neue Benutzer wird über die eingebane der Register Form erstellt.
      */
     @Transactional
     public Result save() {
 
         Form<Authentication.Register> submission = formFactory.form(Authentication.Register.class).bindFromRequest();
 
-        //TODO prüfen ob username bereits existiert
         //Form auf Errors prüfen
         if (submission.hasErrors()) {
             System.out.println("Form error");
@@ -83,25 +78,25 @@ public class Signup extends Controller {
         } else {
 
             Authentication.Register register = submission.get();
-            Result resultError = checkBeforeSave(submission, register.email);
+            Result resultError1 = checkBeforeSaveEmail(submission, register.getEmail());
+            Result resultError2 = checkBeforeSaveEmail(submission, register.getBenutzername());
 
-            if (resultError != null) {
-                return resultError;
-            }
+            if (resultError1 != null) return resultError1;
+            if (resultError2 != null) return resultError2;
 
             try {
                 Benutzer benutzer = new Benutzer();
-                benutzer.setEmail(register.email);
-                benutzer.setName(register.name);
-                benutzer.setPwhash(Hash.createPassword(register.passwort));
-                benutzer.setBenutzername(register.benutzername);
+                benutzer.setEmail(register.getEmail());
+                benutzer.setName(register.getName());
+                benutzer.setPwhash(Hash.createPassword(register.getPasswort()));
+                benutzer.setBenutzername(register.getBenutzername());
                 benutzer.setValidiert(0);
                 benutzer.setConfirmationToken(UUID.randomUUID().toString());
 
                 Adresse adresse = new Adresse();
-                adresse.setOrt(register.ort);
-                adresse.setPlz(register.plz);
-                adresse.setStrasse(register.strasse);
+                adresse.setOrt(register.getOrt());
+                adresse.setPlz(register.getPlz());
+                adresse.setStrasse(register.getStrasse());
 
                 adresse.save();
                 benutzer.save();
@@ -118,9 +113,11 @@ public class Signup extends Controller {
 
     }
 
-    //Prüft ob die Email bereits existiert
+    /*
+     * Prüft ob die Email bereits existiert
+     */
     @Transactional
-    private Result checkBeforeSave(Form<Authentication.Register> registerForm, String email) {
+    private Result checkBeforeSaveEmail(Form<Authentication.Register> registerForm, String email) {
         // Check unique email
         if (Benutzer.findByEmail(email) != null) {
             return badRequest("Ein Benutzer mit dieser Email Adresse existiert bereits");
@@ -129,8 +126,22 @@ public class Signup extends Controller {
         return null;
     }
 
+    /*
+     * Prüft ob ein Benutzer mit diesem Benutzername bereits exisitert
+     */
+    @Transactional
+    private Result checkBeforeSaveName(Form<Authentication.Register> registerForm, String benutzername) {
+        // Check unique email
+        if (Benutzer.findByUsername(benutzername) != null) {
+            return badRequest("Ein Benutzer mit dieser Email Adresse existiert bereits");
+        }
+        return null;
+    }
 
-    //Sendet eine Email, die ein Link mit dem Bestätigungstoken verschickt, damit der Benutzer via Email sein Account validieren kann
+
+    /*
+     * Sendet eine Email, die ein Link mit dem Bestätigungstoken verschickt, damit der Benutzer via Email sein Account validieren kann
+     */
     @Transactional
     private void sendMailAskForConfirmation(Benutzer benutzer) throws EmailException, MalformedURLException {
 
@@ -143,12 +154,14 @@ public class Signup extends Controller {
 
     }
 
-    //Wenn der Benutzer sein Bestätigungslink aufruft, wird das Token abgeglichen und der Benutzer wird auf validiert gesetzt
+    /*
+     * Wenn der Benutzer sein Bestätigungslink aufruft, wird das Token abgeglichen und der Benutzer wird auf validiert gesetzt
+     */
     @Transactional
     public Result confirm(String token) {
         Benutzer benutzer = Benutzer.findByConfirmationToken(token);
         if (benutzer == null) {
-            return badRequest(views.html.confirm.render("Unbekanntes Email"));
+            return badRequest(views.html.confirm.render("Unbekannter Benutzer"));
         }
 
         if (benutzer.validiert == 1) {
@@ -158,35 +171,17 @@ public class Signup extends Controller {
         try {
             if (Benutzer.confirm(benutzer)) {
                 //Mail an den Benutzer senden, dass dieser erfolgreich validiert wurde
-                sendMailConfirmation(benutzer);
+                mc.sendValidationConfirmation(benutzer.getEmail());
 
                 return ok(views.html.confirm.render("ok"));
             } else {
                 return badRequest(views.html.confirm.render("Server Error"));
             }
         } catch (AppException e) {
-            Logger.error("Error", e);
-            return badRequest(views.html.confirm.render("Server Error"));
-        } catch (EmailException e) {
-            Logger.debug("Email Error", e);
             return badRequest(views.html.confirm.render("Server Error"));
         }
 
     }
 
-    /**
-     * Send the confirm mail.
-     *
-     * @param user user created
-     * @throws EmailException Exception when sending mail
-     */
-    private void sendMailConfirmation(Benutzer user) throws EmailException {
-        String subject = Messages.get("mail.welcome.subject");
-        String message = Messages.get("mail.welcome.message");
 
-        /* TODO methode für confirmation mail erstellen
-        Mail.Envelop envelop = new Mail.Envelop(subject, message, user.email);
-        Mail mailer = new Mail(mailerClient);
-        mailer.sendMail(envelop);*/
-    }
 }

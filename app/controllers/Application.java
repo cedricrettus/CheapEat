@@ -18,18 +18,28 @@ import static play.mvc.Results.ok;
 
 /**
  * Created by Fabio on 27.10.2017.
+ * Rendering der Grundseiten
  */
 public class Application extends Controller{
 
 
+    /*
+     * Rendering Startseite, Liste von 15 zufälligen Angeboten
+     */
     public Result index() {
         return ok(views.html.index.render());
     }
 
+    /*
+     * Rendering der Anmeldeseite
+     */
     public Result login() {
         return ok(views.html.login.render());
     }
 
+    /*
+     * Rendering der Suchseite, ergebnisse werden über REST geladen
+     */
     public Result search(){
         return ok(views.html.suche.render());
     }

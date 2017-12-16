@@ -39,6 +39,9 @@ public class Profile extends Controller {
         return ok(views.html.profile.render(Benutzer.findByEmail(request().username())));
     }
 
+    /*
+     * Alle Bestellungen des angemeldeten Benutzers anzeigen
+     */
     @Transactional
     public Result getOrders(){
         Benutzer rbenutzer = Benutzer.findByEmail(request().username());

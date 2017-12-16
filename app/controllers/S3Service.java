@@ -30,6 +30,9 @@ public class S3Service {
 
     }
 
+    /*
+     * Das BIld wird in den Amazon S3 Bucket hochgeladen, mit einem zufällgigen Filename (Unique identifier)
+     */
     public boolean uploadImage(File file, String fileName){
         AWSCredentials awsCredentials = new BasicAWSCredentials(accessKey, secretKey);
         AmazonS3 s3client = new AmazonS3Client(awsCredentials);

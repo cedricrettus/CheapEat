@@ -15,33 +15,55 @@
         <form id="register-form">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
+                <input type="text" class="form-control" id="name" aria-describedby="emailHelp" maxlength="50" placeholder="Enter name" required>
+                <div class="invalid-feedback">
+                    Gib einen korrekten Namen an. Maximal 50 Zeichen.
+                </div>
             </div>
             <div class="form-group">
                 <label for="email">Email Adresse</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+                <div class="invalid-feedback">
+                    Gib einen korrekte Email Adresse an.
+                </div>
             </div>
             <div class="form-group">
                 <label for="benutzername">Benutzername</label>
-                <input type="text" class="form-control" id="benutzername" aria-describedby="emailHelp" placeholder="benutzername">
+                <input type="text" class="form-control" id="benutzername" aria-describedby="emailHelp" maxlength="20" placeholder="benutzername" required>
                 <small id="emailHelp" class="form-text text-muted">Dieser Name wird den anderen Benutzern angezeigt</small>
+                <div class="invalid-feedback">
+                    Gib einen Korrekten Benutzernamen an! Maximal 20 Zeichen.
+                </div>
             </div>
             <div class="form-group">
                 <label for="strasse">Strasse</label>
-                <input type="text" class="form-control" id="strasse" aria-describedby="emailHelp" placeholder="Strasse Nr.">
+                <input type="text" class="form-control" id="strasse" aria-describedby="emailHelp" placeholder="Strasse Nr." required>
                 <small id="emailHelp" class="form-text text-muted">Adresse wird nur angezeigt wenn eine Bestellung bestätigt wird.</small>
+                <div class="invalid-feedback">
+                    Gib eine korrekte Strasse an.
+                </div>
             </div>
             <div class="form-group">
                 <label for="plz">PLZ</label>
-                <input type="text" class="form-control" id="plz" aria-describedby="emailHelp" placeholder="0000">
+                <input type="text" class="form-control" id="plz" pattern="([1-468][0-9]|[57][0-7]|9[0-6])[0-9]{2}" aria-describedby="emailHelp" placeholder="0000" required>
+                <div class="invalid-feedback">
+                    Gib eine korrekte Postleitzahl an.
+                </div>
             </div>
             <div class="form-group">
-                <label for="ort">Ort</label>
-                <input type="text" class="form-control" id="ort" aria-describedby="emailHelp" placeholder="Wohnort">
+                <label for="ort">Wohnort</label>
+                <input type="text" class="form-control" id="ort" aria-describedby="emailHelp" placeholder="Wohnort" required>
+                <div class="invalid-feedback">
+                    Gib einen korrekten Ort ein.
+                </div>
             </div>
             <div class="form-group">
                 <label for="passwort">Passwort</label>
-                <input type="password" class="form-control" id="passwort" placeholder="Passwort">
+                <input type="password" class="form-control" id="passwort" placeholder="Passwort" required>
+                <div class="invalid-feedback">
+                    Gib ein korrektes Passwort ein.
+                </div>
+
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

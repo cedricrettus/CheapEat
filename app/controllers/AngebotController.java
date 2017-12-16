@@ -1,7 +1,5 @@
 package controllers;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import models.Angebot;
 import models.AngeboteAll;
 import models.Benutzer;
@@ -58,7 +56,36 @@ public class AngebotController extends Controller {
                 return badRequest("Benutzer muss angemeldet sein um ein Angebot zu erstellen!");
             }
 
-            System.out.println(angebot.toString());
+            //Bilder hochladen, angebot wird nachher persisted, damit nicht ein angebot ohne Bilder besteht
+            Http.MultipartFormData<File> body = request().body().asMultipartFormData();
+
+            if(body != null){
+                List<Http.MultipartFormData.FilePart<File>> bilder = body.getFiles();
+                //TODO maximale Anzahl an Bilder beschränken
+                //TODO bilder als Thumbnail und big hochladen
+                if (bilder.size() > 0) {
+                    for (int i = 0; i < bilder.size(); i++) {
+                        filename = UUID.randomUUID().toString();
+                        if (s3.uploadImage(bilder.get(i).getFile(), filename)) {
+                            System.out.println("image uploaded!");
+
+                            //filename in db schreiben
+                            Bild bild = new Bild(filename, angebot.getId());
+                            bild.save();
+                            angebot.setBild(1);
+
+                        } else {
+                            System.out.println("upload failed!");
+                        }
+                    }
+                } else {
+                    System.out.println("Keine Bilder hochgeladen");
+                }
+            }else{
+                System.out.println("Keine Bilder ausgewählt");
+            }
+
+            //Angebot persisten
 
             DateFormat format = new SimpleDateFormat("HH:mm");
             Date time = null;
@@ -76,38 +103,8 @@ public class AngebotController extends Controller {
             //Verfügbare Menge des Angebots initial auf angebotsmenge setzen
             angebot.setMengeVerfuegbar(angebot.getMenge());
 
-            JPA.em().persist(angebot);
+            angebot.save();
             JPA.em().flush();
-
-            //Bild hochladen
-            Http.MultipartFormData<File> body = request().body().asMultipartFormData();
-
-            if(body != null){
-                List<Http.MultipartFormData.FilePart<File>> bilder = body.getFiles();
-                //TODO maximale Anzahl an Bilder beschränken
-                //TODO bilder als Thumbnail und big hochladen
-                if (bilder.size() > 0) {
-                    for (int i = 0; i < bilder.size(); i++) {
-                        filename = UUID.randomUUID().toString();
-                        if (s3.uploadImage(bilder.get(i).getFile(), filename)) {
-                            System.out.println("image uploaded!");
-
-                            //filename in db schreiben
-                            Bild bild = new Bild(filename, angebot.getId());
-                            JPA.em().persist(bild);
-                            JPA.em().flush();
-
-                            angebot.setBild(1);
-                            JPA.em().persist(angebot);
-
-                        } else {
-                            System.out.println("upload failed!");
-                        }
-                    }
-                } else {
-                    System.out.println("Keine Bild hochgeladen");
-                }
-            }
 
         }
         return ok("Angebot erstellt");
@@ -125,7 +122,7 @@ public class AngebotController extends Controller {
         //Anzahl der Elemente in der Zufallsliste
         int noElements = 0;
 
-        if(angebote.size()>= 15){
+        if(angebote.size() >= 15){
             noElements = 15;
         }else{
             noElements = angebote.size();
@@ -146,7 +143,7 @@ public class AngebotController extends Controller {
     }
 
     /*
-     * EIn Angebot wird nach seiner ID zurückgegeben, inkl URLs der Bilder und PLZs
+     * Ein Angebot wird nach seiner ID zurückgegeben, inkl URLs der Bilder und PLZs
      */
     @Transactional(readOnly = true)
     public Result getAngebote(int id) {

@@ -6,6 +6,8 @@ import play.db.jpa.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Math.round;
+
 /**
  * Created by Fabio on 17.11.2017.
  */
@@ -108,6 +110,8 @@ public class AngeboteAll {
             } else {
                 angeboteAll.add(new AngeboteAll(adresse.getPlz(), null, benutzer.getBenutzername() , benutzer.getBewertung(), benutzer.getAnzBewertung(), angebote.get(i)));
             }
+            
+            angeboteAll.get(i).setBewertung(Benutzer.roundRating(angeboteAll.get(i).getBewertung()));
 
         }
 

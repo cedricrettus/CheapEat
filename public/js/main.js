@@ -42,60 +42,72 @@ function addEventListeners(){
         $('#angebotModal').modal('toggle');
     });
 
-
-    $('#angebotSubmit').click(function(){
+    $('#angebotSubmit').click(function(e){
         //$('#angebotForm').submit();
 
-        var formData = new FormData();
-        formData.append('titel', $('#titel').val());
-        formData.append('beschreibung', $('#beschreibung').val());
-        formData.append('zeitForm', $('#zeitForm').val());
-        formData.append('kueche', $('#kueche').val());
-        formData.append('datum', $('#datum').val());
-        formData.append('menge', $('#menge').val());
-        formData.append('preis', $('#preis').val());
-        for(i = 0; i < $('#bilder')[0].files.length; i++){
-            formData.append('bilder[]', $('#bilder')[0].files[i]);
+        if (this.checkValidity() === false) {
+            e.preventDefault();
+            e.stopPropagation();
+        }else{
+
+            var formData = new FormData();
+            formData.append('titel', $('#titel').val());
+            formData.append('beschreibung', $('#beschreibung').val());
+            formData.append('zeitForm', $('#zeitForm').val());
+            formData.append('kueche', $('#kueche').val());
+            formData.append('datum', $('#datum').val());
+            formData.append('menge', $('#menge').val());
+            formData.append('preis', $('#preis').val());
+            for(i = 0; i < $('#bilder')[0].files.length; i++){
+                formData.append('bilder[]', $('#bilder')[0].files[i]);
+            }
+
+            $.ajax({
+                type: "POST",
+                url: '/angebote',
+                data: formData,
+                enctype: 'multipart/form-data',
+                contentType: false,
+                processData: false
+            }, function(data){
+                console.log(data);
+                $('#angebotModal').modal('hide');
+                addSuccess('Angebot erstellt');
+            }).fail(function (jqXHR, textStatus) {
+                console.log(jqXHR);
+                console.log(textStatus);
+                addDanger(jqXHR.responseText);
+            });
         }
-
-        $.ajax({
-            type: "POST",
-            url: '/angebote',
-            data: formData,
-            enctype: 'multipart/form-data',
-            contentType: false,
-            processData: false
-        }, function(data){
-            console.log(data);
-            $('#angebotModal').modal('hide');
-            addSuccess('Angebot erstellt');
-        }).fail(function (jqXHR, textStatus) {
-            console.log(jqXHR);
-            console.log(textStatus);
-            addDanger(jqXHR.responseText);
-        });
-
+        angebotForm.classList.add('was-validated');
 
     });
 
 
-    $('#bestellenSubmit').click(function(){
-        postData = {
-            'angebot_id': $('#bestellenSubmit').data('id'),
-            'menge' : $('#bestellenMenge').val()
-        }
+    $('#bestellenSubmit').click(function(e){
+        if (this.checkValidity() === false) {
+            e.preventDefault();
+            e.stopPropagation();
+        }else{
+            postData = {
+                'angebot_id': $('#bestellenSubmit').data('id'),
+                'menge' : $('#bestellenMenge').val()
+            }
 
-        $.post('/bestellung', postData, function(data){
-            console.log(data);
-            $('#bestellenModal').modal('hide');
-            addSuccess('Bestellung gesendet');
+            $.post('/bestellung', postData, function(data){
+                console.log(data);
+                $('#bestellenModal').modal('hide');
+                addSuccess('Bestellung gesendet');
 
-        })
+            })
             .fail(function (jqXHR, textStatus) {
                 console.log(jqXHR);
                 console.log(textStatus);
                 addDanger(jqXHR.responseText);
             });
+        }
+        bestellenForm.classList.add('was-validated');
+
     });
 
     $('.bestellButton').click(function(){
