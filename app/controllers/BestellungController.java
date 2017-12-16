@@ -21,6 +21,7 @@ import static play.mvc.Results.ok;
 @Security.Authenticated(Secured.class)
 public class BestellungController extends Controller {
 
+    //MailerService um EMails über gmail smtp zu senden
     MailerService mc;
 
     @Inject
@@ -37,35 +38,50 @@ public class BestellungController extends Controller {
     }
 
     /*
-     *
+     * Eine Bestellung wird erstellt, vom Client wird die Angebots ID und die gewünschte Menge übermittelt
+     * Ein Mail wird versendet, das den Anbieter informiert, das eine Anfrage für eine Bestellung gemacht wurde
+     * Bestellung muss zuerst vom Anbieter bestätigt werden
      */
     @Transactional
     public Result addBestellung() {
 
-        //TODO prüfen ob bestellmenge verfügbar ist
+        //Benutzer der die Bestellung tätigt
         Benutzer benutzer = Benutzer.findByEmail(request().username());
 
         Bestellung bestellung = formFactory.form(Bestellung.class).bindFromRequest().get();
+
+        //Angebot, das bestellt wird
+        Angebot angebot = Angebot.findById(bestellung.getAngebot_id());
+
+
+        //Nicht vorhandene Angebots id wird im POST gesendet
+        if(angebot == null){
+            return badRequest("Ungültige Anfrage, Angebot nicht vorhanden!");
+        }
+        //Benutzer darf nicht sein eigenes Angebot bestellen
+        if(angebot.getBenutzer_id() == benutzer.getId()){
+            return badRequest("Fehler! Eigenes Angebot kann nicht bestellt werden!");
+        }
+        if(bestellung.getMenge() > angebot.getMengeVerfuegbar()){
+            return badRequest("Nicht mehr genügend Portionen verfügbar");
+        }
+
         bestellung.setProzesscode(1);
         bestellung.setBenutzer_id(benutzer.getId());
 
-        JPA.em().persist(bestellung);
+        //Verfügbare Menge des Angebots anpassen, wird wieder zurückgesetzt, falls die anfrage abgelehnt wird
+        angebot.setMengeVerfuegbar(angebot.getMengeVerfuegbar() - bestellung.getMenge());
+        angebot.save();
+
+        bestellung.save();
         JPA.em().flush();
-        int id =  bestellung.id;
 
-        System.out.println(id);
-
-        Angebot angebot1 = JPA.em().find(Angebot.class, bestellung.getAngebot_id());
-        Benutzer anbieter = Benutzer.findById(bestellung.getBenutzer_id());
+        Benutzer anbieter = Benutzer.findById(angebot.getBenutzer_id());
 
         System.out.println(benutzer.getEmail());
-        mc.sendOrderNotification(anbieter.getEmail(), benutzer.getEmail());
+        //TODO email wieder entkommentieren
+        //mc.sendOrderNotification(anbieter.getEmail(), benutzer.getEmail());
         return ok();
     }
-
-
-
-
-
 
 }

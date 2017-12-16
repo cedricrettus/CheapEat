@@ -12,7 +12,7 @@ import java.util.List;
 public class AngeboteAll {
     private int plz;
     /*
-    * Bildet von einem Angobot das Komplette Angebot inkl Bilder URLs und Adresse
+     * Bildet von einem Angobot das Komplette Angebot inkl Bilder URLs und Adresse
      */
 
     private List urls;
@@ -65,9 +65,33 @@ public class AngeboteAll {
         this.plz = plz;
     }
 
+    public String getBenutzername() {
+        return benutzername;
+    }
+
+    public void setBenutzername(String benutzername) {
+        this.benutzername = benutzername;
+    }
+
+    public double getBewertung() {
+        return bewertung;
+    }
+
+    public void setBewertung(double bewertung) {
+        this.bewertung = bewertung;
+    }
+
+    public int getAnzBewertung() {
+        return anzBewertung;
+    }
+
+    public void setAnzBewertung(int anzBewertung) {
+        this.anzBewertung = anzBewertung;
+    }
+
     /*
-     * Komplettes Angebot wird gebildet, inkls aller Bilder URLs, sofern Bilder hochgeladen wurden. Zusätzlich benutzername, bewertungen und plz
-     */
+         * Komplettes Angebot wird gebildet, inkls aller Bilder URLs, sofern Bilder hochgeladen wurden. Zusätzlich benutzername, bewertungen und plz
+         */
     @Transactional
     public static List<AngeboteAll> buildCompleteOfferFromId(List<Angebot> angebote){
         List<AngeboteAll> angeboteAll = new ArrayList<AngeboteAll>();

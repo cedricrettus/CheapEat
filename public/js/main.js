@@ -58,17 +58,6 @@ function addEventListeners(){
             formData.append('bilder[]', $('#bilder')[0].files[i]);
         }
 
-        /*postData = {
-            'titel': $('#titel').val(),
-            'beschreibung': $('#beschreibung').val(),
-            'zeitForm': $('#zeitForm').val(),
-            'datum': $('#datum').val(),
-            'kueche': $('#kueche').val(),
-            'menge': $('#menge').val(),
-            'preis': $('#preis').val(),
-            'bilder': $('#bilder').attr('files')
-        }*/
-
         $.ajax({
             type: "POST",
             url: '/angebote',

@@ -19,38 +19,35 @@ public class Angebot {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public int id;
+    private int id;
 
-    public int benutzer_id;
-
+    private int benutzer_id;
 
     @Constraints.Required
-    public String titel;
+    private String titel;
 
-    public String beschreibung;
-
+    private String beschreibung;
 
     @Temporal(TemporalType.DATE)
-    public Date datum;
+    private Date datum;
 
     @Temporal(TemporalType.TIME)
-    public Date zeit;
+    private Date zeit;
 
-    public String zeitForm;
-
+    private String zeitForm;
 
     @Constraints.Required
-    public double preis;
+    private double preis;
 
-    public int menge;
+    private int menge;
 
     private int mengeVerfuegbar;
 
-    public String kueche;
+    private String kueche;
 
-    public int aktiv;
+    private int aktiv;
 
-    public int bild;
+    private int bild;
 
 
     public Angebot() {
@@ -65,7 +62,6 @@ public class Angebot {
     public void save(){
         JPA.em().persist(this);
     }
-
 
     public int getId() {
         return id;
@@ -115,6 +111,14 @@ public class Angebot {
         this.zeit = zeit;
     }
 
+    public String getZeitForm() {
+        return zeitForm;
+    }
+
+    public void setZeitForm(String zeitForm) {
+        this.zeitForm = zeitForm;
+    }
+
     public double getPreis() {
         return preis;
     }
@@ -129,6 +133,14 @@ public class Angebot {
 
     public void setMenge(int menge) {
         this.menge = menge;
+    }
+
+    public int getMengeVerfuegbar() {
+        return mengeVerfuegbar;
+    }
+
+    public void setMengeVerfuegbar(int mengeVerfuegbar) {
+        this.mengeVerfuegbar = mengeVerfuegbar;
     }
 
     public String getKueche() {
@@ -153,22 +165,6 @@ public class Angebot {
 
     public void setBild(int bild) {
         this.bild = bild;
-    }
-
-    public String getZeitForm() {
-        return zeitForm;
-    }
-
-    public void setZeitForm(String zeitForm) {
-        this.zeitForm = zeitForm;
-    }
-
-    public int getMengeVerfuegbar() {
-        return mengeVerfuegbar;
-    }
-
-    public void setMengeVerfuegbar(int mengeVerfuegbar) {
-        this.mengeVerfuegbar = mengeVerfuegbar;
     }
 
     @Override

@@ -1,12 +1,14 @@
 package controllers;
 
-import com.google.gson.Gson;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import models.Angebot;
 import models.AngeboteAll;
 import models.Benutzer;
 import models.Bild;
 import play.data.DynamicForm;
 import play.data.Form;
+import play.libs.Json;
 import play.mvc.*;
 import play.db.jpa.*;
 import play.data.FormFactory;
@@ -70,6 +72,9 @@ public class AngebotController extends Controller {
             angebot.setZeit(time);
             //Dem angebot wird die BenutzerId des Angeboterstellers zugewiesen
             angebot.setBenutzer_id(benutzer.getId());
+
+            //Verfügbare Menge des Angebots initial auf angebotsmenge setzen
+            angebot.setMengeVerfuegbar(angebot.getMenge());
 
             JPA.em().persist(angebot);
             JPA.em().flush();
@@ -136,12 +141,8 @@ public class AngebotController extends Controller {
             zufAngebote.add(angebote.get(randomIndex));
             angebote.remove(randomIndex);
         }
-        List<AngeboteAll> alle = AngeboteAll.buildCompleteOfferFromId(zufAngebote);
 
-        System.out.println("test");
-        //TODO json richtig machen
-        String json = new Gson().toJson(alle);
-        return ok(new Gson().toJson(alle));
+        return ok(toJson(AngeboteAll.buildCompleteOfferFromId(zufAngebote)));
     }
 
     /*

@@ -19,6 +19,7 @@ import static play.libs.Json.*;
 
 /**
  * Created by Fabio on 23.11.2017.
+ * Funktionen sind nur Aufrufbar, wenn der Benutzer angemeldet ist, sonst wird eine Fehlermeldung gemäss Secured class zurückgegeben
  */
 @Security.Authenticated(Secured.class)
 public class Profile extends Controller {
@@ -79,7 +80,10 @@ public class Profile extends Controller {
         return ok(toJson(bestellungen));
     }
 
-    //Anfragen für angebote werden aktzeptiert vom user
+    /*
+     * Anfrage für ein Angebot (Bestellung) wird akzeptiert,  der besteller erhält eine email mit der adresse des Anbieters
+     * Die adresse wird jetzt auch auf der Bestellungsübersicht angezeigt
+     */
     @Transactional
     public Result acceptRequest(int bestellungId){
         Benutzer benutzerReq = Benutzer.findByEmail(request().username());
@@ -128,6 +132,9 @@ public class Profile extends Controller {
         }
     }
 
+    /*
+     * Alle Anfragen des angemeldeten Benutzers zurückgegeben
+     */
     @Transactional
     public Result getRequests(){
         Benutzer rbenutzer = Benutzer.findByEmail(request().username());
@@ -160,6 +167,9 @@ public class Profile extends Controller {
         return ok(toJson(anfragen));
     }
 
+    /*
+     * ALle Aerstellten Angebote des angemeldeten Benutzers zurückgeben
+     */
     @Transactional
     public Result getOffers(){
         Benutzer benutzer = Benutzer.findByEmail(request().username());
@@ -168,6 +178,14 @@ public class Profile extends Controller {
         return ok(toJson(AngeboteAll.buildCompleteOfferFromId(angebote)));
     }
 
+    /*
+     * Eine abgeschlossene Bestellung bewerten, token für die Bewertung müssen übereinstimmen, damit bewertung nicht 2mal gemacht werden kann
+     * Besteller und anbieter können sich gegenseitig bewerten über diese Funktion
+     * Parameter url: id der Bestellung
+     * POST: token: einmaliges request token
+     *       who: besteller oder anbieter
+     *       rating: die gewählte Bewertung 1-5
+     */
     @Transactional
     public Result rateOrder(int id){
         DynamicForm requestData = formFactory.form().bindFromRequest();

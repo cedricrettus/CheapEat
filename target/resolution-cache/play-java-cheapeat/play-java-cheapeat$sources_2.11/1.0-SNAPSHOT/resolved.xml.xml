@@ -4,7 +4,7 @@
 		module="play-java-cheapeat$sources_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20171214104145"
+		publication="20171216085659"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

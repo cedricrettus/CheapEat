@@ -2,29 +2,25 @@
 [debug] [naha] Initial source changes: 
 [debug] [naha] 	removed:Set()
 [debug] [naha] 	added: Set()
-[debug] [naha] 	modified: Set(C:\dev\git\CheapEat\app\controllers\AngebotController.java)
+[debug] [naha] 	modified: Set(C:\dev\git\CheapEat\app\controllers\Secured.java)
 [debug] [naha] Invalidated products: Set()
 [debug] [naha] External API changes: API Changes: Set()
 [debug] [naha] Modified binary dependencies: Set()
-[debug] [naha] Initial directly invalidated sources: Set(C:\dev\git\CheapEat\app\controllers\AngebotController.java)
+[debug] [naha] Initial directly invalidated sources: Set(C:\dev\git\CheapEat\app\controllers\Secured.java)
 [debug] [naha] 
 [debug] [naha] Sources indirectly invalidated by:
 [debug] [naha] 	product: Set()
 [debug] [naha] 	binary dep: Set()
 [debug] [naha] 	external source: Set()
-[debug] All initially invalidated sources: Set(C:\dev\git\CheapEat\app\controllers\AngebotController.java)
+[debug] All initially invalidated sources: Set(C:\dev\git\CheapEat\app\controllers\Secured.java)
 [info] Compiling 1 Java source to C:\dev\git\CheapEat\target\scala-2.11\classes...
-[debug] Attempting to call com.sun.tools.javac.api.JavacTool@40f7029c directly...
-[error] C:\dev\git\CheapEat\app\controllers\AngebotController.java:3: package com.google.gson does not exist
-[error] import com.google.gson.Gson;
-[error] C:\dev\git\CheapEat\app\controllers\AngebotController.java:143: cannot find symbol
-[error]   symbol:   class Gson
-[error]   location: class controllers.AngebotController
-[error]         String json = new Gson().toJson(alle);
-[error] C:\dev\git\CheapEat\app\controllers\AngebotController.java:144: cannot find symbol
-[error]   symbol:   class Gson
-[error]   location: class controllers.AngebotController
-[error]         return ok(new Gson().toJson(alle));
-[info] C:\dev\git\CheapEat\app\controllers\AngebotController.java: C:\dev\git\CheapEat\app\controllers\AngebotController.java uses unchecked or unsafe operations.
-[info] C:\dev\git\CheapEat\app\controllers\AngebotController.java: Recompile with -Xlint:unchecked for details.
-[error] (compile:compileIncremental) javac returned nonzero exit code
+[debug] Attempting to call com.sun.tools.javac.api.JavacTool@3e2e4d44 directly...
+[debug] Java compilation took 0.278202895 s
+[debug] Java analysis took 0.015509757 s
+[debug] Java compile + analysis took 0.320536058 s
+[debug] [naha] New invalidations:
+[debug] [naha] 	Set()
+[debug] [naha] Initial set of included nodes: Set()
+[debug] [naha] Previously invalidated, but (transitively) depend on new invalidations:
+[debug] [naha] 	Set()
+[debug] [naha] All newly invalidated sources after taking into account (previously) recompiled sources:Set()
