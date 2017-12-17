@@ -29,6 +29,7 @@ $(document).ready(function(){
                     addDanger(jqXHR.responseText);
                 });
         }
+        $('#register-form')[0].classList.add('was-validated');
 
     });
 
@@ -55,6 +56,7 @@ $(document).ready(function(){
                     addDanger(jqXHR.responseText);
                 });
         }
+        $('#login-form')[0].classList.add('was-validated');
 
     });
 

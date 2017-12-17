@@ -14,9 +14,6 @@ nav.navbar {
     margin: 20px 20px 20px 0px ;
     padding: 15px;
 }
-#angebotModal{
-    z-index: 2000;
-}
 .preis{
 
 }
@@ -82,4 +79,17 @@ nav.navbar {
 }
 .rating-number{
     font-weight: 600;
+}
+#modal-wait{
+    z-index: 3000;
+    top: 30%;
+    width: 70%;
+    margin: auto;
+}
+/*modal backdrops so anpassen, damit backdrop des ladebalken höchster z-index hat*/
+.modal-backdrop.fade {
+    z-index: 1030;
+}
+.modal.fade{
+    z-index: 1039;
 }

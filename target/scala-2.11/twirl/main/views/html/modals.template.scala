@@ -89,7 +89,7 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
                                 <input id="menge" type="number" placeholder="1" name="menge" min="1" max="99" step="1" class="form-control" required/>
                             </div>
                             <div class="form-group">
-                                <label for="preis" >Preis: </label>
+                                <label for="preis" >Preis pro Portion: </label>
                                 <div class="input-group">
 
                                     <span class="input-group-addon">CHF</span>
@@ -101,7 +101,7 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
                             </div>
                             <div class="form-group">
                                 <label for="bilder">Bilder: </label>
-                                <input class="form-control-file" id="bilder" type="file" name="bilder" accept="image/jpeg" multiple>
+                                <input class="form-control-file" id="bilder" type="file" name="bilder" accept="image/*" multiple>
                                 <small class="form-text text-muted">Du kannst mehrere Bilder zu deinem Angebot hinzufügen um dein Essen zu zeigen. Die Bilder müssen im .jpeg Format vorliegen</small>
                             </div>
                     </div>
@@ -184,6 +184,21 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
             </div>
         </div>
     </div>
+</div>
+
+    <!-- MODAL LADEBALKEN -->
+
+<div class="modal hide" id="modal-wait" tabindex="-1" data-backdrop="static" data-keyboard="false">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h1>Laden...</h1>
+        </div>
+        <div class="modal-body">
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%"></div>
+            </div>
+        </div>
+    </div>
 </div>"""))
       }
     }
@@ -204,10 +219,10 @@ Seq[Any](format.raw/*1.1*/("""<!-- MODAL ANGEBOT ERSTELLEN -->
 object modals extends modals_Scope0.modals
               /*
                   -- GENERATED --
-                  DATE: Sat Dec 16 15:36:45 CET 2017
+                  DATE: Sun Dec 17 13:29:17 CET 2017
                   SOURCE: C:/dev/git/CheapEat/app/views/modals.scala.html
-                  HASH: 51eedf3144e12b884cf8e901727fecb36470a1ba
-                  MATRIX: 829->0|1657->801|1686->809|1736->831|7049->6116|7079->6124|7130->6146|8831->7819|8861->7827|8908->7845
+                  HASH: 6799321d65cfdf2cbc0a14bc8f9856020eaaac47
+                  MATRIX: 829->0|1657->801|1686->809|1736->831|7058->6125|7088->6133|7139->6155|8840->7828|8870->7836|8917->7854
                   LINES: 32->1|46->15|46->15|47->16|135->104|135->104|136->105|170->139|170->139|171->140
                   -- GENERATED --
               */

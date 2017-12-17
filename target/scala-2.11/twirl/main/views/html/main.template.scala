@@ -39,20 +39,21 @@ Seq[Any](format.raw/*1.32*/("""
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/png" href=""""),_display_(/*9.59*/routes/*9.65*/.Assets.at("images/favicon.png")),format.raw/*9.97*/("""">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-        <link rel="stylesheet" href=""""),_display_(/*12.39*/routes/*12.45*/.Assets.at("css/style.css")),format.raw/*12.72*/("""">
-        <link rel="stylesheet" href=""""),_display_(/*13.39*/routes/*13.45*/.Assets.at("css/mobile.css")),format.raw/*13.73*/("""">
+        <!---<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href=""""),_display_(/*12.39*/routes/*12.45*/.Assets.at("css/bootstrap.css")),format.raw/*12.76*/("""">
+        <link rel="stylesheet" href=""""),_display_(/*13.39*/routes/*13.45*/.Assets.at("css/style.css")),format.raw/*13.72*/("""">
+        <link rel="stylesheet" href=""""),_display_(/*14.39*/routes/*14.45*/.Assets.at("css/mobile.css")),format.raw/*14.73*/("""">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src=""""),_display_(/*15.23*/routes/*15.29*/.Assets.at("js/jquery-3.2.1.js")),format.raw/*15.61*/("""" type="text/javascript"></script>
-        <script src=""""),_display_(/*16.23*/routes/*16.29*/.Assets.at("js/handlebars-v4.0.11.js")),format.raw/*16.67*/("""" type="text/javascript"></script>
-        <script src=""""),_display_(/*17.23*/routes/*17.29*/.Assets.at("js/hbScript.js")),format.raw/*17.57*/("""" type="text/javascript"></script>
-        <script src=""""),_display_(/*18.23*/routes/*18.29*/.Assets.at("js/main.js")),format.raw/*18.53*/("""" type="text/javascript"></script>
+        <script src=""""),_display_(/*16.23*/routes/*16.29*/.Assets.at("js/jquery-3.2.1.js")),format.raw/*16.61*/("""" type="text/javascript"></script>
+        <script src=""""),_display_(/*17.23*/routes/*17.29*/.Assets.at("js/handlebars-v4.0.11.js")),format.raw/*17.67*/("""" type="text/javascript"></script>
+        <script src=""""),_display_(/*18.23*/routes/*18.29*/.Assets.at("js/hbScript.js")),format.raw/*18.57*/("""" type="text/javascript"></script>
+        <script src=""""),_display_(/*19.23*/routes/*19.29*/.Assets.at("js/main.js")),format.raw/*19.53*/("""" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     </head>
     <body>
-        """),_display_(/*23.10*/content),format.raw/*23.17*/("""
-    """),format.raw/*24.5*/("""</body>
+        """),_display_(/*24.10*/content),format.raw/*24.17*/("""
+    """),format.raw/*25.5*/("""</body>
 </html>
 """))
       }
@@ -74,11 +75,11 @@ Seq[Any](format.raw/*1.32*/("""
 object main extends main_Scope0.main
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 01 11:51:25 CET 2017
+                  DATE: Sun Dec 17 14:05:19 CET 2017
                   SOURCE: C:/dev/git/CheapEat/app/views/main.scala.html
-                  HASH: 87e9e8e50871084c1ee76f40ad50faa30dd17dd2
-                  MATRIX: 748->1|873->31|903->35|984->90|1009->95|1181->241|1195->247|1247->279|1433->438|1448->444|1496->471|1565->513|1580->519|1629->547|1798->689|1813->695|1866->727|1951->785|1966->791|2025->829|2110->887|2125->893|2174->921|2259->979|2274->985|2319->1009|2847->1510|2875->1517|2908->1523
-                  LINES: 27->1|32->1|34->3|38->7|38->7|40->9|40->9|40->9|43->12|43->12|43->12|44->13|44->13|44->13|46->15|46->15|46->15|47->16|47->16|47->16|48->17|48->17|48->17|49->18|49->18|49->18|54->23|54->23|55->24
+                  HASH: 248e4b3b554a2516ce0b8588d8d9def42233a3ae
+                  MATRIX: 748->1|873->31|903->35|984->90|1009->95|1181->241|1195->247|1247->279|1441->446|1456->452|1508->483|1577->525|1592->531|1640->558|1709->600|1724->606|1773->634|1942->776|1957->782|2010->814|2095->872|2110->878|2169->916|2254->974|2269->980|2318->1008|2403->1066|2418->1072|2463->1096|2991->1597|3019->1604|3052->1610
+                  LINES: 27->1|32->1|34->3|38->7|38->7|40->9|40->9|40->9|43->12|43->12|43->12|44->13|44->13|44->13|45->14|45->14|45->14|47->16|47->16|47->16|48->17|48->17|48->17|49->18|49->18|49->18|50->19|50->19|50->19|55->24|55->24|56->25
                   -- GENERATED --
               */
           

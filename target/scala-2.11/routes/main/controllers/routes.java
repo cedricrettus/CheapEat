@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Thu Dec 14 10:43:54 CET 2017
+// @DATE:Sun Dec 17 13:12:47 CET 2017
 
 package controllers;
 

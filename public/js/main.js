@@ -79,7 +79,7 @@ function addEventListeners(){
                 enctype: 'multipart/form-data',
                 contentType: false,
                 processData: false
-            }, function(data){
+            }).done(function(data){
                 console.log(data);
                 $('#modal-wait').modal('hide');
                 $('#angebotModal').modal('hide');
@@ -91,7 +91,7 @@ function addEventListeners(){
                 addDanger(jqXHR.responseText);
             });
         }
-        //angebotForm.classList.add('was-validated');
+        $('#angebotForm')[0].classList.add('was-validated');
 
     });
 
@@ -124,7 +124,7 @@ function addEventListeners(){
                 addDanger(jqXHR.responseText);
             });
         }
-        //bestellenForm.classList.add('was-validated');
+        $('#bestellenForm')[0].classList.add('was-validated');
 
     });
 
