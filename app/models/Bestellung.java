@@ -15,22 +15,20 @@ import java.util.List;
 @Table(name = "bestellungen")
 public class Bestellung {
 
-    //TODO datum der bestellung eintragen
-
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    public int id;
+    private int id;
 
-    public int benutzer_id;
+    private int benutzer_id;
 
-    public int angebot_id;
+    private int angebot_id;
 
-    public int menge;
+    private int menge;
 
-    public int prozesscode;
+    private int prozesscode;
 
-    public String bewToken_besteller;
-    public String bewToken_anbieter;
+    private String bewToken_besteller;
+    private String bewToken_anbieter;
 
     //Prozesscode werden verwendet um den Status der Bestellung zu zeigem.
     // 1: Bestellung aufgegeben, 2: Bestellung angenommen, 3: bestellung beendet -> bewertung, 10: bestellung abgelehnt
@@ -50,11 +48,11 @@ public class Bestellung {
         return JPA.em().find(Bestellung.class, id);
     }
 
-
     @Transactional
     public void save(){
         JPA.em().persist(this);
     }
+
 
     public int getId() {
         return id;

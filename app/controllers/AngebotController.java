@@ -53,6 +53,7 @@ public class AngebotController extends Controller {
             if(request().username() != null){
                  benutzer = Benutzer.findByEmail(request().username());
             }else{
+                System.out.println("nicht authorisiert");
                 return badRequest("Benutzer muss angemeldet sein um ein Angebot zu erstellen!");
             }
 
@@ -154,13 +155,11 @@ public class AngebotController extends Controller {
      */
     @Transactional(readOnly = true)
     public Result getAngebote(int id) {
-        //TODO select angebot by id
         Angebot angebot = Angebot.findById(id);
         List<Angebot> angebote = new ArrayList<Angebot>();
         angebote.add(angebot);
 
         return ok(toJson(AngeboteAll.buildCompleteOfferFromId(angebote)));
-
     }
 
     /*

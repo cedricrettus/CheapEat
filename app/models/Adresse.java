@@ -30,6 +30,9 @@ public class Adresse {
 
     }
 
+    /*
+     * Die Adresse eines Benutzers zurückgeben
+     */
     @Transactional
     public static Adresse findByUserId(int userId){
         List<Adresse> adressen = JPA.em().createQuery("select p from Adresse p where p.benutzer_id = "+ userId).getResultList();

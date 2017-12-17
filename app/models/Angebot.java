@@ -2,17 +2,14 @@ package models;
 
 import play.data.validation.Constraints;
 import play.db.jpa.JPA;
+import play.db.jpa.JPAApi;
 import play.db.jpa.Transactional;
 
+import javax.inject.Inject;
 import javax.persistence.*;
-import javax.validation.Constraint;
-import javax.xml.crypto.Data;
-import java.io.File;
-import java.sql.Time;
-import java.time.LocalTime;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
 
 @Entity
 @Table(name = "angebote")
@@ -65,8 +62,30 @@ public class Angebot {
     }
 
     @Transactional
+    public static Angebot findByTitle(String titel){
+        List<Angebot> angebot = JPA.em().createQuery("select a from Angebot a where a.titel = "+ titel).getResultList();
+        if(angebot.size() > 0){
+            return angebot.get(0);
+        }else{
+            return null;
+        }
+
+    }
+
+    @Transactional
     public void save(){
         JPA.em().persist(this);
+    }
+
+    @Transactional
+    public boolean deleteOffer(int id){
+        Query deleteAngebot = JPA.em().createQuery("delete from Angebot a where a.id = "+ id);
+        Query deleteBilder = JPA.em().createQuery("delete from Bild b where b.angebote_id = "+ id);
+
+        if(deleteAngebot.executeUpdate() > 0 && deleteBilder.executeUpdate() >= 0){
+            return true;
+        }
+        return false;
     }
 
     public int getId() {

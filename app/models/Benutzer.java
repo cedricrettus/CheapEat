@@ -19,8 +19,6 @@ import java.util.List;
 @Table(name = "benutzer")
 public class Benutzer {
 
-    //TODO alle felder in models auf private
-
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     public int id;
@@ -41,6 +39,9 @@ public class Benutzer {
 
     public int validiert = 0;
 
+    /*
+     * Den Benutzer mit der zugehörigen Email Adresse zurückgeben
+     */
     @Transactional
     public static Benutzer findByEmail(String email) {
         List<Benutzer> benutzer = JPA.em().createQuery("select u from Benutzer u where u.email = '"+ email+"'").getResultList();
@@ -51,6 +52,9 @@ public class Benutzer {
         }
     }
 
+    /*
+     * Den Benutzer mit dem zugehörigen Token zurückgeben
+     */
     @Transactional
     public static Benutzer findByConfirmationToken(String token){
         //TODO testen  mit getSingleResult
@@ -74,6 +78,9 @@ public class Benutzer {
         }
     }
 
+    /*
+     * Den Benutzer zurückgeben der die zugehörige bestellung erstellt hat
+     */
     @Transactional
     public static Benutzer findByOrder(int id){
         List<Benutzer> benutzerList = JPA.em().createQuery("select u from Benutzer u, Angebot a, Bestellung b where b.id ="+id+" and b.angebot_id = a.id and a.benutzer_id = u.id ").getResultList();
@@ -86,6 +93,9 @@ public class Benutzer {
 
     }
 
+    /*
+     * Eine Liste von bestellungen zurückgeben, die ein Benutzer egetätigt hat
+     */
     @Transactional
     public static List<Bestellung> findOrdersByUser(String email){
         Benutzer benutzer = findByEmail(email);
@@ -103,16 +113,16 @@ public class Benutzer {
         return JPA.em().find(Benutzer.class, userId);
     }
 
+    /*
+     * Den Benutzer persisten
+     */
     public void save(){
         JPA.em().persist(this);
     }
 
-    public boolean confirm(){
-        this.validiert = 1;
-        JPA.em().persist(this);
-        return true;
-    }
-
+    /*
+     * Einen Benutzer nach seinem benutzernamen suchen
+     */
     public static Benutzer findByUsername(String benutzername) {
         List<Benutzer> benutzer = JPA.em().createQuery("select p from Benutzer p where p.benutzername = "+ benutzername).getResultList();
         if(benutzer.size() > 0){
@@ -122,6 +132,9 @@ public class Benutzer {
         }
     }
 
+    /*
+     * Der Benutzer wird über das UUID Token validiert, in dem der Bestätigungslink im Email gewählt wird
+     */
     @Transactional
     public static boolean confirm(Benutzer benutzer) throws AppException {
         if (benutzer == null) {
@@ -135,6 +148,9 @@ public class Benutzer {
     }
 
 
+    /*
+     * Den Benutzer authentifiezieren, indem das Passwort gehast wird und mit dem gespeicherten Passwort abgeglichen wird
+     */
     @Transactional
     public static Benutzer authenticate(String email, String clearPasswort) throws AppException {
         List<Benutzer> benutzer = JPA.em().createQuery("select u from Benutzer u where u.email = '"+ email+"'").getResultList();

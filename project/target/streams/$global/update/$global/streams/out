@@ -5,6 +5,10 @@
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'compile'
 [debug] == resolving dependencies for default#cheapeat-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#cheapeat-build;0.1-SNAPSHOT->org.scala-sbt#global-plugins;0.0 [compile->default(compile)]
+[info] Resolving org.scala-sbt#global-plugins;0.0 ...
+[debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#global-plugins;0.0 {compile=[default(compile)]}
+[debug] 	found org.scala-sbt#global-plugins;0.0 in inter-project
 [debug] == resolving dependencies default#cheapeat-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.5.10 [compile->default(compile)]
 [info] Resolving com.typesafe.play#sbt-plugin;2.5.10 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.play#sbt-plugin;2.5.10 {compile=[default(compile)]}
@@ -2810,6 +2814,7 @@
 [debug] resolving dependencies for configuration 'runtime'
 [debug] == resolving dependencies for default#cheapeat-build;0.1-SNAPSHOT [runtime]
 [debug] == resolving dependencies for default#cheapeat-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#cheapeat-build;0.1-SNAPSHOT->org.scala-sbt#global-plugins;0.0 [compile->default(compile)]
 [debug] == resolving dependencies default#cheapeat-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.5.10 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.5.10->com.typesafe.play#sbt-routes-compiler_2.10;2.5.10 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.5.10->com.typesafe.play#sbt-routes-compiler_2.10;2.5.10 [compile->runtime]
@@ -4927,6 +4932,7 @@
 [debug] == resolving dependencies for default#cheapeat-build;0.1-SNAPSHOT [test]
 [debug] == resolving dependencies for default#cheapeat-build;0.1-SNAPSHOT [runtime]
 [debug] == resolving dependencies for default#cheapeat-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#cheapeat-build;0.1-SNAPSHOT->org.scala-sbt#global-plugins;0.0 [compile->default(compile)]
 [debug] == resolving dependencies default#cheapeat-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.5.10 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.5.10->com.typesafe.play#sbt-routes-compiler_2.10;2.5.10 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.5.10->com.typesafe.play#sbt-routes-compiler_2.10;2.5.10 [compile->runtime]
@@ -7847,6 +7853,7 @@
 [debug] resolving dependencies for configuration 'compile-internal'
 [debug] == resolving dependencies for default#cheapeat-build;0.1-SNAPSHOT [compile-internal]
 [debug] == resolving dependencies for default#cheapeat-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#cheapeat-build;0.1-SNAPSHOT->org.scala-sbt#global-plugins;0.0 [compile->default(compile)]
 [debug] == resolving dependencies default#cheapeat-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.5.10 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.5.10->com.typesafe.play#sbt-routes-compiler_2.10;2.5.10 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.5.10->com.typesafe.play#sbt-routes-compiler_2.10;2.5.10 [compile->runtime]
@@ -10491,6 +10498,7 @@
 [debug] == resolving dependencies for default#cheapeat-build;0.1-SNAPSHOT [runtime-internal]
 [debug] == resolving dependencies for default#cheapeat-build;0.1-SNAPSHOT [runtime]
 [debug] == resolving dependencies for default#cheapeat-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#cheapeat-build;0.1-SNAPSHOT->org.scala-sbt#global-plugins;0.0 [compile->default(compile)]
 [debug] == resolving dependencies default#cheapeat-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.5.10 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.5.10->com.typesafe.play#sbt-routes-compiler_2.10;2.5.10 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.5.10->com.typesafe.play#sbt-routes-compiler_2.10;2.5.10 [compile->runtime]
@@ -12610,6 +12618,7 @@
 [debug] == resolving dependencies for default#cheapeat-build;0.1-SNAPSHOT [test]
 [debug] == resolving dependencies for default#cheapeat-build;0.1-SNAPSHOT [runtime]
 [debug] == resolving dependencies for default#cheapeat-build;0.1-SNAPSHOT [compile]
+[debug] == resolving dependencies default#cheapeat-build;0.1-SNAPSHOT->org.scala-sbt#global-plugins;0.0 [compile->default(compile)]
 [debug] == resolving dependencies default#cheapeat-build;0.1-SNAPSHOT->com.typesafe.play#sbt-plugin;2.5.10 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.5.10->com.typesafe.play#sbt-routes-compiler_2.10;2.5.10 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.play#sbt-plugin;2.5.10->com.typesafe.play#sbt-routes-compiler_2.10;2.5.10 [compile->runtime]
@@ -15476,7 +15485,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.11!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 3511ms :: artifacts dl 140ms
+[debug] :: resolution report :: resolve 1923ms :: artifacts dl 78ms
 [debug] 	report for default#cheapeat-build;0.1-SNAPSHOT compile produced in C:\dev\git\CheapEat\project\target\resolution-cache\reports\default-cheapeat-build-compile.xml
 [debug] 	report for default#cheapeat-build;0.1-SNAPSHOT runtime produced in C:\dev\git\CheapEat\project\target\resolution-cache\reports\default-cheapeat-build-runtime.xml
 [debug] 	report for default#cheapeat-build;0.1-SNAPSHOT test produced in C:\dev\git\CheapEat\project\target\resolution-cache\reports\default-cheapeat-build-test.xml
@@ -15490,5 +15499,5 @@
 [debug] 	report for default#cheapeat-build;0.1-SNAPSHOT docs produced in C:\dev\git\CheapEat\project\target\resolution-cache\reports\default-cheapeat-build-docs.xml
 [debug] 	report for default#cheapeat-build;0.1-SNAPSHOT pom produced in C:\dev\git\CheapEat\project\target\resolution-cache\reports\default-cheapeat-build-pom.xml
 [debug] 	report for default#cheapeat-build;0.1-SNAPSHOT scala-tool produced in C:\dev\git\CheapEat\project\target\resolution-cache\reports\default-cheapeat-build-scala-tool.xml
-[debug] 	resolve done (3511ms resolve - 140ms download)
+[debug] 	resolve done (1923ms resolve - 78ms download)
 [info] Done updating.
