@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Sun Dec 17 13:12:47 CET 2017
+// @DATE:Sun Dec 17 14:58:56 CET 2017
 
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
 import play.core.routing.{ HandlerDef, ReverseRouteContext, queryString, dynamicString }
@@ -65,13 +65,13 @@ package controllers {
     // @LINE:27
     def rateOrder(id:Int): Call = {
       import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "bestellung/bewertung/" + implicitly[PathBindable[Int]].unbind("id", id))
+      Call("POST", _prefix + { _defaultPrefix } + "bestellung/" + implicitly[PathBindable[Int]].unbind("id", id) + "/bewertung")
     }
   
     // @LINE:20
     def acceptRequest(id:Int): Call = {
       import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "me/anfragen/accept/" + implicitly[PathBindable[Int]].unbind("id", id))
+      Call("POST", _prefix + { _defaultPrefix } + "me/anfragen/" + implicitly[PathBindable[Int]].unbind("id", id) + "/accept")
     }
   
     // @LINE:18
@@ -83,7 +83,7 @@ package controllers {
     // @LINE:19
     def denyRequest(id:Int): Call = {
       import ReverseRouteContext.empty
-      Call("POST", _prefix + { _defaultPrefix } + "me/anfragen/deny/" + implicitly[PathBindable[Int]].unbind("id", id))
+      Call("POST", _prefix + { _defaultPrefix } + "me/anfragen/" + implicitly[PathBindable[Int]].unbind("id", id) + "/deny")
     }
   
     // @LINE:17
@@ -149,7 +149,7 @@ package controllers {
     // @LINE:24
     def getUserRating(id:Int): Call = {
       import ReverseRouteContext.empty
-      Call("GET", _prefix + { _defaultPrefix } + "benutzer/bewertung/" + implicitly[PathBindable[Int]].unbind("id", id))
+      Call("GET", _prefix + { _defaultPrefix } + "benutzer/" + implicitly[PathBindable[Int]].unbind("id", id) + "/bewertung")
     }
   
     // @LINE:9

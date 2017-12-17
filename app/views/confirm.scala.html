@@ -6,13 +6,15 @@
     <div class="content">
     @alerts()
 
-    <script>
-        @if(meldung.equals("ok")){
-            addSuccess("Registrierung erfolgreich bestätigt <a '/login'>Hier anmelden </a>");
-        }else{
-            addDanger(meldung)
-        }
-    </script>
+    <div class="container">
+        <script>
+            @if(meldung.equals("ok")){
+                addSuccess("Registrierung erfolgreich bestätigt <a href='/login'>Hier anmelden </a>");
+            }else{
+                addDanger(meldung);
+            }
+        </script>
+    </div>
 
     </div>
 

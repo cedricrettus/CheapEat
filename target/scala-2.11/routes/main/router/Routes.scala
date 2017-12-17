@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Sun Dec 17 13:12:47 CET 2017
+// @DATE:Sun Dec 17 14:58:56 CET 2017
 
 package router
 
@@ -73,11 +73,11 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """bestellung""", """controllers.BestellungController.getBestellung()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/bestellungen""", """controllers.Profile.getOrders()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/anfragen""", """controllers.Profile.getRequests()"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/anfragen/deny/""" + "$" + """id<[^/]+>""", """controllers.Profile.denyRequest(id:Int)"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/anfragen/accept/""" + "$" + """id<[^/]+>""", """controllers.Profile.acceptRequest(id:Int)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/anfragen/""" + "$" + """id<[^/]+>/deny""", """controllers.Profile.denyRequest(id:Int)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/anfragen/""" + "$" + """id<[^/]+>/accept""", """controllers.Profile.acceptRequest(id:Int)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """me/angebote""", """controllers.Profile.getOffers()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """benutzer/bewertung/""" + "$" + """id<[^/]+>""", """controllers.AngebotController.getUserRating(id:Int)"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """bestellung/bewertung/""" + "$" + """id<[^/]+>""", """controllers.Profile.rateOrder(id:Int)"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """benutzer/""" + "$" + """id<[^/]+>/bewertung""", """controllers.AngebotController.getUserRating(id:Int)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """bestellung/""" + "$" + """id<[^/]+>/bewertung""", """controllers.Profile.rateOrder(id:Int)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """profile""", """controllers.Profile.index()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.Application.login()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.Authentication.authenticate()"""),
@@ -224,7 +224,7 @@ class Routes(
       "getBestellung",
       Nil,
       "GET",
-      """ TODO prüfen wird nicht benötigt glaube ich""",
+      """ TODO bestellung bereitstellen nach id""",
       this.prefix + """bestellung"""
     )
   )
@@ -265,7 +265,7 @@ class Routes(
 
   // @LINE:19
   private[this] lazy val controllers_Profile_denyRequest10_route = Route("POST",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("me/anfragen/deny/"), DynamicPart("id", """[^/]+""",true)))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("me/anfragen/"), DynamicPart("id", """[^/]+""",true), StaticPart("/deny")))
   )
   private[this] lazy val controllers_Profile_denyRequest10_invoker = createInvoker(
     Profile_3.denyRequest(fakeValue[Int]),
@@ -276,13 +276,13 @@ class Routes(
       Seq(classOf[Int]),
       "POST",
       """""",
-      this.prefix + """me/anfragen/deny/""" + "$" + """id<[^/]+>"""
+      this.prefix + """me/anfragen/""" + "$" + """id<[^/]+>/deny"""
     )
   )
 
   // @LINE:20
   private[this] lazy val controllers_Profile_acceptRequest11_route = Route("POST",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("me/anfragen/accept/"), DynamicPart("id", """[^/]+""",true)))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("me/anfragen/"), DynamicPart("id", """[^/]+""",true), StaticPart("/accept")))
   )
   private[this] lazy val controllers_Profile_acceptRequest11_invoker = createInvoker(
     Profile_3.acceptRequest(fakeValue[Int]),
@@ -293,7 +293,7 @@ class Routes(
       Seq(classOf[Int]),
       "POST",
       """""",
-      this.prefix + """me/anfragen/accept/""" + "$" + """id<[^/]+>"""
+      this.prefix + """me/anfragen/""" + "$" + """id<[^/]+>/accept"""
     )
   )
 
@@ -316,7 +316,7 @@ class Routes(
 
   // @LINE:24
   private[this] lazy val controllers_AngebotController_getUserRating13_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("benutzer/bewertung/"), DynamicPart("id", """[^/]+""",true)))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("benutzer/"), DynamicPart("id", """[^/]+""",true), StaticPart("/bewertung")))
   )
   private[this] lazy val controllers_AngebotController_getUserRating13_invoker = createInvoker(
     AngebotController_6.getUserRating(fakeValue[Int]),
@@ -327,13 +327,13 @@ class Routes(
       Seq(classOf[Int]),
       "GET",
       """Bewertung""",
-      this.prefix + """benutzer/bewertung/""" + "$" + """id<[^/]+>"""
+      this.prefix + """benutzer/""" + "$" + """id<[^/]+>/bewertung"""
     )
   )
 
   // @LINE:27
   private[this] lazy val controllers_Profile_rateOrder14_route = Route("POST",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("bestellung/bewertung/"), DynamicPart("id", """[^/]+""",true)))
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("bestellung/"), DynamicPart("id", """[^/]+""",true), StaticPart("/bewertung")))
   )
   private[this] lazy val controllers_Profile_rateOrder14_invoker = createInvoker(
     Profile_3.rateOrder(fakeValue[Int]),
@@ -344,7 +344,7 @@ class Routes(
       Seq(classOf[Int]),
       "POST",
       """Bestellung wird bewertet -> benutzer hinter der bestellung wird bewertung zugewiesen""",
-      this.prefix + """bestellung/bewertung/""" + "$" + """id<[^/]+>"""
+      this.prefix + """bestellung/""" + "$" + """id<[^/]+>/bewertung"""
     )
   )
 

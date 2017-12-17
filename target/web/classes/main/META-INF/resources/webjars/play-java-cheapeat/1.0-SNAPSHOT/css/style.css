@@ -93,3 +93,7 @@ nav.navbar {
 .modal.fade{
     z-index: 1039;
 }
+.btn-primary{
+    background-color: #1fa23c;
+    border-color: #1fa23c;
+}

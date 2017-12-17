@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/dev/git/CheapEat/conf/routes
-// @DATE:Sun Dec 17 13:12:47 CET 2017
+// @DATE:Sun Dec 17 14:58:56 CET 2017
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -88,7 +88,7 @@ package controllers.javascript {
       "controllers.Profile.rateOrder",
       """
         function(id0) {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "bestellung/bewertung/" + (""" + implicitly[PathBindable[Int]].javascriptUnbind + """)("id", id0)})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "bestellung/" + (""" + implicitly[PathBindable[Int]].javascriptUnbind + """)("id", id0) + "/bewertung"})
         }
       """
     )
@@ -98,7 +98,7 @@ package controllers.javascript {
       "controllers.Profile.acceptRequest",
       """
         function(id0) {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "me/anfragen/accept/" + (""" + implicitly[PathBindable[Int]].javascriptUnbind + """)("id", id0)})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "me/anfragen/" + (""" + implicitly[PathBindable[Int]].javascriptUnbind + """)("id", id0) + "/accept"})
         }
       """
     )
@@ -118,7 +118,7 @@ package controllers.javascript {
       "controllers.Profile.denyRequest",
       """
         function(id0) {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "me/anfragen/deny/" + (""" + implicitly[PathBindable[Int]].javascriptUnbind + """)("id", id0)})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "me/anfragen/" + (""" + implicitly[PathBindable[Int]].javascriptUnbind + """)("id", id0) + "/deny"})
         }
       """
     )
@@ -218,7 +218,7 @@ package controllers.javascript {
       "controllers.AngebotController.getUserRating",
       """
         function(id0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "benutzer/bewertung/" + (""" + implicitly[PathBindable[Int]].javascriptUnbind + """)("id", id0)})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "benutzer/" + (""" + implicitly[PathBindable[Int]].javascriptUnbind + """)("id", id0) + "/bewertung"})
         }
       """
     )

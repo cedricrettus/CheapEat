@@ -127,7 +127,7 @@ function addRateEventListener(){
                 'who' : $(this).data('who'),
                 'rating' : $(this).text()
             }
-            $.post('/bestellung/bewertung/'+ $(this).data('id'), postData, function(data){
+            $.post('/bestellung/'+ $(this).data('id') +'/bewertung', postData, function(data){
                 $('#modal-wait').modal('hide');
                 addSuccess("Bewertung abgegeben");
                 setTimeout(function(){ location.reload(); }, 2000);
@@ -145,7 +145,7 @@ function addRateEventListener(){
 function addDenyAcceptEventListener(){
     $('.button-accept').click(function(){
         $('#modal-wait').modal('show');
-        $.post('/me/anfragen/accept/'+ $(this).data('id'), function(data) {
+        $.post('/me/anfragen/' + $(this).data('id') + '/accept', function(data) {
             console.log(data);
             $('#modal-wait').modal('hide');
             setTimeout(function(){ location.reload(); }, 2000);
@@ -160,7 +160,7 @@ function addDenyAcceptEventListener(){
 
     $('.button-deny').click(function(){
         $('#modal-wait').modal('show');
-        $.post('/me/anfragen/deny/'+ $(this).data('id'), function(data) {
+        $.post('/me/anfragen/' + $(this).data('id') + '/deny', function(data) {
             console.log(data);
             $('#modal-wait').modal('hide');
             addSuccess("Erfolgreich Abgelehnt");
