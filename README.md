@@ -20,7 +20,9 @@ The application is based on the java play framework version 2.5.3
  ## REST API
  The application comes with a REST API, that can be used to get offers, ratings, users, orders and to post Registration, login, offer    creation, ratings and order request. ALl URLs with parameters are listed below. Parameter type is string if not specified
  
- GET  /               
+'''
+ GET  /  
+'''
  - Response: Index site as html
  
  GET  /angebote/all   
