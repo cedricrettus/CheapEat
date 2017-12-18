@@ -48,23 +48,23 @@ The application is based on the java play framework version 2.5.3
  
  POST  /angebote      
   - creates a new offer
-                      
-                      Parameters: "titel" : title of the offer
-                                  "beschreibung" : description of the offer
-                                  "datum" : date when the offer is to be picked up format yy-mm-dd
-                                  "zeitForm" : time when the offer is to be picked up format hh:mm
-                                  "kueche" : kitchen e.g. italian, french
-                                  "menge" : the number of available servings (int)
-                                  "preis" : the price per serving (double)
-                                  "bilder[]" : image/jpeg binary
-                      Response:   OK if offer is successfully created
-                                  bad request with errortext
+  - Parameters: 
+     - "titel" : title of the offer
+     - "beschreibung" : description of the offer
+     - "datum" : date when the offer is to be picked up format yy-mm-dd
+     - "zeitForm" : time when the offer is to be picked up format hh:mm
+     - "kueche" : kitchen e.g. italian, french
+     - "menge" : the number of available servings (int)
+     - "preis" : the price per serving (double)
+     - "bilder[]" : image/jpeg binary
+   - Response:   OK if offer is successfully created, bad request with errortext
                                   
- POST  /bestellung    creates an order for the specified offer
-                      Parameter:  "menge" : servings to be placed on order (int)
-                                  "id"    : offer id (int)
-                                  OK if order is successfully created
-                                  bad request with errortext
+ POST  /bestellung    
+  - creates an order for the specified offer
+  - Parameter:  
+     - "menge" : servings to be placed on order (int)
+     - "id"    : offer id (int)
+  - response: OK if order is successfully created, bad request with errortext
                                   
  POST
  
