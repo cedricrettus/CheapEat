@@ -20,35 +20,48 @@ The application is based on the java play framework version 2.5.3
  ## REST API
  The application comes with a REST API, that can be used to get offers, ratings, users, orders and to post Registration, login, offer    creation, ratings and order request. ALl URLs with parameters are listed below. Parameter type is string if not specified
  
-'''
+```
  GET  /  
-'''
+```
  - Response: Index site as html
  
- GET  /angebote/all   
+```
+ GET  /angebote/all  
+```
   - Response: 15 random offers are returned as JSON, only available offers
- 
- GET  /angebote/:id   
+ ```
+ GET  /angebote/:id 
+ ```
   - Response: Offer with selected id is returned as JSON
  
- GET  /search         
+ ```
+ GET  /search
+ ```
   - Response: search site is returned as html
  
+ ```
  GET  /search/:plz    
+ ```
   - Parameters: optinoal parameter "datum", returns offers on selected date
   - Response: Offers as JSON with selected plz and date (optional)
-                      
- GET  /signup         
+  
+ ```
+ GET  /signup 
+ ```
   - Response: signup form as html
  
- POST /signup         
+ ```
+ POST /signup
+ ```
   - Registers a new user
   - Parameters: "name" : name of the user
                                   
  
  secured functions: to use these function you have to be logged in as 
  
- POST  /angebote      
+ ```
+ POST  /angebote
+ ```
   - creates a new offer
   - Parameters: 
      - "titel" : title of the offer
@@ -60,15 +73,18 @@ The application is based on the java play framework version 2.5.3
      - "preis" : the price per serving (double)
      - "bilder[]" : image/jpeg binary
    - Response:   OK if offer is successfully created, bad request with errortext
-                                  
- POST  /bestellung    
+ ```                               
+ POST  /bestellung 
+ ```
   - creates an order for the specified offer
   - Parameter:  
      - "menge" : servings to be placed on order (int)
      - "id"    : offer id (int)
   - response: OK if order is successfully created, bad request with errortext
-                                  
+ 
+ ```                                
  POST
+ ```
  
  
  # Authors
