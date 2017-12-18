@@ -3,6 +3,8 @@
 # Description
 Cheapeat is a web application to sell and buy unnused food. You can create an offer with your food and a picture. Users can filter offers by plz and date. 
 
+The application is based on the java play framework version 2.5.3
+
 ## Concepts used in this Application
   - User Management
   - User Registration with confirmation through email
@@ -18,26 +20,35 @@ Cheapeat is a web application to sell and buy unnused food. You can create an of
  ## REST API
  The application comes with a REST API, that can be used to get offers, ratings, users, orders and to post Registration, login, offer    creation, ratings and order request. ALl URLs with parameters are listed below. Parameter type is string if not specified
  
- GET  /               Response: Index site as html
+ GET  /               
+ - Response: Index site as html
  
- GET  /angebote/all   Response: 15 random offers are returned as JSON, only available offers
+ GET  /angebote/all   
+  - Response: 15 random offers are returned as JSON, only available offers
  
- GET  /angebote/:id   Response: Offer with selected id is returned as JSON
+ GET  /angebote/:id   
+  - Response: Offer with selected id is returned as JSON
  
- GET  /search         Response: search site is returned as html
+ GET  /search         
+  - Response: search site is returned as html
  
- GET  /search/:plz    Parameters: optinoal parameter "datum", returns offers on selected date
-                      Response: Offers as JSON with selected plz and date (optional)
+ GET  /search/:plz    
+  - Parameters: optinoal parameter "datum", returns offers on selected date
+  - Response: Offers as JSON with selected plz and date (optional)
                       
- GET  /signup         Response: signup form as html
+ GET  /signup         
+  - Response: signup form as html
  
- POST /signup         Registers a new user
-                      Parameters: "name" : name of the user
+ POST /signup         
+  - Registers a new user
+  - Parameters: "name" : name of the user
                                   
  
  secured functions: to use these function you have to be logged in as 
  
- POST  /angebote      creates a new offer
+ POST  /angebote      
+  - creates a new offer
+                      
                       Parameters: "titel" : title of the offer
                                   "beschreibung" : description of the offer
                                   "datum" : date when the offer is to be picked up format yy-mm-dd
