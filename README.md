@@ -5,6 +5,17 @@ Cheapeat is a web application to sell and buy unnused food. You can create an of
 
 The application is based on the java play framework version 2.5.3
 
+Frameworks/modules used with version:
+ - [play framework 2.5.1](https://www.playframework.com/documentation/2.5.x/Highlights25)
+ - [Bootstrap 4.0.0-beta2](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+ - [jQuery 3.2.1](http://api.jquery.com/)
+ - [scala version 2.11.7](http://www.scala-lang.org/api/current/index.html)
+ - hibernate 4.3.7
+ - play-mailer 6.0.1
+ - jbcrypt
+ - aws-java-sdk 1.11.229
+ 
+
 ## Concepts used in this Application
   - User Management
   - User Registration with confirmation through email
@@ -45,6 +56,25 @@ The application is based on the java play framework version 2.5.3
   - Parameters: optinoal parameter "datum", returns offers on selected date
   - Response: Offers as JSON with selected plz and date (optional)
   
+   ```
+ GET  /benutzer/:id/bewertung  
+ ```
+  - Returns rating points of specified user
+  - Response: rating as JSON
+  
+   ```
+ GET  /login    
+ ```
+  - response: login form as html
+  
+   ```
+ POST  /login   
+ ```
+  - parameter:
+    - "email" : email of the registered user
+    - "passwort" : password of the registered user
+  - response: OK if offer is successfully created (session cookie is created), bad request with errortext
+  
  ```
  GET  /signup 
  ```
@@ -54,16 +84,30 @@ The application is based on the java play framework version 2.5.3
  POST /signup
  ```
   - Registers a new user
-  - Parameters: "name" : name of the user
+  - Parameters: 
+    - "name" : name of the user
+    - "benutzername" : username, has to be unique
+    - "email" : email adress, has to be unique
+    - "passwort" : password
+    - "plz" : zipcode (int)
+    - "strasse" : street
+    - "ort" : residence
+  - response: OK if user is successfully created, bad request with errortext
+  
+  ```
+  GET  /confirm/:confirmToken
+  ```
+   - validates the user with given confirmation token, confirmation token is in format of a UUID
+   - response: OK if offer is successfully created (session cookie is created), bad request with errortext
                                   
  
- secured functions: to use these function you have to be logged in as 
+ **secured functions**: to use these function you have to be logged in
  
  ```
  POST  /angebote
  ```
   - creates a new offer
-  - Parameters: 
+  - Parameter: 
      - "titel" : title of the offer
      - "beschreibung" : description of the offer
      - "datum" : date when the offer is to be picked up format yy-mm-dd
@@ -83,9 +127,101 @@ The application is based on the java play framework version 2.5.3
   - response: OK if order is successfully created, bad request with errortext
  
  ```                                
- POST
+ GET  /logout
  ```
+  - logs off the user, destroys the play session
+  - response:   OK if offer is successfully created, bad request with errortext
+  
+ ```
+ POST  /bestellung/:id/bewertung
+ ```
+  - rates the specified order (by order id)
+  - parameters
+    - "who" : "anbieter" or "besteller" specifies the seller/buyer
+    - "token" : token to authorise the rating
+    - "rating" : rating point for the user (int, 1 to 5)
+  - response :  OK if offer is successfully created, bad request with errortext
+  
+ ```
+ GET  /me/bestellungen
+ ```
+  - response: all placed order of signed in user as JSON
+  
+  ```
+ GET  /me/anfragen
+ ```
+  - response: all order requests offsigned in user as JSON
+  
+  ```
+ GET  /me/angebote
+ ```
+  - response: all created offers of signed in user as JSON
+  
+  ```
+ GET  /me/anfragen/:id/accept
+ ```
+  - accepts the specified order request (parameter is order id)
+  - response: OK if offer is successfully created, bad request with errortext
+  
+```
+ GET  /me/anfragen/:id/deny
+ ```
+  - denys the specified order request (parameter is order id)
+  - response: OK if offer is successfully created, bad request with errortext
+  
+ ## Config options
+ To deploy the application the mysql database url, s3 bucket and the smtp server have to be set.
+ The configuration for the play app is in /conf/application.conf
  
+ The following configurations need to be adjusted:
+ 
+ ```
+ db.default{
+  driver="com.mysql.jdbc.Driver"
+  url="jdbc:mysql://<mysql_url>"
+  username=<mysql_username>
+  password="<mysql_password>"
+  host="<hostname>"
+  jndiName=DefaultDS
+}
+```
+
+```
+//alternative smtp server can be used, example is with google smtp with tls
+play.mailer {
+  debug = true
+  host = "smtp.gmail.com" 
+  port = 587
+  ssl = false
+  tls = true
+  user = "<username (email)>"
+  password = "<password>"
+  timeout=60000
+  connectiontimeout=60000
+  //https://myaccount.google.com/u/3/lesssecureapps zulassen
+}
+
+```
+
+```
+aws.accessKey="<access_key>"
+aws.secretKey="<secret_key>"
+cheapeat.s3.bucketName="<s3_bucket_name>"
+```
+
+```
+//site hostname for urls building
+server.hostname = "<hostname url>"
+```
+  
+ # Future developments
+ 
+ The following futures should be developed to deploy the application is deployed in a productive environment
+  - Users should be able to reset password (via forget password or password change)
+  - Users should be able to update addresses
+  - Users should be able to add additional addresses and add different addresses to offers
+  - Images should be saved as thumnails, be shown full size when clicked on thumbnail
+  - Users should be able to edit and delete created offers
  
  # Authors
  Authors of this project are Fabio Göldi and Cedric Sutter
