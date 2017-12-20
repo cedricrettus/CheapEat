@@ -88,7 +88,7 @@ public class AngebotController extends Controller {
                 //TODO bilder als Thumbnail und big hochladen
                 if (bilder.size() > 0) {
                     for (int i = 0; i < bilder.size(); i++) {
-                        if(bilder.get(i).getContentType() != "image/jpeg"){
+                        if(!bilder.get(i).getContentType().equals("image/jpeg")){
                             //Angebot wieder löschen, damit kein halbes Angebot erfasst ist
                             //JPA.em().remove(angebot);
                             //return badRequest("Ungültiges Dateiformat");
