@@ -9,11 +9,10 @@ Frameworks/modules used with version:
  - [play framework 2.5.1](https://www.playframework.com/documentation/2.5.x/Highlights25)
  - [Bootstrap 4.0.0-beta2](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
  - [jQuery 3.2.1](http://api.jquery.com/)
- - [scala version 2.11.7](http://www.scala-lang.org/api/current/index.html)
- - hibernate 4.3.7
- - play-mailer 6.0.1
- - jbcrypt
- - aws-java-sdk 1.11.229
+ - [hibernate 4.3.7](http://hibernate.org/orm/documentation/4.3/)
+ - [play-mailer 6.0.1](https://github.com/playframework/play-mailer)
+ - [jbcrypt](http://www.mindrot.org/projects/jBCrypt/)
+ - [aws-java-sdk 1.11.229](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/index.html)
  
 
 ## Concepts used in this Application
@@ -215,7 +214,6 @@ server.hostname = "<hostname url>"
 ```
   
  # Future developments
- 
  The following futures should be developed to deploy the application is deployed in a productive environment
   - Users should be able to reset password (via forget password or password change)
   - Users should be able to update addresses
