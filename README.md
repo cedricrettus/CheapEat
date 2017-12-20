@@ -25,6 +25,7 @@ Frameworks/modules used:
   - Accept or deny an order request for your offer
   - Rate users after order completion
   - Show user ratings
+  - Send emails via play-mailer and google smtp
  
  # Usage
  ## REST API
