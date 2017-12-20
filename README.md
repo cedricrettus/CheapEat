@@ -5,15 +5,14 @@ Cheapeat is a web application to sell and buy unnused food. You can create an of
 
 The application is based on the java play framework version 2.5.3
 
-Frameworks/modules used with version:
+Frameworks/modules used:
  - [play framework 2.5.1](https://www.playframework.com/documentation/2.5.x/Highlights25)
  - [Bootstrap 4.0.0-beta2](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
  - [jQuery 3.2.1](http://api.jquery.com/)
- - [scala version 2.11.7](http://www.scala-lang.org/api/current/index.html)
- - hibernate 4.3.7
- - play-mailer 6.0.1
- - jbcrypt
- - aws-java-sdk 1.11.229
+ - [hibernate 4.3.7](http://hibernate.org/orm/documentation/4.3/)
+ - [play-mailer 6.0.1](https://github.com/playframework/play-mailer)
+ - [jbcrypt](http://www.mindrot.org/projects/jBCrypt/)
+ - [aws-java-sdk 1.11.229](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/index.html)
  
 
 ## Concepts used in this Application
@@ -26,10 +25,11 @@ Frameworks/modules used with version:
   - Accept or deny an order request for your offer
   - Rate users after order completion
   - Show user ratings
+  - Send emails via play-mailer and google smtp
  
  # Usage
  ## REST API
- The application comes with a REST API, that can be used to get offers, ratings, users, orders and to post Registration, login, offer    creation, ratings and order request. ALl URLs with parameters are listed below. Parameter type is string if not specified
+ The application comes with a REST API, that can be used to get offers, ratings, users, orders and to post registration, login, offer    creation, ratings and order request. All URLs with parameters are listed below. Parameter type is string if not specified
  
 ```
  GET  /  
@@ -215,7 +215,6 @@ server.hostname = "<hostname url>"
 ```
   
  # Future developments
- 
  The following futures should be developed to deploy the application is deployed in a productive environment
   - Users should be able to reset password (via forget password or password change)
   - Users should be able to update addresses
