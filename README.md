@@ -5,7 +5,7 @@ Cheapeat is a web application to sell and buy unnused food. You can create an of
 
 The application is based on the java play framework version 2.5.3
 
-Frameworks/modules used with version:
+Frameworks/modules used:
  - [play framework 2.5.1](https://www.playframework.com/documentation/2.5.x/Highlights25)
  - [Bootstrap 4.0.0-beta2](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
  - [jQuery 3.2.1](http://api.jquery.com/)
