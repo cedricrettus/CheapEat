@@ -7,7 +7,7 @@ nav.navbar {
 
 .jumbotron {
     margin-bottom: 0px;
-    background-color: rgba(54, 162, 11, 0.53) !important;
+    background-color: rgba(33, 132, 50, 0.55) !important
 }
 
 .card{
@@ -96,4 +96,9 @@ nav.navbar {
 .btn-primary{
     background-color: #1fa23c;
     border-color: #1fa23c;
+}
+.btn-primary:hover, .btn.btn-primary:active{
+    background-color: #1fa23c;
+    border-color: #1fa23c;
+    opacity: 0.6;
 }
