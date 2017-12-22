@@ -1,5 +1,8 @@
 # Cheapeat Webapplikation
 
+Github Repository: https://github.com/cedricrettus/CheapEat
+Site available through heroku: cheapeat.herokuapp.com or cheapeat.fgoe.ch
+
 # Description
 Cheapeat is a web application to sell and buy unnused food. You can create an offer with your food and a picture. Users can filter offers by plz and date. 
 
